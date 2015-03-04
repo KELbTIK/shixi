@@ -1,0 +1,1 @@
+{module name='flash_messages' function='display'}{$MAIN_CONTENT}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE translation2 [
+<!ELEMENT translation2 (languages)>
+<!ELEMENT languages (lang*)>
+<!ELEMENT lang (name?,meta?,error_text?,encoding?)>
+<!ATTLIST lang id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT meta (#PCDATA)>
+<!ELEMENT error_text (#PCDATA)>
+<!ELEMENT encoding (#PCDATA)>
+]>
+
+<translation2>
+  <languages>
+    <lang id="en">
+      <name> English </name>
+      <meta> a:10:{s:14:"activeFrontend";s:1:"1";s:13:"activeBackend";s:1:"1";s:10:"is_default";b:0;s:5:"theme";s:0:"";s:11:"date_format";s:8:"%m.%d.%Y";s:17:"decimal_separator";s:1:".";s:19:"thousands_separator";s:1:",";s:8:"decimals";s:1:"2";s:11:"rightToLeft";s:1:"0";s:20:"currencySignLocation";s:1:"0";} </meta>
+      <error_text></error_text>
+      <encoding> utf-8 </encoding>
+    </lang>
+  </languages>
+</translation2>

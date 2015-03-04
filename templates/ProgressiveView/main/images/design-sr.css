@@ -1,0 +1,44 @@
+/* START:Serbski Language
+*********************************************************************************/
+.inputName {
+	font-family: Arial;
+}
+.quick-search-btn #btnSearch {
+	padding: 0 19px 0 34px;
+}
+#job-seeker-tools ul li a {
+	font-size: 16px;
+}
+#jTabs .css-panes ul a {
+	font-size: 14px;
+}
+.jobseeker-button {
+	right: -33px !important;
+}
+#top-menu ul li:hover > a {
+	padding: 11px 9px;
+}
+#top-menu ul li a {
+	font-size: 15px;
+	padding: 11px 10px;
+}
+.footer-wrapper ul li a {
+	padding: 5px 4px;
+}
+.search-only {
+	font-size: 10px;
+}
+#currentSearch th,
+#refineResults th {
+	font-size: 17px;
+}
+#sort-by .sbOptions {
+	width: 150px;
+}
+fieldset#Location_ZipCode {
+	font-size: 12px;
+}
+input#Location_ZipCode {
+	width: 66px !important;
+}
+/********************************************************************************/

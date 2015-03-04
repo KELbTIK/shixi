@@ -1,0 +1,329 @@
+/* START STYLES
+ * ******************************************************* */
+body {
+	text-align: right;
+}
+input[type="text"], input[type="password"], select, textarea {
+	text-align: right;
+}
+table, table thead, table thead th, table tbody td {
+	text-align: right !important;
+}
+h1{
+	float: none;
+}
+/* END STYLES
+ * ******************************************************* */
+
+
+/* START DESIGN STYLES
+ * ******************************************************* */
+.rightPanelTitle {
+	width: 220px;
+	padding: 5px 10px 0 25px;
+}
+ul.browseListing {
+	padding: 0 10px 0 0;
+}
+.employerBlock, .jobseekerBlock {
+	padding: 0 10px 0 100px;
+	width: 210px;
+}
+.headerPage {
+	text-align: left;
+}
+
+.inputName {
+	padding: 0 5px 0 0;
+	float: right;
+}
+.leftColumnMA img, .rightColumnMA img {
+	float: right;
+}
+.leftColumnMA li, .rightColumnMA li {
+	line-height: 25px;
+	clear: both;
+}
+.printPage {text-align: right;}
+/* END DESIGN STYLES
+ * ******************************************************* */
+
+
+/* START TREE
+ * ******************************************************* */
+.ui-dialog .ui-dialog-title {
+	float: right !important;
+	margin: 0.1em 0.1em 0.2em !important;
+}
+div.tree_button {
+	padding-right:23px;
+	width: 290px!important;
+}
+ul.tree li {
+	padding: 0 10px 0 0 !important;
+}
+ul.tree label {
+	padding: 2px 10px 0 0 !important;
+}
+ul.tree li .checkbox {
+	float: right !important;
+}
+ul.tree li .collapsed {
+	float: right !important;
+}
+ul.tree li .expanded {
+	float: right !important;
+}
+ul.tree li .arrow {
+	float: right !important;
+}
+/* END TREE
+ * ******************************************************* */
+/* START Different Languages FIXED CSS */
+.blue, .green{
+	display: inline-block;
+}
+.continue-shopping{
+	width: 50%;
+}
+#poll h2{
+	padding: 5px 10px 0 0;
+}
+#poll{
+	padding: 0 10px 0 0;
+}
+#poll p{
+	direction: ltr;
+}
+#poll form, #mailchimp-nl-cont label, #productDetails ~ table, .pm-sub-menu, #formPayment,
+.displayFieldBlock, .subuser-permis-ul, .subuser-cb-ul, .block_values_button, .compProfileInfo, #listings_per_page_form,.listings_per_page_form, .pageNavigation form{
+	direction: rtl;
+}
+#mailchimp-newsletter h1{
+	padding: 5px 10px 0 0;
+	width: 245px;
+}
+.RSSBlock{
+	float: left;
+	margin: 0 0 0 10px;
+}
+.blogDate, .RightLink, #Salary_list, #DesiredSalary_list, .searchGeoDistance, #searchType-keywords{
+	float: left;
+}
+.GrayBlock h1{
+	padding: 0 8px 0 0;
+}
+.featuredListings, .bcName, .browseCompanyAB, .MyAccount, .MyAccountFoot, .notCheck, .notDesc,
+#addListingForm div.tree_button, .leftDisplaySIde, .numberPerPage, #contact-info{
+	float: right;
+}
+.fix{
+	width:94%!important;
+}
+.login_buttons_txt{
+	float: right;
+	direction: rtl;
+	margin: 0 0 0 5px;
+	line-height: 15px;
+}
+.soc_reg_form .social_plugins_div, .productDetails-info, .BreadCrumbs, .currentProducts-info{
+	float: none;
+}
+#loginForm{
+	margin:0 0 0 36%;
+}
+.inputName, .inputField, .inputReq, .inputNameBig, .inputFieldSmall, #adMargin, .productDetails-name,
+.input-form-bc, .currentProducts-name, .contact-detail-cap, #note-block{
+	float: right;
+	direction: rtl;
+}
+.ui-icon-closethick{
+	font-size: 0;
+}
+#adSpace{
+	float: left;
+	margin: 0;
+}
+.bcField{
+	width: 84%;
+}
+.listingInfo h2 div{
+	float: left!important;
+}
+.displayFieldBlock .in_share{
+	float: right;
+	direction: rtl;
+	padding: 0 0 0 5px;
+}
+.refineItem a{
+	display: inline-block;
+}
+.priorityListing ul li, .evenrow ul li, .oddrow ul li{
+	float: right!important;
+}
+#productDetails table{
+	margin: 0 0 0 50%;
+}
+#productsSelect{
+	margin: 0 15px 0 90%;
+}
+.product-detail-button{
+	margin: 0 10px 0 72%;
+}
+#productDetails table td, #productDetails table th{
+	text-align: center!important;
+}
+#productDetails ~table td input[type="text"]{
+	width:218px!important;
+}
+#adSpaceAccount{
+	margin: 20px 0 0 0;
+}
+#table-alerts{
+	margin: 0 0 0 30%;
+}
+.narrow-col h3{
+	float:right;
+	margin: 0 0 0 5px;
+	direction: rtl;
+}
+.mt-count-available{
+	float: right;
+	direction: rtl;
+	padding: 10px;
+}
+#addListingForm .inputStringMoney {
+	width: 238px!important;
+}
+.instruction{
+	float: right;
+	margin: 0 10px 0 0;
+}
+.instr_cont{
+	margin: 0 0 0 -293px;
+}
+.instruction .instr_arrow{
+	margin: 0 0 0 -26px;
+}
+.in_share{
+	margin: 0 0 0 64%;
+}
+.MyAccountHead h1{
+	padding: 20px 380px 0 0;
+}
+.pageNavigation{
+	margin: 10px 0 0 10px;
+	float: left;
+}
+.align_right a{
+	margin: 0 10px;
+}
+.ui-multiselect-checkboxes label {
+	text-align: right;
+}
+.ui-multiselect-header ul li,
+.ui-multiselect span {
+	float: right !important;
+}
+.ui-multiselect .ui-icon,
+.ui-multiselect-header li.ui-multiselect-close {
+	float: left !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	left: 0.3em;
+}
+/*** Start Profiler Fix ***/
+.profiler table, .profiler table thead, .profiler table thead th, .profiler table tbody td{
+	text-align: center!important;
+}
+#metrics .blue{
+	display: table-cell!important;
+	float: none;
+}
+/*** End Profiler Fix ***/
+#poll span{
+	display: inline-block;
+}
+/* END Different Languages FIXED CSS */
+/* ******************************************************* */
+
+
+/* START:Reports
+*********************************************************************************/
+#reports table {
+	float: right;
+	clear: both;
+}
+/********************************************************************************/
+
+
+/* START:Application Tracking
+*********************************************************************************/
+.app-tracking {
+	float: right;
+}
+.navigation-application {
+	float: left;
+}
+.ApplicationPointedInListingInfo {
+	direction: rtl;
+}
+/********************************************************************************/
+
+/* START:Saved Searches CSS
+*********************************************************************************/
+.saved-search-tbl {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Tree
+*********************************************************************************/
+#tree-block ul.tree li .checkbox {
+	background-position: top right;
+	padding: 0 20px 0 0;
+}
+ul.tree li ul {
+	padding: 0 8px 0 0;
+}
+.tree-child-close {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.tree-child-1 {
+	margin: 0 15px 3px 0 !important;
+}
+.tree-child-2 {
+	margin: 0 30px 3px 0 !important;
+}
+.tree-child-3 {
+	margin: 0 45px 3px 0 !important;
+}
+.tree-child-4 {
+	margin: 0 60px 3px 0 !important;
+}
+.tree-input-field {
+	float: right;
+}
+.tree-input-field .left {
+	float: right;
+}
+.tree-available-count {
+	margin: 0 10px 0 0;
+}
+.tree-input-field .left {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Radio Buttons
+*********************************************************************************/
+input[type="radio"],
+label,
+p {
+	direction: rtl;
+}
+label span {
+	display: inline-block;
+}
+/********************************************************************************/

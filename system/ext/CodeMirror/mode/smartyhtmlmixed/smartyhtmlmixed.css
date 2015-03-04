@@ -1,0 +1,4 @@
+/* this overrides the default Smarty tag styles for emphasis. Not required, but suggested! */
+.cm-smarty {
+  background-color: #ffffbb;
+}

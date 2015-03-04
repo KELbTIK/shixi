@@ -1,0 +1,2680 @@
+body {
+	margin: 15px 0;
+	padding: 0;
+	background: #fff;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+
+/* START:General CSS
+*********************************************************************************/
+.clr {
+	clear: both;
+}
+fieldset {
+	border: 0;
+	margin: 3px 0;
+	padding: 3px 0;
+ }
+a {
+	color: #666;
+}
+input[type="text"],
+input[type="password"],
+select {
+	border: 1px solid #C6C6C6;
+	padding: 3px 2px;
+}
+#loginForm input[type="text"],
+#loginForm input[type="password"],
+input[type="text"] {
+	width: 310px;
+}
+h1,
+h2,
+h3 {
+	color: #D5241B;
+}
+h1 {
+	font-size: 20px;
+	margin: 4px 0 8px 0;
+}
+h2 {
+	font-size: 19px;
+	margin: 2px;
+}
+h3 {
+	font-size: 17px;
+	margin: 0;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+a img {
+	border:none;
+}
+p.warning,
+p.error,
+p.message,
+p.notice,
+p.information {
+	margin: 5px;
+	padding: 5px 5px 5px 35px;
+}
+p.warning,
+p.error {
+	background: url("cancel.png") no-repeat 1% 50% #fcffd3;
+	color: #CE0000;
+	border: 1px solid #CE0000;
+}
+p.message {
+	background: url("apply.png") no-repeat 1% 50% #e0ffdf;
+	color: #006a25;
+	border: 1px solid #006a25;
+}
+p.notice,
+p.information {
+	background: url("info-message.png") no-repeat 1% 50% #f0f8ff;
+	color: #095694;
+	border: 1px solid #5ca4e3;
+}
+.MainDiv {
+	width: 935px;
+	margin: 0 auto;
+}
+.InnerDiv,
+.indexDiv {
+	border-left: 1px solid #D9D9D9;
+	border-right: 1px solid #D9D9D9;
+}
+.InnerDiv {
+	overflow: hidden;
+	width: 933px;
+}
+.indexDiv {
+	width: 923px;
+	padding: 2px 5px;
+	margin: 0;
+}
+/********************************************************************************/
+
+/* START:Tables
+*********************************************************************************/
+table {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 12px;
+}
+table thead {
+	background: url("table_title_bg.png");
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	color: #666;
+	text-align: left;
+}
+table thead th {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	text-align: left !important;
+}
+tr.oddrow {
+	background: #FBFBFC;
+}
+tbody > tr {
+	color: #787878;
+}
+.priorityListing > td,
+.evenrow > td,
+.oddrow > td {
+	padding: 7px 0;
+}
+.evenrow,
+.oddrow {
+	margin: 0;
+	padding: 0;
+}
+.evenrow {
+	background: #F1F5FB;
+}
+.oddrow {
+	background: #fff;
+}
+table thead th a {
+	color: #666;
+	text-decoration: none;
+	font-size: 12px;
+}
+.tableLeft,
+.tableRight {
+	width: 8px;
+	display: block;
+}
+/********************************************************************************/
+
+/* START:Header and Top Menu
+*********************************************************************************/
+a.logo {
+	margin: 10px 0 0 10px;
+}
+.headerPage {
+	background: url("header.png") no-repeat;
+	display: block;
+	width: 100%;
+	height: 69px;
+}
+.headerUserMenu {
+	color: #fff;
+	display: block;
+	float: right;
+	margin: 10px 15px 0 0;
+	text-align: right;
+	font-size: 11px;
+}
+#underHeader {
+	background: url("topMenu.png") repeat-x;
+	color: #fff;
+	padding: 0 0 0 10px;
+	height: 40px;
+	line-height: 34px;
+}
+#chooseLanguage {
+	float: right;
+	padding: 10px 10px 0 0;
+}
+#topMenu {
+	padding: 0;
+	float: left;
+}
+#topMenu ul {
+	margin: 9px 0 0;
+	padding: 0;
+	list-style-type: none;
+}
+#topMenu ul li {
+	float: left;
+	padding: 0 0 0 8px;
+	margin: 0 13px 0 0;
+}
+#topMenu ul li a {
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	line-height: 20px;
+}
+li#dropDown {
+	background: url("dropDownArrow.png") no-repeat right;
+	padding: 0 15px 0 8px !important;
+}
+li#dropDown ul a,
+.headerUserMenu a {
+	color: #fff !important;
+}
+#topMenu li ul {
+	background: #f5f5f5;
+	position: absolute;
+	z-index: 10;
+	left: -999em;
+	width: 200px;
+	height: auto;
+	margin: 0;
+}
+#topMenu li li {
+	margin: 0 !important;
+	width: 200px;
+	padding: 2px 0 !important;
+	border-bottom: 1px solid #e6e6e6;
+}
+#topMenu li li:hover {
+	background: #d6d6d6;
+}
+#topMenu li li a {
+	color: #000 !important;
+	padding: 0 5px;
+	text-align: left !important;
+	text-decoration: none;
+	font-size: 12px;
+}
+#topMenu li:hover ul,
+#topMenu li li:hover ul,
+#topMenu li li li:hover ul {
+	left: auto;
+	visibility: visible;
+}
+/********************************************************************************/
+
+/* START:Main Page Structure
+*********************************************************************************/
+.leftColumn,
+.rightColumn {
+	display: block;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.leftColumn {
+	width: 672px;
+}
+.rightColumn {
+	width: 255px;
+	margin: 0 0 0 5px;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.indexPageColumn {
+	width: 100%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+}
+.rightPanelTitle {
+	width: 230px;
+	height: 31px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+	padding: 5px 0 0 25px;
+	margin: 10px 0;
+	background: url("rightPanel_title.png") no-repeat;
+}
+.InputStat {
+	display: block;
+	float: right;
+	margin: 0 10px 0 0;
+	font-style: italic;
+}
+.InputStat .strong {
+	color: #D5241B;
+}
+.GrayBlock {
+	background: url("qsearch_bg.png") repeat-x #ebebeb;
+	width: 660px;
+	min-height: 135px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	border-left: none;
+}
+.GrayBlock h1 {
+	padding: 0 0 0 8px;
+	margin: 5px 0 5px 0;
+}
+.banner {
+	margin: 5px 0;
+	text-align: center;
+}
+#grayBgBanner {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+#grayBgBanner .banner {
+	margin: 0;
+	padding: 10px;
+}
+.messageBox {
+	z-index: 1000000;
+}
+/********************************************************************************/
+
+/* START:Quick Search
+*********************************************************************************/
+.QuickSearch {
+	background: url("qsearch_bg.png") repeat-x;
+	width: 660px;
+	height: 135px;
+	display: block;
+	border: 1px solid #ddd;
+	border-left: none;
+}
+.loop {
+	background: url("quickSearch.png") no-repeat;
+	width: 108px;
+	height: 135px;
+	display: block;
+	float: left;
+	margin: 0 0 0 2px;
+}
+.QuickSearch h1 {
+	color: #6E6E6E;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+.QuickSearch input {
+	width: 110px !important;
+}
+.QuickSearch .searchList {
+	width: 120px;
+}
+.QuickSearch fieldset {
+	border: 0;
+	margin: 0;
+	padding: 5px 0 0 8px;
+}
+.quickSearchInputName {
+	width: 75px;
+	display: block;
+	float: left;
+}
+.quickSearchInputField {
+	width: 130px;
+	float: left;
+}
+.quickSearchInputField a {
+	color: #666;
+	font-size: 11px;
+}
+/********************************************************************************/
+
+/* START:Featured and Latest Jobs
+*********************************************************************************/
+.FeaturedCompanies,
+.FeaturedCompaniesLogo {
+	display: block;
+	float: left;
+}
+.FeaturedCompanies h1 {
+	color: #3E7B08;
+	font-size: 14px;
+	margin: 0 0 0 5px;
+}
+.FeaturedCompaniesLogo {
+	width: 150px;
+	text-align: center;
+	margin: 3px;
+}
+.featuredListings {
+	width: 20%;
+	float: left;
+	margin: 5px 10px;
+	padding: 0 0 0 5px;
+}
+.featuredListings a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+}
+.blue,
+.green {
+	color: #787878;
+}
+.RSSBlock {
+	background: url("rssblock_bg.png") no-repeat;
+	width: 119px;
+	height: 30px;
+	display: block;
+	float: right;
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+	margin: 0 10px 0 0;
+}
+.RSSBlock a {
+	text-decoration: none;
+}
+/********************************************************************************/
+
+/* START:Employer Jobseeker Block
+*********************************************************************************/
+.employerBlock,
+.jobseekerBlock {
+	width: 220px;
+	height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #ddd;
+	padding: 0 0 0 100px;
+}
+.employerBlock {
+	background: url("employer.png") no-repeat;
+	border-left: none;
+}
+.jobseekerBlock {
+	background: url("jobseeker.png") no-repeat;
+	margin: 0 0 0 20px;
+}
+.employerBlock h1,
+.jobseekerBlock h1 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #000;
+}
+/********************************************************************************/
+
+/* START:Blog
+*********************************************************************************/
+.blogPost {
+	overflow: hidden;
+	padding: 3px 10px;
+	line-height: 18px;
+}
+a.blogLink {
+	color: #ce0000;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+.blogDate {
+	float: right;
+	color: #4c4c4c;
+	font-weight: bold;
+	font-size: 11px;
+}
+/********************************************************************************/
+
+/* START:News
+*********************************************************************************/
+#news {
+	padding: 0 10px 0 20px;
+}
+.smallLink {
+	font-size: 10px;
+	float: right;
+}
+#news ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#news ul li {
+	margin: 3px 0;
+	padding: 3px 0;
+	border-bottom: 1px dotted #ccc;
+}
+a.newsLink {
+	text-decoration: none;
+	font-weight: bold;
+}
+#newsCategory {
+	display: block;
+	float: right;
+	border: 1px solid #C9C9C9;
+	padding: 5px;
+	margin: 0 0 0 10px;
+	width: 200px;
+}
+#newsCategory a,
+#newsCategory .strong {
+	padding: 3px 0;
+	display: block;
+}
+#newsCategory h3 {
+	font-size: 13px;
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #C9C9C9;
+}
+#newsCategory a:hover,
+#newsCategory .strong:hover {
+	background: #f2f2f2;
+	color: #000;
+}
+.newsItems {
+	padding: 10px 0;
+	border-bottom: 1px dotted #C9C9C9;
+}
+.newsItems h2 a {
+	text-decoration: none;
+}
+.newsPreview {
+	clear: both;
+}
+/********************************************************************************/
+
+/* START:Browse By
+*********************************************************************************/
+ul.browseListing {
+	margin: 0;
+	padding: 0;
+}
+ul.browseListing li {
+	list-style-type: none;
+	margin: 5px 0 0 13px;
+}
+.browseListing a {
+	margin: 0;
+	padding: 5px 0 0 15px;
+}
+.browseListing a:hover {
+	text-decoration: none;
+}
+.browse {
+	margin: 7px 0 0 0;
+}
+.browseCompanyAB {
+	float: left;
+	padding: 5px;
+}
+/********************************************************************************/
+
+/* START:Polls
+*********************************************************************************/
+#poll{
+	margin: 10px 0 0 0;
+}
+#poll h2 {
+	width: 245px;
+	height: 31px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 22px;
+	padding: 5px 0 0 35px;
+	background: url("rightPanel_title.png") no-repeat;
+}
+#poll form{
+	padding: 0 0 0 10px;
+}
+/********************************************************************************/
+
+/* START:Mailchimp Newsletter
+*********************************************************************************/
+#mailchimp-newsletter {
+	margin: 15px 0 0;
+	overflow: hidden;
+}
+#mailchimp-newsletter h1 {
+	background: url("rightPanel_title.png") no-repeat;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	width: 255px;
+	height: 31px;
+	padding: 5px 0 0 30px;
+	margin: 0;
+	line-height: 22px;
+}
+#mailchimp-newsletter input #mch_subscribe {
+	height: 30px;
+	color: #fff;
+	border-style: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+#mailchimp-newsletter input:hover #mch_subscribe {
+	background: url("button.png") 0 -30px;
+}
+#mailchimp-newsletter fieldset {
+	margin: 9px 8px;
+	line-height: 20px;
+}
+p.mailchimp-nl-desc {
+	text-align: justify;
+	margin: 8px;
+	font-size: 11px;
+}
+#mch_email,
+#mch_name {
+	width: 230px;
+}
+#mailchimp-nl-cont label {
+	display: block;
+}
+/********************************************************************************/
+
+/* START:Footer
+*********************************************************************************/
+.Footer {
+	background: url("footer.png") repeat-x;
+	width: 100%;
+	height: 38px;
+	display: block;
+	line-height: 38px;
+}
+.Footer a,
+.Footer {
+	color: #fff;
+}
+.FooterLeft,
+.FooterRight {
+	width: 5px;
+	height: 38px;
+	display: block;
+}
+.FooterLeft {
+	background: url("footer_left_angle.png") no-repeat;
+	float: left;
+}
+.FooterRight {
+	background: url("footer_right_angle.png") no-repeat;
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Input Fields
+*********************************************************************************/
+.inputName,
+.inputField,
+.inputReq {
+	display: block;
+	float: left;
+}
+.inputName {
+	width: 23%;
+}
+.inputReq {
+	width: 2%;
+	color: red;
+}
+.search-only {
+	display: inline-block;
+	float: right;
+	font-size: 11px;
+	margin: 0 0 0 1px;
+	text-align: right;
+	white-space: nowrap;
+	width: 163px;
+}
+.searchString {
+	border: 1px solid #C6C6C6;
+	width: 313px;
+}
+.searchMoney {
+	width: 35%!important;
+}
+#Salary_list,
+#DesiredSalary_list {
+	width: 125px;
+	float: right;
+}
+.searchString {
+	border: 1px solid #C6C6C6;
+}
+.salary-abbr {
+	display: inline-block;
+	width: 184px;
+}
+#Salary_list,
+#DesiredSalary_list {
+	width: 122px !important;
+}
+#Location,
+.searchString,
+#registr-form .inputField input[type="text"] {
+	width: 313px;
+}
+#search_form .inputField,
+.builder-col-wide .inputField {
+	display: inline-block;
+	width: 315px;
+}
+.ui-multiselect {
+	min-height: 23px;
+	padding: 3px 4px 3px 5px !important
+}
+/********************************************************************************/
+
+/* START:Reports
+*********************************************************************************/
+#reports-navigation {
+	font-weight: bold;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 15px 0;
+}
+#reports-navigation-in {
+	background: -moz-linear-gradient(top,  #fafafa 0%, #ededed 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top,  #fafafa 0%,#ededed 100%);
+	background: -o-linear-gradient(top,  #fafafa 0%,#ededed 100%);
+	background: -ms-linear-gradient(top,  #fafafa 0%,#ededed 100%);
+	background: linear-gradient(to bottom,  #fafafa 0%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ededed',GradientType=0 );
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+}
+#reports-navigation-in-border {
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-khtml-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	position: relative;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	overflow: hidden;
+}
+#reports-navigation a:hover {
+	background: #f2f2f2;
+}
+#reports-navigation .current {
+	background: #e4e4e4;
+	color: #7a7a7a;
+	text-decoration: none;
+}
+#reports-navigation .current:hover {
+	background: #e4e4e4;
+}
+#reports-navigation .middle-item {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+#reports-navigation a {
+	display: block;
+	float: left;
+	padding: 10px 25px;
+	color: #585b62;
+}
+#reports {
+	padding: 10px 0;
+}
+#reports form {
+	margin: 0 0 5px 0;
+}
+#reports h2 {
+	font-weight: normal;
+	margin: 5px 0;
+}
+#reports td {
+	padding: 5px;
+}
+#reports #quick-stats {
+	width: 400px;
+}
+#reports #quick-stats td {
+	border-bottom: 1px solid #DEDEDE;
+}
+#reports #general-stats {
+	width: 600px;
+}
+#general-stats .general-stats-item,
+#general-stats th {
+	text-align: center !important;
+}
+#adSpaceAccount #reports-navigation,
+#adSpaceAccount h3,
+#adSpaceAccount h1 {
+	display: none;
+}
+#adSpaceAccount #quick-stats {
+	display: block;
+	width: auto;
+}
+#my-account-stats {
+	margin: 0 0 20px 0;
+}
+/********************************************************************************/
+
+/* START:Browse by company
+*********************************************************************************/
+.bcName,
+.bcField {
+	display: block;
+	float: left;
+}
+.bcName {
+	width: 15%;
+}
+.bcField {
+	width: 40%;
+}
+.SearchResultsCompany .evenrow,
+.SearchResultsCompany .oddrow {
+	height: 30px;
+}
+.compLogo {
+	background: #fff;
+}
+.compLogo,
+.compLogo img {
+	height: 40px;
+}
+/********************************************************************************/
+
+/* START:Display Listings
+*********************************************************************************/
+.userInfo,
+.listingInfo {
+	display: block;
+	float: left;
+}
+.userInfo {
+	width: 260px;
+}
+.userInfo embed {
+	width: 235px !important;
+}
+.listingInfo {
+	width: 650px;
+}
+.smallListingInfo {
+	width: 50%;
+	display: block;
+	float: left;
+	margin: 5px 0 0 0;
+}
+.smallListingInfo .strong {
+	color: #000;
+}
+.rightDisplaySIde {
+	width: 460px !important;
+}
+.narrow-col .displayField embed {
+	width: 90%;
+	height: 250px;
+	float: left;
+	clear: both;
+}
+#company-profile-video a.player,
+#company-profile-video embed,
+#col-wide .displayField a.player,
+#col-wide .displayField embed {
+	width: 100%;
+	height: 350px;
+}
+.narrow-col a.player {
+	width: 95%;
+}
+#refineResults embed {
+	width: 233px;
+}
+/********************************************************************************/
+
+/* START:My Account
+*********************************************************************************/
+.MyAccount {
+	padding: 0 0 0 30px;
+	color: #e61e1e;
+	font-size: 13px;
+	width: 590px;
+	background: url("MyAccout-bg.png") repeat-y right;
+	overflow: hidden;
+	clear: both;
+	float: left;
+}
+.MyAccountHead {
+	width: 590px;
+	height: 107px;
+	background: url("MyAccout-up.png") no-repeat;
+}
+.MyAccountHead h1 {
+	color: #5a5a5a;
+	font-size: 30px;
+	padding: 20px 0 0 110px;
+	margin: 0;
+}
+.leftColumnMA,
+.rightColumnMA {
+	display: block;
+	float: left;
+	margin: 10px;
+}
+.leftColumnMA {
+	width: 250px;
+	padding: 0 0 0 50px;
+}
+.rightColumnMA {
+	width: 240px;
+	padding: 0 0 0 10px;
+}
+.leftColumnMA ul, .rightColumnMA ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.leftColumnMA li, .rightColumnMA li {
+	margin: 10px 0;
+	padding: 0;
+}
+.MyAccountFoot {
+	float: left;
+	width: 590px;
+	height: 52px;
+	background: url("MyAccout-down.png") no-repeat;
+}
+.pm-sub-menu {
+	font-size: 12px;
+	line-height: 20px;
+	margin: 3px 0 0 28px;
+}
+/********************************************************************************/
+
+/* START:Sub-Account
+*********************************************************************************/
+#sub-accounts .inputName {
+	width: 20%;
+}
+.sub-user-permissions {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.sub-user-permissions li {
+	margin: 0 0 10px 0;
+}
+/********************************************************************************/
+
+/* START:Accordeon
+*********************************************************************************/
+.page_button {
+	background: #efefef;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	margin: 10px 0;
+	padding: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.page_button:hover {
+	background: #e7e7e7;
+}
+.page_icon {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	color: #891300;
+}
+/********************************************************************************/
+
+/* START:Recently view and Suggested Jobs
+*********************************************************************************/
+#recentlyViewedJobs,
+#suggestedJobs {
+	width: 440px;
+	margin: 15px 10px;
+	overflow: hidden;
+}
+#recentlyViewedJobs {
+	float: left;
+}
+#suggestedJobs {
+	float: right;
+}
+#suggestedJobs-title,
+#recentlyViewedJobs-title {
+	color: #5A5A5A;
+	font-size: 16px;
+	margin: 0 0 15px 0;
+	border-bottom: 1px dotted #5A5A5A;
+}
+/********************************************************************************/
+
+/* START:Contacts
+ *********************************************************************************/
+#contactInfo {
+	background: url("view-contact-bg.png") repeat-y;
+	width: 707px;
+	margin: 15px auto 0;
+	overflow: hidden;
+}
+#contactInfo-in {
+	background: url("view-contact-header.png") no-repeat top;
+	width: 677px;
+	overflow: hidden;
+	padding: 30px 15px 15px;
+}
+#contactInfo-footer {
+	background: url("view-contact-footer.png") no-repeat;
+	width: 707px;
+	height: 21px;
+	margin: 0 auto;
+}
+#user-top {
+	margin: 10px 0;
+	overflow: hidden;
+}
+#contact-image {
+	float: left;
+}
+#contact-image img,
+#contact-image {
+	width: 190px;
+}
+#contact-info {
+	width: 450px;
+	float: left;
+	margin: 0 10px 0 0 ;
+}
+#contact-group {
+	font-size: 13px;
+	clear: both;
+	overflow: hidden;
+	margin: 10px 0;
+}
+#cont-info-sendpm {
+	width: 190px;
+	float: left;
+	text-align: center;
+	margin: 15px 0;
+}
+.contact-detail-cap {
+	width: 30%;
+	float: left;
+	font-weight: bold;
+}
+.contact-detail-info {
+	width: 70%;
+	float: left;
+}
+#note-block {
+	width: 440px;
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 15px 0;
+	overflow: hidden;
+}
+#note-block span {
+	margin: 2px 0;
+	overflow: hidden;
+	display: block;
+}
+#note-block span textarea {
+	width: 98% !important;
+}
+#under-contact {
+	overflow: hidden;
+	clear: both;
+}
+/********************************************************************************/
+
+/* START:Payment Page
+*********************************************************************************/
+.paymentButton {
+	min-width: 130px;
+}
+.sendPaymentTo {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+#formPayment input[type="text"] {
+	width: 313px;
+}
+/********************************************************************************/
+
+/* START:Invoice
+*********************************************************************************/
+#invoice-buttons {
+	text-align: center;
+	margin: 20px 0 0 0;
+}
+#invoice-billto,
+#invoice-sendto,
+#invoice-logo,
+#invoice-info {
+	margin: 10px 0;
+	padding: 10px 5px;
+}
+#invoice-logo {
+	width: 350px;
+	float: left;
+}
+#invoice-info {
+	width: 350px;
+	float: right;
+	text-align: right;
+	line-height: 20px;
+}
+#invoice-billto {
+	float: left;
+}
+#invoice-sendto {
+	float: right;
+}
+#invoice-billto,
+#invoice-sendto {
+	border-top: 1px solid #d9d9d9;
+	width: 380px;
+	line-height: 22px;
+}
+#invoice-info .strong,
+#invoice-billto .strong,
+#invoice-sendto .strong {
+	font-size: 18px;
+}
+table#invoice-table {
+	width: 100%;
+	font-size: 12px;
+}
+table#invoice-table tbody tr:hover {
+	background: #f0f0f0;
+}
+table#invoice-table td {
+	border: 1px solid #d9d9d9;
+	padding: 5px 10px;
+}
+table#invoice-table tr.invoice-table-head,
+table#invoice-table tbody tr.invoice-table-head:hover {
+	background: #ededed !important;
+}
+table#invoice-table tr.invoice-table-head td {
+	font-weight: bold;
+	font-size: 13px;
+	color: #000;
+	height: inherit !important;
+}
+.invoice-amount-total {
+	background: #f5f5f5;
+	text-align: right;
+	font-weight: bold;
+}
+.invoice-actions {
+	text-align:center !important;
+}
+.invoice-form .inputName {
+	width: 13%;
+}
+.invoice_align {
+	text-align: right;
+}
+.invoice_actions {
+	width: 140px;
+	text-align: center !important;
+}
+/********************************************************************************/
+
+/* START:Search Results Page
+*********************************************************************************/
+.searchResultsHeaderLineNew {
+	width: 884px;
+	height: 37px;
+	background: url("upmenu.png") no-repeat;
+	margin: 0 0 0 20px;
+}
+.searchResultsHeaderLineMenu {
+	padding: 5px 0 0 45px;
+}
+.comment {
+	font-size: 12px;
+	font-weight: bold;
+	color: #B9281F;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+.searchResultsHeaderLine a:link,
+.searchResultsHeaderLine a:visited,
+.searchResultsHeaderLine a:hover {
+	color: #555;
+}
+.tableSRNavPerPage {
+	float: left;
+	margin: 0 30px 0 20px;
+}
+.priorityListing {
+	background: #ededed;
+}
+.topResultsLinks {
+	width: 100%;
+	display: block;
+}
+.topResultsLinks ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.topResultsLinks ul li {
+	float: left;
+	margin: 0 15px 0 0;
+}
+.topResultsLinks ul li a {
+	color: #666;
+	margin: 0 0 0 2px;
+}
+.searchResultsHeaderLineNew ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 9px 0 0 20px;
+}
+.searchResultsHeaderLineNew ul li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+.searchResultsHeaderLineNew ul li a {
+	color: #666;
+	font-size: 11px;
+}
+ul.listingLinksBottom {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 0 8px;
+	float: right;
+}
+.priorityListing ul,
+.evenrow ul,
+.oddrow ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.priorityListing ul li,
+.evenrow ul li,
+.oddrow ul li {
+	float: left;
+	margin: 0 15px 0 0;
+}
+.priorityListing ul li a,
+.evenrow ul li a,
+.oddrow ul li a {
+	color: #444;
+	font-weight: normal;
+	font-size: 11px;
+	text-decoration: underline;
+}
+.priorityListing a,
+.evenrow a,
+.oddrow a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.priorityListing a .strong,
+.evenrow a .strong,
+.oddrow a .strong {
+	color: #666;
+	font-size: 12px;
+	text-decoration: underline;
+}
+.priorityListing .strong,
+.evenrow .strong,
+.oddrow .strong {
+	color: #000;
+}
+.priorityListing a:hover .strong,
+.evenrow a:hover .strong,
+.oddrow a:hover .strong {
+	text-decoration: none;
+}
+.separateListing {
+	border-bottom: 1px dotted #B2B2B2;
+	margin: 0;
+	padding: 0;
+}
+.priorityListing {
+	background: #FBFFAF;
+}
+.topNavBar {
+	width: 922px;
+	float: left;
+	color: #666;
+}
+.topNavBarLeft,
+.topNavBarRight {
+	width: 8px;
+	display: block;
+	float: left;
+}
+.numberResults {
+	width: 168px;
+}
+.numberResults,
+.numberPerPage {
+	display: block;
+	float: left;
+	margin: 0 20px 0 0;
+	line-height: 30px;
+}
+.pageNavigation {
+	display: block;
+	float: right;
+	margin: 10px 0 0 0;
+	text-align: right;
+}
+.Results {
+	color: #D5241B;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 4px 0 8px;
+}
+#topResults {
+	float: right;
+	width: 100%;
+	margin: 0 0 10px 0;
+}
+#refineResults {
+	float: left;
+	width: 200px;
+}
+#listingsResults {
+	float: right;
+	width: 715px;
+}
+#endResults {
+	width: 100%;
+	float: left;
+	margin: 10px 0 0 0;
+}
+.noRefine #listingsResults {
+	width: 100%;
+}
+.noRefine table {
+	border: 1px solid #C9C9C9;
+}
+#displayListing #refineResults {
+	width: 260px;
+}
+#displayListing #listingsResults {
+	width: 655px;
+}
+#currentSearch td {
+	padding: 0 5px;
+}
+.listingLeftBlock {
+	padding: 5px;
+	width: 232px;
+	max-width: 232px;
+	float: left;
+}
+/********************************************************************************/
+
+/* START:Buttons
+*********************************************************************************/
+input.button,
+input[type="submit"],
+input[type="button"],
+a.button {
+	background: url("button.png") repeat-x;
+	min-width: 110px;
+	height: 30px;
+	padding: 0 10px;
+	color: #fff;
+	border: 0;
+	font-weight: bold;
+	cursor: pointer;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+}
+input.standart-button,
+a.standart-button {
+	background: url("gray-standart-button.png") repeat-x;
+	min-width: 100px;
+	height: 25px;
+	padding: 0 10px;
+	color: #000 !important;
+	font-size: 12px !important;
+	font-weight: bold;
+	font-family: Arial !important;
+	cursor: pointer;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #9f9f9f;
+	text-transform: inherit !important;
+}
+input:hover.button,
+input:hover[type="submit"],
+input:hover[type="reset"],
+input:hover[type="button"],
+a:hover.button {
+	background: url("button.png") repeat-x 0 -30px;
+}
+input.standart-button:hover,
+a:hover.standart-button {
+	background: url("gray-standart-button.png") repeat-x 0 -25px;
+}
+a.standart-button,
+a.button {
+	text-decoration: none !important;
+	display: inline-block;
+	text-align: center;
+}
+a.standart-button {
+	color: #000;
+	line-height: 25px !important;
+	height: 23px;
+}
+a.button {
+	color: #fff;
+	line-height: 34px;
+}
+input.buttonApply {
+	background: url("button.png") repeat-x;
+	height: 30px;
+	color: #fff;
+	border: 0;
+	font-weight: bold;
+	cursor: pointer;
+}
+.prevBtn a,
+.nextBtn a {
+	text-decoration: none;
+}
+.apply-button,
+input.buttonApply {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Display Listing
+*********************************************************************************/
+.page_navigator {
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+.page_navigator,
+.page_navigator a:link,
+.page_navigator a:visited,
+.page_navigator a:hover {
+	color: #666;
+}
+/********************************************************************************/
+
+/* START:Application
+*********************************************************************************/
+.pointedInListingInfo {
+	border-bottom: 1px solid #B2B2B2;
+	padding: 2px;
+}
+.pointedInListingInfo2,
+.ApplicationPointedInListingInfo {
+	border-bottom: 1px solid #B2B2B2;
+	border-right: 1px solid #B2B2B2;
+}
+.pointedInListingInfo2 {
+	padding: 2px 4px;
+}
+.ApplicationPointedInListingInfo {
+	padding: 5px;
+}
+.ApplicationPointedInListingInfo a {
+	text-decoration: underline;
+	font-weight: normal;
+}
+.ApplicationPointedInListingInfo a:hover {
+	text-decoration: none;
+}
+.ApplicationActions a {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 13px;
+}
+.ApplicationActions a:hover {
+	text-decoration: underline;
+}
+.ApplicationPointedInListingInfo2 {
+	border: 1px solid #B2B2B2;
+	border-top: none;
+	padding: 5px;
+}
+.app-tracking {
+	float: left;
+}
+.navigation-application,
+.navigation-application .numberPerPage,
+.navigation-application .pageNavigation {
+	float: right;
+}
+.app-tracking p {
+	margin: 7px 0;
+}
+.navigation-application .pageNavigation {
+	margin: 10px 25px 10px 0;
+}
+table.tableSearchResultApplications {
+	border-width: 0;
+	border-top-style: none;
+	color: #787878;
+}
+/********************************************************************************/
+
+/* START:Job Import
+*********************************************************************************/
+.headrow td,
+.headrow td a:link,
+.headrow td a:visited,
+.headrow td a:link,
+.headrow td a:visited {
+	font-size: 12px;
+	color: #4e7391;
+}
+.headrow td {
+	border-bottom: 2px solid #4e7391;
+	font-weight: bold;
+	padding: 0 0 3px 0;
+}
+/********************************************************************************/
+
+/* START:BreadCrumbs
+*********************************************************************************/
+.BreadCrumbs {
+	color: #CE0000;
+	font-weight: bold;
+	font-size: 11px;
+	font-family: Tahoma;
+	margin: 10px 0 0 0;
+}
+.BreadCrumbs p {
+	margin: 0 0 10px 0;
+}
+/********************************************************************************/
+
+/* START:Company Profile
+*********************************************************************************/
+.compProfileTitle,
+.compProfileBottom {
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	width: 250px;
+	height: 19px;
+}
+.compProfileTitle {
+	font-size: 140%;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	background: url("form_title_bg.png") #686868;
+}
+.compProfileBottom {
+	background: url("form_bottom_bg.png") no-repeat;
+}
+.compProfileInfo {
+	border: 1px solid #b4b4b4;
+	padding: 5px;
+	width: 238px;
+}
+/********************************************************************************/
+
+/* START:Private Messages
+*********************************************************************************/
+#pmDetails #form_subject,
+#pmDetails #form_to {
+	width: 300px;
+}
+#pmDetails fieldset {
+	border-bottom: 1px dotted gray;
+	padding: 5px 0;
+}
+#pmDetails fieldset.reply {
+	border: 0;
+}
+/********************************************************************************/
+
+/* START:Refine Search Block
+*********************************************************************************/
+#blockInner th {
+	white-space: normal;
+}
+.refine_button {
+	background: #EFEFEF;
+	cursor: pointer;
+	margin: 5px 0 0 0;
+}
+.refine_icon {
+	padding: 0 5px;
+	display: block;
+	float: left;
+	width: 15px;
+}
+.refineItem {
+	padding: 3px 0 0 5px;
+	display: block;
+}
+.refineItem,
+.refineItem a,
+.refine_res {
+	font-size: 11px;
+}
+.refine_res a {
+	color: blue;
+	padding: 5px 0 0 0;
+}
+.refine_res a:hover {
+	text-decoration: none;
+}
+.block_values_button {
+	background: #EFEFEF;
+	cursor: pointer;
+	padding: 2px 0;
+	margin: 5px 0;
+}
+/********************************************************************************/
+
+/* START:Complex Fields
+*********************************************************************************/
+.complex {
+	border-bottom: 1px dotted #727272;
+	padding: 10px 0;
+	display: block;
+	width: 700px;
+}
+.complex .inputName {
+	width: 25%;
+}
+.complex .cke {
+	margin: 5px 0 0 0;
+}
+.remove,
+.add,
+.complete {
+	display: inline-block;
+	text-decoration: underline !important;
+}
+.add,
+.complete {
+	padding: 2px 0 0 20px;
+	margin: 2px 0 5px 0;
+}
+.remove {
+	background: url("delete.png") no-repeat 0 1px;
+	padding: 0 0 0 20px;
+	margin: 0 0 5px 0;
+}
+a:hover.remove {
+	text-decoration: none !important;
+	color: red;
+}
+#delete-promocode {
+    display: inline;
+    vertical-align: top;
+}
+.add {
+	background: url("add.png") no-repeat left center;
+}
+a:hover.add,
+a:hover.complete {
+	color: green;
+	text-decoration: none !important;
+}
+.complete {
+	background: url("complete.png") no-repeat left center;
+}
+/********************************************************************************/
+
+/* START:Icons
+*********************************************************************************/
+li.modifySearchIco,
+li.saveSearchIco,
+li.savedIco,
+li.saved2Ico,
+li.viewDetails,
+li.viewVideo {
+	padding: 2px 0 1px 17px;
+	background: url("icons.png") no-repeat;
+}
+li.modifySearchIco {
+	background-position: 0 -18px;
+}
+li.saveSearchIco {
+	background-position: 0 -56px;
+}
+li.savedIco,
+li.saved2Ico {
+	background-position: 0 -36px;
+}
+li.viewDetails {
+	background-position: 0 -73px;
+}
+li.viewVideo {
+	background-position: 0 0;
+}
+li.comments {
+	padding: 0 0 0 20px;
+}
+li.panelSavedIco,
+li.panelViewDitailsIco,
+li.printListingIco,
+li.viewMapIco,
+li.arrow {
+	background: url("icons.png") no-repeat;
+	padding: 0 0 1px 20px;
+}
+li.panelSavedIco {
+	background-position: 0 -164px;
+}
+li.panelViewDitailsIco {
+	background-position: 0 -182px;
+}
+li.printListingIco {
+	background-position: 0 -146px;
+}
+li.viewMapIco {
+	background-position: 0 -127px;
+}
+li.arrow {
+	background-position: 0 -201px;
+}
+li.ratingPanel,
+li.pagging,
+li.paggingBottom {
+	color: #787878;
+}
+.ratingPanel p {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+li.pagging {
+	padding: 0 0 0 40px;
+}
+li.paggingBottom {
+	padding: 0 55px 0 0;
+	font-size: 11px;
+}
+.ModResults,
+.Rating,
+.Comments,
+.Pagging {
+	display: block;
+	float: left;
+}
+.ModResults {
+	width: 306px;
+}
+.Rating {
+	width: 280px;
+}
+.Comments {
+	width: 130px;
+}
+.Pagging {
+	width: 200px;
+}
+.ModResults ul,
+.Rating ul,
+.Comments ul,
+.Pagging ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 0 8px;
+	font-size: 11px;
+}
+.ModResults ul li,
+.Rating ul li,
+.Comments ul li,
+.Pagging ul li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+/********************************************************************************/
+
+/* START:Notification Page
+*********************************************************************************/
+.notCheck,
+.notDesc {
+	display: block;
+	float: left;
+}
+.notCheck {
+	width: 4%;
+}
+.notDesc {
+	width: 32%;
+	line-height: 20px;
+}
+/********************************************************************************/
+
+/* START:Instructions CSS
+*********************************************************************************/
+.instruction {
+	position: relative;
+	margin: 0 0 0 10px;
+	float: left;
+}
+.instruction .instr_icon {
+	background: url("./instruction_16x16.png") left top;
+	float: left;
+	height: 16px;
+	width: 16px;
+}
+.instruction .instr_block {
+	display: none;
+	font-size: 11px;
+	left: 18px;
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	width: 275px;
+	z-index: 1000;
+}
+.instruction .instr_arrow {
+	background: url("./orangeArrow.png") no-repeat 0 4px;
+	float: left;
+	height: 16px;
+	width: 9px;
+}
+.instruction .instr_cont {
+	padding: 0 7px;
+	background: #eee;
+	float: left;
+	width: 250px;
+}
+/********************************************************************************/
+
+/* START:Print page
+*********************************************************************************/
+#print-button {
+	width: 920px;
+	margin: 0 auto;
+}
+.printPage {
+	width: 920px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.printLeft {
+	width: 190px;
+	float: left;
+	line-height: 20px;
+}
+.printRight {
+	width: 700px;
+	float: right;
+}
+.printRight .leftDisplaySIde {
+	width: 170px;
+	float: left;
+	font-size: 11px;
+}
+.printRight .rightDisplaySIde {
+	float: left;
+	margin: 0 0 10px 0;
+	width: 520px !important;
+}
+.printRight .clrBorder {
+	clear: both;
+	border-top: 1px dotted gray;
+}
+.printRight #col-wide .displayField {
+	clear: both;
+	margin: 8px 0 22px;
+	overflow: hidden;
+}
+.printRight .narrow-col .displayFieldBlock {
+	margin: 5px 0 0;
+	overflow: hidden;
+}
+.printLeft h2 {
+	margin: 2px 0 23px 0 !important;
+	color: black;
+}
+.printRight h2 {
+	margin: 0 0 15px 0 !important;
+}
+.preview-buttons{
+	text-align: center;
+	margin: 12px 0;
+}
+/********************************************************************************/
+
+/* START:AdSpace
+*********************************************************************************/
+#adMargin {
+	float: left;
+	width: 570px;
+}
+#adSpace {
+	float: right;
+	width: 330px;
+	margin: 20px 0 0 620px;
+	position: absolute;
+}
+#adSpaceAccount {
+	float: right;
+	width: 290px;
+	overflow: hidden;
+}
+/********************************************************************************/
+
+/* START:Site Map
+*********************************************************************************/
+#siteMap table {
+	border: 0;
+}
+#siteMap td {
+	width: 20%;
+	vertical-align: top;
+}
+#siteMap td .strong,
+#siteMap td b {
+	color: #000;
+}
+#siteMap table td p {
+	margin: 5px 0;
+	padding: 1px 0;
+}
+#siteMap table td a {
+	background: url("grayArrow.png") no-repeat left;
+	margin: 0 0 0 10px;
+	padding: 0 0 0 13px;
+}
+/********************************************************************************/
+
+/* START:Social Plugins and Buttons
+*********************************************************************************/
+.apiCode span {
+	display: inline;
+}
+.social_login_a,
+.linkedinLink {
+	display: block;
+	height: 16px;
+}
+.social_login_a {
+	float: right;
+	margin: 0 0 0 15px;
+	width: 16px;
+}
+.linkedinLogin,
+.linkedin_16 {
+	background: url("social/linkedin_16x16.png") no-repeat;
+}
+.linkedinLink {
+	line-height: 16px;
+	margin: 10px 0;
+	padding: 0 0 0 20px;
+}
+.in_share {
+	float: left;
+	margin: 0 6px 0 0;
+	border: 0;
+}
+#social_autoFill {
+	font-weight: bold;
+	margin: 10px 0;
+	padding: 0 0 0 21px;
+	line-height: 16px;
+}
+.facebook_16 {
+	background: url("social/facebook_16x16.png") no-repeat;
+}
+.RightLink {
+	float: right;
+}
+.RightLink a {
+	font-size: 12px;
+	font-weight: normal;
+}
+#shareThis {
+	border-left: 1px solid #D9D9D9;
+	border-right: 1px solid #D9D9D9;
+	clear: both;
+	margin: 0;
+	padding: 15px 0 10px 10px;
+}
+.in_CompanyInsiderWidget,
+.in_ProfileInsiderWidget{
+	margin: 15px 0;
+}
+a.social_login_button{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin: 0 0 0 5px;
+	padding: 0 !important;
+	vertical-align: top;
+}
+.login_buttons_txt {
+	line-height: 15px;
+}
+.slb_linkedin,
+.slb_facebook,
+.slb_google_plus,
+.slb_google {
+	background: url("social/social.png") no-repeat;
+}
+.slb_linkedin {
+	background-position: 0 -38px;
+}
+.slb_facebook {
+	background-position: 0 0;
+}
+.slb_google_plus, .slb_google {
+	background-position: 0 -19px;
+}
+.social_plugins_div {
+	font-weight: normal;
+	margin: 8px 0 0;
+	float: right;
+	clear: both;
+}
+#registr-form {
+	margin: 15px 0 0 0;
+}
+.linkedin-icon {
+	background: url("social/linkedin_16x16.png") no-repeat left;
+	padding: 3px 0 3px 20px;
+}
+.soc_reg_form .login_buttons_txt {
+	font-size: 11px;
+}
+.soc_reg_form .social_plugins_div {
+	float: none;
+}
+.ui-dialog .social_plugins_div {
+	margin: 5px 0 0;
+}
+/********************************************************************************/
+
+/* START:Browse by Tree
+*********************************************************************************/
+ul.browse_tree, ul.browse_tree *,
+ul.browse_tree label {
+	margin: 0;
+	padding: 0;
+}
+ul.browse_tree, ul.browse_tree * {
+	list-style-type: none;
+	list-style-position: inside;
+}
+ul.browse_tree img.arrow {
+	padding: 2px 0 0;
+	border: 0;
+	width: 15px;
+}
+ul.browse_tree li {
+	padding: 0;
+	clear: both;
+}
+ul.browse_tree li ul {
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+ul.browse_tree label {
+	cursor: pointer;
+}
+ul.browse_tree label.hover {
+	color: red;
+}
+ul.browse_tree {
+	margin: 5px 0;
+}
+ul.browse_tree li .arrow,
+ul.browse_tree li .checkbox {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+}
+ul.browse_tree li .arrow {
+	background: url("../../../../system/ext/jquery/ltL_nes.gif") no-repeat;
+}
+ul.browse_tree li .collapsed {
+	background: url("../../../../system/ext/jquery/ltP_nes.gif");
+}
+ul.browse_tree li .expanded {
+	background: url("../../../../system/ext/jquery/ltM_ne.gif");
+}
+ul.browse_tree li .checkbox {
+	background: url("../../../../system/ext/jquery/cbUnchecked.gif") no-repeat center top;
+}
+ul.browse_tree li .checked {
+	background: url("../../../../system/ext/jquery/cbChecked.gif");
+}
+ul.browse_tree li .half_checked {
+	background: url("../../../../system/ext/jquery/cbIntermediate.gif");
+}
+div.browse_tree_button {
+	cursor: pointer;
+	width: 313px;
+	height: 17px;
+	padding: 3px 0 0 0;
+	border: 1px solid #B3B3B3;
+	color: #484846;
+	font-size: 12px;
+	background: url("../../../../system/ext/jquery/arrow_tree.png") right center no-repeat #fff;
+}
+.select-free-fix {
+	position: absolute;
+	z-index: 10;
+	overflow: hidden;
+	width: 700px;
+	display: none;
+	height: 250px;
+	background: #fff;
+	padding: 0 0 2px 0;
+}
+.select-free-fix iframe {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	filter: mask();
+	width: 3000px;
+	height: 3000px;
+}
+.select-free-fix .bd {
+	border: 1px solid #aaa;
+	overflow: auto;
+	height: 250px;
+}
+.treeContentDiv {
+	overflow: auto;
+	margin: 3px 0 0 0;
+	overflow-x: auto;
+	width: 100%
+}
+/********************************************************************************/
+
+/* START:Form Builder Fields
+*********************************************************************************/
+#form_builder .form-builder-cont {
+	padding: 10px;
+	display: none;
+	width: 310px;
+	float: left;
+}
+#displayJobsCol_Wide {
+	width: 620px;
+}
+legend.fh-legend {
+	display: none;
+}
+.ui-sortable {
+	border: 1px dotted #ddd;
+	margin: 10px 0;
+	padding: 10px;
+}
+.ui-sortable legend.fh-legend {
+	display: inline;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 15px;
+	color: #ddd;
+}
+.form-builder-cont legend {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+.form-builder-cont fieldset {
+	border: 1px dotted #fff;
+}
+.display-layout {
+	margin: 0 auto;
+	text-align: center;
+	width: 296px;
+}
+.display-layout .layout-item {
+	background: transparent;
+	float: left;
+	margin: 3px 0;
+	padding: 0;
+}
+.narrow-col {
+	width: 325px;
+	float: left;
+}
+#displayResumeCol_Wide {
+	width: 496px;
+}
+.builder-col-narrow {
+	width: 255px;
+}
+.narrow-col h3 {
+	float: left;
+	margin: 0 5px 0 0;
+	display: inline;
+	font-size: 12px;
+}
+/********************************************************************************/
+
+/* START:Google map
+*********************************************************************************/
+#googleMap-links {
+	float: right;
+	margin: 0 0 5px;
+	clear: both;
+}
+#googleMap-links a {
+	font-size: 11px;
+}
+#googleMap-links a.listLink-active {
+	font-weight: bold;
+	text-decoration: none;
+	cursor: default;
+}
+#image_marker,
+#image_marker_Resume,
+#image_marker_priority {
+	background: url("marker_orange.gif");
+}
+#image_marker_indeed {
+	background: url("marker_blue.gif");
+}
+#image_marker_simplyHired {
+	background: url("marker_green.gif");
+}
+#image_marker_beyond {
+	background: url("marker_gray.gif");
+}
+#image_marker,
+#image_marker_Resume,
+#image_marker_priority,
+#image_marker_indeed,
+#image_marker_simplyHired,
+#image_marker_beyond {
+	width: 22px;
+	height: 32px;
+	text-align: center;
+	padding: 1px 0 0 0;
+	font-size: 11px;
+}
+.listingsWithoutLocation,
+.listingsWithoutLocation .strong,
+.listingsWithoutLocation a,
+.listingsWithoutLocation a .strong {
+	color: #939393 !important;
+}
+.mapListings-results {
+	font-size: 11px !important;
+	overflow: hidden;
+	margin: 5px 0;
+	padding: 7px 5px;
+	border-top: 1px dotted #a2aec3;
+	border-bottom: 1px dotted #a2aec3;
+}
+.mapListings-results a .strong {
+	font-size: 11px !important;
+}
+.mapListings-results:hover {
+	background: #eef8ff !important;
+}
+#map {
+	height: 615px;
+	border: 1px solid #c7c7c7;
+	margin: 0 0 0 20px;
+}
+#googleMap-searchResults {
+	height: 520px;
+	overflow-y: auto;
+	margin: 0 0 10px 0;
+}
+#googleMap-pagging {
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+#googleMap-pagging .nextBtn,
+#googleMap-pagging .prevBtn,
+#googleMap-pagging .navigationItems {
+	clear: none;
+	display: inline;
+}
+#googleMap-pagging .nextBtn,
+#googleMap-pagging .prevBtn {
+	background: none !important;
+	color: black !important;
+	margin: 0 1px;
+}
+#googleMap-pagging .nextBtn a,
+#googleMap-pagging .prevBtn a {
+	background: none !important;
+	color: black !important;
+	padding: 0 2px;
+	text-transform: inherit;
+}
+a#listView-icon,
+a#mapView-icon {
+	background: url("icons.png") no-repeat;
+	padding: 2px 0 2px 20px;
+}
+a#listView-icon {
+	background-position: 0 -90px;
+}
+a#mapView-icon {
+	background-position: 0 -108px;;
+}
+/********************************************************************************/
+
+/* START:Products page and Shopping Cart
+ *********************************************************************************/
+#shoppingCart {
+	margin: 13px 0 0;
+}
+#shoppingCart a img {
+	vertical-align: text-top;
+}
+.products {
+	border: 1px solid #e3e3e3;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	width: 800px;
+	float: left;
+	padding: 10px;
+	margin: 15px 50px;
+	box-shadow: 0 0 4px #DDD;
+}
+.products:hover {
+	border: 1px solid #f8d2d0;
+	background: #fbf2f1;
+}
+.productInfo {
+	width: 580px;
+	float: left;
+	margin: 0 0 0 20px;
+}
+.productInfo a {
+	text-decoration: underline;
+}
+.productInfo a:hover,
+.productLinks a {
+	text-decoration: none;
+}
+.productLinks .button {
+	margin: 0 0 10px 0;
+}
+.productLinks {
+	background: #ffeae8;
+	border: 1px solid #fcdbd8;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	border-radius: 7px;
+	text-align: center;
+	padding: 15px 10px;
+	width: 170px;
+	float: right;
+	margin: 0;
+	box-shadow: 0 0 2px #DDD;
+}
+.productsPrice {
+	font-size: 13px;
+	margin: 0 0 10px 0;
+}
+#productDetails {
+	line-height: 26px;
+}
+.productDetails-name {
+	width: 140px;
+	float: left;
+	font-weight: bold;
+	font-size: 13px;
+}
+.productDetails-info {
+	float: left;
+	display: inline;
+	font-size: 13px;
+}
+.viewProductsPrice,
+#volume_price {
+	font-size: 14px !important;
+	font-weight: bold;
+}
+#volume_price {
+	display: inline;
+	line-height: 18px;
+}
+#productsSelect {
+	float: left;
+	margin: 0 15px 0 0;
+}
+#productTotal {
+	text-align: right !important;
+	padding: 2px 5px 0 0;
+}
+#total_price {
+	padding: 0;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+}
+.currentProducts-name {
+	width: 250px;
+	float: left;
+	font-weight: bold;
+	font-size: 13px;
+	margin: 4px 0;
+	padding: 0 15px 0 0;
+}
+.currentProducts-info {
+	float: left;
+	display: inline;
+	margin: 4px 0;
+	font-size: 13px;
+}
+#promotionCode {
+	margin: 10px;
+}
+#promotionCode input#inputPromotionCode {
+	width: 150px !important;
+}
+.continue-shopping,
+.product-detail-button {
+	float: left;
+}
+.continue-shopping {
+	margin: 0 10px 0 35%;
+}
+.product-detail-button {
+	margin: 0 10px 0 0;
+}
+#productDetails ~ table td input[type="text"] {
+	width: 218px !important;
+}
+.productLinks .button {
+	min-width: 170px;
+}
+.productLinks #add-listing {
+	margin: 5px 0 0 0;
+}
+/********************************************************************************/
+
+/* START:Profiler
+*********************************************************************************/
+.profiler {
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	z-index: 15;
+}
+.profiler * {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#blockResize {
+	width: 100%;
+	height: 10px;
+	cursor: n-resize;
+	display: none;
+}
+.profilerHead {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 960px;
+	background: #222;
+	border: 12px solid #000;
+	border-bottom: none;
+	font-family: "Lucida Grande", Tahoma, Arial, sans-serif;
+}
+.profiler h3 {
+	font-weight: normal;
+	line-height: 200px;
+	padding: 0 15px;
+	color: #fff;
+}
+.profiler,
+.profiler td {
+	color: #444;
+}
+.logsBlock {
+	height: 200px;
+	display: none;
+	overflow: auto;
+	width: 99%;
+}
+.metrics {
+	background: #000;
+	width: 100%;
+}
+.functionsTab,
+.queriesTab {
+	border-top: 1px solid #ccc;
+	overflow: auto;
+	width: 100%;
+}
+.profiler .blue {
+	color: #3769A0 !important;
+}
+.profiler .purple {
+	color: #953FA1 !important;
+}
+.profiler .collapseTab {
+	display: none;
+	color: yellow;
+	width: 2%;
+}
+.profiler,
+.functionsTab,
+.queriesTab {
+	display: none;
+}
+.profiler,
+.functions,
+.queries,
+.functions .functionsTab,
+.queries .queriesTab {
+	display: block !important;
+}
+.functions td.blue,
+.queries td.purple {
+	background: #222 !important;
+	border-bottom: 6px solid #fff !important;
+	cursor: default !important;
+}
+.metrics td {
+	height: 40px;
+	width: 20%;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #000;
+	border-bottom: 6px solid #444;
+}
+.metrics td:hover {
+	background: #222;
+	border-bottom: 6px solid #777;
+}
+.profiler var {
+	font-size: 23px;
+	font-weight: bold;
+	font-style: normal;
+	margin: 0 0 3px 0;
+	display: block;
+}
+.profiler h4 {
+	font-size: 12px;
+	color: #fff;
+	margin: 0 0 4px 0;
+}
+.profiler .main {
+	width: 100%;
+}
+.profiler .main td {
+	padding: 7px 15px;
+	text-align: left;
+	background: #151515;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	border-bottom: 1px dotted #323232;
+	color: #fff;
+}
+.profiler .main td, pre {
+	font-family: Monaco, "Consolas", "Lucida Console", "Courier New", monospace;
+	font-size: 11px;
+}
+.profiler .main td b {
+	float: left;
+	font-weight: normal;
+	color: #E6F387;
+}
+.profiler .main td:hover,
+table.main thead td.currentColumn {
+	background: #2E2E2E;
+}
+table.main thead td.currentColumn {
+	color: #fff;
+}
+#infometr {
+	width: 5%;
+	cursor: default;
+}
+#infometr:hover {
+	background: #000;
+}
+/********************************************************************************/
+
+/* START:Custom Jquery
+*********************************************************************************/
+.ui-datepicker-trigger {
+	position: relative;
+	top: 2px;
+	left: 3px;
+	margin: 0 5px 0 0;
+}
+/********************************************************************************/
+
+/* START:PayPal form
+*********************************************************************************/
+select#country,
+select#card_type,
+select#state {
+	width: 315px !important;
+}
+select#exp_date_mm,
+select#exp_date_yy {
+	width: 125px !important;
+}
+input#state {
+	border: 1px solid #C6C6C6;
+	width: 313px;
+}
+/********************************************************************************/
+
+/* START:Add/Edit Listing Form
+*********************************************************************************/
+#addListingForm {
+	margin: 0 0 0 15px;
+}
+#addListingForm .inputName {
+	width: 19%;
+}
+.complex {
+	width: 570px;
+}
+.complex .inputName {
+	width: 23%;
+}
+#editListingForm .inputName {
+	width: 20%;
+}
+.input-form-bc {
+	display: inline;
+}
+/********************************************************************************/
+
+/* START:Cookie Preferences Slider
+*********************************************************************************/
+#cookiePreferencesSlider {
+	height: 280px;
+}
+/********************************************************************************/
+
+/* START:Highlight Templates Fix
+*********************************************************************************/
+#underHeader > .templateHighlight {
+	height: 40px;
+	float: left;
+}
+#dropDown > .templateHighlight {
+	width: 50px;
+	top: 0;
+	position: absolute;
+}
+#dropDown > .templateHighlight ul {
+	top: 30px;
+}
+.leftColumn > .templateHighlight {
+	height: 170px;
+}
+/********************************************************************************/

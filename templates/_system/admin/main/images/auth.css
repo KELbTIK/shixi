@@ -1,0 +1,112 @@
+body {
+    background: #F9F9F9;
+	font-size: 13px;
+    font-family: 'Droid Sans',sans-serif;
+	margin: 0; padding: 0;
+}
+
+/* START:Include fonts
+*********************************************************************************/
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('fonts/droidsans-webfont.eot');
+    src: url('fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/droidsans-webfont.woff') format('woff'),
+    url('fonts/droidsans-webfont.ttf') format('truetype'),
+    url('fonts/droidsans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/********************************************************************************/
+
+/* START:Miscellaneous
+*********************************************************************************/
+.clr {clear: both;}
+/********************************************************************************/
+
+/* START:Content
+*********************************************************************************/
+#loginForm {
+    background: white;
+    width: 320px;
+    margin: 150px auto 0;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.30);
+    -moz-box-shadow: rgba(0,0,0, 0.30) 0 0 15px;
+    box-shadow: rgba(0,0,0, 0.30) 0 0 15px;
+    border: 1px solid #808080;
+    overflow: hidden;
+}
+    #loginForm label {
+        color: #666;
+        display: inline-block;
+        margin: 8px 17px 20px;
+        line-height: 22px;
+    }
+        #loginForm label input {
+            width: 270px;
+            padding: 7px;
+            border: 1px solid #AAA;
+        }
+        #loginForm label input:focus {
+            border: 1px solid #555;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+            -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+        }
+    #loginForm input#loginButton {
+        background: #DDD;
+        border: 1px solid #ACACAC;
+        color: #333;
+        cursor: pointer;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.06);
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.06);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.06);
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        padding: 3px 15px; margin: 0 0 20px 20px;
+        float: left;
+        border-radius: 2px;
+        font-size: 15px;
+    }
+    #loginForm input#loginButton:hover {
+        background: #EEE;
+        border: 1px solid #AAA;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    }
+	#loginForm select#languages {
+		width: 190px;
+		float: right;
+		margin: 0 17px 0 0;
+	}
+#headerLogo {
+    background: url(loginheaderback.png) repeat-x;
+    height: 50px;
+    padding: 15px;
+    color: #666;
+}
+#authFormLogin {
+    background: url(authLogin-bg.png) no-repeat;
+    width: 320px; height: 211px;
+}
+fieldset#errorAuth {
+    border: 0;
+    font-size: 12px;
+    color: red;
+    padding: 10px 15px 0;
+}
+#recaptcha_area, #recaptcha_table {
+	margin: 0 -16px;
+}
+/********************************************************************************/
+
+/* START:Copyright
+*********************************************************************************/
+#copyright {
+    clear: both;
+    text-align: center;
+    color: #444;
+    margin: 17px 0 0 0;
+    font-size: 12px;
+}
+/********************************************************************************/

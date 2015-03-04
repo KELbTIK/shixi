@@ -1,0 +1,682 @@
+/* START STYLES
+ * ******************************************************* */
+input[type="text"],
+input[type="password"],
+select,
+textarea,
+h1{
+	text-align: right;
+}
+table,
+table thead,
+table thead th,
+table tbody td {
+	text-align: right !important;
+}
+/* END STYLES
+ * ******************************************************* */
+
+
+/* START DESIGN STYLES
+ * ******************************************************* */
+.inputName {
+	padding: 0 5px 0 0;
+}.printPage {
+	text-align: right;
+}
+/* END DESIGN STYLES
+ * ******************************************************* */
+
+
+/* START TREE
+ * ******************************************************* */
+.ui-dialog .ui-dialog-title {
+	float: right !important;
+	margin: 0.1em 0.1em 0.2em !important;
+}
+ul.tree li {
+	padding: 0 10px 0 0 !important;
+}
+ul.tree label {
+	padding: 2px 10px 0 0 !important;
+}
+ul.tree li .checkbox {
+	float: right !important;
+}
+ul.tree li .collapsed {
+	float: right !important;
+}
+ul.tree li .expanded {
+	float: right !important;
+}
+ul.tree li .arrow {
+	float: right !important;
+}
+/* END TREE
+ * ******************************************************* */
+/* START:Arab Language Fixes
+*********************************************************************************/
+.blue,
+.bcName,
+.bcField,
+.bcFieldSmall,
+.notDesc,
+.notCheck,
+.instruction,
+.browseCompanyAB,
+.priorityListing ul li,
+.evenrow ul li,
+.oddrow ul li,
+.curSearchItem a,
+.MyAccount,
+#adMargin,
+.numberPerPage,
+#contact-info,
+.tree-input-field,
+span.jqTransformCheckboxWrapper {
+	float: right;
+}
+.tree-available-count {
+	margin: 0 10px 0 0;
+}
+.searchGeoDistance,
+.RSS,
+.RightLink,
+#adSpace,
+#adSpaceAccount {
+	float: left;
+}
+.inputName,
+.inputField,
+.inputReq,
+.inputNameBig,
+.inputFieldSmall,
+.currentProducts-name,
+.input-form-bc,
+.productDetails-name,
+.contact-detail-cap,
+#note-block {
+	float: right;
+	direction: rtl;
+}
+.subuser-permis-ul,
+.subuser-cb-ul,
+#poll form p,
+#poll form,
+#mailchimp-form label,
+.subuser-cb-ul,
+.displayField ul,
+.refineItem,
+.pm-sub-menu,
+.displayFieldBlock h3,
+#productDetails ~ table,
+.block_values_button,
+.compProfileInfo,
+.listings_per_page_form,
+#listings_per_page_form,
+.pageNavigation form,
+.listing-info .left-side {
+	direction: rtl;
+}
+.narrow-col h3,
+.social_plugins_div .login_buttons_txt {
+	float: right;
+	direction: rtl;
+	margin: 0 0 0 5px;
+}
+.inputName,
+#messageBox .inputName {
+	width: 19% !important;
+	float: right;
+}
+#addListingForm .inputName {
+	width: 13% !important;
+}
+#messageBox .inputButton {
+	text-align: right;
+	width: 81% !important;
+}
+.ui-dialog .ui-dialog-content {
+	text-align: right !important;
+}
+.social_plugins_div {
+	font-size: 11px;
+}
+#messageBox #slb_google,
+#messageBox #slb_facebook,
+#messageBox #slb_linkedin {
+	top: -4px;
+}
+span.jqTransformCheckboxWrapper {
+	margin: -1px 5px 0;
+}
+.soc_reg_form .social_plugins_div {
+	float: none;
+}
+.contact-us .fix {
+	width: 94%!important;
+}
+.compProfileTitle,
+.js-emp-menu ul li {
+	text-align: right;
+}
+.listingInfo h2 div {
+	float: left!important;
+}
+.refineItem a {
+	display: inline-block;
+}
+p.mailchimp-nl-desc {
+	text-align: right!important;
+}
+#productDetails table {
+	margin: 0 0 0 50%;
+}
+#productDetails table td {
+	text-align: center!important;
+}
+#productDetails ~table td input[type="text"] {
+	width: 218px!important;
+}
+#productsSelect {
+	margin: 0 15px 0 88%;
+}
+#productDetails .jqTransformSelectWrapper div span,
+#shoppingCartTable .jqTransformSelectWrapper div span {
+	position: relative;
+	float: right;
+}
+.product-detail-button {
+	margin: 0 20px 0 75%;
+}
+.continue-shopping {
+	width: 53%;
+}
+.ui-icon-closethick {
+	font-size: 0;
+}
+.blueBox h1 {
+	margin: 2px 5px 2px 5px;
+}
+.productDetails-info {
+	float: right;
+}
+#productDetails {
+	text-align: right;
+}
+.in_share {
+	margin: 0 0 0 67%!important;
+}
+#card_number {
+	width: 348px!important;
+}
+.inputStringMoney {
+	width: 238px !important;
+}
+#uploadForm td {
+	width: 220px;
+}
+#uploadForm td input[type="text"] {
+	width: 219px;
+	margin: 0 0 0 330px;
+}
+.instruction .instr_icon {
+	margin: 0 10px 0 0;
+}
+#instruction_DesiredSalary .instr_cont,
+#instruction_ZipCode .instr_cont,
+#instruction_StartDate .instr_cont {
+	margin: 0 0 0 -265px;
+}
+#instruction_StartDate .instr_cont {
+	margin: -20px 0 0 -265px;
+}
+#instruction_DesiredSalary .instr_arrow,
+#instruction_ZipCode .instr_arrow,
+#instruction_StartDate .instr_arrow {
+	margin: 0 0 0 -25px;
+	top: 9px;
+}
+#instruction_StartDate .instr_arrow {
+	visibility: hidden;
+	margin: 0 0 0 20px;
+}
+.currentProducts-info {
+	float: none;
+}
+.bread-crumb {
+	float: right;
+}
+#table-alerts {
+	margin: 0 0 0 30%;
+}
+.pageNavigation {
+	margin: 10px 0 0 10px;
+	float: left;
+}
+.align_right a {
+	margin: 0 10px;
+}
+.ui-multiselect-checkboxes label {
+	text-align: right;
+}
+.ui-multiselect-header ul li,
+.ui-multiselect span {
+	float: right !important;
+}
+.ui-multiselect .ui-icon,
+.ui-multiselect-header li.ui-multiselect-close {
+	float: left !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	left: 0.3em;
+}
+/*** Start Profiler Fix ***/
+.profiler table,
+.profiler table thead,
+.profiler table thead th,
+.profiler table tbody td {
+	text-align: center!important;
+}
+#metrics .blue {
+	display: table-cell!important;
+	float: none;
+}
+.priorityListing > td,
+.evenrow > td,
+.oddrow > td {
+	padding: 7px 0 7px 5px;
+}
+/*** End Profiler Fix ***/
+.priorityListing > td,
+.evenrow > td,
+.oddrow > td {
+	padding: 7px 0 7px 5px;
+	vertical-align: middle;
+}
+#poll span{
+	display: inline-block;
+}
+/* START:Main Page
+ * ******************************************************* */
+.jqTransformSelectWrapper ul,
+#news ul,
+#innerBlogContentDiv {
+	text-align: right;
+}
+.fl-listing,
+#news ul li,
+#mailchimp-newsletter form,
+#poll form,
+.jqTransformSelectWrapper div span {
+	direction: rtl;
+}
+.jqTransformSelectWrapper div span {
+	padding: 8px 7px 0 7px;
+	width: 97% !important;
+}
+.jqTransformSelectWrapper a.jqTransformSelectOpen {
+	left: 0;
+	right: auto;
+}
+.fl-logo {
+	float: right;
+	border-left: 1px solid #B6B6B6;
+	border-right: none;
+}
+.fl-listing {
+	width: 57%;
+}
+#blog-block h2 {
+	text-align: right;
+	margin: 0 40px 30px 10px;
+}
+.fl-listing .listing-name,
+#news ul li {
+	padding: 0 13px 0 0;
+}
+#featured-jobs-block h2,
+#latest-jobs-block h2 {
+	text-align: right;
+}
+.jobs-by-column ul {
+	padding: 0 20px 0 0;
+	margin: 0 40px 15px 10px;
+	direction: rtl;
+}
+.blue {
+	padding: 0 0 0 5px;
+}
+.jobs-by-column h3,
+.emp-js-left h3,
+.news-blog-column h3,
+#mailchimp-newsletter h1,
+#poll h2 {
+	text-align: right;
+	margin: 40px 40px 30px 10px;
+}
+.blogDate {
+	float: right;
+}
+#mailchimp-newsletter h1 {
+	margin: 32px 0 20px 30px;
+}
+#poll h2 {
+	margin: 32px 20px 20px 0;
+}
+#poll p {
+	text-align: right;
+	padding: 5px 20px 5px 0 !important;
+}
+.emp-js-right #mailchimp-newsletter p,
+.emp-js-right #poll p {
+	padding: 10px 15px 10px 0 !important;
+}
+.polls-fieldset {
+	margin: 10px 20px 0 0;
+}
+#poll input {
+	margin: 0 20px 0 0;
+}
+#blogBlock h2 {
+	text-align: right;
+	margin: 20px 30px 10px 0;
+}
+.emp-js-right {
+	float: left;
+}
+.emp-js-left,
+.search-only {
+	float: right;
+}
+#companies_per_page_form .jqTransformSelectWrapper div span,
+.companies_per_page_form .jqTransformSelectWrapper div span {
+	width: 83% !important;
+	display: block;
+	position: relative;
+}
+#companies_per_page_form .jqTransformSelectWrapper a.jqTransformSelectOpen,
+.companies_per_page_form .jqTransformSelectWrapper a.jqTransformSelectOpen {
+	top: 0;
+}
+.more,
+.less {
+	font-size: 0;
+	float: right;
+	padding: 0 0 0 5px;
+}
+.listings_per_page_form .jqTransformSelectWrapper span,
+#listings_per_page_form .jqTransformSelectWrapper span {
+	padding: 10px 5px 0;
+}
+.listing-section .right-side {
+	float: left;
+}
+div.tree_button span {
+	background-position: left center !important;
+	width: 345px;
+}
+div.tree_button {
+	float: right !important;
+}
+.mt-count-available{
+	float: right;
+	direction: rtl;
+	padding: 10px;
+}
+.numberPerPage #listings_per_page_form {
+	direction: ltr;
+	float: left;
+	width: auto;
+}
+#messageBox .inputField textarea {
+	width: 94%;
+}
+.numberPerPage {
+	width: 100%;
+}
+input.searchIntegerLess,
+input.searchIntegerMore {
+	width: 148px;
+}
+.pageNavigation {
+	width: 94%;
+}
+.narrow-col .displayFieldBlock h3 {
+	padding: 0 15px 0 5px;
+}
+.narrow-col .displayFieldBlock,
+.displayFieldBlock {
+	text-align: right;
+}
+.compProfileInfo .company-name,
+.compProfileInfo .strong:first-of-type {
+	margin: 0 -10px 0 0;
+}
+.curSearchItem a {
+	float: left !important;
+	font-size: 0;
+}
+.narrow-col .displayFieldBlock h3,
+.narrow-col .displayFieldBlock .displayField {
+	display: inherit;
+}
+.leftDisplaySIde,
+.rightDisplaySIde,
+.my-account {
+	float: right !important;
+}
+.index-wrapper {
+	direction: rtl;
+}
+.Pagging,
+.results-paging .topNavBar .numberPerPage,
+.head #googleMap-links {
+	float: left;
+}
+.social_plugins_div a {
+	top: -8px !important;
+}
+.SearchResultsCompany .numberResults,
+.SearchResultsCompany .topNavBar .pageNavigation {
+	float: left;
+}
+.SearchResultsCompany .numberResults {
+	line-height: 40px;
+}
+.SearchResultsCompany .numberPerPage {
+	float: right;
+	width: 50%;
+}
+.SearchResultsCompany .topNavBar .pageNavigation {
+	width: auto;
+}
+.SearchResultsCompany .topNavBar {
+	min-height: 34px;
+}
+.top-right-menu .social_plugins_div a {
+	top: 10px !important;
+}
+.ModResults ul li a,
+.Rating p,
+.Comments a,
+.topResultsLinks ul li a {
+	background: url("breadcr-arrow-arab.png") no-repeat right center;
+	padding: 0 20px 0 0 !important;
+}
+.ModResults,
+.Rating,
+.Comments {
+	margin: -40px 0 0;
+}
+.underQuickLinks ul li {
+	direction: ltr;
+}
+.after-quick-links .Pagging {
+	float: right;
+}
+.after-quick-links .Pagging .nextBtn {
+	display: inline-block;
+}
+.userInfo center {
+	text-align: right;
+}
+/* Additional FIXES */
+
+#employers a {
+	padding: 10px 20px 20px 20px;
+	font-size: 33px;
+}
+#jTabs .css-panes ul a,
+.polls-variable {
+	float: right;
+}
+#featured-head,
+#latest-head,
+#featured,
+#latest,
+#job-seeker-tools .head,
+#left-column {
+	text-align: right;
+}
+.blogDate,
+#pollButton {
+	float: left;
+}
+.jobseeker-button a {
+	font-size: 19px !important;
+}
+#main-div-after {
+	text-align: right;
+}
+#productDetails ~ table td:first-child {
+	width: 0;
+}
+.bcName {
+	width: 10%;
+}
+.searchActDate,
+.searchIntegerLess,
+.searchIntegerMore {
+	width: 157px !important;
+}
+input#Location_ZipCode {
+	width: 100px !important;
+	float: left;
+}
+.searchGeoDistance {
+	float: none;
+}
+
+.results-paging .numberPerPage {
+	margin: 0;
+}
+.results-paging .numberResults {
+	float: left;
+	padding: 12px;
+}
+.list {
+	background: url("red-arrow-arab.png") no-repeat right center;
+	padding: 0 15px 0 0;
+}
+.BreadCrumbs {
+	text-align: right;
+}
+.BreadCrumbs p span,
+.BreadCrumbs p a {
+	background: url("breadcr-arrow-arab.png") no-repeat right center;
+	padding: 0 10px 0 0;
+}
+.my-account ul {
+	float: right;
+}
+.results {
+	margin: 0;
+}
+.inputStringMoney {
+	width: 181px !important;
+}
+/* ******************************************************* */
+
+
+/* START:Reports
+*********************************************************************************/
+#reports table {
+	float: right;
+	clear: both;
+}
+#reports form span {
+	right: 0;
+}
+/********************************************************************************/
+
+
+/* START:Application Tracking
+*********************************************************************************/
+.navigation-application {
+	float: left;
+}
+.ApplicationPointedInListingInfo,
+.app-tracking,
+.navigation-application .numberPerPage {
+	direction: rtl;
+}
+.tableSearchResultApplications {
+	direction: ltr;
+}
+/********************************************************************************/
+
+/* START:Saved Searches CSS
+*********************************************************************************/
+.saved-search-tbl {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Tree
+*********************************************************************************/
+#tree-block ul.tree li .checkbox {
+	background-position: top right;
+	padding: 0 20px 0 0;
+}
+ul.tree li ul {
+	padding: 0 8px 0 0;
+}
+.tree-child-close {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.tree-child-1 {
+	margin: 0 15px 3px 0 !important;
+}
+.tree-child-2 {
+	margin: 0 30px 3px 0 !important;
+}
+.tree-child-3 {
+	margin: 0 45px 3px 0 !important;
+}
+.tree-child-4 {
+	margin: 0 60px 3px 0 !important;
+}
+.tree-input-field {
+	margin: 9px 0 0 0;
+}
+.tree-input-field .left {
+	float: right;
+}
+.tree-available-count {
+	margin: 0 10px 0 0;
+}
+/********************************************************************************/
+
+/* START:Radio Buttons
+*********************************************************************************/
+input[type="radio"],
+label,
+p {
+	direction: rtl;
+}
+label span {
+	display: inline-block;
+}
+/********************************************************************************/

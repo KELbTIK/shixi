@@ -1,0 +1,2 @@
+<input type="text" value="{$value|escape:'html'}" class="inputString {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}]{else}{$id}{/if}" /><br/>
+<i><b>e.g.</b> https://www.youtube.com/watch?v=XXXXXXXXXXX</i>

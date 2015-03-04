@@ -1,0 +1,1 @@
+<input type="text" class="inputInteger {if $complexField}complexField{/if}" value="{tr type="float"}{$value|default:0}{/tr}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}]{else}{$id}{/if}" {if $id == 'price_per_unit' || $id == 'renewal_price_per_listing'|| $id == 'amount'||$id == 'price'}style="width: 90px;"{/if} />

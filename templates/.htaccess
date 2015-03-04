@@ -1,0 +1,18 @@
+# Apache 2.4
+<IfModule mod_authz_core.c>
+	<Files ~ "\.(php|pl)$">
+		Require all denied
+	</Files>
+</IfModule>
+
+# Apache 2.2
+<IfModule !mod_authz_core.c>
+	<Files ~ "\.(php|pl)$">
+		Order Allow,Deny
+		Deny from all
+	</Files>
+</IfModule>
+
+RemoveHandler .php .phtml .php3 .php4 .php5 .pl
+RemoveType .php .phtml .php3 .php4 .php5 .pl
+#php_flag engine off

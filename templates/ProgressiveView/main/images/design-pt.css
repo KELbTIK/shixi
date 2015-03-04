@@ -1,0 +1,30 @@
+/* START:Portuguese Language
+*********************************************************************************/
+#jTabs .ui-state-default a {
+	font-size: 16px !important;
+}
+#job-seeker-tools ul li a {
+	font-size: 17px;
+}
+#top-menu ul li:hover > a {
+	padding: 11px 9px;
+}
+#top-menu ul li a {
+	font-size: 15px;
+	padding: 11px 10px;
+}
+.footer-wrapper ul li a {
+	padding: 5px;
+}
+#currentSearch th,
+#refineResults th {
+	font-size: 16px;
+}
+#sort-by .sbOptions {
+	width: 150px;
+}
+#applicationFilter .jqTransformSelectWrapper,
+#applicationFilter .jqTransformSelectWrapper ul {
+	width: 190px !important;
+}
+/********************************************************************************/

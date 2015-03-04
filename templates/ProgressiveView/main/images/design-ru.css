@@ -1,0 +1,72 @@
+/* START:Russian Language
+*********************************************************************************/
+.inputName {
+	font-family: Arial;
+}
+#employers {
+	right: -53px;
+}
+#job-seeker-tools ul li a {
+	font-size: 16px;
+}
+#top-menu ul li:hover > a {
+	padding: 11px 12px;
+}
+#top-menu ul li a {
+	font-size: 15px;
+	padding: 11px 13px;
+}
+.search-only {
+	font-size: 9px;
+}
+.currentSearch,
+.refine_button {
+	font-size: 14px;
+}
+.left-side .captions {
+	width: 140px;
+}
+#sort-by a {
+	font-size: 13px;
+}
+#sort-by ul {
+	width: 165px;
+}
+.search-geo-key,
+.search-geo-key ul {
+	width: 173px !important;
+}
+#applicationFilter .jqTransformSelectWrapper,
+#applicationFilter .jqTransformSelectWrapper ul {
+	width: 135px !important;
+}
+#quick-search-left .label {
+	padding: 0 5px 0 15px;
+}
+#quick-search-left h1 {
+	font-size: 18px;
+	margin: 36px 0;
+}
+.numberPerPage .listings_per_page_form,
+.numberPerPage #listings_per_page_form {
+	width: 220px;
+}
+#employer-bg .right-buts {
+	width: 270px;
+}
+.right-buts .post-job,
+.right-buts .search-resume,
+.right-buts .get-resume {
+	width: 225px;
+}
+.right-buts .post-job {
+	font-size: 17px;
+}
+.right-buts .search-resume,
+.right-buts .get-resume {
+	font-size: 15px;
+}
+input#Location_ZipCode{
+	width: 110px !important;
+}
+/********************************************************************************/

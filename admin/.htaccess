@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /admin/
+
+RewriteCond %{REQUEST_URI} .*/kcfinder/(.*)
+RewriteCond %{REQUEST_URI} !.*/kcfinder/(browse.*|upload.*)
+RewriteRule .* ../system/ext/kcfinder/%1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* ./index.php

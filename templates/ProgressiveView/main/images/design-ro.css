@@ -1,0 +1,37 @@
+/* START:Roman Language
+*********************************************************************************/
+#employers {
+	right: -35px;
+}
+#job-seeker-tools ul li a {
+	font-size: 16px;
+}
+#jTabs .ui-state-default a {
+	font-size: 17px !important;
+}
+.jobseeker-button {
+	right: -33px !important;
+}
+.jqTransformSelectWrapper div span {
+	width: 77% !important;
+}
+#currentSearch th,
+#refineResults th {
+	font-size: 16px;
+}
+#activation_date_notless,
+#activation_date_notmore {
+	width: 128px !important;
+}
+.search-geo-key,
+.search-geo-key ul {
+	width: 165px !important;
+}
+input#Location_ZipCode {
+	width: 90px !important;
+}
+#applicationFilter .jqTransformSelectWrapper,
+#applicationFilter .jqTransformSelectWrapper ul {
+	width: 202px !important;
+}
+/********************************************************************************/

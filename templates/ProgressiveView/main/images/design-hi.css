@@ -1,0 +1,27 @@
+/* START:Hindi Language
+*********************************************************************************/
+input.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+a.button {
+	padding: 3px 10px;
+}
+#top-menu ul li a {
+	font-size: 15px;
+	padding: 11px 13px;
+}
+#top-menu ul li:hover > a {
+	padding: 11px 12px
+}
+.footer-wrapper ul li a {
+	padding: 5px;
+}
+#addListingForm .inputName {
+	padding: 0 20px 0 0;
+	width: 15%;
+}
+.white-block h2 {
+	font-size: 17px;
+}
+/********************************************************************************/

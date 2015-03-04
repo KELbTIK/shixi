@@ -1,0 +1,185 @@
+/* START:General CSS
+*********************************************************************************/
+body {
+	text-align: right;
+}
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+	text-align: right;
+	direction: rtl;
+}
+#structure {
+	direction: ltr;
+}
+table,
+table thead,
+table thead th,
+table tbody td {
+	text-align: right !important;
+}
+h1,
+h3,
+p,
+fieldset form table,
+fieldset form table td,
+.setting_block form table td,
+#massMailling h3,
+#massMailling form,
+#massMailling #clear td,
+.fieldset td,
+#filterForm td,
+.head_actions,
+#manage_form td {
+	text-align: left !important;
+}
+.greenButton,
+.grayButton {
+	margin: 0 5px 1px 3px;
+}
+.numberPerPage {
+	padding: 0 25px 0 10px;
+}
+/********************************************************************************/
+
+/* START:Dashboard
+*********************************************************************************/
+h1.usersOnline,
+h1.payments,
+h1.registered,
+h1.postings,
+h1.quickLinks,
+h1.updates {
+	background-position: right 0;
+	padding: 0 40px 0 0;
+}
+/********************************************************************************/
+
+/* START:Left Menu
+*********************************************************************************/
+.menuName {
+	float: right;
+	margin: 10px 8px 0 0;
+}
+.menuArrow {
+	float: left;
+	margin: 0 0 0 5px;
+}
+.lmsih a {
+	width: 226px;
+	padding: 5px 28px 5px 10px;
+}
+/********************************************************************************/
+
+/* START:jQuery
+*********************************************************************************/
+.setting_icon {
+	float: left;
+}
+.setting_button {
+	padding: 2px 5px 0 5px !important;
+}
+.ui-icon {
+	font-size: 0;
+}
+.CodeMirror-sizer {
+	min-width: inherit !important;
+}
+/********************************************************************************/
+
+/* START:Multiselect
+*********************************************************************************/
+.ui-multiselect {
+	padding: 5px 5px 5px 0 !important;
+}
+.ui-multiselect-header ul li,
+.ui-multiselect span {
+	float: right !important;
+}
+.ui-multiselect .ui-icon,
+.ui-multiselect-header li.ui-multiselect-close {
+	float: left !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	left: 0.3em;
+}
+.mt-count-available {
+	padding: 10px;
+}
+/********************************************************************************/
+
+/* START:Tree
+*********************************************************************************/
+.ui-dialog .ui-dialog-title {
+	float: right !important;
+	margin: 0.1em 0 0.2em !important;
+}
+ul.tree li {
+	padding: 0 10px 0 0 !important;
+	list-style: none;
+}
+ul.tree label {
+	padding: 2px 10px 0 0 !important;
+}
+ul.tree li .checkbox,
+ul.tree li .collapsed,
+ul.tree li .expanded,
+ul.tree li .arrow {
+	float: right !important;
+}
+#tree-block ul.tree li .checkbox {
+	background-position: top right;
+	padding: 0 20px 0 0;
+}
+ul.tree li ul {
+	padding: 0 8px 0 0;
+}
+.tree-child-close {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.tree-child-1 {
+	margin: 0 15px 3px 0 !important;
+}
+.tree-child-2 {
+	margin: 0 30px 3px 0 !important;
+}
+.tree-child-3 {
+	margin: 0 45px 3px 0 !important;
+}
+.tree-child-4 {
+	margin: 0 60px 3px 0 !important;
+}
+.tree-input-field,
+.tree-input-field .left {
+	float: right;
+	width: 266px;
+	text-align: right;
+}
+.tree-available-count {
+	margin: 0 10px 0 0;
+}
+.right {
+	float: left;
+}
+.left {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Social Media
+*********************************************************************************/
+#social-media td {
+	direction: rtl;
+}
+#social-media #network-list img {
+	padding: 0 0 0 7px;
+}
+#postJobs p {
+	text-align: right !important;
+}
+.clear-border-left {
+	border: 1px solid transparent;
+}
+/********************************************************************************/

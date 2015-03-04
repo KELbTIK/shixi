@@ -1,0 +1,41 @@
+/* START:Deutch Language
+*********************************************************************************/
+#employers a {
+	font-size: 18px;
+}
+.jobseeker-button a {
+	font-size: 18px !important;
+	padding: 15px 10px 20px !important;
+}
+#top-menu ul li:hover > a {
+	padding: 11px 11px;
+}
+#top-menu ul li a {
+	font-size: 14px;
+	padding: 11px 12px;
+}
+.footer-wrapper ul li a {
+	padding: 5px;
+	font-size: 13px;
+}
+#currentSearch th,
+#refineResults th {
+	font-size: 14px;
+}
+#listing-details-menu li a {
+	font-size: 15px;
+}
+.left-side .captions {
+	width: 88px;
+}
+.my-account ul li a {
+	font-size: 14px;
+}
+#top-menu li ul li {
+	min-width: 220px;
+}
+#applicationFilter .jqTransformSelectWrapper,
+#applicationFilter .jqTransformSelectWrapper ul {
+	width: 170px !important;
+}
+/********************************************************************************/

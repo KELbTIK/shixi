@@ -1,0 +1,37 @@
+#cookiePreferences_front-end {
+	position: relative;
+	text-align: center;
+	display:none;
+}
+
+#cookiePreferencesInfBlock {
+	background-color:#FFF;
+	border:1px solid #000;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display:table;
+	margin-right:auto;
+	margin-left:auto;
+	padding:10px;
+}
+
+#cookiePreferencesSlider {
+	float:left;
+	margin: 15px 0 0 50px;
+}
+
+#cookiePreferencesPopupButtons {
+	display:table;
+	margin: 20px auto;
+}
+
+div.cookiePreferencesDescription {
+	width:300px;
+	margin-bottom:15px;
+	margin-left:150px;
+}
+
+#cookiePreferencesMobile_front-end {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}

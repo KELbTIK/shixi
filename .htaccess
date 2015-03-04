@@ -1,0 +1,22 @@
+<IfModule mod_expires.c>
+	<FilesMatch ".(ico|gif|jpe?g|png|swf|css|js|txt)$">
+		ExpiresActive On
+		ExpiresDefault "access plus 1 day"
+		ExpiresByType image/gif "modification plus 1 day"
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+	<FilesMatch ".(ico|gif|jpe?g|png|swf|css|js|txt)$">
+		ExpiresActive On
+		ExpiresDefault "access plus 1 day"
+		ExpiresByType image/gif "modification plus 1 day"
+	</FilesMatch>
+</IfModule>
+
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* ./index.php

@@ -1,0 +1,20 @@
+/* START:Spanish Language
+*********************************************************************************/
+#sort-by .sbOptions {
+	width: 170px;
+}
+.search-geo-key,
+.search-geo-key ul {
+	width: 160px !important;
+}
+fieldset#Location_ZipCode {
+	font-size: 12px;
+}
+input#Location_ZipCode {
+	width: 87px !important;
+}
+#applicationFilter .jqTransformSelectWrapper,
+#applicationFilter .jqTransformSelectWrapper ul {
+	width: 185px !important;
+}
+/********************************************************************************/

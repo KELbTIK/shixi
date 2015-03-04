@@ -1,0 +1,1 @@
+<p class="message">[[Your information was successfully sent]]</p>

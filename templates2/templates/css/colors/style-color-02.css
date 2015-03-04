@@ -1,0 +1,47 @@
+#wrapper { background-image: url(../../images/backgrounds/background_02.jpg); }
+		
+a.btn, a.btn:visited { 
+	border: solid 1px #3a3661; 
+	color:#fff;  	
+	background-color: #6f6ba1; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6f6ba1), to(#5a5688));
+	background-image: -webkit-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: -moz-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: -ms-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: -o-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: linear-gradient(to bottom, #6f6ba1, #5a5688);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#6f6ba1, endColorstr=#5a5688);		
+}
+
+a.btn:hover {
+	background:#5a5688;	
+}
+
+.form-row input.btn {  
+	border: solid 1px #3a3661; 
+	color:#fff;  
+	background-color: #6f6ba1; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6f6ba1), to(#5a5688));
+	background-image: -webkit-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: -moz-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: -ms-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: -o-linear-gradient(top, #6f6ba1, #5a5688);
+	background-image: linear-gradient(to bottom, #6f6ba1, #5a5688);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#6f6ba1, endColorstr=#5a5688);		
+}
+
+.form-row input.btn:hover, .form-row input.btn:focus {
+	background:#5a5688;
+}	
+
+.glyph-item { 
+	color:#5a5688
+}
+
+.pricing .blocks .inner ul li.price {
+	background: #6f6ba1;	
+	border-bottom: solid 5px #5a5688; 
+	margin-top:-1px
+}
+
+.highlight h2 span {
+	color:#6f6ba1
+}

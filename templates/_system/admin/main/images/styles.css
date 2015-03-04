@@ -1,0 +1,208 @@
+﻿
+.inputForm
+{
+	width: 400px;
+	height:100px;
+	margin-left:120px; 
+	margin-top: 10px; 
+	margin-bottom:0px;
+	float: left;
+}
+
+*html .inputForm
+{
+	width: 400px;
+	height:100px;
+	margin-left:120px; 
+	margin-top: 10px; 
+	margin-bottom:0px;
+	float: none;
+}
+
+*html .AdminForm
+{
+	width: 554px;
+	height: 375px;
+	
+}
+.AdminForm
+{
+	text-align:left;
+	width: 554px;
+	height: 375px;
+	background: url("loginned_form.png");
+	background-color: #d5d5d5;
+	margin: auto;
+	margin-top: 100px;
+	font-family:Tahoma;
+	background-repeat:no-repeat;
+}
+
+.adminButton
+{
+	width:  123px;
+	height: 29px;
+	background-image: url("loginned_btn_n.png");
+	float: right;
+	margin-right: 130px;
+	border-width:0px;
+	border-style:none;
+	cursor: hand;
+	color: #e9e9e9;
+	margin-bottom:25px;
+}
+
+.ErrorMsg
+{
+	margin-left: 30px;
+	float: left; 
+	background-color:#936262; 
+	width: 495px;
+	text-align: center;
+	margin-top:5px;
+}
+*html .ErrorMsg
+{
+	margin-left: 15px;
+}
+
+.editBox
+{
+	width: 210px;	
+}
+
+*html .editBox
+{
+	width: 200px;	
+}
+
+
+*html .adminButton
+{
+	margin-bottom:0px;
+}
+
+
+.verTitle
+{
+	float: right; 
+	margin-top: 120px; 
+	font-size: 12px; 
+	margin-right: 125px;
+	color: white;
+}
+
+*html .verTitle
+{
+	margin-right: 60px; 
+	font-size: 12px;
+}
+
+.adminButton:hover
+{
+	background: url("loginned_btn_h.png");
+}
+
+/*-------------------------- OLD -------------------------------
+body,tr,td,table,a,span,div{font-size: x-small}
+h1{font-size: 150%}
+h2{font-size: 140%}
+h3{font-size: 130%}
+h4{font-size: 120%}
+a
+{
+	FONT-WEIGHT: bold;
+	TEXT-DECORATION: none;
+	COLOR: #2222ff;
+}
+
+a:hover
+{
+	COLOR: #ee1111;
+}
+
+.title,.dtitle
+{
+	FONT-WEIGHT: bold;
+}
+
+.lblock
+{
+	COLOR: #6A282A;
+	FONT-FAMILY: Helvetica;
+}
+
+.lblock .title
+{
+	COLOR: #6A282A;
+}
+
+.lblock a
+{
+
+	COLOR: #FFFFFF;
+}
+
+.lblock a:hover
+{
+	COLOR: #6A282A;
+}
+
+.news
+{
+	COLOR: #6A282A;
+	BACKGROUND: #FFFCC7;	
+	FONT-FAMILY: Helvetica;
+}
+
+.news table
+{
+	COLOR: #6A282A;
+	BACKGROUND: #FFFCC7;	
+	FONT-FAMILY: Helvetica;
+}
+
+.news .title
+{
+	COLOR: #6A282A;
+}
+
+.news .dtitle
+{
+	COLOR: #FFFFFF;
+}
+
+.news a
+{
+	COLOR: #6A282A;
+}
+
+.news a:hover
+{
+	COLOR: #2282B5;
+}
+
+.news.dtitle a
+{
+	COLOR: #FFFFFF;
+}
+
+
+a.menu:link, a.menu:visited{
+		COLOR: #6A282A;
+		font-family:Arial, Helvetica;
+		}
+		
+a.banner:link, a.banner:visited{
+	color: #333333;
+	font-family: Verdana, Helvetica;
+	font-weight: normal;
+	}
+	
+a.banner:hover{
+	color: #000099;
+	font-family: Verdana, Helvetica;
+	font-weight: normal;
+	text-decoration:underline;
+	}
+*/

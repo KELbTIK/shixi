@@ -1,0 +1,343 @@
+/* START STYLES
+ * ******************************************************* */
+body {text-align: right;}
+input[type="text"], input[type="password"], select, textarea {text-align: right;}
+table, table thead, table thead th, table tbody td {text-align: right !important;}
+/* END STYLES
+ * ******************************************************* */
+
+
+/* START DESIGN STYLES
+ * ******************************************************* */
+.logo {text-align: left;}
+ul.browseListing {padding: 0 10px;}
+.JobsPanelHeader {padding: 0 10px 0 0;}
+.QuickSearch h1 {	padding: 12px 20px 0 0;}
+.QuickSearch fieldset {margin: 3px 20px 3px 0;}
+.compProfileTitle {text-align: center;}
+
+.inputName {padding: 0 5px 0 0;}
+.leftColumnMA img, .rightColumnMA img {float: right;}
+.leftColumnMA li, .rightColumnMA li {
+	line-height:50px;
+	clear: both;
+}
+.printPage {text-align: right;}
+/* END DESIGN STYLES
+ * ******************************************************* */
+
+
+/* START TREE
+ * ******************************************************* */
+.ui-dialog .ui-dialog-title {
+	float: right !important;
+	margin: 0.1em 0.1em 0.2em !important;
+}
+div.tree_button {padding-right:23px;}
+ul.tree li {padding: 0 10px 0 0 !important;}
+ul.tree label {padding: 2px 10px 0 0 !important;}
+ul.tree li .checkbox {float: right !important;}
+ul.tree li .collapsed {float: right !important;}
+ul.tree li .expanded {float: right !important;}
+ul.tree li .arrow {float: right !important;}
+/* END TREE
+ * ******************************************************* */
+/* START Languages Fixed CSS */
+.InputStat{
+	padding: 0 30px 0 0;
+}
+#top-right h1, #quicksearch h1{
+	margin: 0 10px 0 0;
+}
+#top-right, #poll, #mailchimp-nl-cont label, .social_plugins_div, #productDetails ~ table,
+.listingInfo h2, .listingInfo .displayField ul, #siteMap table, #browse-items, .pm-sub-menu, #formPayment,
+.subuser-permis-ul, .subuser-cb-ul, ul.browseListing li, .quickLinkBlock, .block_values_button, .compProfileInfo, #listings_per_page_form,.listings_per_page_form, .pageNavigation form{
+	direction: rtl;
+}
+#poll p{
+	direction: ltr;
+}
+p.mailchimp-nl-desc{
+	text-align: right;
+}
+#mainRss, .RSS, .blogDate, #Salary_list, #DesiredSalary_list, .RightLink, .searchGeoDistance, #searchType-keywords{
+	float: left;
+}
+.featuredListings{
+	float: right;
+	border-right: 1px dotted black;
+	border-left: none;
+	padding: 0 10px 0 0;
+
+}
+#productDetails table{
+	margin:0 0 0 50%;
+	text-align: center;
+}
+#productDetails table td, #productDetails table th{
+	text-align: center!important;
+}
+#productsSelect{
+	margin: 0 5px 0 90%;
+}
+.product-detail-button{
+	margin: 0 0 0 75%;
+}
+.continue-shopping{
+	margin: 0 0 0 75%;
+}
+.productDetails-name,
+.inputName,
+.inputField,
+.inputReq,
+.inputNameBig,
+.inputFieldSmall,
+#adMargin,
+.leftDisplaySIde,
+.currentProducts-name,
+.input-form-bc,
+.contact-detail-cap,
+#note-block {
+	direction: rtl;
+	float: right;
+}
+.inputField #manage-pictures {
+	direction: ltr !important;
+}
+.productDetails-info{
+	float: none;
+}
+#productDetails ~ table td input[type="text"]{
+	width:218px!important;
+}
+.ui-icon-closethick{
+	font-size: 0px;
+}
+.fix{
+	width:94%!important;
+}
+#adSpace{
+	float: left;
+	margin: 0;
+}
+#adMargin div.tree_button{
+	width:290px!important;
+}
+.browseCompanyAB, .bcName, #contact-info{
+	float:right;
+}
+.bcField{
+	width:84%;
+}
+.refineItem a{
+	display: inline-block;
+}
+.viewDetails, .saved2Ico, .viewVideo{
+	float: right!important;
+}
+.curSearchItem a{
+	display: inline-block;
+}
+.listingInfo h2 div{
+	float: left!important;
+}
+.displayFieldBlock h3{
+	float: right;
+	direction: rtl;
+	padding: 0 0 0 5px;
+}
+.narrow-col{
+	width:350px;
+}
+.compProfileTitle{
+	margin: 0 10px 0 0;
+}
+.in_share{
+	margin: 0 0 0 67%;
+}
+#siteMap table td a{
+	background: url("grayArrow.png") no-repeat scroll right center;
+	padding: 0 10px 0 0;
+}
+.soc_reg_form .social_plugins_div{
+	width:100%;
+}
+.BreadCrumbs{
+	float: none;
+}
+#adSpaceAccount{
+	margin: 20px 0 0 0;
+}
+.MyAccount, .MyAccountFoot, .notCheck, .notDesc, #addListingForm div.tree_button, .numberPerPage{
+	float: right;
+}
+.currentProducts-info{
+	float: none;
+}
+#table-alerts{
+	margin: 0 0 0 30%;
+}
+.mt-count-available{
+	float: right;
+	direction: rtl;
+	padding: 10px;
+}
+#addListingForm .inputStringMoney {
+	width: 238px!important;
+}
+.instruction{
+	float: right;
+	margin: 0 10px 0 0;
+}
+.instr_cont{
+	margin: 0 0 0 -293px;
+}
+#tree_drop_down_Occupations{
+	width: 290px;
+}
+.instruction{
+	float: right;
+	margin: 0 10px 0 0;
+}
+.instr_cont{
+	margin: 0 0 0 -293px;
+}
+.instruction .instr_arrow{
+	margin: 0 0 0 -26px;
+}
+#addListingForm .selectCurrency {
+	width:71px;
+}
+.login_buttons_txt{
+	float:right;
+}
+.browseListing a{
+	background: url(arrow-arab.png) no-repeat right center;
+	margin: 0;
+	padding: 5px 15px 0 0;
+}
+.blue{
+	display:inline-block;
+}
+.quickLinkBlock p{
+	margin: 8px 13px 10px 13px;
+}
+#siteMap table td a{
+	background: url("grayArrow-arab.png") no-repeat scroll right center;
+	padding: 0 12px 0 0;
+}
+.browseItems{
+	direction: ltr;
+	display: inline-block;
+}
+.pageNavigation{
+	margin: 10px 0 0 10px;
+	float: left;
+}
+.align_right a{
+	margin: 0 10px;
+}
+.ui-multiselect-checkboxes label {
+	text-align: right;
+}
+.ui-multiselect-header ul li,
+.ui-multiselect span {
+	float: right !important;
+}
+.ui-multiselect .ui-icon,
+.ui-multiselect-header li.ui-multiselect-close {
+	float: left !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	left: 0.3em;
+}
+/*** Start Profiler Fix ***/
+.profiler table, .profiler table thead, .profiler table thead th, .profiler table tbody td{
+	text-align: center!important;
+}
+#metrics .blue{
+	display: table-cell!important;
+}
+/*** End Profiler Fix ***/
+#poll span{
+	display: inline-block;
+}
+/* END Languages Fixed CSS */
+
+
+/* START:Reports
+*********************************************************************************/
+#reports table {
+	float: right;
+	clear: both;
+}
+/********************************************************************************/
+
+
+/* START:Application Tracking
+*********************************************************************************/
+.app-tracking {
+	float: right;
+}
+.navigation-application {
+	float: left;
+}
+.ApplicationPointedInListingInfo {
+	direction: rtl;
+}
+/********************************************************************************/
+
+/* START:Saved Searches CSS
+*********************************************************************************/
+.saved-search-tbl {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Radio Buttons
+*********************************************************************************/
+input[type="radio"],
+label,
+p {
+	direction: rtl;
+}
+label span {
+	display: inline-block;
+}
+/********************************************************************************/
+
+/* START:Tree
+*********************************************************************************/
+#tree-block ul.tree li .checkbox {
+	background-position: top right;
+	padding: 0 20px 0 0;
+}
+ul.tree li ul {
+	padding: 0 8px 0 0;
+}
+.tree-child-close {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.tree-child-1 {
+	margin: 0 15px 3px 0 !important;
+}
+.tree-child-2 {
+	margin: 0 30px 3px 0 !important;
+}
+.tree-child-3 {
+	margin: 0 45px 3px 0 !important;
+}
+.tree-child-4 {
+	margin: 0 60px 3px 0 !important;
+}
+.tree-input-field {
+	float: right;
+}
+.tree-input-field .left {
+	float: right;
+}
+.tree-available-count {
+	margin: 0 10px 0 0;
+}
+/********************************************************************************/

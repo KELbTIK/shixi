@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>Inout Mailing List Manager Premium ReadMe :: Installation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.style4 {
+	color: #CCFFFF;
+	font-weight: bold;
+}
+.style5 {
+	color: #0000FF;
+	font-weight: bold;
+}
+-->
+</style>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="ppc-style.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ccccff">
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><strong><BR>
+    </strong>      <h1>
+        <p class=loginbar style9><span class="style4"> &nbsp;Hello and thank you very much for choosing Inout Mailing List Manager Premium</span><span class="style5"> </span>
+        </p>
+        </h1>
+          
+</p> 
+     
+             <br>
+             <p>Your current version is 4.3 If you are using this script for first time follow the instructions below. If you are upgrading from any older version to current version, <a href="#upgrade">please read this</a>
+      </p>
+
+             <h1 class="MsoHyperlink">
+               <br>
+               To install the script follow the steps 1-10</h1>
+                      </p>
+             <p class=MsoNormal>
+          <![if !supportEmptyParas]>1.     
+          <![endif]>
+          <o:p></o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      First of all, upload all the files to server, into a new directory<br></p>
+        <p class=MsoNormal>2.<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </span>Create a new MySQL database using your website management control panel (eg: Cpanel) and assign a new username and password for it. <br>
+          &nbsp;&nbsp;&nbsp;</p>
+        <p class=MsoNormal>
+          <![if !supportEmptyParas]>
+          3. 
+          <![endif]>
+          <o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open the the config.inc.php and edit some important configurations  as described . <br>
+          <br>
+      </o:p><o:p>        </o:p></p>
+        <p class=MsoNormal>
+          <o:p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You have to enter your license key in the config file.</o:p>
+        </p>
+        <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <span class="pagetable_activecell">Note</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>        
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The license can be generated after logging into the members area of inoutscripts.com. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Please use your email address and the given password to login.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+        <p class=MsoNormal></p>
+        <p class=MsoNormal></p>
+        <p class=MsoNormal>
+          <o:p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now, set  your admin area username and password   in the config file. <span style='mso-tab-count:1'> </span>You can also change the admin login username and password anytime in future  in config.inc.php.<br>
+        <br>
+        </o:p></p>                
+        <p class=MsoNormal>6.<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </span>Now you can enter your MySQL settings in the config.inc.php file as described in it. </p>
+        <p class=MsoNormal>&nbsp;        </p>
+        <p class=MsoNormal><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </span>The setting for &quot;localhost&quot; usually doesn't need to 
+          be changed but your host may have a different name for their MySQL server.</p>
+
+        
+      <p class=MsoNormal><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>The settings for &quot;username&quot;, &quot;password&quot; and 
+        &quot;database name&quot; <em>usually</em> need to be entered like this 
+        in the config.inc file. [If you need assistance most hosts will happily 
+        guide you.]</p>
+        <p class=MsoNormal><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </span>yourdomain_username</p>
+
+        
+      <p class=MsoNormal><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>password just as it is</p>
+        <p class=MsoNormal><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>yourdomain_databasename</p>
+      <p class=MsoNormal>&nbsp;</p>
+      <p class=MsoNormal>7.<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </span>In config.inc.php change the url for $server_dir= to point 
+          to the full path of the directory where you have installed the script,      </p>
+        <p class=MsoNormal><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </span>eg. $server_dir=&quot;http://mydomain.com/newsletter/&quot;</p>
+        
+        <p class=MsoNormal><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>[Remember to include the last forward slash.]<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;</span>
+        <![if !supportEmptyParas]>
+
+        &nbsp; 
+        <![endif]>
+        <o:p></o:p></p>
+      <p class=MsoNormal>
+        <![endif]>
+
+      <o:p></o:p><br>
+      <br>
+      8.<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </span>Change the access permission[CHMOD] of the directories <strong>attachments</strong>,<strong>csv</strong>,<strong>export</strong>,<strong>import</strong> and <strong>userfiles</strong>        to 777</p>
+      <p class=MsoNormal>&nbsp;</p>
+      <p class=MsoNormal>9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit the confirm.inc.php file in case you want to send confirmation email when people subscribe to a list.</p>
+      <p class=MsoNormal>
+        <o:p><br>
+          <br>
+        </o:p>
+        10.<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+      </span> Go to the URL http://yourdomain.com/newsletter/index.php in your browser and login using the username and password you set in the config.inc.php file. After logging in </p>
+      <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;please&nbsp;&nbsp;invoke  http://yourdomain.com/newsletter/install.php<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pagetable_activecell">IMPORTANT NOTE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></p>
+      <p class="pagetable_activecell">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you are getting any error message in the install page saying some loading file is missing, please find the required file in the zip file <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.inoutscripts.com/downloads/ioncube_loader_files.zip and upload to the 'ioncube' directory.<br>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you have any query, please contact our support desk. We will be glad to help you.</p>
+      <p><span class="pagetable_activecell">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br>
+      </p>
+      <p class=MsoNormal><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          &nbsp;
+          <![endif]>
+        <o:p></o:p></p>
+      <p class=MsoNormal><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span><strong>That's it!</strong> <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>
+        <![if !supportEmptyParas]>
+
+        <o:p></o:p></p>
+      <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <![endif]>
+        <o:p></o:p>
+      </p>
+	  
+<p >      
+<a name="upgrade"></a><h1 class="MsoHyperlink">To upgrade the script follow these steps <o:p></o:p>
+  <br>
+  <br>
+</h1>
+      <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pagetable_activecell">IMPORTANT NOTE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></p>
+<p class="MsoHyperlink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;If you have active campaigns, there are chances that the campaign may not be fired to some emails in the queue. Also there are chances that the statistics may go wrong. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  It is strongly recommended to upgrade after all active/inactive campaigns are&nbsp;completed/restarted. </strong></p>
+</p>
+        <span class="pagetable_activecell">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br>
+<p>1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload the files to your installation directory except config.inc.php. Copy the mysql settings and admin login settings from old config file to the new config file. </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please update the value of <span class="pagetable_activecell">$charset_encoding</span> according to your current system encoding. Until version 4.2 the script was using iso-8859-1. From version 4.3 onwards the deafult encoding will be utf-8.<br>
+  <br> 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Those who are upgrading  must specify the encoding correctly to ensure data consistency. If you need any help contact our support desk <br>
+  <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Upload the  config.inc.php after making the above changes.<br>
+          <br>
+        2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="MsoNormal">Ensure that  the access permission[CHMOD] of the directories <strong>csv</strong> and <strong>userfiles</strong> is 777</span></p>
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After logging in please invoke install.php from browser; your tables will be upgraded automatically. </p>
+        <p>&nbsp; </p>
+        <h1 class="MsoHyperlink">DISCLAIMER<o:p></o:p></h1>
+        <p class=MsoHyperlink><b>
+
+          <![if !supportEmptyParas]>
+          &nbsp;
+          <![endif]>
+          <o:p></o:p></b></p>
+        
+      <p class=MsoHyperlink><b><o:p>By downloading and/or installing 
+        this script you accept all responsibility and liability without exception 
+        for all content displayed on the domain that uses this script, and you 
+        accept all the <a href="http://www.inoutscripts.com/terms.php" target="_blank">terms</a> 
+        of use without exception as given at our website <a href="http://www.inoutscripts.com" target="_blank">InoutScripts.com</a></o:p></b></p>
+        <p class=MsoHyperlink>
+
+          <![if !supportEmptyParas]>
+          &nbsp;
+          <![endif]>
+          <o:p></o:p></p>
+        <p class=MsoNormal>==================================================<br>
+        <o:p></o:p></p>
+        <p class=MsoNormal>Thanks and Regards,</p>
+        <p class=MsoNormal>Inoutscripts Support Desk</p>
+        <p class=MsoNormal>support@inoutscripts.com</p>
+
+        <p class=MsoNormal>
+          <![if !supportEmptyParas]>
+          &nbsp;
+          <![endif]>
+          <o:p></o:p></p>
+    </div></td>
+  </tr>
+  <tr>
+
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+&nbsp;&nbsp;&nbsp;
+</body>
+</html>

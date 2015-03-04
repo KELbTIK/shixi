@@ -1,0 +1,8 @@
+/*** START French Language FIXED CSS ***/
+#topMenu ul li {
+	margin: 0 6px;
+}
+#topMenu ul li a{
+	font-size: 10px;
+}
+/*** END French Language FIXED CSS ***/

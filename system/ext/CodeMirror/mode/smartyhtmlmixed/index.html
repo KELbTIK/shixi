@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CodeMirror: Smarty/HTML mixed mode</title>
+    <link rel="stylesheet" href="../../lib/codemirror.css">
+    <script src="../../lib/codemirror.js"></script>
+    <script src="../xml/xml.js"></script>
+    <script src="../javascript/javascript.js"></script>
+    <script src="../css/css.js"></script>
+    <script src="../smarty/smarty.js"></script>
+    <script src="smartyhtmlmixed.js"></script>
+    <link rel="stylesheet" href="../../doc/docs.css">
+    <link rel="stylesheet" href="smartyhtmlmixed.css">
+    <style>.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+  </head>
+  <body>
+    <h1>CodeMirror: Smarty/HTML mixed mode</h1>
+    <form><textarea id="code" name="code">
+{* still buggy, but getting there *}
+<html>
+  <head>
+    <title></title>
+    <script>
+      {$smartyvar}
+    </script>
+    <style type="text/css">
+      {assign var="c" value="another"}
+    </style>
+  </head>
+  <body>
+  <h1>{$title}</h1>
+  <ul>
+  {foreach from=$var}
+    <li>{$i}</li>
+  {/foreach}
+  </ul>
+  </body>
+</html>
+</textarea></form>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+          mode: {
+            name: "smartyhtmlmixed"
+          },
+          lineNumbers: true
+      });
+    </script>
+
+    <p>The Smarty mixed mode depends on the Smarty, XML, JavaScript, and CSS modes.</p>
+
+    <p><strong>MIME types defined:</strong> <code>text/html</code>
+    (redefined, only takes effect if you load this parser after the
+    XML parser).</p>
+
+  </body>
+</html>

@@ -1,0 +1,902 @@
+/* START:Input Fields
+*********************************************************************************/
+fieldset > fieldset > fieldset {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+input,
+textarea,
+button {
+	font-family: inherit;
+}
+input,
+select {
+	color: #484846;
+}
+input:focus {
+	color: #ab0000;
+	background: #feffd0;
+}
+#application-settings input[disabled],
+#expiration-date input[disabled] {
+	background: #f0f0f0 !important;
+}
+select {
+	font-size: 12px;
+	font-family: Verdana, sans-serif;
+	border: 1px solid #B3B3B3;
+}
+.ui-multiselect {
+	padding: 5px !important;
+}
+.ui-multiselect-menu .ui-widget-header {
+	background: #eaeaea;
+	padding: 5px 6px;
+}
+.ui-multiselect-checkboxes .ui-state-hover {
+	background: #f2f2f2 !important;
+	border: 1px solid #e3e4e4 !important;
+	border-radius: 2px;
+}
+.ui-state-focus,
+.ui-state-active {
+	background: url("../../../../../system/ext/jquery/css/images/ui-bg_glass_75_dadada_1x400.png") repeat-x scroll 50% 50% #DADADA !important;
+}
+#messageBox .inputName {
+	width: 30%;
+	padding: 2px 0 0 0;
+}
+#messageBox .inputButton,
+#messageBox .inputField {
+	width: 70%;
+}
+#messageBox .inputField select,
+#messageBox .inputField input {
+	width: 99%;
+}
+#messageBox .inputField textarea {
+	width: 98%;
+}
+#messageBox .inputField input[type="checkbox"] {
+	width: auto;
+}
+/********************************************************************************/
+
+/* START:ui-widget Custom style
+*********************************************************************************/
+.ui-widget input,
+.ui-widget {
+	font-family: inherit !important;
+}
+.ui-widget-overlay {
+	background: #000 !important;
+	opacity: .30;
+	filter:Alpha(Opacity=30);
+}
+#ui-dialog-title-messageBox span {
+	font-weight: normal;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	top: 15px !important;
+}
+.cke_toolbox span {
+	clear: none !important;
+}
+/********************************************************************************/
+
+/* START:Specific Field Types Inputs
+*********************************************************************************/
+.searchText,
+input.searchStringLike {
+	border: 1px solid #C6C6C6;
+	width: 313px;
+}
+.searchList {
+	width: 315px;
+}
+.inputList {
+	width: 153px;
+	z-index: 124;
+	height: 61px;
+}
+.searchGeoDistance,
+#searchType-keywords {
+	margin: 5px 0 0 0;
+	width: 150px;
+}
+.searchGeoLocation {
+	width: 113px !important;
+	border: 1px solid #C6C6C6;
+}
+.searchString {
+	width: 120px;
+}
+#helplink {
+	clear: both;
+	padding: 2px 0 0;
+}
+#helplink a {
+	font-size: 11px;
+}
+.searchActDate {
+	border: 1px solid #C6C6C6;
+	width: 127px !important;
+}
+.list {
+	width: 67px;
+}
+.inputString,
+.inputGeo,
+.inputInteger {
+	border: 1px solid #C6C6C6;
+	width: 313px;
+}
+.searchIntegerMore,
+.searchIntegerLess {
+	width: 145px !important;
+}
+input.captcha {
+	margin: 5px 0 0;
+	width: 118px !important;
+}
+.inputStringMoney {
+	border: 1px solid #B3B3B3;
+	width: 178px !important;
+}
+.searchMoney {
+	border: 1px solid #C6C6C6;
+	width: 84px !important;
+}
+.uploadProgress{
+	display: block !important;
+	position: absolute;
+	width: 700px;
+	height: 700px;
+	z-index: 1000;
+}
+.inputForm .searchList {
+	width: 315px;
+}
+#editForm .button {
+	width: auto !important;
+}
+.smallh1 {
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+	float: right;
+	text-transform: none;
+}
+.notif-date-days input {
+	width: 30px !important;
+}
+.location {
+	color: #989898;
+}
+/********************************************************************************/
+
+/* START:Complex fields
+*********************************************************************************/
+.leftDisplaySIde,
+.rightDisplaySIde {
+	display: block;
+	float: left;
+}
+.leftDisplaySIde {
+	width: 170px;
+	font-size: 11px;
+}
+.rightDisplaySIde {
+	margin: 0 0 10px 0;
+}
+.clrBorder {
+	clear: both;
+	border-top: 1px dotted gray;
+}
+/********************************************************************************/
+
+/* START:Ajax preloader
+*********************************************************************************/
+.preloader {
+	display: none;
+	text-align: center;
+	margin: 0 auto;
+}
+#refine-block-preloader {
+	background: url("../ajax_preloader_circular_32.gif") no-repeat;
+	height: 32px;
+	width: 32px;
+	display: block;
+	margin: 60px auto 0;
+}
+/********************************************************************************/
+
+/* START:Video Player
+*********************************************************************************/
+.player{
+	display: block;
+	height: 250px;
+	margin: 0 0 15px 0;
+}
+.inputField .player {
+	width: 330px;
+}
+/********************************************************************************/
+
+/* START:Guest Alerts
+*********************************************************************************/
+.replace-email .inputButton {
+	margin: 5px;
+	float: right;
+	width: inherit !important;
+}
+/********************************************************************************/
+
+/* START:Form Builder
+*********************************************************************************/
+.mt-count-available {
+	float: left;
+	padding: 4px 0 0 10px;
+}
+.narrow-1col {
+	width: auto !important;
+	float: none !important;
+}
+#col-wide .displayField {
+	margin: 8px 0 22px;
+	overflow: hidden;
+	clear: both;
+}
+.narrow-col .displayFieldBlock {
+	margin: 5px 0 0;
+}
+.displayFieldBlock h3 {
+	clear: both;
+}
+.template-url {
+	float: left;
+}
+/********************************************************************************/
+
+/* START:Demo Panel
+*********************************************************************************/
+#demo-fix {
+	z-index: 3000;;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+#demo-link-closed,
+#demo-link {
+	background: url("../demoPanel/demo-info-bg.png") repeat-x;
+	width: 120px;
+	height: 24px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: absolute;
+	padding: 3px 10px;
+	z-index: 2000;
+}
+#demo-link {
+	height: 20px;
+}
+#demo-link #demo-link-arrow,
+#demo-link-closed #demo-link-arrow {
+	padding: 0 20px 0 0;
+	margin: 2px 0 0 0;
+}
+#demo-link #demo-link-arrow {
+	background: url("../demoPanel/arrow-up.png") no-repeat right;
+}
+#demo-link-closed #demo-link-arrow {
+	background: url("../demoPanel/arrow-down.png") no-repeat right;
+}
+#demo-info ul {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0 0 0 140px;
+	width: 1080px;
+}
+#demo-info ul li {
+	float: left;
+	padding: 2px 15px;
+	margin: 1px 0 0 0;
+	height: 21px;
+}
+#demo-info ul li span {
+	line-height: 21px;
+}
+#demo-info a {
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;;
+}
+#demo-info ul li:hover {
+	background: url("../demoPanel/demo-panel-hover-bg.png");
+}
+li.demo-info-sep {
+	background: url("../demoPanel/demo-info-sep-bg.png") repeat-y;
+	width: 2px;
+	height: 25px !important;
+	padding: 0 !important;
+	margin: 1px 0 0 0 !important;
+}
+li.demo-order {
+	background: url("../demoPanel/demo-panel-order-bg.png") repeat-x !important;
+}
+li.demo-order a {
+	color: #fff !important;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#demo-info select {
+	width: 150px;
+	height: 20px;
+	margin: 1px 0 0 5px;
+	padding: 0;
+}
+#demo-info select option {
+	font-size: 12px;
+	padding: 3px 2px;
+	color: #000;
+}
+#demo-info select option[disabled="disabled"] {
+	color: #ccc;
+	text-align: center;
+	padding: 2px;
+}
+#demo-info {
+	background: url("../demoPanel/demo-panel-bg.png");
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	margin: 0 auto;
+	color: #000;
+	text-align: center;
+	z-index: 1900;
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+}
+/********************************************************************************/
+
+/* START:Payment
+*********************************************************************************/
+.orderInfo {
+	padding: 5px 0;
+}
+/********************************************************************************/
+
+/* START:In share and Profile Widget
+*********************************************************************************/
+embed {
+	visibility: visible !important;
+}
+.in_share {
+	float: none !important;
+	margin: 10px 6px 10px 4px !important;
+}
+.in_ProfileWidget,
+.in_ProfileInsiderWidget {
+	padding: 0 8px 22px 0;
+	display: inline;
+}
+/********************************************************************************/
+
+/* START:General Classes Block
+*********************************************************************************/
+.text-center {
+	text-align: center !important;
+}
+.strong {
+	font-weight: bold;
+}
+.small {
+	font-size: 0.8em;
+}
+.underline {
+	text-decoration: underline;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+/********************************************************************************/
+
+/* START:Tree Field Css
+*********************************************************************************/
+.tree-input-field {
+	width: 313px;
+	float: left;
+	margin: 0 0 5px;
+}
+.tree-available-count {
+	display: inline-block;
+	float: left;
+	margin: 0 0 0 10px;
+}
+.tree-as-sb-vals {
+	margin: 0 0 10px 0;
+}
+ul.tree,
+ul.tree * {
+	list-style: inside none;
+	margin: 5px 0;
+	padding: 0;
+}
+ul.tree img.arrow {
+	padding: 2px 0 0 0;
+	border: 0;
+	width: 15px;
+}
+ul.tree li {
+	padding: 0;
+	clear: both;
+}
+ul.tree li ul {
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+ul.tree label {
+	cursor: pointer;
+	padding: 2px 0;
+}
+ul.tree label.hover {
+	color: red;
+}
+ul.tree {
+	margin: 5px 0;
+}
+#tree-block {
+	overflow: auto;
+	padding: 5px;
+	max-height: 400px;
+	margin: 20px;
+	background: #ffe;
+	border: 1px solid #c3c3c3;
+}
+#tree-buttons {
+	text-align: center;
+}
+#tree-available {
+	margin: 0 0 0 15px;
+	float: left;
+}
+#tree-deselect-all {
+	margin: 0 15px 0 0 ;
+	float: right;
+	vertical-align: top;
+	cursor: pointer;
+}
+.tree-values div {
+	margin-top: 7px !important;
+	margin-bottom: 5px !important;
+}
+.tree-child {
+	color: #575757;
+}
+.tree-child-1 {
+	margin: 0 0 3px 15px !important;
+}
+.tree-child-2 {
+	margin: 0 0 3px 30px !important;
+}
+.tree-child-3 {
+	margin: 0 0 3px 45px !important;
+}
+.tree-child-4 {
+	margin: 0 0 3px 60px !important;
+}
+.tree-parent {
+	font-weight: bold;
+	margin: 7px 0 5px;
+}
+.tree-child-close {
+	color: #BEBEBE;
+	cursor: pointer;
+	font-size: 10px !important;
+	margin: 0 5px 0 0;
+}
+ul.tree li .arrow {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+	background: url("../../../../../system/ext/jquery/ltL_nes.gif") no-repeat 0 0;
+}
+ul.tree li .collapsed {
+	background: url("../../../../../system/ext/jquery/ltP_nes.gif") no-repeat;
+}
+ul.tree li .expanded {
+	background: url("../../../../../system/ext/jquery/ltM_ne.gif") no-repeat;
+}
+ul.tree li .checkbox {
+	padding: 0 0 3px 20px;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+	background: url("../../../../../system/ext/jquery/cbUnchecked.gif") no-repeat 0 2px;
+}
+ul.tree li .checked {
+	background: url("../../../../../system/ext/jquery/cbChecked.gif") no-repeat 0 2px;
+}
+ul.tree li .half_checked {
+	background: url("../../../../../system/ext/jquery/cbIntermediate.gif") no-repeat 0 2px;
+}
+div.tree_button {
+	cursor: pointer;
+	width: 313px;
+	height: 17px;
+	padding: 3px 0 0 0;
+	border: 1px solid #B3B3B3;
+	float: left;
+	font-size: 12px;
+	background: url("../../../../../system/ext/jquery/arrow_tree.png") right center no-repeat #fff;
+}
+.more-button {
+	margin: 10px 0;
+}
+/********************************************************************************/
+
+/* START:Pop up Window CSS
+*********************************************************************************/
+.ui-dialog-content {
+	max-height: 700px;
+}
+#captchaImg {
+	height: 60px;
+	display: inline-block;
+}
+#loading {
+	background: url("../loader.gif") #000 no-repeat center;
+	opacity: .30;
+	filter:Alpha(Opacity=30);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	z-index: 10;
+	text-align: center;
+	color: #fff;
+}
+#pm_send_form textarea {
+	height: 300px !important;
+}
+.ui-dialog .ui-dialog-content {
+	padding: 0.8em 1.5em !important;
+}
+/********************************************************************************/
+
+/* START:General Tables
+*********************************************************************************/
+.saved-search-tbl {
+	width: 65%;
+}
+.saved-search-tbl td {
+	vertical-align: middle;
+}
+.saved-search-tbl .separateListing {
+	line-height: 0;
+}
+.saved-search-tbl input {
+	margin: 5px 0;
+}
+/********************************************************************************/
+
+/* START:Application Tracking CSS
+*********************************************************************************/
+.ApplicationPointedInListingInfo .name {
+	font-size: 13px;
+	font-weight: bold;
+}
+.tableSearchResultApplications tbody td {
+	vertical-align: top;
+}
+.tableSearchResultApplications tbody a {
+	text-decoration: none;
+}
+.tableSearchResultApplications tbody a:hover {
+	text-decoration: underline;
+}
+.app-track-link a {
+	font-weight: bold !important;
+	font-size: 13px;
+}
+.table-application-border-bottom .form-notes {
+	padding: 0 10px;
+}
+.table-application-border-bottom .form-notes b {
+	display: block;
+}
+.actions-with-selected {
+	float: right;
+	padding: 0 5px 0 0;
+}
+#my-listings-table ul li {
+	margin: 0;
+}
+/********************************************************************************/
+
+/* START:Tool Tip CSS Block
+*********************************************************************************/
+.tip-darkgray {
+	border: 2px solid #444;
+	background: #555;
+	color: #fff;
+	margin: 0;
+	padding: 6px 12px;
+	max-width: 300px;
+	border-radius: 12px;
+	border-top-left-radius: 5px;
+	-webkit-border-radius: 12px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius: 12px;
+	-moz-border-radius-topleft: 5px;
+	-moz-box-shadow: 2px 2px 5px #111;
+	-webkit-box-shadow: 2px 2px 5px #111;
+	box-shadow: 2px 2px 5px #111;
+	word-break: break-all;
+	opacity: 0.95;
+	z-index: 100;
+}
+.tip-darkgray .tip-inner {
+	margin: -1px 0 0 0;
+	padding: 0 4px 3px 4px;
+}
+.tip-darkgray .tip-arrow-top {
+	top: -8px;
+	left: 5px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 8px solid #444;
+}
+.tip-darkgray .tip-arrow-right {
+	background: url("tip-darkgray_arrows.png") no-repeat -22px 0;
+}
+/********************************************************************************/
+
+/* START:Highlight Templates
+*********************************************************************************/
+.templateHighlight {
+	border: 1px dotted red;
+	position: relative;
+	min-height: 15px;
+}
+#highlighterBlock {
+	display: none;
+	background: #ffb83d !important;
+	opacity: .20;
+	filter:Alpha(Opacity=20);
+}
+.templateHighlight .highlight-clr {
+	line-height: 14px;
+	clear: both;
+}
+.templateHighlight .inner_div,
+.inner_div {
+	display: block;
+	position: absolute;
+	z-index: 11;
+	background: red;
+	text-align: center;
+	padding: 1px 10px;
+	bottom: 0;
+	line-height: 14px;
+}
+.templateHighlight .inner_div a,
+.inner_div a {
+	display: block;
+	color: yellow !important;
+	font-size: 12px !important;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 12px !important;
+	padding: 0 !important;
+	background: none !important;
+	font-family: Arial, sans-serif !important;
+	text-transform: none !important;
+	margin: 0 !important;
+}
+.templateHighlight .inner_div a:hover,
+.inner_div a:hover {
+	text-decoration: underline;
+}
+.highlight-body {
+	position: relative;
+}
+.highlight-body body {
+	margin: 0 !important;
+	border: 1px dotted red;
+}
+/********************************************************************************/
+
+/* START:Edit Templates
+*********************************************************************************/
+.add-template legend {
+	display: none;
+}
+.add-template label {
+	display: inline-block;
+	width: 30%;
+	margin: 0 0 15px 0;
+}
+.add-template #apply_name {
+	margin: 0 15px 0 200px;
+}
+.add-template input[type="text"],
+.add-template select {
+	width: 60%;
+}
+.edit-template-simple {
+	margin: 15px 0 0;
+	padding: 15px 0 0;
+	border-top: 1px dotted;
+}
+.edit-template-simple .td-name {
+	width: 15%;
+	padding: 5px 0;
+}
+.edit-template-simple a {
+	margin: 5px 0;
+	display: inline-block;
+}
+.edit-template-simple a:hover {
+	text-decoration: none;
+}
+/********************************************************************************/
+
+/* START:Print Listing
+*********************************************************************************/
+.printLeft {
+	word-wrap: break-word;
+}
+/********************************************************************************/
+
+/* START:Social Media Posting
+*********************************************************************************/
+a.linkedin-posting,
+a.twitter-posting,
+a.facebook-posting,
+a.googleplus-posting {
+	padding: 0 0 0 35px;
+	min-width: 155px;
+	display: inline-block;
+	text-decoration: none;
+}
+a.facebook-posting {
+	background: url("../sm_facebook-icon-bg.png") #2862B1 no-repeat left;
+}
+a.facebook-posting:hover {
+	background-color: #2e6abc;
+}
+a.googleplus-posting {
+	background: url("../sm_google-icon-bg.png") #DF4A32 no-repeat left;
+}
+a.googleplus-posting:hover {
+	background-color: #e6533c;
+}
+a.twitter-posting {
+	background: url("../sm_twitter-icon-bg.png") #4BC0EA no-repeat left;
+}
+a.twitter-posting:hover {
+	background-color: #54c8f1;
+}
+a.linkedin-posting {
+	background: url("../sm_linkedin-icon-bg.png") #328ab4 no-repeat left;
+}
+a.linkedin-posting:hover {
+	background-color: #3891bb;
+}
+.linkedin-posting span,
+.twitter-posting  span,
+.googleplus-posting  span,
+.facebook-posting  span {
+	color: #fff !important;
+	font-weight: bold;
+	padding: 4px 10px 4px 0;
+	display: inline-block;
+}
+/********************************************************************************/
+
+/* START:Plugins SimplyHired, Beyond etc
+*********************************************************************************/
+.apiCode a img {
+	display: inline-block;
+	margin: 0 0 4px;
+}
+.api-jobs-plugin td {
+	border-top: 3px solid #B2B2B2;
+	padding: 5px 0;
+}
+.api-jobs-plugin img {
+	border: 0;
+}
+/********************************************************************************/
+
+/* START:Application Settings
+*********************************************************************************/
+#application-settings {
+	margin: 3px 0 0 0;
+}
+#application-settings td {
+	padding: 0 0 15px 0;
+}
+#application-settings .inputRadio {
+	margin: 2px 5px 0 5px;
+}
+#application-settings .inputString {
+	width: 285px;
+}
+/********************************************************************************/
+
+/* START:Upload pictures
+*********************************************************************************/
+#uploadForm div {
+	padding: 0 !important;
+	font-family: inherit;
+}
+#uploadForm fieldset {
+	margin: 0 0 10px 0 !important;
+}
+table#manage-pictures {
+	width: 315px;
+}
+table#manage-pictures img {
+	padding: 5px 0;
+}
+.add-picture-loading {
+	position: absolute;
+	margin: 35px 0 0 60px;
+	z-index: 10;
+}
+#manage-pictures .thumbnail {
+	width: 50px;
+}
+#manage-pictures .actions {
+	width: 20px;
+	white-space: nowrap;
+}
+#manage-pictures .caption {
+	width: 130px;
+}
+/********************************************************************************/
+
+/* START:Expiration date
+*********************************************************************************/
+#expiration-date tr {
+	border: 0;
+}
+#expiration-date td {
+	padding: 0 0 15px 0;
+}
+#expiration-date .inputRadio {
+	margin: 1px 5px 0 5px;
+}
+#expiration-date #until {
+	margin: 5px 5px 0;
+}
+#expiration-date td .input_date {
+	width: 95px !important;
+}
+/********************************************************************************/
+
+/* START:Delete Profile
+*********************************************************************************/
+#reason {
+	width: 455px !important;
+	margin: 10px 0 0 0;
+}
+/********************************************************************************/

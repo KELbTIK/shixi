@@ -1,0 +1,46 @@
+/* START:French Language
+*********************************************************************************/
+#employers a {
+	font-size: 19px;
+}
+.jobseeker-button {
+	right: -86px !important;
+}
+#top-menu ul li:hover > a {
+	padding: 11px 9px;
+}
+#top-menu ul li a {
+	font-size: 15px;
+	padding: 11px 10px;
+}
+.footer-wrapper ul li a {
+	padding: 5px;
+}
+.jqTransformSelectWrapper div span {
+	width: 77% !important;
+}
+.search-only {
+	font-size: 9px;
+}
+#currentSearch th,
+#refineResults th {
+	font-size: 16px;
+}
+#sort-by .sbOptions {
+	width: 160px !important;
+}
+.search-geo-key,
+.search-geo-key ul {
+	width: 176px !important;
+}
+fieldset#Location_ZipCode {
+	font-size: 12px;
+}
+input#Location_ZipCode {
+	width: 87px !important;
+}
+#applicationFilter .jqTransformSelectWrapper,
+#applicationFilter .jqTransformSelectWrapper ul {
+	width: 150px !important;
+}
+/********************************************************************************/

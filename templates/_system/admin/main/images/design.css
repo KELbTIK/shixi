@@ -1,0 +1,2540 @@
+body {
+	font-size: 13px;
+	font-family: 'Droid Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #444;
+}
+
+/* START:Include fonts
+*********************************************************************************/
+@font-face {
+	font-family: 'Droid Sans';
+	src: url('fonts/droidsans-webfont.eot');
+	src: url('fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/droidsans-webfont.woff') format('woff'),
+	url('fonts/droidsans-webfont.ttf') format('truetype'),
+	url('fonts/droidsans-webfont.svg#DroidSerifRegular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+/********************************************************************************/
+
+/* START:General CSS
+*********************************************************************************/
+.clr {
+	clear: both;
+}
+a {
+	color: #444;
+}
+a:hover {
+	text-decoration: none;
+}
+h1 {
+	color: #444;
+	font-size: 27px;
+	font-weight: normal;
+	margin: 7px 0;
+	padding: 0;
+}
+.text-center {
+	text-align: center;
+}
+.strong {
+	font-weight: bold;
+}
+.small {
+	font-size: 0.8em;
+}
+.underline {
+	text-decoration: underline;
+}
+.left {
+	float: left;
+}
+.right,
+.floatRight {
+	float: right;
+}
+.titleicon {
+	float: left;
+	margin: 0 10px 0 0;
+}
+.head {
+	background: #ededed;
+	font-weight: bold;
+}
+.head td {
+	border-right: 1px solid #E0DFDF;
+}
+.text-center {
+	text-align: center !important;
+}
+.annotation,
+.small-text {
+	font-size: 11px;
+}
+.italic {
+	font-style: italic;
+}
+.required {
+	color: red;
+}
+.note {
+	font-size: 10px;
+	color: #000080;
+}
+/********************************************************************************/
+
+/* START:Dashboard
+*********************************************************************************/
+#dashboard {
+	margin: 70px 0 0 0;
+	padding: 0;
+	position: relative;
+}
+#stats {
+	background: #EDF1F7;
+	border-bottom: 1px solid #C6D5EA;
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+}
+.statblock {
+	border-right: 1px solid #D7E5F7;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.statblock:hover {
+	background: #dde4ed;
+}
+#stats h2 {
+	color: #6C798C;
+	font-size: 22px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+#stats h2 a {
+	color: #6C798C;
+	display: block;
+	margin: 0;
+	padding: 7px 25px;
+	text-decoration: none;
+}
+#stats h2 a:hover {
+	background: #dde4ed;
+	color: #6C798C;
+	padding: 7px 25px 7px 25px;
+	margin: 0;
+	text-decoration: none;
+}
+#stats p {
+	color: #808080;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 10px 5px;
+}
+.dashboardBlocks {
+	float: left;
+	margin: 5px 25px 0 0;
+	padding: 0;
+	width: 300px;
+}
+.box {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 6px #ccc;
+	margin: 0;
+	padding: 0;
+}
+.box-header {
+	background: url("bg-header.png") repeat-x #eee;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin: 0;
+	padding: 9px;
+	overflow: hidden;
+}
+.box-footer {
+	background: url("bg-footer.png") repeat-x #eee;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin: 0;
+	padding: 10px;
+	overflow: hidden;
+}
+.innerpadding {
+	padding: 10px;
+}
+h1.usersOnline,
+h1.payments,
+h1.registered,
+h1.postings,
+h1.quickLinks,
+h1.updates {
+	color: #667386;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 0 0 40px;
+}
+h1.usersOnline a,
+h1.payments a,
+h1.registered a,
+h1.postings a,
+h1.quickLinks a,
+h1.updates a {
+	color: #667386;
+}
+h1.usersOnline {
+	background: url("users-online.png") no-repeat;
+}
+h1.payments {
+	background: url("icons/moneyreceipt.png") no-repeat;
+}
+h1.registered {
+	background: url("registered.png") no-repeat;
+}
+h1.postings {
+	background: url("postings.png") no-repeat;
+}
+h1.quickLinks {
+	background: url("quick-links.png") no-repeat;
+}
+h1.updates {
+	background: url("icons/lightbulb32.png") no-repeat;
+}
+/********************************************************************************/
+
+/* START:Head Structure
+*********************************************************************************/
+#leftHeader {
+	background: url("leftHeader.png") repeat-x;
+	height: 80px;
+	overflow: hidden;
+}
+#logoLink {
+	background: url("logo.png") no-repeat;
+	display: block;
+	width: 198px;
+	height: 29px;
+	margin: 20px 0 0 45px;
+}
+#topGray {
+	background: url("topGreyback.png") #DDDDDC repeat-x;
+	border-bottom: 1px solid #B0B0B0;
+	height: 80px;
+	padding: 0;
+}
+#updateInfoBlock {
+	position: absolute;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #fff;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: #CE0000;
+	font-weight: bold;
+	display: none;
+}
+#closeUpdateInfoBlock {
+	color: #000;
+	cursor: pointer;
+	float: right;
+	margin: 0 10px 0 0;
+}
+#breadCrumbs {
+	background: #7C8287;
+	color: #fff;
+	float: left;
+	font-size: 15px;
+	margin: 52px 0 0;
+	padding: 5px 7px;
+}
+#breadCrumbs a {
+	color: #fff;
+}
+#topRight {
+	background: url("topRightback.png");
+	border-radius: 5px;
+	color: #E2E2E2;
+	margin: 15px 20px 0 0;
+	padding: 10px;
+	font-size: 15px;
+	float: right;
+}
+#topRight a {
+	color: #fff;
+	font-size: 12px;
+}
+#suggest-feature {
+	float: right;
+	margin: 44px 15px 0 0;
+}
+#suggest-feature a:hover {
+	background: url("icon-idea.png") no-repeat 0 -18px;
+	color: #feec75;
+}
+#suggest-feature a {
+	display: inline-block;
+	background: url("icon-idea.png") no-repeat top left;
+	padding: 0 0 0 18px;
+	height: 18px;
+	line-height: 18px;
+	color: #fff;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+}
+.page_title {
+	color: #000;
+	font-weight: bold;
+	font-size: 14%;
+}
+/********************************************************************************/
+
+/* START:Left Menu Structure
+*********************************************************************************/
+.leftMenu,
+.leftMenuOpen {
+	background: url("leftMenuback.png") repeat-x #ccc;
+	cursor: pointer;
+	font-weight: bold;
+	height: 35px;
+	margin: 10px 0 0 15px;
+	width: 245px;
+}
+.leftMenu {
+	border: 1px solid #CACACA;
+	border-radius: 2px;
+	color: #555;
+}
+.leftMenuOpen {
+	border-left: 1px solid #CACACA;
+	border-right: 1px solid #CACACA;
+	border-top: 1px solid #CACACA;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	color: #333;
+}
+.leftMenuOpen .borders {
+	width: 220px;
+}
+.menuName {
+	float: left;
+	font-size: 13px;
+	margin: 10px 0 0 8px;
+	text-transform: uppercase;
+}
+.menuName a {
+	text-decoration: none;
+	color: #555;
+}
+.menuArrow {
+	float: right;
+	margin: 0 5px 0 0;
+}
+.menuItems {
+	background: #FAFAFA;
+	border-bottom: 1px solid #CACACA;
+	border-left: 1px solid #CACACA;
+	border-right: 1px solid #CACACA;
+	margin: 0 0 0 15px;
+	padding: 5px 0;
+	width: 245px;
+}
+.lmsi a,
+.lmsih a {
+	color: #444;
+	display: block;
+	text-decoration: none;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	padding: 3px 10px 3px 10px;
+	font-size: 13px;
+}
+.lmsi a:hover,
+.lmsih a:hover {
+	background: #e3e3e3 url("menuback.png") repeat-x;
+	color: #333;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	display: block;
+	text-decoration: none;
+}
+.lmsih a {
+	text-decoration: none;
+	background: #fff;
+	color: #222;
+	width: 244px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 10px 5px 10px;
+	-webkit-box-shadow: -6px 1px 8px 1px #ccc;
+	-moz-box-shadow: -6px 1px 8px 1px #ccc;
+	box-shadow: -6px 1px 8px 1px #ccc;
+}
+.lmsih a:hover {
+	color: #222;
+	background: #fff;
+}
+/********************************************************************************/
+
+/* START:Main Structure
+*********************************************************************************/
+#structure {
+	border: 0;
+	min-height: 700px;
+}
+#structure > table td,
+#structure > table th {
+	padding: 5px;
+	border-bottom: 1px solid #E0DFDF;
+	border-left: 1px dotted #A1A1A1;
+}
+#structure > table {
+	border: 1px solid #E0DFDF;
+}
+#structure > td {
+	padding: 0;
+	border-bottom: 0;
+	border-left: 0;
+}
+#left {
+	background: url("leftGreenBg.png") repeat-y;
+	width: 280px;
+	padding: 0 0 100px 0;
+}
+.InContent {
+	padding: 15px 20px;
+	clear: both;
+	position: relative;
+}
+.InContent .ui-corner-all {
+	border-radius: 0 !important;
+}
+.InContent fieldset table#complexFieldsItems {
+	margin: 0 !important;
+	width: 100% !important;
+}
+.manual {
+	display: block;
+	float: right;
+	margin: 90px 25px 0 0;
+	padding: 0;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	z-index: 1000;
+}
+.manual a {
+	text-decoration: none;
+}
+/********************************************************************************/
+
+/* START:Footer
+*********************************************************************************/
+#footer {
+	background: #F0F0F0;
+	border-top: 1px solid #ccc;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 0 0 20px;
+	text-align: left;
+}
+#footer a,
+#footer {
+	color: #797979;
+}
+/********************************************************************************/
+
+/* START:Tables CSS Block
+*********************************************************************************/
+#messageBox table,
+.InContent table {
+	background: #fff;
+	border-collapse: collapse;
+	border: 1px solid #e0dfdf;
+}
+#messageBox thead,
+#messageBox th,
+.InContent thead,
+.InContent th {
+	background: #ededed;
+}
+#messageBox td,
+#messageBox th,
+.InContent td,
+.InContent th {
+	padding: 4px;
+	border-bottom: 1px solid #E0DFDF;
+	border-left: 1px dotted #A1A1A1;
+	text-align: left;
+}
+.width_td_logo td {
+	height: 35px;
+}
+form.mapping th {
+	border-left: 0 !important;
+}
+tr.oddrow {
+	background: #fff;
+}
+tr.evenrow {
+	background: #f7f7f7;
+}
+tr.evenrow:hover,
+tr.oddrow:hover {
+	background: #e4ebf5;
+}
+tr.headrow {
+	font-weight: bold;
+	color: #4b4b4b;
+}
+tr.headrow td {
+	background: #efefef;
+}
+.actions {
+	text-align: center !important;
+}
+#actionsNowrap {
+	width: 200px;
+}
+fieldset {
+	max-width: 700px;
+	background: #fafafa;
+	border: 1px solid #c0c0c0;
+	padding: 10px;
+}
+#geographicDataForm fieldset {
+	max-width: 642px;
+}
+#massMailling .floatRight {
+	float: left;
+	width: 764px;
+	text-align: right;
+}
+.wide-fieldset {
+	max-width: 800px;
+}
+.wide-fieldset table td {
+	vertical-align: top;
+}
+#editUserForm input[type="password"],
+#editUserForm input[type="text"],
+.wide-fieldset input[type="text"] {
+	width: 305px;
+}
+.wide-fieldset .complex {
+	width: 530px;
+}
+#editUserForm select,
+.wide-fieldset select,
+.wide-fieldset .inputField select.complexField {
+	width: 315px;
+}
+.wide-fieldset .selectCurrency {
+	width: 150px;
+}
+.caption-td {
+	width: 25%;
+}
+table.fieldset {
+	margin: 10px 5px;
+}
+fieldset#filter_fieldset {
+	max-width: 920px;
+}
+fieldset.inlineField {
+	width: 350px;
+	display: block;
+	float: left;
+}
+.InContent fieldset table {
+	width: 95% !important;
+	background: none !important;
+	margin: 3px auto !important;
+}
+.InContent fieldset table,
+.InContent fieldset td,
+.InContent fieldset th {
+	border: 0 !important;
+}
+legend {
+	color: #444;
+	font-size: 15px;
+	font-weight: normal;
+	padding: 0 10px;
+	overflow: hidden;
+}
+/********************************************************************************/
+
+/* START:Cke Editor CSS
+*********************************************************************************/
+span#cke_detailed_description table,
+span#cke_brief table,
+span#cke_text table,
+.InContent span#cke_detailed_description td,
+.InContent span#cke_detailed_description th,
+.InContent span#cke_brief td,
+.InContent span#cke_brief th,
+.InContent span#cke_text td,
+.InContent span#cke_text th {
+	width: 98%;
+	background: inherit !important;
+	border-collapse: inherit !important;
+	border: inherit !important;
+}
+.cke {
+	width: auto !important;
+}
+.cke_reset_all {
+	white-space: inherit !important;
+}
+#massMailling #cke_text {
+	width: 752px !important;
+}
+/********************************************************************************/
+
+/* START:Buttons
+*********************************************************************************/
+input.button {
+	background: url("buttonBg.png") repeat-x;
+	font-size: 12px;
+	font-weight: bold;
+	height: 23px;
+	padding: 0 15px;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+	float: right;
+}
+.greenButton,
+.grayButton {
+	background: rgb(249,253,255);
+	background: -moz-linear-gradient(top,  rgba(249,253,255,1) 0%, rgba(191,200,206,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,253,255,1)), color-stop(100%,rgba(191,200,206,1)));
+	background: -webkit-linear-gradient(top,  rgba(249,253,255,1) 0%,rgba(191,200,206,1) 100%);
+	background: -o-linear-gradient(top,  rgba(249,253,255,1) 0%,rgba(191,200,206,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(249,253,255,1) 0%,rgba(191,200,206,1) 100%);
+	background: linear-gradient(to bottom,  rgba(249,253,255,1) 0%,rgba(191,200,206,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', endColorstr='#bfc8ce',GradientType=0 );
+	border: 1px solid #B5B3B5;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 1px 0 0 #fff inset;
+	color: #777;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 3px 10px;
+	margin: 0 0 1px 3px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #fff;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+}
+.notactive-grayButton {
+	background:-moz-linear-gradient( center top, #F4F4F4 5%, #eeeeee 100% );
+	border: 1px solid #D9D9D9;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 1px 0 0 #fff inset;
+	color: #C8C8C8;
+	display: inline-block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 10px;
+	margin: 0 0 0 3px;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #fff;
+	cursor: pointer;
+}
+a.grayButton,
+a.deleteButton,
+a.redButton {
+	text-decoration: none;
+	line-height: 19px;
+	margin: 0 !important;
+	padding: 1px 10px;
+}
+span.greenButtonInEnd {
+	float: left;
+	margin: 0 15px 0 0;
+}
+#addProductForm .greenButtonEnd {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+#addProductForm #block_1 {
+	margin: 10px 0;
+}
+input.standart-button,
+a.standart-button {
+	background: url("gray-standart-button.png") repeat-x;
+	min-width: 100px;
+	height: 25px;
+	padding: 0 10px;
+	color: #000 !important;
+	font-size: 12px !important;
+	font-weight: bold;
+	font-family: Arial, sans-serif !important;
+	cursor: pointer;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #9f9f9f;
+	text-transform: inherit !important;
+}
+input.standart-button:hover,
+a:hover.standart-button {
+	background: url("gray-standart-button.png") repeat-x 0 -25px;
+}
+a.standart-button {
+	text-decoration: none !important;
+	display: inline-block;
+	text-align: center;
+	color: #000;
+	height: 23px;
+}
+.editbutton,
+.deletebutton {
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 10px;
+	text-decoration: none;
+	display: inline-block;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.editbutton {
+	background: #f9fdff;
+	background: -moz-linear-gradient(top,  #f9fdff 0%, #bbd4e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9fdff), color-stop(100%,#bbd4e5));
+	background: -webkit-linear-gradient(top,  #f9fdff 0%,#bbd4e5 100%);
+	background: -o-linear-gradient(top,  #f9fdff 0%,#bbd4e5 100%);
+	background: -ms-linear-gradient(top,  #f9fdff 0%,#bbd4e5 100%);
+	background: linear-gradient(to bottom,  #f9fdff 0%,#bbd4e5 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fdff', endColorstr='#bbd4e5',GradientType=0 );
+	-moz-box-shadow: inset 0 1px 0 0 #fff;
+	-webkit-box-shadow: inset 0 1px 0 0 #fff;
+	box-shadow: inset 0 1px 0 0 #fff;
+	border: 1px solid #b5b3b5;
+	color: #777;
+	text-shadow: 1px 1px 0 #fff;
+}
+.editbutton:hover {
+	background: #bbd4e5;
+	background: -moz-linear-gradient(top,  #bbd4e5 0%, #f9fdff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bbd4e5), color-stop(100%,#f9fdff));
+	background: -webkit-linear-gradient(top,  #bbd4e5 0%,#f9fdff 100%);
+	background: -o-linear-gradient(top,  #bbd4e5 0%,#f9fdff 100%);
+	background: -ms-linear-gradient(top,  #bbd4e5 0%,#f9fdff 100%);
+	background: linear-gradient(to bottom,  #bbd4e5 0%,#f9fdff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbd4e5', endColorstr='#f9fdff',GradientType=0 );
+}
+.redButton {
+	-moz-box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+	box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+	background: #efc8c6; /* Old browsers */
+	background: -moz-linear-gradient(top, #efc8c6 0%, #e5a7a7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efc8c6), color-stop(100%,#e5a7a7));
+	background: -webkit-linear-gradient(top, #efc8c6 0%,#e5a7a7 100%);
+	background: -o-linear-gradient(top, #efc8c6 0%,#e5a7a7 100%);
+	background: -ms-linear-gradient(top, #efc8c6 0%,#e5a7a7 100%);
+	background: linear-gradient(to bottom, #efc8c6 0%,#e5a7a7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efc8c6', endColorstr='#e5a7a7',GradientType=0 );
+	background-color: #f0a5a1;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #E29595;
+	display: inline-block;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 10px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.redButton:hover {
+	background: #edd8d7;
+	background: -moz-linear-gradient(top, #edd8d7 0%, #e2c0c0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edd8d7), color-stop(100%,#e2c0c0));
+	background: -webkit-linear-gradient(top, #edd8d7 0%,#e2c0c0 100%);
+	background: -o-linear-gradient(top, #edd8d7 0%,#e2c0c0 100%);
+	background: -ms-linear-gradient(top, #edd8d7 0%,#e2c0c0 100%);
+	background: linear-gradient(to bottom, #edd8d7 0%,#e2c0c0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edd8d7', endColorstr='#e2c0c0',GradientType=0 );
+}
+.deletebutton {
+	-moz-box-shadow: inset 0 1px 0 0 #f7c5c0;
+	-webkit-box-shadow: inset 0 1px 0 0 #f7c5c0;
+	box-shadow: inset 0 1px 0 0 #f7c5c0;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0a5a1), color-stop(1, #e67e7e) );
+	background: -moz-linear-gradient( center top, #f0a5a1 5%, #e67e7e 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0a5a1', endColorstr='#e67e7e');
+	background-color: #f0a5a1;
+	border: 1px solid #b8372e;
+	color: #fff;
+	text-shadow: 1px 1px 0 #9c3830;
+}
+.deletebutton:hover {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e67e7e), color-stop(1, #f0a5a1) );
+	background: -moz-linear-gradient( center top, #e67e7e 5%, #f0a5a1 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e67e7e', endColorstr='#f0a5a1');
+	background-color: #e67e7e;
+}
+.editbutton_activate {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #B4DDC0), color-stop(1, #A7D9B5) );
+	background:-moz-linear-gradient( center top, #B4DDC0 5%, #A7D9B5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#B4DDC0', endColorstr='#A7D9B5');
+	background-color: #A7D9B5;
+	color: #595959;
+	text-shadow: 1px 1px 0 #fff;
+	-moz-box-shadow: inset 0 1px 0 0 #fff;
+	-webkit-box-shadow: inset 0 1px 0 0 #fff;
+	box-shadow: inset 0 1px 0 0 #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #b5b3b5;
+	display: inline-block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 17px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.editbutton_activate:hover {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #A7D9B5), color-stop(1, #B4DDC0) );
+	background: -moz-linear-gradient( center top, #A7D9B5 5%, #B4DDC0 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A7D9B5', endColorstr='#B4DDC0');
+	background-color: #BBD4E5;
+}
+/********************************************************************************/
+
+/* START:Inputs, Selects
+*********************************************************************************/
+input[type="text"],
+input[type="password"],
+.textField {
+	border: 1px solid #cacaca;
+	border-radius: 3px;
+	font-family: 'Droid Sans',sans-serif;
+	padding: 4px;
+	width: 200px;
+	height: 20px;
+}
+select {
+	width: 209px;
+	border: 1px solid #cacaca;
+	border-radius: 3px;
+	padding: 4px;
+}
+#messageBox textarea#list {
+	width: 98%;
+	height: 95%;
+}
+.location {
+	color: #989898;
+}
+.inputList {
+	width: 315px;
+	height: 87px;
+}
+#tr_profile_field_as_dv .commentSmall {
+	padding: 0 0 3px 0;
+}
+#profileFieldAsDefaultValue {
+	margin: 0 0 7px;
+}
+#defaultValue {
+	margin: 8px 0 0;
+}
+#profile_field_as_dv {
+	padding: 6px 4px 5px;
+	margin: 0;
+}
+/********************************************************************************/
+
+/* START:Accordeon CSS Block
+*********************************************************************************/
+#mediumButton {
+	width: 655px;
+	height: 25px;
+	padding: 2px 5px 0 5px;
+	line-height: 24px;
+	font-weight: bold;
+	font-size: 12px;
+}
+#fullButton {
+	height: 25px;
+	padding: 2px 0 0 5px;
+	line-height: 22px;
+	font-weight: bold;
+	font-size: 12px;
+}
+.setting_block {
+	width: 655px;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	background: #ededed;
+	border: 1px solid #e4e4e4;
+}
+.setting_block td:first-child {
+	width: 120px;
+}
+#fullSettingBlock {
+	width: auto;
+}
+.setting_button {
+	background: #dcdcdc;
+	border: 1px solid #e4e4e4;
+	cursor: pointer;
+}
+.setting_icon {
+	float: right;
+}
+#accordeonClosed,
+#accordeonOpen {
+	width: 10px;
+	height: 10px;
+	margin: 5px 10px 0 0;
+	float: right;
+}
+#accordeonClosed {
+	background: url("menu_closed.png") no-repeat;
+}
+#accordeonOpen {
+	background: url("menu_opened.png") no-repeat;
+}
+#clear {
+	background: none;
+	border: 0;
+}
+#clear table,
+#clear td,
+#clearTable table,
+#clearTable td {
+	border: 0;
+}
+tr#clearTable {
+	background: #fff;
+	border: 1px solid #fff;
+}
+/********************************************************************************/
+
+/* START:Edit Email Templates
+*********************************************************************************/
+.editEmailTemp,
+.editEmailTempSec2,
+.editEmailTempSec {
+	width: 17px;
+	float: right;
+}
+.editEmailTemp {
+	margin: 0 40px 0 0;
+}
+.editEmailTempSec {
+	margin: 0 0 0 80px;
+}
+.editEmailTempSec2 {
+	margin: 0 0 0 23px;
+}
+.edit-email-template {
+	background: url("pen.png") no-repeat;
+	width: 20px;
+	height: 19px;
+	display: inline-block;
+	margin: 7px 0 0 8px;
+}
+#notificationsTab select,
+.setting_block select,
+#guest_alert_email,
+#email_alert {
+	float: left;
+}
+#generalTab .edit-email-template {
+	float: right;
+}
+#template_content {
+	font-size: 13px;
+	font-family: Tahoma, Arial, sans-serif;
+}
+.ui-tabs .ui-tabs-nav li a {
+	padding: 0.5em 0.7em !important;
+}
+/********************************************************************************/
+
+/* START:Complex Fields
+*********************************************************************************/
+.complex {
+	border-bottom: 1px dotted #000;
+	padding: 5px 0;
+}
+.complex fieldset {
+	border: 0;
+	padding: 4px 0 10px;
+}
+.complex .inputName {
+	width: 27%;
+	float: left;
+}
+.complex .inputReq {
+	float: left;
+	color: red;
+	width: 20px;
+}
+.complex .inputField {
+	float: left;
+}
+.inputField select.complexField {
+	width: 209px;
+}
+.remove {
+	background: url("delete.png") no-repeat 0 1px;
+	padding: 0 0 0 20px;
+	margin: 0 0 5px 0;
+	display: inline-block;
+	text-decoration: underline !important;
+}
+a:hover.remove {
+	text-decoration: none !important;
+	color: red;
+}
+.add {
+	background: url("add.png") no-repeat left center;
+	padding: 2px 0 0 20px;
+	margin: 2px 0 5px 0;
+	display: inline-block;
+	text-decoration: underline !important;
+}
+a:hover.add {
+	color: green;
+	text-decoration: none !important;
+}
+/********************************************************************************/
+
+/* START:Paginator
+*********************************************************************************/
+.resultsnumber {
+	float: left;
+	font-size: 15px;
+	margin: 3px 0 0 5px;
+	padding: 0;
+}
+.actionWithSelected,
+.actionSelected {
+	float: left;
+	margin: 0 0 0 20px;
+}
+.actionSelected select {
+	padding: 3px;
+}
+.content-current {
+	color: #fff;
+}
+.items-count {
+	float: left;
+	margin: 6px 10px 0 5px;
+}
+.actionSelected {
+	width: auto;
+}
+.numberPerPage {
+	margin: 0 25px 0 0;
+}
+.numberPage,
+.numberPerPage {
+	float: right;
+}
+.perPage {
+	width: 60px;
+}
+.pagination {
+	float: right;
+	margin: 5px 10px 0 10px;
+	padding: 0;
+}
+.pagination .current {
+	background: -moz-linear-gradient(center top , #ffffff, #dddddd) #EFEFEF;
+	border: 1px solid #808080;
+	color: #000;
+	border-radius: 2px 2px 2px 2px;
+	padding: 2px 5px;
+	margin: 0 0 0 3px;
+	text-decoration: none;
+}
+.pagination .current :hover {
+	cursor: pointer;
+}
+.pagination .page-field {
+	border: 1px solid #CACACA;
+	position: absolute;
+	margin: 20px 0 0 -35px;
+	width: 100px;
+}
+.pagination .page-field .content-current,
+.pagination .page-field .title-current {
+	padding: 5px;
+}
+.pagination .page-field .content-current {
+	height: 40px;
+	background: #fff ;
+	text-align: center;
+}
+.pagination .page-field .title-current {
+	background: #808080 ;
+	color: #fff;
+	text-align: center;
+}
+.pagination .page-field .content-current .page-input {
+	margin: 5px 0;
+	position: relative;
+	float: left;
+}
+.pagination .page-field .content-current input[type="text"] {
+	border: 1px solid #CACACA;
+	border-radius: 3px 3px 3px 3px;
+	font-family: 'Droid Sans',sans-serif;
+	padding: 4px;
+	width: 45px;
+}
+.pagination .page-field .content-current .page-enter-button {
+	margin: 5px 0;
+	position: relative;
+	float: right;
+	border-radius: 3px 3px 3px 3px;
+	border: 1px solid #CACACA;
+	background: linear-gradient(to bottom, #F9FDFF 0%, #BFC8CE 100%);
+	height: 27px;
+	width: 27px;
+}
+.pagination .page-field .content-current input[type="button"] {
+	background: url("./icon-enter.png") center no-repeat;
+	border: 1px solid #CACACA;
+	height: 27px;
+	width: 27px;
+}
+.pagination .page-field .content-current input[type="button"]:hover {
+	cursor: pointer;
+}
+.pagination a {
+	background: -moz-linear-gradient(center top , #ffffff, #EFEFEF) #EFEFEF;
+	border: 1px solid #ccc;
+	color: #555;
+	border-radius: 2px 2px 2px 2px;
+	padding: 2px 5px;
+	text-decoration: none;
+}
+.pagination .arrow-left img,
+.pagination .arrow-right img {
+	border: 0;
+}
+.pagination .none {
+	background: -moz-linear-gradient(center top , #ffffff, #EFEFEF) #EFEFEF;
+	border: 1px solid #ccc;
+	color: #555;
+	border-radius: 2px 2px 2px 2px;
+	padding: 2px 5px;
+	text-decoration: none;
+}
+#displayResults .innerpadding {
+	border-left: 5px solid #e6e6e6;
+	border-right: 5px solid #e6e6e6;
+	background: #e6e6e6;
+}
+#displayResultsTable {
+	border: 1px solid #fff;
+}
+.actionDescription,
+.actionButtons  {
+	margin: 6px 10px 0 10px;
+}
+.actionDescription {
+	float: left;
+}
+.actionButtons {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Miscellaneous
+*********************************************************************************/
+.commentSmall {
+	font-size: 11px;
+}
+.packageVersion {
+	color: #fff;
+	font-size: 12px;
+	padding: 0 35px 0 0;
+	text-align: right;
+}
+p.warning,
+p.error,
+p.message,
+p.notice,
+p.note {
+	margin: 5px;
+	padding: 5px 5px 5px 35px;
+}
+p.warning,
+p.error {
+	background: url("cancel.png") #fcffd3 no-repeat 1% 50%;
+	color: #CE0000;
+	border: 1px solid #CE0000;
+}
+p.errorList {
+	background: #fcffd3;
+	color: #CE0000;
+	border: 1px solid #CE0000;
+	margin: 5px 5px 5px 35px;
+	padding: 5px 5px 5px 15px;
+}
+p.message {
+	background: url("warning.png") #e0ffdf no-repeat 1% 50%;
+	color: #006a25;
+	border: 1px solid #006a25;
+}
+p.notice,
+p.note {
+	background: url("check.png") #f4f4f4 no-repeat 1% 50%;
+	color: #414141;
+	border: 1px solid #d2d2d2;
+}
+.align_right {
+	text-align: right;
+}
+.clear-border-left {
+	border-left: 0 !important;
+	border-right: 1px solid #E0DFDF;
+}
+/********************************************************************************/
+
+/* START:XML Import
+*********************************************************************************/
+.xml-data-fields {
+	text-align: left;
+	padding: 0 5px;
+	width: 195px;
+	height: 25px;
+}
+.draggableuser,
+.draggable {
+	width: 145px;
+	padding: 5px 27px;
+	background: #AFAFAF;
+	border: 1px solid #ddd;
+	color: #333;
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+}
+.droppableuser,
+.droppable {
+	padding: 3px 5px;
+	width: 200px;
+	height: 29px;
+	background: #FFAD84;
+	border: 1px solid #ddd;
+	color: #333;
+	float: right;
+}
+.td_height {
+	height: 44px;
+}
+.droppable2user,
+.droppable2 {
+	text-align: center;
+	padding: 3px 5px;
+	width: 200px;
+	height: 29px;
+	background: #EAEAEA;
+	border: 1px solid #ddd;
+	color: #333;
+}
+.droppable2external_id {
+	padding: 5px;
+	width: 200px;
+	height: 25px;
+	background: #EAEAEA;
+	border: 1px solid #ddd;
+	color: #333;
+}
+.ui-state-highlight {
+	background: #FF752B !important;
+}
+.ui-state-drophover {
+	background: #FF5500 !important;
+}
+.ui-state-highlight2 {
+	background: #D3D3D3;
+}
+.ui-state-drophover2 {
+	background: #BCBCBC;
+}
+.droppableusername {
+	padding: 5px;
+	width: 200px;
+	height: 25px;
+	background: #FFAD84;
+	border: 1px solid #ddd;
+	color: #333;
+	float: right;
+}
+.td_height {
+	height: 44px;
+}
+.droppable2Username {
+	padding: 5px;
+	width: 200px;
+	height: 25px;
+	background: #EAEAEA;
+	border: 1px solid #ddd;
+	color: #333;
+	text-align: center;
+}
+/********************************************************************************/
+
+/* START:Mass Mailing
+*********************************************************************************/
+#test_mailer td {
+	padding: 5px 0;
+}
+#test_mailer td input {
+	margin: 0;
+}
+.to_block {
+	margin: 0 0 6px 0;
+}
+.to_block label {
+	color: #555;
+	display: block;
+	float: left;
+	font-weight: normal;
+	width: 110px;
+}
+/********************************************************************************/
+
+/* START:Log
+*********************************************************************************/
+#log {
+	max-width: 1100px;
+	height: 420px;
+	padding: 4px;
+	background: #ddd;
+	color: #000;
+	border: 1px solid #999;
+	font-family: Arial, sans-serif;
+	font-size: 7pt;
+	overflow: auto;
+}
+/********************************************************************************/
+
+/* START:Permissions and Settings
+*********************************************************************************/
+.permArrowDown,
+.permArrow {
+	width: 15px;
+	height: 20px;
+	display: block;
+	float: left;
+}
+.permArrowDown {
+	background: url("arrowDown.png") no-repeat 0 7px;
+}
+.permArrow {
+	background: url("arrowRight.png") no-repeat 2px 5px;
+}
+/********************************************************************************/
+
+/* START:Themes
+*********************************************************************************/
+#themes,
+#themesPic {
+	float: left;
+}
+#themes {
+	width: 360px;
+}
+#themesPic {
+	width: 400px;
+}
+/********************************************************************************/
+
+/* START:Products
+*********************************************************************************/
+.InContent #productForm td,
+.InContent #productForm th {
+	border-left: 0 !important;
+}
+.productType {
+	width: 35%;
+}
+.productType ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.productType li {
+	margin: 10px 0 20px 0;
+	padding: 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+.productTypeComment {
+	font-size: 12px;
+	font-weight: normal;
+}
+.productInputReq {
+	width: 5px;
+	color: red;
+}
+.productInputField {
+	width:98%;
+}
+#volume_based_pricing_div {
+	width: auto !important;
+}
+#complexFieldsVolume td:first-child .volume_based_pricing {
+	width: 50px;
+}
+#complexFieldsVolume td .volume_based_pricing {
+	width: 90px;
+}
+.product-buttons {
+	width: 920px;
+	text-align: right;
+}
+/********************************************************************************/
+
+/* START:Template Manager
+*********************************************************************************/
+.et-add-new-block {
+	margin: 9px 0 0;
+}
+.spec-vars-title,
+.spec-vars-title-h {
+	cursor: pointer;
+}
+.spec-vars-title {
+	background: url("arrowRight.png") no-repeat 0 6px;
+}
+.spec-vars-title-h {
+	background: url("arrowDown.png") no-repeat 0 6px;
+}
+.spec-vars-var,
+.spec-vars-title,
+.spec-vars-title-h {
+	display: block;
+	padding: 0 0 0 13px;
+	font-weight: normal;
+	line-height: 22px;
+}
+#email-template-edit .subject {
+	width: 500px;
+}
+.et-vars-groups li {
+	font-weight: bold;
+	margin: 7px 0;
+}
+.et-vars-groups li .et-var-val {
+	font-weight: normal;
+	display: block;
+	line-height: 22px;
+}
+.specific-vars {
+	margin: 0 0 0 20px;
+}
+.specific-vars li {
+	font-weight: normal;
+}
+.CodeMirror {
+	max-width: inherit !important;
+	border: 1px solid #E0DFDF;
+}
+.CodeMirror pre {
+	white-space: pre-wrap !important;
+}
+.edit-template-fieldset {
+	max-width: 800px;
+}
+.add-template-fieldset {
+	max-width: 700px;
+}
+/********************************************************************************/
+
+/* START:Statistics
+*********************************************************************************/
+#stat-footer form {
+	float: left;
+	padding: 20px 0 0 0;
+	width: 160px;
+}
+#stat-footer .greenButtonEnd {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	float: left;
+}
+#stat-footer .printButton {
+	float: left;
+	margin: 0;
+}
+.pring-chart {
+	border: none !important;
+	font-size: 12px;
+	display: none;
+}
+.pring-chart td,
+.no-border {
+	border: none !important;
+}
+.pring-chart #applyStatistics,
+.pring-chart #viewStatistics {
+	height: 300px;
+	width: 100%;
+}
+.print-sales-table .print-button {
+	padding: 0 0 0 50px;
+}
+.pring-chart .print-button {
+	padding: 0 0 0 100px;
+}
+.print-table {
+	text-align: left;
+	font-size: 12px;
+}
+.export-select {
+	width: 60px;
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Static Content
+*********************************************************************************/
+.InContent table#editStaticContent table {
+	background: none !important;
+	border: 0 !important;
+}
+/********************************************************************************/
+
+/* START:Custom jquery
+*********************************************************************************/
+.ui-datepicker-trigger {
+	background: none;
+	top: 4px !important;
+	left: 1px !important;
+	border: 0;
+	cursor: pointer;
+	padding: 0;
+}
+.ui-widget {
+	font-size: 13px !important;
+	font-family: 'Droid Sans', sans-serif !important;
+	color: #444 !important;
+}
+#settingsPane,
+form#settingsPane,
+#settingsPane .ui-widget-content,
+#productForm .ui-widget-content {
+	border: 0 !important;
+}
+#settingsPane .ui-tabs-panel,
+#productForm .ui-tabs-panel {
+	border-left: 1px solid #BEC4C8 !important;
+	border-right: 1px solid #BEC4C8 !important;
+	border-bottom: 1px solid #BEC4C8 !important;
+}
+#settingsPane .ui-widget-header,
+#productForm .ui-widget-header {
+	background: none !important;
+}
+#settingsPane .ui-tabs-selected,
+#productForm .ui-tabs-selected {
+	border-left: 1px solid #BEC4C8;
+	border-top: 1px solid #BEC4C8;
+	border-right: 1px solid #BEC4C8;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-size: 12px !important;
+	font-family: 'Droid Sans', sans-serif !important;
+}
+.ui-widget-header {
+	border-bottom: 1px solid #BEC4C8 !important;
+}
+.color-red {
+	color: red;
+}
+tr.myDragClass td {
+	color: yellow;
+	background: #999;
+}
+td.dragHandle {
+	cursor: move;
+}
+/********************************************************************************/
+
+/* START:Invoice
+*********************************************************************************/
+#invoice-buttons {
+	text-align: center;
+	margin: 20px 0 0 0;
+	max-width: inherit !important;
+	background: none !important;
+	border: 0 !important;
+}
+#invoice-buttons a.button {
+	color: #fff !important;
+}
+#invoice-billto,
+#invoice-sendto,
+#invoice-logo,
+#invoice-info {
+	margin: 10px 0;
+	padding: 10px 5px;
+}
+#invoice-logo {
+	width: 350px;
+	float: left;
+}
+#invoice-info {
+	width: 350px;
+	float: right;
+	text-align: right;
+	line-height: 20px;
+}
+#invoice-billto {
+	float: left;
+}
+#invoice-sendto {
+	float: right;
+}
+#invoice-billto,
+#invoice-sendto {
+	border-top: 1px solid #d9d9d9;
+	width: 380px;
+	line-height: 22px;
+}
+#invoice-info strong,
+#invoice-billto strong,
+#invoice-sendto strong {
+	font-size: 18px;
+}
+table#invoice-table {
+	width: 100%;
+	font-size: 12px;
+	font-family: inherit;
+	border-collapse: collapse;
+}
+table#invoice-table tbody tr:hover {
+	background: #f0f0f0;
+}
+table#invoice-table td {
+	border: 1px solid #d9d9d9;
+	padding: 5px 10px;
+}
+table#invoice-table tr.invoice-table-head {
+	background: #ededed;
+}
+table#invoice-table tbody tr.invoice-table-head:hover {
+	background: #ededed !important;
+}
+table#invoice-table tr.invoice-table-head td {
+	font-weight: bold;
+	font-size: 13px;
+	color: #000;
+	height: inherit !important;
+}
+.invoice-amount-total {
+	background: #f5f5f5;
+	text-align: right;
+	font-weight: bold;
+}
+.invoice-actions {
+	text-align: center !important;
+}
+.invoice-washy {
+	color: #ADADAD;
+}
+/********************************************************************************/
+
+/* START:Print page
+*********************************************************************************/
+#print-button {
+	width: 800px;
+	margin: 0 auto;
+}
+.printPage {
+	width: 800px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.printLeft {
+	width: 200px;
+	float: left;
+}
+.printRight {
+	width: 580px;
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Application Manage
+*********************************************************************************/
+#application-table td {
+	background: none;
+	padding: 0;
+	border: 0;
+}
+#application-table table {
+	background: none;
+	border: 0;
+}
+#application-table table td {
+	padding: 4px;
+	border-top: 0;
+	border-left: 1px solid #E0DFDF;
+	border-bottom: 1px solid #E0DFDF;
+	border-right: 1px solid #E0DFDF;
+}
+#application-table table td table,
+table#application-table {
+	background: none;
+	border: 0;
+}
+#application-settings {
+	width: 100% !important;
+}
+#application-settings td {
+	padding: 0 0 5px 0;
+}
+#application-settings input[type="radio"] {
+	margin: 0 5px 0 0;
+}
+/********************************************************************************/
+
+/* START:Application Settings
+*********************************************************************************/
+#application-settings {
+	margin: 3px 0 0 0;
+}
+#application-settings td {
+	padding: 0 0 15px 0;
+}
+#application-settings .inputRadio {
+	margin: 2px 5px 0 5px;
+}
+#application-settings .inputString {
+	width: 170px;
+}
+/********************************************************************************/
+
+/* START:Profiler
+*********************************************************************************/
+.profiler {
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	z-index: 15;
+}
+.profiler * {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#blockResize {
+	width: 100%;
+	height: 10px;
+	cursor: n-resize;
+	display: none;
+}
+.profilerHead {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 960px;
+	background: #222;
+	border: 12px solid #000;
+	border-bottom: none;
+	font-family: "Lucida Grande", Tahoma, Arial, sans-serif;
+}
+.profiler h3 {
+	font-weight: normal;
+	line-height: 200px;
+	padding: 0 15px;
+	color: #fff;
+}
+.profiler,
+.profiler td {
+	color: #444;
+}
+.logsBlock {
+	height: 200px;
+	display: none;
+	overflow: auto;
+	width: 99%;
+}
+.metrics {
+	background: #000;
+	width: 100%;
+}
+.functionsTab,
+.queriesTab {
+	border-top: 1px solid #ccc;
+	overflow: auto;
+	width: 100%;
+}
+.profiler .blue {
+	color: #3769A0 !important;
+}
+.profiler .purple {
+	color: #953FA1 !important;
+}
+.profiler .collapseTab {
+	display: none;
+	color: yellow;
+	width: 2%;
+}
+.profiler,
+.functionsTab,
+.queriesTab {
+	display: none;
+}
+.profiler,
+.functions,
+.queries {
+	display: block !important;
+}
+.functions td.blue,
+.queries td.purple {
+	background: #222 !important;
+	border-bottom: 6px solid #fff !important;
+	cursor: default !important;
+}
+.metrics td {
+	height: 40px;
+	width: 20%;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #000;
+	border-bottom: 6px solid #444;
+}
+.metrics td:hover {
+	background: #222;
+	border-bottom: 6px solid #777;
+}
+.profiler var {
+	font-size: 23px;
+	font-weight: bold;
+	font-style: normal;
+	margin: 0 0 3px 0;
+	display: block;
+}
+.profiler h4 {
+	font-size: 12px;
+	color: #fff;
+	margin: 0 0 4px 0;
+}
+.profiler .main {
+	width: 100%;
+	border-collapse: collapse;
+}
+.profiler,
+.functions .functionsTab,
+.queries .queriesTab {
+	display: block;
+}
+.profiler .main td {
+	padding: 7px 15px;
+	text-align: left;
+	background: #151515;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	border-bottom: 1px dotted #323232;
+	color: #fff;
+}
+.profiler .main td,
+pre {
+	font-family: Monaco, "Consolas", "Lucida Console", "Courier New", monospace;
+	font-size: 11px;
+}
+.profiler .main td b {
+	float: left;
+	font-weight: normal;
+	color: #E6F387;
+}
+.profiler .main td:hover {
+	background: #2E2E2E;
+}
+table.main thead td.currentColumn {
+	background: #2E2E2E;
+	color: #fff;
+}
+#infometr {
+	width: 5%;
+	cursor: default;
+}
+#infometr:hover {
+	background: #000;
+}
+.popup-table input {
+	height: 25px;
+	margin: 3px 0;
+}
+.popup-table .required {
+	margin: 0 0 0 5px;
+}
+.popup-table td {
+	font-size: 13px;
+}
+#saved_mailings table {
+	width: 66%;
+}
+/********************************************************************************/
+
+/* START:Email Log
+*********************************************************************************/
+#resendEmailDialogForm fieldset {
+	padding: 5px;
+}
+#resendEmailDialogForm input[type="checkbox"] {
+	vertical-align: sub;
+}
+/********************************************************************************/
+
+/* START:Tree Field CSS
+ *********************************************************************************/
+.tree-input-field {
+	width: 313px;
+	float: left;
+	margin: 0 0 5px;
+}
+.tree-available-count {
+	display: inline-block;
+	float: left;
+	margin: 0 0 0 10px;
+}
+ul.tree {
+	list-style: none inside;
+	margin: 5px 0;
+	padding: 0;
+}
+.tree-as-sb-vals {
+	margin: 0 0 10px 0;
+}
+ul.tree img.arrow {
+	padding: 2px 0 0 0;
+	border: 0;
+	width: 15px;
+}
+ul.tree li {
+	padding: 0;
+	list-style-type: none;
+	clear:both;
+}
+ul.tree li ul {
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+ul.tree label {
+	cursor: pointer;
+	padding: 2px 0;
+}
+ul.tree label.hover {
+	color: red;
+}
+ul.tree {
+	margin: 5px 0;
+}
+#tree-block {
+	overflow: auto;
+	padding: 5px;
+	max-height: 400px;
+	margin: 20px;
+	background: #ffe;
+	border: 1px solid #c3c3c3;
+}
+#tree-buttons {
+	text-align: center;
+}
+#tree-available {
+	margin: 0 0 0 15px;
+	float: left;
+}
+#tree-deselect-all {
+	margin: 0 15px 0 0 ;
+	float: right;
+	vertical-align: top;
+	cursor: pointer;
+}
+.tree-values div {
+	margin-top: 7px !important;
+	margin-bottom: 5px !important;
+}
+.tree-child {
+	color: #575757;
+}
+.tree-child-1 {
+	margin: 0 0 3px 15px !important;
+}
+.tree-child-2 {
+	margin: 0 0 3px 30px !important;
+}
+.tree-child-3 {
+	margin: 0 0 3px 45px !important;
+}
+.tree-child-4 {
+	margin: 0 0 3px 60px !important;
+}
+.tree-parent {
+	font-weight: bold;
+	margin: 7px 0 5px;
+}
+.tree-child-close {
+	color: #BEBEBE;
+	cursor: pointer;
+	font-size: 10px !important;
+	margin: 0 5px 0 0;
+}
+ul.tree li .arrow {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+	background: url("../../../../../system/ext/jquery/ltL_nes.gif") no-repeat 0 0;
+}
+ul.tree li .collapsed {
+	background-image: url("../../../../../system/ext/jquery/ltP_nes.gif");
+}
+ul.tree li .expanded {
+	background-image: url("../../../../../system/ext/jquery/ltM_ne.gif");
+}
+ul.tree li .checkbox {
+	height: 16px;
+	padding: 0 0 0 20px;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+	background: url("../../../../../system/ext/jquery/cbUnchecked.gif") no-repeat left top;
+}
+ul.tree li .checked {
+	background-image: url("../../../../../system/ext/jquery/cbChecked.gif");
+}
+ul.tree li .half_checked {
+	background-image: url("../../../../../system/ext/jquery/cbIntermediate.gif");
+}
+div.tree_button {
+	cursor: pointer;
+	width: 313px;
+	height: 17px;
+	padding: 3px 0 0 0;
+	border: 1px solid #B3B3B3;
+	float: left;
+	font-size: 12px;
+	background: url("../../../../../system/ext/jquery/arrow_tree.png") right center no-repeat #fff;
+}
+.select-free-fix {
+	position: absolute;
+	z-index: 10;
+	overflow: hidden;
+	width: 700px;
+	display: none;
+	height: 250px;
+	background: #fff;
+	padding: 0 0 2px 0;
+}
+.select-free-fix iframe {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	filter: mask();
+	width: 3000px;
+	height: 3000px;
+}
+.select-free-fix .bd {
+	border: solid 1px #aaa;
+	overflow: auto;
+	height: 250px;
+}
+.inner-content-div {
+	height: 232px;
+	margin: 3px 0 0 0;
+	overflow-x: auto;
+}
+.mt-count-available {
+	float: left;
+	padding: 4px 0 0 10px;
+}
+/********************************************************************************/
+
+/* START:JobG8 Plugin
+*********************************************************************************/
+#jobg8-plugin {
+	width: 660px;
+}
+#jobg8-plugin select,
+#jobg8-plugin textarea,
+#jobg8-plugin input[type="text"] {
+	width: 300px;
+}
+#jobg8-plugin select,
+#jobg8-plugin textarea {
+	height: 150px;
+}
+.filter-description {
+	width: 400px;
+	text-align: justify;
+	vertical-align: top;
+	padding: 5px 10px 5px 5px;
+}
+.filter-description input[type="checkbox"] {
+	float: left;
+}
+.filter-description span {
+	width: 300px;
+	float: left;
+	margin: 0 0 0 10px;
+}
+.mapping {
+	width: 660px;
+	border: 0 !important;
+}
+.listing-type-form {
+	margin: 10px 0;
+}
+.mapping p {
+	margin: 0;
+}
+.mapping td {
+	border: 0;
+	padding: 0;
+}
+.mapping .setting_block td:first-child {
+	width: 250px;
+}
+#mapping-instruction {
+	width: 680px;
+	margin: 0 0 20px 0;
+	text-align: justify;
+}
+#mapping-instruction p {
+	margin: 10px;
+}
+#mapping-error {
+	width: 655px;
+}
+.mapping select {
+	width: 375px;
+}
+.mapping-employment td,
+.mapping-salary td,
+.mapping-category td {
+	padding: 10px 0;
+}
+.mapping-category select {
+	height: 105px;
+}
+.mapping-employment select {
+	height: 90px;
+}
+.mapping-employment .mappingActions,
+.mapping-salary .mappingActions,
+.mapping-category .mappingActions {
+	margin: 0 63px 0 0;
+}
+/********************************************************************************/
+
+/* START:Social Media
+*********************************************************************************/
+#connectionSettings {
+	position: relative;
+}
+.network-field-oddrow td {
+	background: #fff;
+	border: 0 !important;
+}
+.network-field-evenrow td {
+	background: #F7F7F7;
+	border: 0 !important;
+}
+.network-field-last td {
+	border-bottom: 1px solid #E0DFDF !important;
+}
+td.comment-td {
+	padding: 10px !important;
+	font-size: 11px;
+	border-bottom: 1px solid #E0DFDF !important;
+}
+#social-media #network-list {
+	width: 195px;
+}
+#social-media #network-list img {
+	padding: 0 7px 0 0;
+	text-decoration: none;
+	vertical-align: sub;
+}
+#social-media table td {
+	padding: 8px 5px;
+}
+#social-media table td.required {
+	border-left: 0 !important;
+	border-right: 0 !important;
+}
+#social-media table td:first-child {
+	width: 28%;
+}
+#social-media textarea,
+#social-media input[type="text"] {
+	width: 300px !important;
+}
+#social-media select {
+	width: 312px;
+}
+#social-media #social-feed-settings {
+	width: 650px;
+}
+#social-media #social-feed-settings select,
+#social-media #social-feed-settings input {
+	margin: 2px 0;
+}
+#social-media td fieldset {
+	border: 0;
+	background: none;
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+#social-media #posting_limit,
+#social-media #update_every {
+	width: 80px !important;
+}
+#social-media .posting-settings td.required,
+#social-media .posting-settings td:first-child {
+	padding: 15px 5px 0 5px;
+	vertical-align: top;
+}
+#social-media .posting-settings td:last-child {
+	vertical-align: middle;
+}
+#postJobs table td {
+	vertical-align: inherit;
+}
+.ui-widget .deletebutton {
+	color: #fff;
+}
+.ui-widget .editbutton {
+	color: #777;
+}
+/********************************************************************************/
+
+/* START:Edit Picture PopUp
+*********************************************************************************/
+#editForm table,
+#editForm td {
+	border: none;
+}
+/********************************************************************************/
+
+/* START:Multiselect
+*********************************************************************************/
+.ui-multiselect {
+	padding: 5px 0 5px 5px !important;
+}
+.ui-multiselect {
+	padding: 2px 0 2px 3px;
+}
+.ui-multiselect-menu .ui-widget-header {
+	background: #eaeaea;
+	padding: 5px 6px;
+}
+.ui-multiselect-checkboxes .ui-state-hover {
+	background: #f2f2f2 !important;
+	border: 1px solid #e3e4e4 !important;
+	border-radius: 2px;
+}
+.ui-state-focus,
+.ui-state-active {
+	background: url("../../../../../system/ext/jquery/css/images/ui-bg_glass_75_dadada_1x400.png") repeat-x scroll 50% 50% #DADADA !important;
+}
+#messageBox .inputName {
+	width: 30%;
+	padding: 2px 0 0 0;
+}
+.product-multilist .ui-multiselect {
+	width: 250px !important;
+}
+/********************************************************************************/
+
+/* START:Upload pictures
+*********************************************************************************/
+#UploadPics table {
+	width: 310px !important;
+	margin: 0 !important;
+}
+table#manage-pictures {
+	margin: 10px 0 15px 0 !important;
+}
+#manage-pictures .thumbnail {
+	width: 50px;
+}
+#manage-pictures .actions {
+	width: 20px;
+	white-space: nowrap;
+}
+#manage-pictures .caption {
+	width: 130px;
+}
+.add-picture-loading {
+	position: absolute;
+	margin: 35px 0 0 60px;
+	z-index: 10;
+}
+/********************************************************************************/
+
+/* START:Expiration date
+*********************************************************************************/
+table#expiration-date {
+	width: auto !important;
+	margin: 0 !important;
+}
+#expiration-date td {
+	padding: 0 0 15px 0;
+}
+#expiration-date .inputRadio {
+	margin: 1px 5px 0 5px;
+}
+#expiration-date #until {
+	margin: 7px 5px 0;
+}
+#expiration-date td .input_date {
+	width: 95px !important;
+}
+/********************************************************************************/
+
+/* START:Video Player
+*********************************************************************************/
+.player {
+	display: block;
+	height: 250px;
+	width: 300px;
+}
+/********************************************************************************/
+
+/* START:Instructions CSS
+*********************************************************************************/
+.instruction {
+	position: relative;
+	margin:0 0 0 10px;
+	float: left;
+}
+.instruction .instr_icon {
+	background: url("information.png") repeat left top;
+	float: left;
+	height: 16px;
+	width: 16px;
+}
+.instruction .instr_block {
+	display: none;
+	position: absolute;
+	left: 18px;
+	background: #FA9F45;
+	border: 1px solid #ccc;
+	opacity: 0.9;
+	padding: 6px;
+	width: 250px;
+}
+/********************************************************************************/
+
+/* START:Sub Admin CSS Block
+*********************************************************************************/
+tr.subpermission td {
+	padding: 0 0 0 20px;
+}
+.permGroupTitle {
+	cursor: pointer;
+	text-transform: capitalize;
+	margin: 2px 0 0 0;
+}
+.subadminPerm li {
+	margin: 10px 0;
+	list-style: none;
+}
+#perm_settings_fieldset,
+#notifications_settings_fieldset {
+	border: 0;
+}
+#perm_settings_fieldset,
+#notifications_settings_fieldset {
+	background: none;
+}
+#perm_settings_fieldset legend.title,
+#notifications_settings_fieldset legend.title {
+	color: #000;
+	font-size: 100%;
+	font-weight: normal;
+}
+.head_actions {
+	margin: 5px auto;
+}
+.return_toprev_page {
+	margin: 10px auto;
+}
+#notifications_settings_fieldset ul {
+	list-style: none;
+}
+#notifications_ul span.status {
+	color: green;
+	font-size: 80%;
+	margin: 0 0 0 20px;
+}
+/********************************************************************************/
+
+/* START:Settings
+*********************************************************************************/
+.notifications input[type="text"] {
+	width: 30px;
+}
+td.notifications {
+	padding: 5px;
+	width: 33px;
+}
+#reForm input[type="text"] {
+	width: 180px;
+}
+/********************************************************************************/
+
+/* START:Progbar CSS
+*********************************************************************************/
+#progbar iframe {
+	height: 20px;
+	width: 160px;
+	vertical-align: top;
+	display: inline-block;
+}
+/********************************************************************************/
+
+/* START:Banners Block CSS
+*********************************************************************************/
+.banner-textarea {
+	width: 400px;
+	height: 100px;
+}
+.banner-clue {
+	font-style: italic;
+	font-size: 12px;
+}
+.banner-clue span,
+.flash_param_field {
+	color: #0000ff;
+}
+#rejection_reason_text {
+	width: 315px;
+	height: 200px;
+}
+/********************************************************************************/
+
+/* START:Posting Page Block CSS
+*********************************************************************************/
+.posting-fields-legend {
+	width: 30px;
+	height: 30px;
+	background: #ffc481;
+	border: 1px solid #000;
+	float: left;
+	margin: 0 10px 0 0;
+}
+.posting-field-td {
+	padding: 0 !important;
+}
+.posting-field-td div {
+	padding: 5px 5px 6px;
+}
+.posting-field-td .field-holder {
+	font-weight: bold;
+	color: #A9A9A9;
+}
+.posting-field-td .field {
+	border-top: 1px solid #E0DFDF;
+}
+/********************************************************************************/
+
+/* START:Refine Block CSS
+*********************************************************************************/
+.refine-block .grayButton {
+	margin: 0 0 10px 10px;
+}
+/********************************************************************************/
+
+/* START:HTML Filter Block CSS
+*********************************************************************************/
+#htmlElem .setting_butt {
+	cursor: pointer;
+	margin: 0;
+}
+#htmlElem .setting_ico {
+	padding: 0 5px;
+	float: left;
+	display: block;
+	width: 30px;
+}
+#htmlElem .setting_block {
+	margin: 0 0 0 50px;
+}
+/********************************************************************************/
+
+/* START:Update Block CSS
+*********************************************************************************/
+.package_text_diff {
+	background: #FAFAFA;
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	width: 98%;
+}
+.inner_table {
+	width: 480px;
+	height: 600px;
+	overflow: scroll;
+}
+.package_text_diff .package_text_diff_line {
+	background: #eee;
+	border: 1px solid #D7D7D7;
+	color: #999999;
+	font-family: Verdana, Arial, Helvetica, "sans-serif";
+	font-size: 0.8em;
+	padding: 0 3px 0 0;
+	text-align: right;
+	width: 2%;
+}
+.text_diff_op_line.text_diff_op_change .package_text_diff_left,
+.text_diff_op_line.text_diff_op_delete .package_text_diff_left {
+	background: #FFCCCC;
+}
+.text_diff_op_line.text_diff_op_add .package_text_diff_right,
+.text_diff_op_line.text_diff_op_change .package_text_diff_right {
+	background: #CCFFCC;
+}
+.update-cf {
+	color: #808080;
+}
+/********************************************************************************/

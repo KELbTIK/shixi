@@ -1,0 +1,524 @@
+/* START STYLES
+ * ******************************************************* */
+body {text-align: right;}
+input[type="text"], input[type="password"], select, textarea {text-align: right;}
+table, table thead, table thead th, table tbody td {text-align: right !important;}
+/* END STYLES
+ * ******************************************************* */
+
+
+/* START DESIGN STYLES
+ * ******************************************************* */
+.JobSeekerBlockBg {
+	width: 181px;
+	padding: 0 100px 0 0;
+}
+.EmployerBlockBg {
+	width: 171px;
+	padding: 0 110px 0 0;	
+}
+.JobSeekerBlockTop, .EmployerBlockTop {
+	width:243px;
+	padding: 0 40px 0 0;
+}
+.quickSearchTop, .featuredJobsTop, .latestJobsTop, .blogTop {
+	width: 525px;
+	padding: 0 48px 0 0;
+}
+.loginFormTop {
+	width: 133px;
+	padding: 0 40px 0 0;
+}
+h1.Results {padding: 0 50px 0 0;}
+.compProfileTitle {text-align: center;}
+.SearchResultsCompany h1 {clear: both;}
+
+.inputName {padding: 0 5px 0 0;}
+.leftColumnMA img, .rightColumnMA img {float: right;}
+.leftColumnMA li, .rightColumnMA li {
+	padding: 10px 0;
+	clear: both;
+}
+.printPage {text-align: right;}
+/* END DESIGN STYLES
+ * ******************************************************* */
+
+
+/* START TREE
+ * ******************************************************* */
+.ui-dialog .ui-dialog-title {
+	float: right !important;
+	margin: 0.1em 0.1em 0.2em !important;
+}
+div.tree_button {padding-right:23px;}
+ul.tree li {padding: 0 10px 0 0 !important;}
+ul.tree label {padding: 2px 10px 0 0 !important;}
+ul.tree li .checkbox {float: right !important;}
+ul.tree li .collapsed {float: right !important;}
+ul.tree li .expanded {float: right !important;}
+ul.tree li .arrow {float: right !important;}
+/* END TREE
+ * ******************************************************* */
+/* START Languages Fixed CSS */
+.InputStat{
+	padding: 0 30px 0 0;
+}
+#top-right h1, #quicksearch h1{
+	margin: 0 10px 0 0;
+}
+#top-right, #poll, #mailchimp-nl-cont label, #productDetails ~ table, .listingInfo h2, .listingInfo .displayField ul,
+#siteMap table, #formPayment, .subuser-permis-ul, .subuser-cb-ul, ul.browseListing li, .compProfileInfo,
+.quickLinkBlock, #refineResults th, #listing-product-choice-form, #quickSearch select, #quickSearchLinks li li,
+.displayField ul, .usersBlock ul li, #informationBlockBg, .block_values_button, .compProfileInfo, #listings_per_page_form,.listings_per_page_form, .pageNavigation form{
+	direction: rtl;
+}
+#poll p{
+	direction: ltr;
+}
+p.mailchimp-nl-desc, .listingInfo h2, .listingInfo p, .indexResultsTable tr > th{
+	text-align: right;
+}
+#mainRss, .RSS, .searchGeoDistance, #searchType-keywords, #Salary_list, #DesiredSalary_list, .RightLink,
+#adSpaceAccount, a.blogLink, #listingInfo input[type="button"], #listingTopLinks a, #buttonLogin{
+	float: left;
+}
+.blogDate, .browseCompanyAB, .bcName, .notCheck, .notDesc, #addListingForm div.tree_button,
+.printRight .narrow-col h3, #listingDescription .narrow-col h3, #tree_drop_down_Occupations,
+#userTools, .printRight h2, #listingDescription h2, .logInPassInput, #contact-info{
+	float: right;
+}
+.logInPassInput {
+	width: 100px;
+}
+.tableRight{
+	width:5px;
+}
+.featuredListings{
+	float: right;
+	border-right: 1px dotted black;
+	border-left: none;
+	padding: 0 10px 0 0;
+
+}
+ul.browseListing, .productDetails-info{
+	float:none;
+}
+.social_plugins_div{
+	direction: rtl;
+	display: inline-block;
+}
+#productDetails table{
+	margin:0 0 0 50%;
+	text-align: center;
+}
+#productDetails table td, #productDetails table th{
+	text-align: center!important;
+}
+#productsSelect{
+	margin: 0 5px 0 90%;
+}
+.product-detail-button{
+	margin: 0 0 0 74%;
+}
+.continue-shopping{
+	margin: 0 0 0 74%;
+}
+.ui-dialog .social_plugins_div{
+	font-size: 12px;
+}
+.productDetails-name, .inputName, .inputField, .inputReq, .inputNameBig, .inputFieldSmall,
+#adMargin, .leftDisplaySIde, .currentProducts-name, .input-form-bc, .contact-detail-cap, #note-block{
+	direction: rtl;
+	float: right;
+}
+#table-alerts{
+	float: right!important;
+}
+.ui-dialog .ui-dialog-content{
+	padding: 0.5em 5px 0 10px!important;
+}
+#productDetails ~ table td input[type="text"]{
+	width:218px!important;
+}
+.ui-icon-closethick{
+	font-size: 0px;
+}
+.fix{
+	width:94%!important;
+}
+#adSpace{
+	float: left;
+	margin: 0;
+}
+#adMargin div.tree_button{
+	width:290px!important;
+}
+.bcField{
+	width:84%;
+}
+.refineItem a{
+	display: inline-block;
+}
+.viewDetails, .saved2Ico, .viewVideo{
+	float: right!important;
+}
+.curSearchItem a{
+	display: inline-block;
+}
+.listingInfo h2 div{
+	float: left!important;
+}
+.displayFieldBlock h3{
+	float: right;
+	direction: rtl;
+	padding: 0 0 0 5px;
+}
+.narrow-col{
+	width:339px;
+}
+.compProfileTitle{
+	margin: 0 10px 0 0;
+}
+.in_share{
+	margin: 0 0 0 57%;
+}
+#siteMap table td a{
+	padding: 0 10px 0 0;
+}
+.BreadCrumbs, .MyAccountHead{
+	float: none;
+}
+.leftColumnMA, .rightColumnMA, #leftMenu, .numberPerPage{
+	float:right;
+}
+#leftMenu ul li{
+	padding: 10px 25px 10px 0;
+}
+#leftMenu ul{
+	padding: 0 7px 0 0;
+}
+.pm-sub-menu {
+	direction: rtl;
+	text-align: right;
+	clear:both;
+}
+.MyAccount a{
+	margin: 0 5px 0 0;
+}
+.BreadCrumbs p span{
+	padding: 0 0 1px 15px;
+}
+.currentProducts-info{
+	float: none;
+}
+#myAccountPages{
+	padding: 0 5px 0 0;
+}
+#listing-product-choice-form p b{
+	display: inline-block;
+}
+.mt-count-available{
+	float: right;
+	direction: rtl;
+	padding: 10px;
+}
+#addListingForm .inputStringMoney {
+	width: 238px!important;
+}
+.instruction{
+	float: right;
+	margin: 0 10px 0 0;
+}
+.instr_cont{
+	margin: 0 0 0 -293px;
+}
+#tree_drop_down_Occupations{
+	width: 290px;
+}
+.instruction .instr_arrow{
+	margin: 0 0 0 -26px;
+}
+#addListingForm .selectCurrency {
+	width:71px;
+}
+.login_buttons_txt{
+	float:right;
+}
+.browseListing a:hover{
+	background: url(bgarrowTest-arab.png) no-repeat right center;
+	padding: 0 16px 0 0;
+	margin: 8px 0 0 0;
+}
+.browseListing a{
+	background: url("arrowCicleTest.png") no-repeat 178px center;
+	padding: 0 16px 0 0;
+	margin: 8px 0 0 0;
+}
+.blue{
+	display:inline-block;
+}
+.quickLinkBlock p{
+	margin: 8px 13px 10px 13px;
+}
+#siteMap table td a{
+	padding: 0 12px 0 0;
+}
+.headerBgBlock, .numberResults{
+	text-align: left;
+}
+.printRight .narrow-col h3, #listingsResults .narrow-col h3{
+	float: right;
+	margin: 0 0 0 5px;
+}
+#jobSeker li, #employer li{
+	list-style: none;
+	margin: 0 0 7px;
+}
+#jobSeker li a, #employer li a{
+	display: inline-block;
+	margin: 0 15px 0 0;
+}
+#rightColumn h3{
+	padding: 0 5px 5px 0;
+}
+.aMessage{
+	margin: 0;
+}
+.page_icon{
+	float:right;
+	margin: 0 0 0 10px;
+}
+.numberPerPage, a#viewComapnies{
+	text-align: left;
+}
+#jobSeekerBlockTop, #employerBlockTop{
+	padding: 6px 10px 0 30px;;
+}
+#jobSeekerBlockBg p, #employerBlockBg p{
+	padding: 10px 10px 0 0;
+}
+#jobSeekerBlockBg p a, #employerBlockBg p a{
+	padding: 0 10px 0 0;
+}
+#loginFormTop{
+	font-size: 21px;
+}
+#buttonLogin, #btnSearch{
+	text-align: center;
+}
+#blogPosts{
+	padding: 8px 0 0 25px;
+	text-align: center;
+}
+.latestIco {
+	padding: 5px 18px 5px 0 !important;
+}
+#userBlocks a{
+	font-size: 14px;
+}
+#userBlocks span{
+	min-width: 145px;
+}
+.featuredIco {
+	padding: 5px 18px 5px 0 !important;
+}
+.refineItem{
+	padding: 0;
+	direction: rtl;
+}
+.linkArrow, .pmSendLink{
+	padding: 0 10px 0 0;
+}
+#toolsHeader, #logoBack{
+	text-align: left;
+}
+.pageNavigation{
+	margin: 0 0 0 10px;
+}
+#quickSearch h1{
+	margin: 0 170px 0 0;
+}
+.quickSearchField{
+	width:260px;
+}
+.quickSearchLinks{
+	width:155px;
+}
+#searchPeople{
+	padding: 60px 252px 0 40px;
+}
+.usersBlock ul{
+	padding: 0 13px 0 0;
+}
+.latestJobsItem ul li{
+	padding: 0 10px 0 0;
+}
+#newsBlock ul li{
+	padding: 0 10px 0 0;
+}
+#siteMap table td a{
+	background: url("grayArrow-arab.png") no-repeat right center;
+}
+a.linkArrow{
+	padding: 0 15px 0 0;
+}
+#informationBlock{
+	padding: 5px 5px 0 0;
+}
+.JobSeekerBlockBg{
+	background: url("jobseeker.png") no-repeat left bottom #F5F5F5;
+	padding: 0 10px 0 0;
+	width: 271px;
+
+}
+.EmployerBlockBg{
+	background: url("employer.png") no-repeat left bottom #F4F2ED;
+	padding: 0 10px 0 0;
+	width: 271px;
+}
+.JobSeekerBlockBg p a, .EmployerBlockBg p a {
+	padding: 0 10px 0 0;
+}
+.JobSeekerBlockBg p a:hover, .EmployerBlockBg p a:hover {
+	background: url("arrow-blue-arab.png") no-repeat right center;
+}
+h1.Companies,
+h1.Category,
+h1.City {
+	background: url("main-page-icons.png") no-repeat;
+	padding: 0 0 0 46px;
+}
+h1.Companies {
+	background-position: left 0;
+}
+h1.Category {
+	background-position: left -38px;
+}
+h1.City {
+	background-position: left -76px;
+}
+table thead th a{
+	display: inline-block;
+}
+table thead th{
+	padding: 0 5px 0 0;
+}
+.browseItems{
+	direction: ltr;
+	display: inline-block;
+}
+.pageNavigation{
+	margin: 10px 0 0 10px;
+	float: left;
+}
+.align_right a{
+	margin: 0 10px;
+}
+.ui-multiselect-checkboxes label {
+	text-align: right;
+}
+.ui-multiselect-header ul li,
+.ui-multiselect span {
+	float: right !important;
+}
+.ui-multiselect .ui-icon,
+.ui-multiselect-header li.ui-multiselect-close {
+	float: left !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	left: 0.3em;
+}
+/*** Start Profiler Fix ***/
+.profiler table, .profiler table thead, .profiler table thead th, .profiler table tbody td{
+	text-align: center!important;
+}
+#metrics .blue{
+	display: table-cell!important;
+}
+/*** End Profiler Fix ***/
+#poll span{
+	display: inline-block;
+}
+#poll input[type="radio"]{
+	background: none!important;
+}
+
+/* END Languages Fixed CSS */
+
+
+/* START:Reports
+*********************************************************************************/
+#reports table {
+	float: right;
+	clear: both;
+}
+/********************************************************************************/
+
+
+/* START:Application Tracking
+*********************************************************************************/
+.app-tracking {
+	float: right;
+}
+.navigation-application {
+	float: left;
+}
+.ApplicationPointedInListingInfo {
+	direction: rtl;
+}
+/********************************************************************************/
+
+/* START:Saved Searches CSS
+*********************************************************************************/
+.saved-search-tbl {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Tree
+*********************************************************************************/
+#tree-block ul.tree li .checkbox {
+	background-position: top right;
+	padding: 0 20px 0 0;
+}
+ul.tree li ul {
+	padding: 0 8px 0 0;
+}
+.tree-child-close {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.tree-child-1 {
+	margin: 0 15px 3px 0 !important;
+}
+.tree-child-2 {
+	margin: 0 30px 3px 0 !important;
+}
+.tree-child-3 {
+	margin: 0 45px 3px 0 !important;
+}
+.tree-child-4 {
+	margin: 0 60px 3px 0 !important;
+}
+.tree-input-field {
+	float: right;
+}
+.tree-input-field .left {
+	float: right;
+}
+.tree-available-count {
+	margin: 0 10px 0 0;
+}
+/********************************************************************************/
+
+/* START:Radio Buttons
+*********************************************************************************/
+input[type="radio"],
+label,
+p {
+	direction: rtl;
+}
+label span {
+	display: inline-block;
+}
+/********************************************************************************/

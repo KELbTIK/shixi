@@ -1,0 +1,1 @@
+<input type="text" value="{$value}" class="inputString {$id} {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}]{elseif $parentID}{$parentID}[{$id}]{else}{$id}{/if}" id="{$id}" />

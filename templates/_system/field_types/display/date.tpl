@@ -1,0 +1,1 @@
+{tr type="date"}{$value}{/tr|escape:'html'}

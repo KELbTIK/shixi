@@ -1,0 +1,2876 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #1e1e1e;
+}
+
+/* START:Fonts Include
+*********************************************************************************/
+@font-face {
+	font-family: MPro;
+	src: url("my.eot");
+}
+@font-face {
+	font-family: MPro;
+	src: url("my.ttf");
+}
+/********************************************************************************/
+
+/* START:General CSS
+*********************************************************************************/
+.clr {
+	clear: both;
+}
+fieldset {
+	border: 0;
+	margin: 3px 0;
+	padding: 3px 0;
+}
+a {
+	color: #1e1e1e;
+	text-decoration: underline;
+}
+a:hover {
+	color: #008aff;
+}
+a img {
+	border: none;
+}
+h1 {
+	border-bottom: 1px dotted #000;
+	text-transform: uppercase;
+	color: #373737;
+	font-size: 16px;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-weight: normal;
+	height: 39px;
+	line-height: 40px;
+}
+h2 {
+	color: #373737;
+	font-size: 17px;
+	margin: 2px;
+}
+h3 {
+	color: #9F9F9F;
+	font-size: 17px;
+	margin: 0;
+}
+input,
+select {
+	background: url("bgselect.png") white repeat-x;
+	padding: 4px 3px;
+}
+input[type="checkbox"] {
+	background: none;
+}
+input[type="text"],
+input[type="password"] {
+	border: 1px solid #C6C6C6;
+	width: 308px;
+}
+input[type="file"] {
+	background: none;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+p.error,
+p.message,
+p.information,
+p.warning,
+p.notice {
+	margin: 5px;
+	padding: 5px 5px 5px 35px;
+}
+p.warning,
+p.error {
+	background: url("cancel.png") #fcffd3 no-repeat 1% 50%;
+	color: #CE0000;
+	border: 1px solid #CE0000;
+}
+p.message {
+	background: url("apply.png") #e0ffdf no-repeat 1% 50%;
+	color: #006a25;
+	border: 1px solid #006a25;
+}
+p.notice,
+p.information {
+	background: url("info-message.png") #f0f8ff no-repeat 1% 50%;
+	color: #095694;
+	border: 1px solid #5ca4e3;
+}
+.aMessage {
+	color: red;
+	font-weight: bold;
+	margin: 0 0 0 10px;
+}
+.MainDiv {
+	width: 980px;
+	margin: 0 auto;
+}
+.indexDiv {
+	width: 100%;
+	margin: 0 0 15px 0;
+}
+/********************************************************************************/
+
+/* START:Tables
+*********************************************************************************/
+table {
+	width: 100%;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table thead,
+table thead th {
+	margin: 0;
+	padding: 0;
+	text-align: left !important;
+}
+table thead {
+	background: url("tbg.png") repeat-x;
+	height: 31px;
+	color: #fff;
+}
+table thead th {
+	white-space: nowrap;
+}
+tbody > tr {
+	color: #787878;
+}
+.priorityListing > td,
+.evenrow > td,
+.oddrow > td {
+	padding: 7px 5px;
+}
+table thead th a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 11px;
+	padding: 0 0 0 4px;
+}
+table thead th a:hover {
+	color: #fff;
+}
+.tableLeft,
+.tableRight {
+	width: 8px;
+	height: 31px;
+}
+.tableLeft {
+	background: url("TableSR-left.png") no-repeat;
+}
+.tableRight {
+	background: url("TableSR-right.png") no-repeat 2px 0;
+}
+.priorityListing a,
+.evenrow a,
+.oddrow a {
+	color: #000;
+	text-decoration: none;
+}
+.priorityListing a .strong,
+.evenrow a .strong,
+.oddrow a .strong {
+	color: #000;
+	font-size: 12px;
+	text-decoration: underline;
+}
+.priorityListing .strong,
+.evenrow .strong,
+.oddrow .strong {
+	color: #373737;
+}
+.priorityListing a:hover .strong,
+.evenrow a:hover .strong,
+.oddrow a:hover .strong {
+	color: #008aff;
+}
+.evenrow,
+.oddrow {
+	margin: 0;
+	padding: 0;
+}
+.evenrow {
+	background: #F0F0F0;
+}
+.oddrow {
+	background: #fff;
+}
+.priorityListing {
+	background: #D2D2D2;
+	color: #000;
+}
+td.noTdPad {
+	padding: 0 !important;
+}
+.align_right {
+	text-align: right;
+}
+#table-alerts .tableRight {
+	background: url("TableSR-right.png") no-repeat 6px 0;
+}
+/********************************************************************************/
+
+/* START:Header
+*********************************************************************************/
+#langSwitcherForm {
+	margin: 0;
+	clear: both;
+}
+.headerPage {
+	background: url("header.png") no-repeat center;
+	overflow: hidden;
+}
+.userMenu {
+	float: right;
+	margin: 15px 10px 0 0;
+	display: block;
+	text-transform: lowercase;
+	text-align: right;
+}
+.logo {
+	float: left;
+	display: block;
+	margin: 20px 0 0 0;
+}
+/********************************************************************************/
+
+/* START:Top Menu
+*********************************************************************************/
+#topMenu {
+	background: url("topMenu.png") repeat-x bottom;
+	height: 42px;
+	margin: 0 0 10px 0;
+}
+#leftTopMenu,
+#rightTopMenu {
+	width: 3px;
+	height: 38px;
+	margin: 4px 0 0;
+}
+#leftTopMenu {
+	background: url("leftMenu.png") no-repeat;
+	float: left;
+}
+#rightTopMenu {
+	background: url("rightMenu.png") no-repeat;
+	float: right;
+}
+#topMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#topMenu ul li {
+	float: left;
+}
+#topMenu ul li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	padding: 12px 15px 13px;
+	display: block;
+}
+#topMenu ul li a:hover {
+	background: url("hoverMenu.png") repeat-x;
+}
+#topMenu ul li.sep {
+	background: url("menuSep.png") no-repeat;
+	width: 2px;
+	height: 38px;
+	margin: 4px 0 0;
+	padding: 0 !important;
+}
+li#dropDown ul a {
+	text-transform: inherit;
+	color: #000;
+	padding: 5px 0;
+}
+#topMenu li ul {
+	position: absolute;
+	z-index: 10;
+	left: -999em;
+	width: 200px;
+	height: auto;
+	border: 1px solid #383838;
+	border-top: none;
+}
+#topMenu li li {
+	border-bottom: 1px solid #fff;
+	width: 200px;
+	background: #F6F6F6;
+}
+#topMenu li li a,
+#topMenu li li a:hover {
+	color: #000;
+}
+#topMenu li li a {
+	padding: 5px;
+	text-align: left !important;
+	text-decoration: none;
+}
+#topMenu li:hover ul,
+#topMenu li li:hover ul,
+#topMenu li li li:hover ul {
+	left: auto;
+	visibility: visible;
+}
+/********************************************************************************/
+
+/* START:Main Page Structure
+*********************************************************************************/
+.leftColumn,
+.rightColumn,
+.mainColumn {
+	display: block;
+	float: left;
+	overflow: hidden;
+}
+.mainColumn {
+	width: 573px;
+	margin: 0 20px;
+}
+.leftColumn {
+	width: 173px;
+}
+.rightColumn {
+	width: 193px;
+}
+.InputStat {
+	display: block;
+	float: right;
+	font-style: italic;
+	text-align: right;
+	margin: 0 0 5px 0;
+}
+.InputStat .strong {
+	color: #373737;
+}
+.banner {
+	margin: 0;
+	text-align: center;
+}
+/********************************************************************************/
+
+/* START:Quick Search
+*********************************************************************************/
+.quickSearchTop {
+	background: url("quickSearchTop.png") repeat-x;
+	width: 100%;
+	height: 31px;
+	display: block;
+	float: left;
+	color: #fff;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	text-transform: uppercase;
+}
+.quickSearch {
+	background: url("quickSearch.png") right bottom no-repeat #f5f5f5 ;
+	border-left: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	width: 551px;
+	clear: both;
+	padding: 5px 10px 10px;
+}
+.quickSearchBottom {
+	background: url("quickSearchDown.png") repeat-x;
+	width: 100%;
+	height: 5px;
+	display: block;
+}
+.quickSearch select {
+	width: 135px;
+}
+.quickSearch input {
+	width: 130px;
+}
+.quickSearch h1 {
+	color: #fff;
+	font-size: 19px;
+	font-weight: bold;
+	margin: 13px 0 0 15px;
+}
+.quickSearch fieldset {
+	border: 0;
+	margin: 8px 3px 0 20px;
+	padding: 0;
+	color: #383838;
+}
+.quickSearchInputName,
+.quickSearchInputField {
+	width: 170px;
+	display: block;
+	float: left;
+}
+.quickSearchInputField a {
+	color: #fff;
+	font-size: 11px;
+}
+/********************************************************************************/
+
+/* START:Featured and Latest Jobs
+*********************************************************************************/
+.featuredJobsTop,
+.latestJobsTop {
+	width: 100%;
+	height: 31px;
+	float: left;
+	color: #fff;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	text-transform: uppercase;
+}
+.featuredJobsTop {
+	background: url("featuredJobsTop.png") repeat-x;
+}
+.featuredJobs,
+.latestJobs {
+	border-left: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	width: 571px;
+	clear: both;
+	padding: 10px 0;
+}
+.featuredJobsBottom,
+.latestJobsBottom {
+	width: 100%;
+	height: 5px;
+}
+.featuredJobsBottom {
+	background: url("featuredJobsDown.png") repeat-x;
+}
+.latestJobsTop {
+	background: url("latestJobsTop.png") repeat-x;
+}
+.latestJobsBottom {
+	background: url("latestJobsDown.png") repeat-x;
+	display: block;
+}
+.FeaturedCompanies {
+	display: block;
+	float: left;
+}
+.FeaturedCompanies h1 {
+	color: #3E7B08;
+	font-size: 14px;
+	margin: 0 0 0 5px;
+}
+.FeaturedCompaniesLogo {
+	width: 100%;
+	display: block;
+	float: left;
+	text-align: center;
+	margin: 3px;
+	padding: 10px 0;
+	border-bottom: 1px dotted #ccc;
+}
+#mainRss {
+	background: url("rss.png") no-repeat left;
+	padding: 2px 0 0 20px;
+	margin: 0 0 2px;
+	float: right;
+	color: #e16400;
+	text-decoration: none;
+	font-weight: bold;
+}
+.green,
+.green_small {
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 11px;
+}
+.green {
+	color: green;
+}
+.green_small {
+	color: #fff;
+}
+.indexResultsTable,
+.indexResultsTable tr > th {
+	color: #000;
+	text-align: left !important;
+}
+.indexResultsTable a:link,
+.indexResultsTable td > a {
+	color: #000;
+	font-weight: normal;
+	text-decoration: underline;
+}
+.indexResultsTable a:hover {
+	color: #008aff;
+}
+/********************************************************************************/
+
+/* START:Employer and Job Seeker Block
+*********************************************************************************/
+.JobSeekerBlock,
+.EmployerBlock {
+	width: 283px;
+	display: block;
+}
+.JobSeekerBlock {
+	float: left;
+}
+.EmployerBlock {
+	float: right;
+}
+.JobSeekerBlockTop,
+.EmployerBlockTop {
+	display: block;
+	width: 280px;
+	height: 28px;
+	padding: 0 0 0 3px;
+	color: #fff;
+	font-family: "Myriad Pro", MPro,Tahoma;
+	font-size: 18px;
+	line-height: 28px;
+	text-transform: uppercase;
+}
+.JobSeekerBlockTop {
+	background: url("jsTop.png") no-repeat;
+	float: left;
+}
+.EmployerBlockTop {
+	background: url("empTop.png") no-repeat;
+	float: right;
+}
+.JobSeekerBlockBg,
+.EmployerBlockBg {
+	width: 281px;
+	clear: both;
+}
+.JobSeekerBlockBg {
+	background: url("jobseeker.png") bottom right #f5f5f5 no-repeat;
+	border-left: 1px solid #7a7466;
+	border-right: 1px solid #7a7466;
+}
+.EmployerBlockBg {
+	background: url("employer.png") bottom right #f4f2ed no-repeat;
+	border-left: 1px solid #4d4635;
+	border-right: 1px solid #4d4635;
+}
+.JobSeekerBlockBg p,
+.EmployerBlockBg p {
+	margin: 0;
+	padding: 10px 0 0 10px;
+}
+.JobSeekerBlockBg p a,
+.EmployerBlockBg p a {
+	padding: 0 0 0 10px;
+	display: inline-block;
+}
+.JobSeekerBlockBg p a:hover,
+.EmployerBlockBg p a:hover {
+	background: url("arrow-blue.png") left no-repeat;
+}
+.JobSeekerBlockBottom,
+.EmployerBlockBottom {
+	width: 283px;
+	height: 5px;
+	display: block;
+}
+.JobSeekerBlockBottom {
+	background: url("jsBottom.png") no-repeat;
+	float: left;
+}
+.EmployerBlockBottom {
+	background: url("empBottom.png") no-repeat;
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Blog
+*********************************************************************************/
+.blogTop {
+	background: url("blogTop.png") repeat-x;
+	width: 100%;
+	height: 31px;
+	display: block;
+	float: left;
+	color: #fff;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	text-transform: uppercase;
+}
+.blogPost {
+	overflow: hidden;
+	padding: 3px 10px;
+	line-height: 15px;
+}
+a.blogLink {
+	color: #000;
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+}
+.blogDate {
+	float: right;
+	color: #4c4c4c;
+	font-weight: bold;
+	font-size: 11px;
+}
+/********************************************************************************/
+
+/* START:News
+*********************************************************************************/
+#news {
+	padding: 0 2px;
+}
+#news p {
+	margin: 5px 0;
+	font-size: 11px;
+}
+.smallLink {
+	font-size: 10px;
+	float: right;
+}
+#news ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#news ul li {
+	margin: 3px 0;
+	padding: 3px 0;
+	border-bottom: 1px dotted #ccc;
+}
+a.newsLink {
+	text-decoration: none;
+	font-weight: bold;
+}
+#newsCategory {
+	display: block;
+	float: right;
+	border: 1px solid #C9C9C9;
+	padding: 5px;
+	margin: 0 0 0 10px;
+	width: 200px;
+}
+#newsCategory a,
+#newsCategory .strong {
+	padding: 3px 0;
+	display: block;
+}
+#newsCategory h3 {
+	font-size: 13px;
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #C9C9C9;
+}
+#newsCategory a:hover,
+#newsCategory .strong:hover {
+	background: #f2f2f2;
+	color: #000;
+}
+.newsItems {
+	padding: 10px 0;
+	border-bottom: 1px dotted #C9C9C9;
+}
+.newsItems h2 a {
+	text-decoration: none;
+}
+/********************************************************************************/
+
+/* START:Login Form
+*********************************************************************************/
+.loginFormTop {
+	background: url("loginTop.png") no-repeat;
+	color: #fff;
+	display: block;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-size: 15px;
+	width: 173px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 5px;
+	text-transform: uppercase;
+}
+.loginFormBg {
+	border-left: 1px solid #fccea1;
+	border-right: 1px solid #fccea1;
+	background: #f6f6f6;
+	width: 161px;
+	display: block;
+	color: #565342;
+	font-size: 11px;
+	padding: 0 5px;
+}
+.loginFormBg input[type="text"] {
+	width: 150px !important;
+}
+#buttonLogin {
+	background: url("loginButton-bg.png") repeat-x;
+	min-width: 34px !important;
+	height: 22px;
+	display: inline-block;
+	float: right;
+	border: 0;
+	color: #fff;
+}
+.loginFormBottom {
+	background: url("loginBottom.png") no-repeat;
+	width: 173px;
+	height: 5px;
+	display: block;
+}
+/********************************************************************************/
+
+/* START:Browse by
+*********************************************************************************/
+ul.browseListing {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.browseListing a {
+	background: url("arrowCicleTest.png") no-repeat left center;
+	margin: 8px 0 0 0;
+	padding: 0 0 0 16px;
+	display: block;
+	font-size: 11px;
+}
+.browseListing a:hover {
+	background: url("bgarrowTest.png") no-repeat left center;
+	color: #fff;
+	text-decoration: none;
+}
+.browse {
+	margin: 7px 0 0 0;
+}
+.browseCompanyAB {
+	float: left;
+	padding: 5px;
+}
+/********************************************************************************/
+
+/* START:Polls
+*********************************************************************************/
+#poll h2 {
+	border-bottom: 1px dotted #000;
+	text-transform: uppercase;
+	color: #373737;
+	font-size: 16px;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-weight: normal;
+	height: 39px;
+	line-height: 40px;
+}
+/********************************************************************************/
+
+/* START:Mailchimp Newsletter
+*********************************************************************************/
+#mailchimp-newsletter {
+	margin: 15px 0 0 0;
+	overflow: hidden;
+}
+#mailchimp-nl-cont {
+	padding: 0 5px;
+}
+p.mailchimp-nl-desc {
+	font-size: 11px;
+	text-align: justify;
+	margin: 5px 0;
+}
+#mch_email,
+#mch_name {
+	width: 160px;
+}
+#mailchimp-nl-cont label,
+#mailchimp-form label {
+	display: block;
+}
+/********************************************************************************/
+
+/* START:Footer
+*********************************************************************************/
+.bottomMenu {
+	width: 100%;
+	height: 42px;
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	margin: 20px 0;
+	text-transform: lowercase;
+}
+.bottomMenu a {
+	padding: 0 5px 0 8px;
+}
+.Footer {
+	background: #373737;
+	width: 100%;
+	height: 45px;
+	display: block;
+	line-height: 45px;
+	color: #9b9b9b;
+	text-align: center;
+}
+.Footer a {
+	color: #9B9B9B;
+}
+.Footer a:hover {
+	text-decoration: none;
+}
+/********************************************************************************/
+
+/* START:Input Fields
+*********************************************************************************/
+.logInNameInput,
+.logInPassInput2,
+.inputFieldLogin {
+	width: 160px !important;
+}
+.logInPassInput {
+	width: 110px !important;
+	float: left;
+}
+.inputFieldLogin,
+.inputNameLogin,
+.inputName,
+.inputField,
+.inputReq {
+	display: block;
+	float: left;
+}
+.inputNameLogin {
+	width: 50px;
+}
+.inputName {
+	width: 26%;
+}
+.inputReq {
+	width: 2%;
+	color: red;
+}
+#search_form .inputField,
+.builder-col-wide .inputField {
+	display: inline-block;
+	width: 315px;
+}
+.search-only {
+	width: 163px;
+	white-space: nowrap;
+	display: inline-block;
+	margin: 0 0 0 1px;
+	font-size: 10px;
+	float: right;
+	text-align: right;
+}
+#registr-form input[type="text"] {
+	width: 313px;
+}
+.selectCurrency {
+	width: 125px;
+}
+.searchMoney {
+	width: 33% !important;
+}
+#Salary_list,
+#DesiredSalary_list {
+	width: 125px;
+	float: right;
+}
+.searchString {
+	border: 1px solid #C6C6C6;
+	width: 313px;
+}
+.salary-abbr {
+	display: inline-block;
+	width: 184px;
+}
+.searchGeoDistance {
+	width: 157px;
+	margin: 5px 0 0 0;
+}
+#uploadForm td input[type="text"] {
+	width: 219px;
+}
+#access_div {
+	padding: 5px 0 0 0;
+}
+.ui-multiselect {
+	min-height: 24px;
+	padding: 3px 4px 3px 5px !important
+}
+/********************************************************************************/
+
+/* START:Reports
+*********************************************************************************/
+#reports-navigation {
+	font-weight: bold;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+}
+#reports-navigation-in {
+	background: -moz-linear-gradient(top,  #fafafa 0%, #ededed 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top,  #fafafa 0%,#ededed 100%);
+	background: -o-linear-gradient(top,  #fafafa 0%,#ededed 100%);
+	background: -ms-linear-gradient(top,  #fafafa 0%,#ededed 100%);
+	background: linear-gradient(to bottom,  #fafafa 0%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ededed',GradientType=0 );
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+}
+#reports-navigation-in-border {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	position: relative;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+#reports-navigation a:hover {
+	background: #f2f2f2;
+}
+#reports-navigation .current {
+	background: #e4e4e4;
+	color: #7a7a7a;
+	text-decoration: none;
+}
+#reports-navigation .current:hover {
+	background: #e4e4e4;
+}
+#reports-navigation .middle-item {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+#reports-navigation a {
+	display: block;
+	float: left;
+	padding: 7px 25px;
+	color: #585b62;
+}
+#reports {
+	padding: 10px 0;
+}
+#reports form {
+	margin: 0 0 5px 0;
+}
+#reports h2 {
+	font-weight: normal;
+	margin: 5px 0;
+}
+#reports td {
+	padding: 5px;
+}
+#reports #quick-stats {
+	width: 400px;
+}
+#reports #quick-stats td {
+	border-bottom: 1px solid #DEDEDE;
+}
+#reports #general-stats {
+	width: 600px;
+}
+#general-stats .general-stats-item,
+#general-stats th {
+	text-align: center !important;
+}
+#adSpaceAccount #reports-navigation,
+#adSpaceAccount h3,
+#adSpaceAccount h1 {
+	display: none;
+}
+#adSpaceAccount #quick-stats {
+	display: block;
+	width: auto;
+}
+#my-account-stats {
+	margin: 0 0 20px 0;
+}
+/********************************************************************************/
+
+/* START:Browse by Company
+*********************************************************************************/
+.bcName,
+.bcField {
+	display: block;
+	float: left;
+}
+.bcName {
+	width: 15%;
+}
+.bcField {
+	width: 40%;
+}
+.SearchResultsCompany .evenrow,
+.SearchResultsCompany .oddrow {
+	height: 30px;
+}
+.compLogo {
+	background: #fff;
+}
+.compLogo,
+.compLogo img {
+	height: 40px;
+}
+/********************************************************************************/
+
+/* START:Display Listing
+*********************************************************************************/
+.userInfo,
+.listingInfo {
+	display: block;
+	float: left;
+}
+.userInfo {
+	width: 285px;
+	background: #eee;
+}
+.userInfo embed {
+	width: 255px !important;
+}
+.listingInfo {
+	width: 680px;
+	margin: 0 0 0 10px;
+	color: #4F4F4F;
+	float: right;
+}
+#displayResumeCol_Wide {
+	width: 521px;
+}
+.narrow-col .displayField embed {
+	width: 90%;
+	height: 250px;
+	float: left;
+	clear: both;
+}
+#company-profile-video a.player,
+#company-profile-video embed,
+#col-wide .displayField a.player,
+#col-wide .displayField embed {
+	width: 100%;
+	height: 350px;
+}
+.narrow-col a.player {
+	width: 95%;
+}
+#refineResults embed {
+	width: 255px;
+}
+.paggingBottom,
+.underQuickLinks .Pagging li.pagging,
+.underQuickLinks .Pagging {
+	float: right;
+}
+li.page_navigator,
+li.page_navigator a {
+	color: #1969a0;
+	font-size: 12px;
+	font-family: Arial;
+}
+li.page_navigator {
+	font-weight: bold;
+	padding: 0;
+	margin: 0 10px 8px 0;
+}
+li.page_navigator a {
+	text-decoration: underline;
+}
+.page_navigator a:link,
+.page_navigator a:visited,
+.page_navigator a:hover {
+	color: #373737;
+}
+.listingLeftBlock {
+	padding: 0 0 0 15px;
+	width: 255px;
+	float: left;
+}
+/********************************************************************************/
+
+/* START:Company Profile
+*********************************************************************************/
+.compProfileTitle {
+	background: url("company-info-up.png") #eee no-repeat;
+	color: #363636;
+	width: 258px;
+	height: 25px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 0 0 12px;
+}
+.compProfileInfo {
+	width: 255px;
+	color: #000;
+	padding: 0 0 0 15px;
+}
+.compProfileInfo .strong,
+.compProfileInfo a:link,
+.compProfileInfo a:visited {
+	color: #383838;
+}
+.compProfileInfo a:hover,
+.compProfileInfo a:hover {
+	color: #008aff;
+}
+.compProfileBottom {
+	display: none;
+}
+.Results {
+	background: url("searchIco.png") right center no-repeat;
+	border-bottom: 1px dotted #000;
+	text-transform: uppercase;
+	color: #373737;
+	font-size: 16px;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-weight: normal;
+	height: 39px;
+	line-height: 18px;
+	padding: 0 11px 0 0
+}
+/********************************************************************************/
+
+/* START:My Account
+*********************************************************************************/
+.MyAccountHead h1 {
+	color: #373737;
+	font-size: 20px;
+	padding: 20px 0 0 0;
+}
+.leftColumnMA,
+.rightColumnMA {
+	display: block;
+	float: left;
+	margin: 10px;
+}
+.leftColumnMA {
+	width: 250px;
+	padding: 0 0 0 50px;
+}
+.rightColumnMA {
+	width: 240px;
+	padding: 0 0 0 10px;
+}
+.leftColumnMA ul,
+.rightColumnMA ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.leftColumnMA li,
+.rightColumnMA li {
+	margin: 10px 0;
+	padding: 0;
+}
+.pm-sub-menu {
+	font-size: 12px;
+	line-height: 20px;
+	margin: 3px 0 0 28px;
+}
+/********************************************************************************/
+
+/* START:Recently view and Suggested Jobs
+*********************************************************************************/
+#recentlyViewedJobs,
+#suggestedJobs {
+	margin: 5px 10px;
+	overflow: hidden;
+	width: 470px;
+}
+#recentlyViewedJobs {
+	float: left;
+}
+#suggestedJobs {
+	float: right;
+}
+#suggestedJobs-title,
+#recentlyViewedJobs-title {
+	color: #373737;
+	font-size: 16px;
+	margin: 0 0 15px 0;
+	border-bottom: 1px dotted #373737;
+}
+/********************************************************************************/
+
+/* START:Sub-Account
+*********************************************************************************/
+#sub-accounts .inputName {
+	width: 20%;
+}
+#sub-accounts table thead th {
+	padding: 0 5px;
+}
+.sub-user-permissions {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.sub-user-permissions li {
+	margin: 0 0 10px 0;
+}
+.subuser-permis-ul,
+.subuser-cb-ul {
+	list-style: none;
+}
+/********************************************************************************/
+
+/* START:Accordeon
+*********************************************************************************/
+.page_button {
+	background: #efefef;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	margin: 10px 0;
+	padding: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.page_button:hover {
+	background: #e7e7e7;
+}
+.page_icon {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	color: #464646;
+}
+/********************************************************************************/
+
+/* START:Contacts
+*********************************************************************************/
+#contactInfo {
+	background: url("view-contact-bg.png") repeat-y;
+	width: 707px;
+	margin: 15px auto 0;
+	overflow: hidden;
+}
+#contactInfo-in {
+	background: url("view-contact-header.png") no-repeat top;
+	width: 677px;
+	overflow: hidden;
+	padding: 30px 15px 15px;
+}
+#contactInfo-footer {
+	background: url("view-contact-footer.png") no-repeat;
+	width: 707px;
+	height: 21px;
+	margin: 0 auto;
+}
+#user-top {
+	margin: 10px 0;
+	overflow: hidden;
+}
+#contact-image {
+	float: left;
+}
+#contact-image img,
+#contact-image,
+#cont-info-sendpm {
+	width: 190px;
+}
+#contact-info {
+	width: 450px;
+	float: left;
+	margin: 0 10px 0 0 ;
+}
+#contact-group {
+	font-size: 13px;
+	clear: both;
+	overflow: hidden;
+	margin: 10px 0;
+}
+#cont-info-sendpm {
+	float: left;
+	text-align: center;
+	margin: 15px 0;
+}
+.contact-detail-cap {
+	width: 40%;
+	float: left;
+	font-weight: bold;
+}
+.contact-detail-info {
+	width: 60%;
+	float: left;
+}
+#note-block {
+	width: 440px;
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 15px 0;
+	overflow: hidden;
+}
+#note-block span {
+	margin: 2px 0;
+	overflow: hidden;
+	display: block;
+}
+#note-block span textarea {
+	width: 98% !important;
+}
+#under-contact {
+	overflow: hidden;
+	clear: both;
+}
+/********************************************************************************/
+
+/* START:Buttons
+*********************************************************************************/
+input.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+a.button,
+input.buttonApply {
+	height: 26px;
+	text-decoration: none;
+	text-transform: uppercase;
+	min-width: 115px;
+	font-size: 13px;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-weight: normal;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+}
+input.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+a.button {
+	background: url("button.png") repeat-x;
+	padding: 0 5px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	position: relative;
+}
+input.buttonApply {
+	background: url("buttonApply.png") no-repeat;
+}
+input.standart-button,
+a.standart-button {
+	background: url("gray-standart-button.png") repeat-x;
+	min-width: 100px;
+	height: 25px;
+	padding: 0 10px;
+	color: #000 !important;
+	font-size: 12px !important;
+	font-weight: bold;
+	font-family: Arial !important;
+	cursor: pointer;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #9f9f9f;
+	text-transform: inherit !important;
+}
+input:hover.button,
+input:hover[type="submit"],
+input:hover[type="reset"],
+input:hover[type="button"],
+a:hover.button {
+	background: url("button.png") repeat-x 0 -26px;
+}
+input.standart-button:hover,
+a:hover.standart-button {
+	background: url("gray-standart-button.png") repeat-x 0 -25px;
+}
+a.standart-button,
+a.button {
+	text-decoration: none !important;
+	display: inline-block;
+	text-align: center;
+}
+a.standart-button {
+	color: #000;
+	line-height: 25px !important;
+	height: 23px;
+}
+a.button {
+	color: #fff;
+	line-height: 28px;
+}
+.preview-buttons {
+	text-align: center;
+	margin: 12px 0;
+}
+.apply-button,
+input.buttonApply {
+	float: right;
+}
+/********************************************************************************/
+
+/* START:Job Import
+*********************************************************************************/
+.headrow td a:link,
+.headrow td a:visited,
+.headrow td a:link,
+.headrow td a:visited,
+.headrow td {
+	font-size: 12px;
+	color: #4e7391;
+}
+.headrow td {
+	border-bottom: 2px solid #4e7391;
+	font-weight: bold;
+	padding: 0 0 3px 0;
+}
+/********************************************************************************/
+
+/* START:Application
+*********************************************************************************/
+.pointedInListingInfo {
+	border-bottom: 1px dotted #B2B2B2;
+	margin: 5px 0;
+	padding: 0 2px;
+}
+.pointedInListingInfo2 {
+	margin: 5px 0;
+	padding: 0 4px;
+}
+.ApplicationPointedInListingInfo {
+	border-bottom: 1px solid #B2B2B2;
+	border-right: 1px solid #B2B2B2;
+	margin: 5px 0;
+	padding: 0 5px 15px 5px;
+}
+.ApplicationActions a {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 13px;
+}
+.ApplicationActions a:hover {
+	text-decoration: underline;
+}
+.ApplicationPointedInListingInfo2 {
+	border: 1px solid #B2B2B2;
+	border-top: none;
+	margin: 5px 0;
+	padding: 0 5px;
+}
+.app-tracking {
+	float: left;
+}
+.navigation-application,
+.navigation-application .numberPerPage,
+.navigation-application .pageNavigation {
+	float: right;
+}
+.app-tracking p {
+	margin: 7px 0;
+}
+.navigation-application .pageNavigation {
+	margin: 10px 25px 10px 0;
+}
+/********************************************************************************/
+
+/* START:Search Results Page
+*********************************************************************************/
+.searchResultsHeaderLineNew {
+	background: url("upmenu.png") no-repeat;
+	height: 35px;
+	padding: 5px 0 0 0;
+	width: 980px;
+}
+.comment {
+	font-size: 12px;
+	font-weight: bold;
+	color: #373737;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+table.tableSearchResult {
+	border: 0;
+	color: #787878;
+}
+table.tableSearchResult a {
+	color: #0a4c79;
+}
+.JobTittleSR {
+	font-size: 15px;
+}
+.topResultsLinks {
+	width: 100%;
+	overflow: hidden;
+	padding: 5px 0;
+}
+.topResultsLinks ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.topResultsLinks ul li {
+	float: left;
+	margin: 0 15px 0 0;
+}
+.topResultsLinks ul li a {
+	color: #000;
+}
+.topResultsLinks ul li a:hover {
+	color: #008aff;
+}
+.searchResultsHeaderLineNew ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 0 20px;
+}
+.searchResultsHeaderLineNew ul li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+ul.listingLinksBottom {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 0 8px;
+	float: right;
+	font-size: 11px;
+}
+.priorityListing ul,
+.evenrow ul,
+.oddrow ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.priorityListing ul li,
+.evenrow ul li,
+.oddrow ul li {
+	float: left;
+	margin: 0 5px 0 0;
+}
+.priorityListing ul li a,
+.evenrow ul li a,
+.oddrow ul li a {
+	text-decoration: underline;
+}
+.priorityListing ul li a:hover,
+.evenrow ul li a:hover,
+.oddrow ul li a:hover {
+	color: #008aff;
+}
+.separateListing {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px dotted #727272;
+}
+.topNavBar,
+.topNavBarLeft,
+.topNavBarRight {
+	height: 35px;
+	display: block;
+	float: left;
+}
+.tableSRNavPerPage {
+	float: left;
+	margin: 0;
+}
+.topNavBar {
+	background: #e0e0e0;
+	width: 964px;
+	color: #363636;
+}
+.topNavBarLeft,
+.topNavBarRight {
+	width: 8px;
+}
+.topNavBarLeft {
+	background: url("NavLeft.png") no-repeat;
+}
+.topNavBarRight {
+	background: url("NavRight.png") no-repeat;
+}
+.numberResults,
+.numberPerPage {
+	margin: 0 20px 0 0;
+	float: left;
+	line-height: 35px;
+}
+.numberResults {
+	background: #ccc;
+	font-weight: bold;
+	display: block;
+	height: 25px;
+	padding: 0 22px 10px 15px;
+	width: 155px;
+}
+.numberPerPage {
+	display: block;
+}
+.pageNavigation {
+	display: block;
+	float: right;
+	margin: 10px 10px 0 0;
+	text-align: right;
+}
+.prevBtn a,
+.nextBtn a {
+	text-decoration: none;
+}
+#topResults {
+	float: right;
+	width: 980px;
+	margin: 0 0 10px 0;
+}
+#refineResults {
+	float: left;
+	width: 200px;
+}
+#listingsResults {
+	float: right;
+	width: 775px;
+}
+#endResults {
+	width: 980px;
+	float: left;
+	margin: 10px 0 0 0;
+}
+.noRefine #listingsResults {
+	width: 100%;
+}
+#displayListing #refineResults {
+	width: 280px;
+}
+#displayListing #listingsResults {
+	width: 695px;
+}
+/********************************************************************************/
+
+/* START:BreadCrumbs
+*********************************************************************************/
+.BreadCrumbs {
+	color: #373737;
+	font-weight: bold;
+	font-size: 11px;
+	font-family: Tahoma;
+	margin: 10px 0 0 0;
+}
+.BreadCrumbs p {
+	margin: 0 0 10px 0;
+}
+/********************************************************************************/
+
+/* START:Refine Search / Current Search
+*********************************************************************************/
+#blockInner th {
+	white-space: normal;
+}
+.refine_button {
+	background: #EFEFEF;
+	cursor: pointer;
+	margin: 5px 0 0 0;
+	padding: 2px 0 4px 0;
+}
+.refine_icon {
+	padding: 0 5px;
+	display: block;
+	float: left;
+	width: 15px;
+}
+.refineItem {
+	padding: 3px 0 0 5px;
+	display: block;
+	font-size: 11px;
+}
+.refineItem a,
+.refine_res {
+	font-size: 11px;
+}
+.refine_res a {
+	color: blue;
+	padding: 5px 0 0 0;
+}
+.refine_res a:hover {
+	text-decoration: none;
+}
+.block_values_button {
+	background: #EFEFEF;
+	cursor: pointer;
+	padding: 2px 0;
+	margin: 5px 0;
+}
+/********************************************************************************/
+
+/* START:Complex fields
+*********************************************************************************/
+.complex {
+	border-bottom: 1px dotted #727272;
+	padding: 10px 0;
+	display: block;
+	width: 750px;
+}
+.complex .inputName {
+	width: 25%;
+}
+.complex .cke {
+	margin: 5px 0 0 0;
+}
+.remove,
+.add,
+.complete {
+	display: inline-block;
+	text-decoration: underline !important;
+}
+.remove {
+	background: url("delete.png") no-repeat 0 1px;
+	padding: 0 0 0 20px;
+	margin: 0 0 5px 0;
+}
+a.remove:hover,
+a.add:hover,
+a.complete:hover {
+	text-decoration: none !important;
+}
+a.remove:hover {
+	color: red;
+}
+#delete-promocode {
+    display: inline;
+    vertical-align: top;
+}
+.add,
+.complete {
+	padding: 2px 0 0 20px;
+	margin: 2px 0 5px 0;
+}
+.add {
+	background: url("add.png") no-repeat left center;
+}
+a:hover.add,
+a:hover.complete {
+	color: green;
+}
+.complete {
+	background: url("complete.png") no-repeat left center;
+}
+/********************************************************************************/
+
+/* START:Icons
+*********************************************************************************/
+li.modifySearchIco,
+li.saveSearchIco,
+li.savedIco,
+li.saved2Ico,
+li.viewDetails,
+li.viewVideo,
+li.panelSavedIco,
+li.panelViewDitailsIco,
+li.printListingIco,
+li.viewMapIco {
+	font-size: 11px;
+}
+li.modifySearchIco,
+li.saveSearchIco,
+li.savedIco,
+li.pagging,
+li.printListingIco,
+li.viewMapIco,
+li.panelViewDitailsIco,
+li.panelSavedIco {
+	padding: 0 0 0 17px;
+}
+li.modifySearchIco,
+li.saveSearchIco,
+li.savedIco,
+li.viewDetails,
+li.viewVideo,
+li.panelViewDitailsIco,
+li.printListingIco,
+li.viewMapIco {
+	background: url("dots-icon.png") no-repeat left center;
+}
+li.viewDetails,
+li.viewVideo {
+	padding: 0 5px 0 16px;
+}
+li.ratingPanel,
+li.paggingBottom,
+li.pagging {
+	color: #787878;
+}
+.ratingPanel p {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.ModResults,
+.Rating,
+.Comments,
+.Pagging {
+	display: block;
+	float: left;
+	width: 355px;
+}
+.Rating {
+	width: 275px;
+}
+.Comments {
+	width: 130px;
+}
+.Pagging {
+	width: 210px;
+}
+.ModResults ul,
+.Rating ul,
+.Comments ul,
+.Pagging ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 0 8px;
+	font-size: 11px;
+}
+.ModResults ul li,
+.Rating ul li,
+.Comments ul li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+h1.Companies,
+h1.Category,
+h1.City {
+	border-bottom: 1px dotted #000;
+	text-transform: uppercase;
+	color: #373737;
+	font-size: 16px;
+	font-family: "Myriad Pro", MPro, Tahoma;
+	font-weight: normal;
+	height: 38px;
+	line-height: 18px;
+	padding: 0 46px 0 0;
+}
+h1.Companies,
+h1.Category,
+h1.City {
+	background: url("main-page-icons.png") no-repeat;
+}
+h1.Companies {
+	background-position: right 0;
+}
+h1.Category {
+	background-position: right -38px;
+}
+h1.City {
+	background-position: right -76px;
+}
+/********************************************************************************/
+
+/* START:Payment Page
+*********************************************************************************/
+.sendPaymentTo {
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #1e1e1e;
+}
+#formPayment .inputField input {
+	width: 313px;
+}
+/********************************************************************************/
+
+/* START:Invoice
+*********************************************************************************/
+#invoice-buttons {
+	text-align: center;
+	margin: 20px 0 0 0;
+}
+#invoice-buttons a.button {
+	color: #fff !important;
+}
+#invoice-billto,
+#invoice-sendto,
+#invoice-logo,
+#invoice-info {
+	margin: 10px 0;
+	padding: 10px 5px;
+}
+#invoice-logo {
+	width: 350px;
+	float: left;
+}
+#invoice-info {
+	width: 350px;
+	float: right;
+	text-align: right;
+	line-height: 20px;
+}
+#invoice-billto {
+	float: left;
+}
+#invoice-sendto {
+	float: right;
+}
+#invoice-billto,
+#invoice-sendto {
+	border-top: 1px solid #d9d9d9;
+	width: 380px;
+	line-height: 22px;
+}
+#invoice-info .strong,
+#invoice-billto .strong,
+#invoice-sendto .strong {
+	font-size: 18px;
+}
+table#invoice-table {
+	width: 100%;
+	font-size: 12px;
+}
+table#invoice-table tbody tr:hover {
+	background: #f0f0f0;
+}
+table#invoice-table td {
+	border: 1px solid #d9d9d9;
+	padding: 5px 10px;
+}
+table#invoice-table tr.invoice-table-head,
+table#invoice-table tbody tr.invoice-table-head:hover {
+	background: #ededed !important;
+}
+table#invoice-table tr.invoice-table-head td {
+	font-weight: bold;
+	font-size: 13px;
+	color: #000;
+	height: inherit !important;
+}
+.invoice-amount-total {
+	background: #f5f5f5;
+	text-align: right;
+	font-weight: bold;
+}
+.invoice-actions {
+	text-align: center !important;
+}
+.invoice-form .inputName {
+	width: 13%;
+}
+.invoice_field {
+	padding: 5px;
+}
+.invoice_align {
+	text-align: right;
+}
+.invoice_actions {
+	width: 140px;
+	text-align: center !important;
+}
+/********************************************************************************/
+
+/* START:Notification Page
+*********************************************************************************/
+.notCheck,
+.notDesc {
+	display: block;
+	float: left;
+}
+.notCheck {
+	width: 4%;
+}
+.notDesc {
+	width: 32%;
+	line-height: 20px;
+}
+/********************************************************************************/
+
+/* START:Instructions CSS
+*********************************************************************************/
+.instruction {
+	position: relative;
+	margin: 0 0 0 10px;
+	float: left;
+}
+.instruction .instr_icon {
+	background: url("./instruction_16x16.png") repeat left top;
+	float: left;
+	height: 16px;
+	width: 16px;
+}
+.instruction .instr_block {
+	display: none;
+	font-size: 11px;
+	left: 18px;
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	width: 275px;
+	z-index: 1000;
+}
+.instruction .instr_arrow {
+	background: url("./orangeArrow.png") no-repeat 0 4px;
+	float: left;
+	height: 16px;
+	width: 9px;
+}
+.instruction .instr_cont {
+	padding: 0 7px;
+	background: #eee;
+	float: left;
+	width: 250px;
+}
+/********************************************************************************/
+
+/* START:Print Page
+*********************************************************************************/
+#print-button {
+	width: 920px;
+	margin: 0 auto;
+}
+.printPage {
+	width: 920px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.printLeft {
+	width: 190px;
+	float: left;
+	line-height: 20px;
+}
+.printRight {
+	width: 700px;
+	float: right;
+}
+.printRight .leftDisplaySIde {
+	width: 170px;
+	float: left;
+	font-size: 11px;
+}
+.printRight .rightDisplaySIde {
+	float: left;
+	margin: 0 0 10px 0;
+	width: 520px !important;
+}
+.printRight .clrBorder {
+	clear: both;
+	border-top: 1px dotted gray;
+}
+.printRight #col-wide .displayField {
+	clear: both;
+	margin: 8px 0 22px;
+	overflow: hidden;
+}
+.printRight .narrow-col .displayFieldBlock {
+	margin: 5px 0 0;
+	overflow: hidden;
+}
+.printLeft h2 {
+	margin: 2px 0 23px 0 !important;
+	color: #000;
+	font-size: 15px;
+}
+.printRight h2 {
+	margin: 0 0 15px 0 !important;
+}
+/********************************************************************************/
+
+/* START:Private Messages
+*********************************************************************************/
+#pmDetails fieldset {
+	border-bottom: 1px dotted gray;
+	padding: 5px 0;
+}
+#pmDetails fieldset.reply {
+	border: 0;
+}
+.pmQuote {
+	border-left: 1px solid #aeaeae;
+	margin: 5px 5px 5px 10px;
+	padding: 0 2px 2px;
+	color: #333;
+	font-style: italic;
+	font-size: 13px;
+	background: #fcfcfc;
+}
+/********************************************************************************/
+
+/* START:AdSpace
+*********************************************************************************/
+#adMargin {
+	float: left;
+	width: 580px;
+}
+#adSpace,
+#adSpaceAccount {
+	float: right;
+	width: 370px;
+}
+/********************************************************************************/
+
+/* START:Site Map
+*********************************************************************************/
+#siteMap table {
+	border: 0;
+}
+#siteMap td {
+	width: 20%;
+	vertical-align: top;
+}
+#siteMap td .strong,
+#siteMap td b {
+	color: #000;
+}
+#siteMap table td p {
+	margin: 5px 0;
+	padding: 1px 0;
+}
+#siteMap table td a {
+	background: url("grayArrow.png") no-repeat left;
+	margin: 0 0 0 10px;
+	padding: 0 0 0 13px;
+}
+/********************************************************************************/
+
+/* START:Social Plugins
+*********************************************************************************/
+.apiCode span {
+	display: inline;
+}
+.social_login_a {
+	display: block;
+	float: right;
+	height: 16px;
+	margin: 0 0 0 15px;
+	width: 16px;
+}
+.linkedinLink {
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	margin: 10px 0;
+	padding: 0 0 0 20px;
+}
+.in_share {
+	float: left;
+	margin: 0 6px 0 0;
+	border: 0;
+}
+#social_autoFill {
+	font-weight: bold;
+	margin: 10px 0;
+	padding: 0 0 0 21px;
+	line-height: 16px;
+}
+.in_ProfileWidget,
+.in_ProfileInsiderWidget {
+	padding: 0 8px 22px 0;
+	display: inline;
+}
+a.social_login_button {
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	margin: 0 0 0 5px;
+	padding: 0 !important;
+}
+.login_buttons_txt {
+	float: left;
+}
+.slb_linkedin,
+.slb_facebook,
+.slb_google_plus,
+.slb_google,
+.facebook_16,
+.linkedin_16,
+.linkedinLogin,
+.linkedin-icon {
+	background: url("social/social.png") no-repeat;
+}
+.slb_linkedin,
+.linkedin_16,
+.linkedinLogin,
+.linkedin-icon {
+	background-position: 0 -38px;
+}
+.slb_facebook,
+.facebook_16 {
+	background-position: 0 0;
+}
+.slb_google_plus, .slb_google {
+	background-position: 0 -19px;
+}
+.social_plugins_div {
+	font-weight: normal;
+	margin: 11px 0 0;
+	float: right;
+	clear: both;
+}
+.soc_reg_form .social_plugins_div {
+	float: none;
+}
+#registr-form {
+	margin: 15px 0 0 0;
+}
+.linkedin-icon {
+	padding: 3px 0 3px 20px;
+}
+.RightLink {
+	float: right;
+}
+.RightLink a {
+	font-size: 12px;
+	font-weight: normal;
+}
+#shareThis {
+	clear: both;
+	margin: 0 0 5px 0;
+	padding: 15px 0 5px 0;
+}
+.ui-dialog .social_plugins_div {
+	margin: 5px 0 0;
+}
+.social-buttons {
+	display: inline-block;
+}
+.ui-dialog .login_buttons_txt {
+	float: none;
+}
+/********************************************************************************/
+
+/* START:Browse By Tree
+*********************************************************************************/
+ul.browse_tree, ul.browse_tree * {
+	list-style: none inside;
+	margin: 0;
+	padding: 0;
+}
+ul.browse_tree img.arrow {
+	padding: 2px 0 0;
+	border: 0;
+	width: 15px;
+}
+ul.browse_tree li {
+	padding: 0;
+	clear: both;
+}
+ul.browse_tree li ul {
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+ul.browse_tree label {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+ul.browse_tree label.hover {
+	color: red;
+}
+ul.browse_tree {
+	margin: 5px 0;
+}
+ul.browse_tree li .arrow,
+ul.browse_tree li .checkbox {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+}
+ul.browse_tree li .arrow {
+	background: url("../../../../system/ext/jquery/ltL_nes.gif") no-repeat;
+}
+ul.browse_tree li .collapsed {
+	background: url("../../../../system/ext/jquery/ltP_nes.gif");
+}
+ul.browse_tree li .expanded {
+	background: url("../../../../system/ext/jquery/ltM_ne.gif");
+}
+ul.browse_tree li .checkbox {
+	background: url("../../../../system/ext/jquery/cbUnchecked.gif") no-repeat center top;
+}
+ul.browse_tree li .checked {
+	background: url("../../../../system/ext/jquery/cbChecked.gif");
+}
+ul.browse_tree li .half_checked {
+	background: url("../../../../system/ext/jquery/cbIntermediate.gif");
+}
+div.browse_tree_button {
+	cursor: pointer;
+	width: 313px;
+	height: 17px;
+	padding: 3px 0 0 0;
+	border: 1px solid #B3B3B3;
+	color: #484846;
+	font-size: 12px;
+	background: url("../../../../system/ext/jquery/arrow_tree.png") right center no-repeat #fff;
+}
+.select-free-fix {
+	position: absolute;
+	z-index: 10;
+	overflow: hidden;
+	width: 700px;
+	display: none;
+	height: 250px;
+	background: #fff;
+	padding: 0 0 2px 0;
+}
+.select-free-fix iframe {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	filter: mask();
+	width: 3000px;
+	height: 3000px;
+}
+.select-free-fix .bd {
+	border: 1px solid #aaa;
+	overflow: auto;
+	height: 250px;
+}
+.treeContentDiv {
+	margin: 3px 0 0 0;
+	overflow-x: auto;
+	width: 100%
+}
+/********************************************************************************/
+
+/* START:Form Builder Fields
+*********************************************************************************/
+#form_builder .form-builder-cont {
+	padding: 10px;
+	display: none;
+	width: 310px;
+	float: left;
+}
+#displayJobsCol_Wide {
+	width: 620px;
+}
+legend.fh-legend {
+	display: none;
+}
+.ui-sortable {
+	border: 1px dotted #ddd;
+	margin: 10px 0;
+	padding: 10px;
+}
+.ui-sortable legend.fh-legend {
+	display: inline;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 15px;
+	color: #ddd;
+}
+.form-builder-cont legend {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+.form-builder-cont fieldset {
+	border: 1px dotted #fff;
+}
+.display-layout {
+	margin: 0 auto;
+	text-align: center;
+	width: 296px;
+}
+.display-layout .layout-item {
+	background: none;
+	float: left;
+	margin: 3px 0;
+	padding: 0;
+}
+.narrow-col {
+	width: 335px;
+	float: left;
+}
+.narrow-col h3 {
+	font-size: 12px;
+	color: #4f4f4f;
+	display: inline;
+	float: left;
+	margin: 0 5px 0 0;
+}
+a span.highlight {
+	color: #1E1E1E;
+	text-decoration: underline;
+}
+a:hover span.highlight {
+	text-decoration: none;
+}
+span.highlight {
+	background: #FFFF00
+}
+/********************************************************************************/
+
+/* START:Google Map
+*********************************************************************************/
+#googleMap-links {
+	float: right;
+	margin: 0 0 5px;
+	clear: both;
+}
+#googleMap-links a {
+	font-size: 11px;
+}
+#googleMap-links a.listLink-active {
+	font-weight: bold;
+	text-decoration: none;
+	cursor: default;
+}
+#image_marker,
+#image_marker_Resume {
+	background: url("marker_orange.gif");
+}
+#image_marker_priority {
+	background: url("marker_orange.gif");
+}
+#image_marker_indeed {
+	background: url("marker_blue.gif");
+}
+#image_marker_simplyHired {
+	background: url("marker_green.gif");
+}
+#image_marker_beyond {
+	background: url("marker_gray.gif");
+}
+#image_marker,
+#image_marker_Resume,
+#image_marker_priority,
+#image_marker_indeed,
+#image_marker_simplyHired,
+#image_marker_beyond {
+	width: 22px;
+	height: 32px;
+	text-align: center;
+	padding: 1px 0 0 0;
+	font-size: 11px;
+}
+.listingsWithoutLocation,
+.listingsWithoutLocation .strong,
+.listingsWithoutLocation a,
+.listingsWithoutLocation a .strong {
+	color: #939393 !important;
+}
+.mapListings-results {
+	font-size: 11px !important;
+	overflow: hidden;
+	margin: 5px 0;
+	padding: 7px 5px;
+	border-top: 1px dotted #a2aec3;
+	border-bottom: 1px dotted #a2aec3;
+}
+.mapListings-results a .strong {
+	font-size: 11px !important;
+}
+.mapListings-results:hover {
+	background: #e4ecf6 !important;
+}
+#map {
+	height: 645px;
+	border: 1px solid #4b8d1f;
+	margin: 0 0 0 20px;
+}
+#googleMap-searchResults {
+	height: 550px;
+	overflow-y: auto;
+	margin: 0 0 10px 0;
+}
+#googleMap-pagging {
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+#googleMap-pagging .nextBtn,
+#googleMap-pagging .prevBtn,
+#googleMap-pagging .navigationItems {
+	clear: none;
+	display: inline;
+}
+#googleMap-pagging .nextBtn,
+#googleMap-pagging .prevBtn {
+	background: none !important;
+	color: #000 !important;
+	margin: 0 1px;
+}
+#googleMap-pagging .nextBtn a,
+#googleMap-pagging .prevBtn a {
+	background: none !important;
+	color: #000 !important;
+	padding: 0 2px;
+	text-transform: inherit;
+}
+a#listView-icon,
+a#mapView-icon {
+	padding: 2px 0 2px 20px;
+	background: url("icons.png") no-repeat;
+}
+a#listView-icon {
+	background-position: 0 -19px;
+}
+a#mapView-icon {
+	background-position: 0 0;
+}
+/********************************************************************************/
+
+/* START:Products Page and Shopping Cart
+*********************************************************************************/
+#shoppingCart {
+	clear: both;
+}
+#shoppingCart a img {
+	vertical-align: text-top;
+}
+.products {
+	border: 1px solid #e3e3e3;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	width: 800px;
+	float: left;
+	padding: 10px;
+	margin: 15px 80px;
+	box-shadow: 0 0 4px #ddd;
+}
+.products:hover {
+	border: 1px solid #e1e1e1;
+	background: #f8f8f8;
+}
+.productInfo {
+	width: 580px;
+	float: left;
+	margin: 0 0 0 20px;
+}
+.productInfo a {
+	text-decoration: underline;
+}
+.productInfo a:hover,
+.productLinks a {
+	text-decoration: none;
+}
+.productLinks {
+	background: #e9e9e9;
+	border: 1px solid #c7c7c7;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;
+	border-radius: 7px;
+	text-align: center;
+	padding: 15px 10px;
+	width: 160px;
+	float: right;
+	margin: 0;
+	box-shadow: 0 0 2px #ddd;
+}
+.productLinks .button {
+	margin: 5px 0;
+}
+.productsPrice {
+	font-size: 13px;
+	margin: 0 0 10px 0;
+}
+#productDetails {
+	line-height: 26px;
+}
+.productDetails-name {
+	width: 140px;
+	float: left;
+	font-weight: bold;
+	font-size: 13px;
+}
+.productDetails-info {
+	float: left;
+	display: inline;
+	font-size: 13px;
+}
+.viewProductsPrice,
+#volume_price {
+	font-size: 14px !important;
+	font-weight: bold;
+}
+#volume_price {
+	display: inline;
+	line-height: 18px;
+}
+#productsSelect {
+	float: left;
+	margin: 0 15px 0 0;
+}
+#productTotal {
+	text-align: right !important;
+	padding: 0 5px 0 0;
+}
+#total_price {
+	padding: 0 2px 0 5px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+}
+.currentProducts-name {
+	width: 250px;
+	float: left;
+	font-weight: bold;
+	font-size: 13px;
+	margin: 4px 0;
+	padding: 0 15px 0 0;
+}
+.currentProducts-info {
+	float: left;
+	display: inline;
+	margin: 4px 0;
+	font-size: 13px;
+}
+#promotionCode {
+	margin: 10px;
+}
+#promotionCode input#inputPromotionCode {
+	width: 150px !important;
+}
+.continue-shopping {
+	float: left;
+	margin: 0 10px 0 35%;
+}
+.product-detail-button {
+	float: left;
+	margin: 0 10px 0 0;
+}
+#productDetails ~ table td input[type="text"],
+#productDetails ~ table td input[type="file"] {
+	width: 220px !important;
+}
+.productLinks .button {
+	min-width: 160px;
+}
+/********************************************************************************/
+
+/* START:Profiler
+*********************************************************************************/
+.profiler {
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	z-index: 15;
+}
+.profiler * {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#blockResize {
+	width: 100%;
+	height: 10px;
+	cursor: n-resize;
+	display: none;
+}
+.profilerHead {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 960px;
+	background: #222;
+	border: 12px solid #000;
+	border-bottom: none;
+	font-family: "Lucida Grande", Tahoma, Arial, sans-serif;
+}
+.profiler h3 {
+	font-weight: normal;
+	line-height: 200px;
+	padding: 0 15px;
+	color: #fff;
+}
+.profiler,
+.profiler td {
+	color: #444;
+}
+.logsBlock {
+	height: 200px;
+	display: none;
+	overflow: auto;
+	width: 99%;
+}
+.metrics {
+	background: #000;
+	width: 100%;
+}
+.functionsTab,
+.queriesTab {
+	border-top: 1px solid #ccc;
+	overflow: auto;
+	width: 100%;
+}
+.profiler .blue {
+	color: #3769A0 !important;
+}
+.profiler .purple {
+	color: #953FA1 !important;
+}
+.profiler .collapseTab {
+	display: none;
+	color: yellow;
+	width: 2%;
+}
+.profiler,
+.functionsTab,
+.queriesTab {
+	display: none;
+}
+.profiler,
+.functions,
+.queries,
+.functions .functionsTab,
+.queries .queriesTab {
+	display: block !important;
+}
+.functions td.blue,
+.queries td.purple {
+	background: #222 !important;
+	border-bottom: 6px solid #fff !important;
+	cursor: default !important;
+}
+.metrics td {
+	height: 40px;
+	width: 20%;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #000;
+	border-bottom: 6px solid #444;
+}
+.metrics td:hover {
+	background: #222;
+	border-bottom: 6px solid #777;
+}
+.profiler var {
+	font-size: 23px;
+	font-weight: bold;
+	font-style: normal;
+	margin: 0 0 3px 0;
+	display: block;
+}
+.profiler h4 {
+	font-size: 12px;
+	color: #fff;
+	margin: 0 0 4px 0;
+}
+.profiler .main {
+	width: 100%;
+}
+.profiler .main td {
+	padding: 7px 15px;
+	text-align: left;
+	background: #151515;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	border-bottom: 1px dotted #323232;
+	color: #fff;
+}
+.profiler .main td,
+pre {
+	font-family: Monaco, "Consolas", "Lucida Console", "Courier New", monospace;
+	font-size: 11px;
+}
+.profiler .main td b {
+	float: left;
+	font-weight: normal;
+	color: #E6F387;
+}
+.profiler .main td:hover,
+table.main thead td.currentColumn {
+	background: #2E2E2E;
+}
+table.main thead td.currentColumn {
+	color: #fff;
+}
+#infometr {
+	width: 5%;
+	cursor: default;
+}
+#infometr:hover {
+	background: #000;
+}
+/********************************************************************************/
+
+/* START:Custom Jquery
+*********************************************************************************/
+.ui-datepicker-trigger {
+	position: relative;
+	top: 2px;
+	left: 3px;
+	margin: 0 5px 0 0;
+}
+/********************************************************************************/
+
+/* START:Pay pal pro
+*********************************************************************************/
+select#country,
+select#card_type,
+select#state {
+	width: 315px !important;
+}
+select#exp_date_mm,
+select#exp_date_yy {
+	width: 125px !important;
+}
+#currentSearch td {
+	padding: 0 5px;
+}
+input#state {
+	border: 1px solid #C6C6C6;
+	width: 313px;
+}
+/********************************************************************************/
+
+/* START:Add/Edit Listing form
+*********************************************************************************/
+.input-form-bc {
+	display: inline;
+}
+#addListingForm {
+	margin: 0 0 0 15px;
+}
+#addListingForm .inputName {
+	width: 19%;
+}
+.complex {
+	width: 575px;
+}
+.complex .inputName {
+	width: 24%;
+}
+#editListingForm .inputName {
+	width: 20%;
+}
+/********************************************************************************/
+
+/* START:Cookie Preferences Slider
+*********************************************************************************/
+#cookiePreferencesSlider {
+	height: 405px;
+}
+/********************************************************************************/
+
+/* START:Highlight Templates Fix
+*********************************************************************************/
+#dropDown > .templateHighlight {
+	width: 50px;
+	top: -2px;
+	position: absolute;
+}
+#dropDown > .templateHighlight ul {
+	top: 45px;
+}
+.mainColumn > .templateHighlight {
+	height: 230px;
+}
+.headerPage + .clr + .templateHighlight {
+	height: 45px;
+}
+.templateHighlight .logInNameInput,
+.templateHighlight .logInPassInput2,
+.templateHighlight .inputFieldLogin {
+	width: 156px !important;
+}
+/********************************************************************************/

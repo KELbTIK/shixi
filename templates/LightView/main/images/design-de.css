@@ -1,0 +1,8 @@
+/*** START Deutsch Language FIXED CSS ***/
+#topMenu ul li {
+	margin: 0 3px;
+}
+#topMenu ul li a{
+	font-size: 11px;
+}
+/*** END Deutsch Language FIXED CSS ***/

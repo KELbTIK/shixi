@@ -1,0 +1,202 @@
+.indexDiv { padding: 44px 0 0 0; }
+#displayResumeCol_Wide { width: 673px; }
+.portlet-content .button { color: green; cursor: pointer; float: right; font-weight: bold;}
+body {padding: 0 10px; background: none !important;}
+.htmlBlock_info, .complexBlock_info, .locationBlock_info { background: url('../information.png') no-repeat 0 0 transparent; width: 16px; height: 16px; float: right;}
+.hidden {display: none;}
+#col-wide textarea.htmlBlock { width: 600px;}
+.builder-col-wide textarea.htmlBlock { width: 490px;}
+.listingInfo {float: left !important; width: 700px;}
+#statusBox { left: 39%; position: fixed; top: 40px; width: 311px;}
+
+.display-layout .layout-item a {display: block; width: 58px; height: 75px; background-image: url("../formBuilder/layouts.png"); }
+.layout-2cols-wide a { background-position: 0 0; }
+.layout-2cols-wide a.active, .layout-2cols-wide a:hover { background-position: 0 76px; }
+.layout-1col-2rows a { background-position: -59px 0; }
+.layout-1col-2rows a.active, .layout-1col-2rows a:hover { background-position: -59px 76px; }
+.layout-wide-2cols a{ background-position: -120px 0; }
+.layout-wide-2cols a.active, .layout-wide-2cols a:hover{ background-position: -120px 76px; }
+.layout-2cols a{ background-position: -180px 0}
+.layout-2cols a.active, .layout-2cols a:hover{ background-position: -180px 76px}
+.layout-1col a{ background-position: 58px 0}
+.layout-1col a.active, .layout-1col a:hover{ background-position: 58px 76px}
+
+
+/* START:Top buttons
+*********************************************************************************/
+#builder-apply,
+#builder-save,
+#builder-reset {
+	background: url(../formBuilder/button.png) repeat-x;
+	border: 0;
+	height: 22px;
+	line-height: 16px;
+	padding: 0 10px 0 0;
+	margin: 0 15px 0 0;
+	font-weight: bold;
+	font-family: Arial;
+	cursor: pointer;
+	font-weight: bold;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px #5D5D5D;
+	behavior: url(../PIE.php);
+}
+
+#builder-apply:hover,
+#builder-save:hover,
+#builder-reset:hover {background: url(../formBuilder/button.png) repeat-x 0 -22px;}
+
+#builder-apply:before,
+#builder-save:before,
+#builder-reset:before {
+	float: left;
+	margin: 0 10px 0 5px;
+}
+
+#builder-save:before {content:url(../formBuilder/icon-save.png);}
+#builder-reset:before {content:url(../formBuilder/icon-reset.png);}
+#builder-apply:before {content:url(../formBuilder/icon-apply.png);}
+/********************************************************************************/
+
+
+
+.builder-col-narrow { float: left; margin: 10px; width: 270px;}
+.builder-col-wide { clear: both; width: 560px;}
+.b-remove-item {display: block; width: 15px; height: 15px; background: url("../delete.png") transparent 0 2px no-repeat; float: right; margin-right: 5px; margin-top: 5px;}
+#inactive-fields input[type="text"], #inactive-fields input[type="password"], #inactive-fields select {border: 1px solid #C3C3C3;  width: 250px !important;}
+#inactive-fields .inputName {width: inherit !important;}
+#inactive-fields div.tree_button {width: 200px !important;}
+.b-btns-top-center { left: 39%; position: fixed; top: 0;}
+
+#form_builder{
+    background: url("../formBuilder/1pxBg.png");
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+	min-height: 238px;
+}
+.side-button{
+    float: left;
+    height: 100%;
+	min-height: 238px;
+    width: 36px;
+    font-family: Verdana, Helvetica, sans-serif;
+    background: url("../formBuilder/grayBg.png") repeat-y;
+    cursor: pointer;
+}
+.side-btn-top{
+    background: url("../formBuilder/grayTop.png") no-repeat #fff 0 0;
+    width: 36px;
+    height: 5px;
+}
+.side-btn-txt {
+    background: url("../formBuilder/show-hide-inactiveFields.png") no-repeat scroll 0 0 transparent;
+    height: 208px;
+    margin: 17px auto;
+    width: 16px;
+}
+#form_builder .form-builder-cont{
+    /*	overflow: scroll;*/
+    padding: 10px;
+    display: none;
+    width: 310px;
+    float: left;
+}
+#displayJobsCol_Wide{
+    width: 620px;
+}
+
+.ui-sortable {
+    margin: 10px 0;
+    padding: 10px 0 0 10px;
+}
+
+.active-fields {
+	border: 1px dotted #ddd;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+.locationFieldset {
+	margin: 10px 10px 10px 10px;
+	padding-right: 10px;
+}
+
+legend.fh-legend {
+    display: inline;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #ddd;
+}
+.form-builder-cont legend {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: #7F7F7F;
+}
+.form-builder-cont fieldset {
+    border: 1px dotted #fff;
+	background: none;
+}
+.dl-fieldset legend{
+
+}
+.dl-fieldset { padding: 0 5px; }
+.display-layout {
+    margin: 0 auto;
+    text-align: center;
+    width: 296px;
+}
+.display-layout .layout-item {
+    background-color: transparent;
+    float: left;
+    margin: 3px 0;
+    padding: 0;
+}
+
+.portlet { margin: 0 0 1em 0; }
+.portlet .htmlBlock { z-index: 1000000000; }
+.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+.portlet-header .ui-icon { float: right; }
+.portlet-content { padding: 0.4em; display: none; }
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+#displayJobsCol_1 .portlet, #displayJobsCol_2 .portlet { width: 275px; }
+#inactive-fields .portlet { width: 286px; }
+.builder-btn {   padding: 10px; text-align: center;}
+.narrow-col { width:341px; float:left; }
+.b-message { background: none repeat scroll 0 0 #fff; margin: 10px; padding: 10px; }
+#displayResumeCol_Wide{width: 517px; }
+a span.highlight{color: black; text-decoration: underline;}
+a:hover span.highlight {text-decoration: none;}
+span.highlight {background-color: #FFFF00}
+.narrow-col h3 { float: left; margin: 0 5px 0 0; display: inline; font-size: 12px; }
+#col-wide .displayField {margin: 8px 0 22px; overflow: hidden; clear: both;}
+.narrow-col .displayFieldBlock {margin: 5px 0 0; overflow: hidden;}
+.displayFieldBlock h3 { clear: both;}
+
+/* START:Fields style
+*********************************************************************************/
+fieldset {
+	background: none;
+	border: 0;
+	margin: 5px 0;
+	padding: 0;
+}
+.builder-col-wide .inputName {
+	width: 20%;
+	float: left;
+}
+.inputField {
+	float: left;
+}
+.narrow-1col {
+	width: 100%;
+}
+/********************************************************************************/

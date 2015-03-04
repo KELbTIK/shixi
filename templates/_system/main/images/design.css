@@ -1,0 +1,1343 @@
+body {
+	padding:0px;
+	margin:15px 0;
+	background-color:white;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	color:black;
+}
+
+.jobAlert
+{
+	font-weight: bold;
+	font-size:13px;	
+}
+
+.diplayJob_topLink
+{
+	margin: 0px 10px 0px 0px; 
+	padding: 0px; 
+	float: left; 
+}
+
+*html .diplayJob_topLink
+{
+	float: left; 
+}
+
+form
+{
+	margin:0px;
+	padding:0px;
+}
+a img
+{
+	border:none;
+}
+.clear_both
+{
+	position:relative;
+	clear:both;
+	height:1px;
+	margin:0px;
+	padding:0px;
+	font-size:1px;
+}
+
+.myAccountLinks
+{
+	width:210px; 
+	float:left; 
+	margin:5px;  
+	color: #e61e1e;
+	font-size: 13pt;
+}
+.myAccountLinks:hover
+{
+	color: #2c2c2c;
+}
+
+
+
+h1, h2, h3
+{
+	font-size:12px;
+	font-weight:bold;
+	color:#4e7391;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+	margin-bottom:5px;
+}
+/* ######################################################################### */	
+table
+{
+	font-size: 12px;
+}
+table.formdisplay {}
+table.form 
+{
+	border: #cccccc 1px solid;
+}
+td.mainleft 
+{
+	border-right: steelblue 1px solid; 
+	padding-right: 4px;
+}
+
+td.caption 
+{
+	font-weight: bold;
+}
+table.top 
+{
+	font-weight: bold; font-size: 50px; color: steelblue; border-bottom: steelblue 1px inset; text-align: center;
+}
+table.topmembermenu {}
+a.topmembermenuitem 
+{
+	font-weight: bold; color: navy; text-decoration: underline;
+}
+a.topmembermenuitem:hover 
+{
+	color: red; text-decoration: none;
+}
+.newsblock a.title, .newsblock a.title:link
+{
+	font-weight: bold; color: black; text-decoration: underline
+}
+.newsblock a.title:hover 
+{
+	font-weight: bold; color: black; text-decoration: none
+}
+.newsblock .short 
+{
+	font-size: 10px;
+}
+tr.evenrow 
+{
+	background-color: #FBFBFC;
+}
+tr.oddrow 
+{
+	background-color: #FBFBFC;
+}
+tr.unactive 
+{
+	background-color: #ffaadd;
+}
+td.title 
+{
+	font-weight: bold; width: 100%; color: ghostwhite; background-color: steelblue;
+}
+td.head 
+{
+	font-weight: bold; font-size: 130%; color: white; background-color: #c7c4e2; text-align: left;
+}
+td.menu_items 
+{
+	font-weight: normal;
+}
+td.menu_sub_items 
+{
+	font-weight: normal;
+}
+.formgroupcaption 
+{
+	font-weight: bold; color: #c00; text-decoration: underline;
+}
+select 
+{
+	font-size: 12px; font-family: verdana;
+	border:1px solid #B3B3B3;
+	color: #484846;
+}
+
+input
+{
+	color: #484846;
+}
+input.button
+{
+	background: url("redbtn_n.png");
+	width: 100px;
+	height: 30px;
+	color: white;
+	border-style: none;
+	font-weight: bold;
+	cursor:hand;
+}
+input.button:hover
+{
+	background: url("redbtn_h.png");
+}
+
+input.text, input.digit, textarea.text, select.list 
+{
+	font-size: 12px; font-family: tahoma; 
+	background-color: white;
+	border:1px solid #B3B3B3;
+}
+input.text 
+{
+	width: 150px; 
+}
+input.digit 
+{
+	width: 50px;
+}
+textarea.text 
+{
+	width: 400px;
+	height:200px;
+}
+select.list
+{
+	width: 150px;
+}
+input.treechangebutton 
+{
+	font-size: 10px; border:1px solid #b95454; font-family: verdana;
+}
+
+table.formrequest, table.forminput
+{
+	width: 100%;
+}
+table.featured 
+{
+	font-size: 10px;
+}
+table.featured_block 
+{
+	width: 100%; 
+} 
+p.warning,
+p.error 
+{
+    margin-top:15px;
+	color: red;
+}
+.carreviews a.title, .carreviews a.title:link
+{
+	font-weight: bold; color: black; text-decoration: underline
+}
+.carreviews a.title:hover 
+{
+	font-weight: bold; color: black; text-decoration: none
+}
+.carreviews .short , .userprofile
+{
+	font-size: 10px;
+}
+.userprofile 
+{
+	font-size: 10px; border: #cccccc 1px solid;
+}
+.userprofile table 
+{
+	font-size: 10px; border-collapse: collapse;
+}
+.userprofile table td 
+{
+	padding:4px;
+}
+td.form_input_item, td.form_request_item
+{
+	width:50px;
+}
+.inputformitem 
+{
+	font-weight: bold;
+}
+
+a:link, a:visited
+{
+color:#666666;
+}
+a:hover, a:active
+{
+}
+/* ######################################################################### */	
+div.main
+{
+	
+	width:935px;
+	margin-left:auto;
+	margin-right:auto;
+	border: solid #d9d9d9;
+	border-width:0px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	margin-top: 0px;
+}
+div.header
+{
+	position:relative;
+    width: 935px;
+    height:69px;
+    background-color: #484848;
+}
+
+.logo
+{
+	position:absolute;
+	top:40px;
+	left:21px;
+}
+a.searchYourCar, a.sellYourCar
+{	
+	color:white;
+	font-size:11px;
+	font-family:Tahoma, Arial, Verdana, Helvetica, sans-serif;
+	font-weight:bold;
+}
+a.searchYourCar:hover, a.sellYourCar:hover, a.searchYourCar:active, a.sellYourCar:active
+{
+	text-decoration:none;
+}
+a.searchYourCar
+{
+	right:180px;
+}
+a.sellYourCar
+{
+	right:50px;
+}
+
+a.linkHome, a.linkContact
+{
+	color:white;	
+	font-size:11px;
+	font-family:Tahoma, Arial, Verdana, Helvetica, sans-serif;
+}
+
+.bbb
+{
+	padding-left:5px; 
+	margin-top:0px; 
+	float: left; 
+	width: 320px; 
+	border-width: 1px; 
+	border-top-style: solid; 
+	border-style: solid; 
+	border-color: #dddddd;
+	margin-right: 10px;
+}
+
+*html .bbb
+{
+	float: right;
+	margin-right:2px;
+	width: 325px;
+}
+
+div.content
+{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+	padding-top:0px;
+/* 	height:550px;  */
+/* 	border:1px solid navy; */
+}
+
+.headerMenu
+{
+	background-image:url("header3.png");
+	color:#FEFEFE;
+	float:left;
+	font-family:Arial;
+	font-size:11px;
+	height:69px;
+	text-align:left;
+	width:161px;
+}
+*html .headerMenu
+{
+	padding-top: 10px;
+	height:59px;
+}
+
+.photoCard
+{
+	background-image:url("photocard.png");
+	height:100px;
+	margin-left:40px;
+	margin-top:10px;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	width:100px;
+}
+*html .photoCard
+{
+	height:90px;
+	width:100px;
+	padding-left:5px;
+	padding-top: 2px;
+}
+
+html div.content2
+{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+	padding-top:0px;
+	padding-left:20px; 
+}
+*html div.content2
+{
+	
+	padding-left:20px;
+	width: 915px;
+}
+
+div.leftBlock, div.rightBlock, div.centerBlock
+{
+	float:left;
+	/* border:1px solid green; */
+}
+div.leftBlock
+{
+	width:174px;
+}
+
+div.centerBlock
+{
+	padding-left:0px
+}
+
+div.rightBlock
+{
+	width:885px;
+	margin-left:0px;
+}
+
+div.leftMenuBlock
+{
+	position:relative;
+}
+.LoginBlock
+{
+	margin-top:20px;
+	margin-bottom:5px;
+	margin-left:40px;
+	font-size:13px;
+	text-decoration:none;
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+div.LoginBlock span a:link, div.LoginBlock span a:visited
+{
+	color:#4e7391;
+	text-decoration:none;
+}
+div.LoginBlock span a:hover, div.LoginBlock span a:active
+{
+	color:#4e7391;
+	text-decoration:underline;
+}
+ul.leftMenu
+{
+	position:relative;
+	margin:0px;
+	padding:0px;
+}
+ul.leftMenu li
+{
+	margin:0px;
+	list-style:none;
+	padding:0px;
+	margin-bottom:5px;
+	text-align:center;
+	font-size:13px;
+	text-decoration:none;
+	font-family:Tahoma, Arial, Verdana, Helvetica, sans-serif;
+	height:33px;
+	line-height:33px;
+	font-weight:bold;
+}
+.leftMenuNoActive
+{
+	background-image:url('lm_blue.gif');
+	background-repeat:no-repeat;
+}
+.leftMenuActive
+{
+	background-image:url('lm_orange.gif');
+	background-repeat:no-repeat;
+}	
+
+ul.leftMenu li  a:hover, ul.leftMenu li  a:active, ul.leftMenu li  a:link, ul.leftMenu li  a:visited
+{
+	color:#FFF;
+	text-decoration:underline;
+}
+
+div.amountPhotosBlock
+{
+	
+}
+
+.iconPhotos
+{
+	position:relative;
+	top:2px;
+	left:0px;
+}
+
+
+ul.detailsLinks, ul.infoBlockDL, ul.linksBackSearchResult
+{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	overflow:hidden;
+}
+
+
+
+ul.linksBackSearchResult
+{
+	margin-top:10px;
+}
+ul.detailsLinks li, ul.infoBlockDL li, ul.linksBackSearchResult li
+{
+	position:relative;
+	float:left;		
+	margin:0px;
+	margin-right:2px;
+	padding:0px;
+	list-style:none;
+	vertical-align:middle;
+}
+
+.headerpage
+{
+	background-color: black; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 935px; 
+	height: 69px;
+	margin-bottom:0px;
+}
+ul.infoBlockDL li
+{
+	margin-left:2px;
+}
+
+table.searchResultsHeaderLine 
+{	
+	
+	background:#E5E5E5; 
+	width:100%;
+	height:37px;
+	background-image: url("detailpanel_bg.png");
+}
+
+.searchResultsHeaderLine a:link, .searchResultsHeaderLine a:visited,  .searchResultsHeaderLine a:hover
+{
+	color:#555555;
+	
+}
+
+table.tableSearchResult 
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #c9c9c9;
+	border-top-style: none;
+	color: #787878;
+}
+
+
+tr.sortby 
+{
+	font-weight:bold;
+	font-size:105%;
+	background-color: #d8d8d8;
+	background-image:url('table_title_bg.png'); 
+	color:#3a3939;
+}
+
+.sortby td a:link, .sortby td a:visited, .sortby td a:hover
+{color:#666666;text-decoration:none}
+
+.page_navigator
+{
+	font-weight:bold;
+	color:#110F7C;
+	padding:0px;
+	margin:0px;
+
+}
+.page_navigator_toppanel
+{
+	font-weight:bold;
+	color:#110F7C;
+	padding:0px;
+	margin:0px;
+	width:150px;
+}
+
+.page_navigator a:link, .page_navigator a:visited, .page_navigator a:hover
+{
+	color:#110F7C
+}
+
+.pointedInListingInfo
+{
+	border-bottom: 1px solid #B2B2B2;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.pointedInListingInfo2
+{
+	border-bottom: 1px solid #B2B2B2;
+	border-right: 1px solid #B2B2B2;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.ApplicationPointedInListingInfo
+{
+	border-bottom: 1px solid #B2B2B2;
+	border-right: 1px solid #B2B2B2;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.automobileClassifieds
+{position:absolute;bottom:40px;left:15px;font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+ font-size:13px;color:white;font-weight:bold;text-transform:capitalize;}
+
+.listInfoPrice
+{font-weight:bold;color:#FF5600;font-family:Verdana, Arial, Helvetica, sans-serif;}
+
+.listInfoYearMakeModel, .listInfoMileage
+{
+	font-weight:bold;
+	color:black;
+	font-family:verdana, sans-serif;
+}
+
+.listInfoYearMakeModel a:link, .listInfoYearMakeModel a:visited, .listInfoYearMakeModel a:hover
+{color:black;text-decoration:none}
+
+.footerBlock
+{
+	position:relative;
+	margin-top:20px;
+	height:38px;
+	background-color: #910500;
+	background-image:url('footer_bg.png');
+	text-align: center;
+	color: white;
+	vertical-align: center;
+ }
+
+.copyright
+{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:100%;}
+
+.copyright a:link, .copyright a:visited, .copyright a:hover, .copyright a:active
+{color:white;text-decoration:underline;font-weight:bold;}
+
+
+.detailsLinks a:link, .detailsLinks a:visited, .detailsLinks a:hover
+{
+	font-size:90%; 
+	text-decoration:underline;
+	color:#444444;
+}
+
+a.black_underline:visited
+{color:black}
+a.black_underline:link
+{color:black}
+a.black_underline:hover
+{color:black}
+
+.top_menu
+{
+	color: white;
+	height: 40px;
+	padding-left: 10px;
+	background-image: url("panel_bg.png");
+	background-color: #911100;
+	margin-top: 0px;
+}
+
+.top_menu a:link
+{color:white}
+
+.top_menu a:visited
+{color:white}
+
+.top_menu a:hover
+{color:white;text-decoration:none}
+
+div.featuredAdsBlock
+{float:right;width:160px}
+
+.headerText
+{
+    margin-top: 5px;
+    padding: 0px 0px;
+	font-weight:bold;
+	font-size:14pt;
+	color: #d5241b;
+	font-family: verdana;
+}
+
+.featuredLinks a:link, .featuredLinks a:visited
+{
+	color:black;
+	font-family: verdana;
+	font-size: 9pt;
+}
+
+select.list
+{width:67px;}
+
+
+
+/* %%%%%SEARCH%%%%%%%%%%% */	
+	.searchTreeLevel1
+	{
+		width:150px;
+	}
+	.searchTreeLevel2
+	{
+		width:150px;
+	}
+	
+	.searchList
+	{
+		width: 130px;
+	}	
+	*html .searchList
+	{
+		width: 155px;
+	}
+	
+	.searchText
+	{
+	    /*width: 80px;*/
+		color: #890400;
+	}
+	
+	.searchStringLike
+	{
+	}
+	
+	.searchString
+	{
+	}
+	.searchIntegerLess
+	{
+		width:61px;
+	}
+	
+	.searchIntegerMore
+	{
+		width:61px;
+	}
+	.searchGeoDistance
+	{
+		width:105px;
+	}
+	.searchGeoLocation
+	{
+		width:50px;
+	}
+	.list
+	{
+		width:67px;
+	}
+/* %%%%%END SEARCH%%%%%%%%%%% */		
+/* %%%%%INPUT%%%%%%%%%%% */	
+	.inputList
+	{
+		width:153px;
+	}
+	.inputMultiList
+	{
+		width:153px;
+		height:90px;
+	}	
+	.inputString
+	{
+		width:148px;
+	}
+	.inputInteger
+	{
+		width:148px;
+	}
+	.inputTreeLevel2
+	{
+		width:153px;
+	}
+	.inputTreeLevel1
+	{
+		width:153px;
+	}
+	.inputGeo
+	{
+		width:148px;
+	}
+	.inputVideo
+	{
+		
+	}
+	
+/* %%%%%END INPUT%%%%%%%%%%% */	
+
+
+
+
+table.sellerComents .inputText
+{
+	margin-top:5px;
+	width:520px;
+	height:80px;
+}	
+table.searchString
+{
+	width:50px;
+}
+.logInNameInput, .logInPassInput
+{
+	width:150px;
+}
+
+.headrow td a:link, .headrow td a:visited, .headrow td a:link, .headrow td a:visited 
+{
+	font-size:12px;
+	color:#4e7391;
+}
+.headrow td
+{
+	border-bottom:2px solid #4e7391;
+	font-weight:bold;
+	padding-bottom:3px;
+	font-size:12px;
+	color:#4e7391;
+}
+
+.RSSBlock
+{
+	float: right; width: 114px; height:25px; margin-right:15px; background-color:#e8e8e8; 
+	color:#8c8c8c; background-image:url('rssblock_bg.png');	padding-left:5px; padding-top: 5px;
+}
+.RSSBlock:hover
+{
+	color: #ff7800;
+}
+
+.quickSearchKeep select
+{width:135px;}
+
+*html .quickSearchKeep select
+{width:135px;}
+
+
+.quickSearchKeep input
+{
+	width:120px; 
+}
+
+
+
+.stateForm
+{
+	margin-left:0px;
+	margin-top:15px;
+}
+
+*html .stateForm
+{
+	margin-top:15px; 
+	margin-left:5px;
+}
+
+
+
+.searchDetails
+{
+	float: left; 
+	width: 60px; 
+	height: 60px; 
+	font-size:10pt; 
+	font-family: verdana; 
+	text-align: right;
+	margin-left: 5px;
+}
+*html .searchDetails 
+{width: 50px;}
+
+.searchForm
+{
+	width: 660px; 
+	height:135px; 
+	background-color: white; 
+	border-width: 1px; 
+	border-right-style:solid; 
+	border-bottom-style: solid; 
+	border-color: #dddddd;
+	background-image: url("qsearch_bg.png");
+	background-repeat: repeat-x;
+	padding-left: 5px;
+	background-color: #f3f3f3;
+}
+
+.FindForm
+{
+	width: 660px; 
+	height:135px; 
+	border-width: 1px; 
+	border-style:solid; 
+	border-color: #dddddd;
+	margin-left: 20px;
+	background-image: url("serachform_bg.png");
+	background-repeat: repeat-x;
+	background-color: #f3f3f3;
+}
+
+*html .searchForm
+{
+	width: 670px; 
+}
+
+.rightPanel
+{
+	width: 255px; 
+	float: right;
+	border-style:solid; 
+	border-width:1px;
+	border-color: #dddddd;
+	border-right-style: none;
+	border-top-style:none;
+}
+.rightPanelTitle
+{
+	padding: 0px; 
+	margin:0px; 
+	height:36px; 
+	width:255px; 
+	padding-top: 0px;
+	font-size: 13pt;
+	font-weight:bold;
+	color: white;
+	padding-left: 25px;
+	padding-top:5px;
+	background-repeat: repeat; 
+	background-image:url("rightPanel_title.png");	
+}
+
+*html .rightPanelTitle
+{
+	width:230px; 
+}
+
+#browse_by_make_model
+{
+	font-family:tahoma;
+	font-size:90%
+}
+#browse_by_make_model a
+{
+	color:#646464;
+	text-decoration:none;
+	font-size: 10pt;
+	font-family: tahoma;
+	list-style: none;
+}
+#browse_by_make_model a:visited{}
+#browse_by_make_model a:hover{text-decoration:underline}
+
+#browse_by_body_style{font-family:verdana}
+#browse_by_body_style a{color:#578298;}
+#browse_by_body_style a:visited{}
+#browse_by_body_style a:hover{}
+
+.acount_mainform
+{
+	width: 550px;
+	height: 300px;
+	border-width:1px; 
+	border-color: black;
+	border-style:solid;
+	border-left-style: none; 
+	float: left; 
+	border-color: #9a9a9a; 
+	background-image:url("account/form_bg.png");
+	padding:0; 
+	margin:0;
+}
+.acount_rightmargin
+{
+	width: 39px; 
+	height: 200px; 
+	float: left; 
+	border-right-style:solid; 
+	border-width:1px;
+	margin-top: 102px; 
+	border-color:#9a9a9a	
+}
+
+*html .acount_rightmargin
+{
+	height: 285px; 
+}
+
+.acount_downbg
+{
+	margin-left:39px; 
+	float: left;
+	width:552px; 
+	height:42px; 
+	background-image:url("account/down_bg.png");
+}
+
+*html .acount_downbg
+{
+	margin-left:19px; 
+}
+
+/* Field Type Style */
+
+.fieldTypeJobCategory
+{
+	height: 145px;
+}
+
+*html .fieldTypeJobCategory
+{
+	height: 150px;
+}
+
+.brByCategoryTable
+{
+	width:100%; 
+	padding-left: 20px;
+}
+
+*html .brByCategoryTable
+{
+	padding-left: 40px;
+}
+
+.LoginFormField
+{
+	width:80px;
+}
+
+.error {
+	color: red;
+}
+.paymentTable
+{
+	padding-top:10px;
+}
+.brByCiryTable
+{
+	width:100%;
+	padding-left: 20px;
+}
+.compProfileTitle
+{
+	padding:0px;
+	padding-top:0;
+	font-size:140%;
+	font-weight:bold; 
+	text-align:center; 
+	background-color:#686868; 
+	color:white; 
+	margin-right:10px;
+	width:250px; 
+	height:19px; 
+	background-image:url('form_title_bg.png');
+}
+.featuredJobsTR
+{
+	width:150px;
+}
+.latestListindTR
+{
+	width:150px;
+}
+.browseCompanyAB
+{
+	float: left;
+	padding: 5px;
+}
+
+
+
+
+/* classes to highlight templates in TemplateSupplier */
+.templateHighlight {
+
+}
+
+.inner_div {
+    display: block;
+    position: relative;
+    width: 24px;
+    margin-top: -24px;
+    margin-left: 5px;
+    z-index: 11;
+}
+.aMessage{
+    color:red;
+    font-weight:bold;
+    margin-left:10px;
+}
+.instruction{
+    position:relative;
+    margin-left:10px;
+    float: left;
+}
+.instruction .instr_icon{
+	background:url("./instruction_16x16.png") repeat scroll left top transparent;
+float:left;
+height:16px;
+width:16px;
+}
+
+.instruction .instr_block{
+	/*background:none repeat scroll 0 0 #EEEEEE;*/
+	display:none;
+	font-size:11px;
+left:18px;
+opacity:0.9;
+position:absolute;
+top:0;
+width:275px;
+z-index:1000;
+}
+.instruction .instr_arrow{
+	background:url("./orangeArrow.png") no-repeat scroll 0 4px transparent;
+	float:left;
+	height:16px;
+	width:9px;
+}
+.instruction .instr_cont{
+	padding:0px 7px;
+	background:none repeat scroll 0 0 #EEEEEE;
+	float:left;
+	width:250px;
+}
+/* social plugins */
+.social_login_a{
+	display: block;
+    float: right;
+    height: 16px;
+    margin: 0 0 0 15px;
+    width: 16px;
+}
+.linkedinLogin{
+	background: url("./social/linkedin_16x16.png") no-repeat transparent 0 0;
+}
+.linkedinLink{
+	display: block;
+    height: 16px;
+    line-height: 16px;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+.in_share{
+	float: left;
+    margin-right: 6px;
+	border:0px;
+}
+#social_autoFill{
+	font-weight: bold;
+    margin: 10px 0;
+    padding-left: 21px;
+	line-height: 16px;
+}
+.linkedin_16{
+	background:url("./social/linkedin_16x16.png") no-repeat scroll left center transparent;
+}
+.facebook_16{
+	background:url("./social/facebook_16x16.png") no-repeat scroll left center transparent;
+}
+.in_CompanyInsiderWidget, 
+.in_ProfileInsiderWidget{
+	margin: 15px 0px; 
+}
+a.social_login_button{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float:left;
+	margin-left: 5px;
+	padding: 0px !important; 
+}
+.login_buttons_txt{
+	float:left;
+}
+.slb_linkedin{
+	background: url("./social/linkedin_16x16.png") no-repeat scroll 0 0 transparent;
+}
+.slb_facebook{
+	background: url("./social/facebook_16x16.png") no-repeat scroll 0 0 transparent;
+}
+.social_plugins_div{
+	font-weight: normal;
+    margin: 15px 0;
+}
+.soc_reg_form .social_plugins_div{float: none;}
+#registr-form {margin: 15px 0 0 0;}
+/* END OF social plugins */
+/* >>>>>>>>>>>>>>>>> FORM FIELDS BUILDER >>>>>>>>>>>>>>>>>>>>>>> */
+
+#form_builder .form-builder-cont{
+/*	overflow: scroll;*/
+    padding: 10px;
+	display: none;
+	width: 310px;
+	float: left;
+}
+#displayJobsCol_Wide{
+	width: 620px;
+}
+legend.fh-legend{
+	display:none;
+}
+.ui-sortable {
+	border: 1px dotted #ddd;
+    margin: 10px 0;
+    padding: 10px;
+}
+.ui-sortable legend.fh-legend {
+	display: inline;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 15px;
+	color: #ddd;
+}
+.form-builder-cont legend {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	
+}
+.form-builder-cont fieldset {
+	border: 1px dotted #fff;
+}
+.dl-fieldset legend{
+	
+}
+.display-layout {
+	margin: 0 auto;
+	text-align: center;
+	width: 296px;
+}
+.display-layout .layout-item {
+	background-color: transparent;
+    float: left;
+    margin: 3px 0px;
+    padding: 0px;
+}
+.display-layout .layout-item a {display: block; width: 74px; height: 91px; background-image: url("./layouts/layouts.png"); }
+.layout-2cols-wide a { background-position: 0px 0px; }
+.layout-2cols-wide a.active, .layout-2cols-wide a:hover { background-position: 0px 91px; }
+.layout-wide-2cols a{ background-position: -77px 0px; }
+.layout-wide-2cols a.active, .layout-wide-2cols a:hover{ background-position: -77px 91px; }
+.layout-2cols a{ background-position: -153px 0px}
+.layout-2cols a.active, .layout-2cols a:hover{ background-position: -153px 91px}
+.layout-1col a{ background-position: 72px 0px}
+.layout-1col a.active, .layout-1col a:hover{ background-position: 72px 91px}
+.sortable-column { float: left; padding-bottom: 10px; }
+.portlet { margin: 0 0em 1em 0; }
+.portlet .htmlBlock { z-index: 1000000000; }
+.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+.portlet-header .ui-icon { float: right; }
+.portlet-content { padding: 0.4em; display: none; }
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+#displayJobsCol_1 .portlet, #displayJobsCol_2 .portlet { width: 275px; }
+#inactive-fields .portlet { width: 286px; }
+.builder-btn {   padding: 10px; text-align: center;}
+.builder-btn button{ width: 75px; }
+.narrow-col {width:315px; float:left;}
+.b-message { background: none repeat scroll 0 0 #fff; margin: 10px; padding: 10px; }
+/* <<<<<<<<<<<<<<<<< FORM FIELDS BUILDER <<<<<<<<<<<<<<<<< */
+#image_marker, #image_marker_Resume {
+    background: url("marker_orange.gif");
+    width: 22px;
+    height: 32px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 11px;
+}
+
+#image_marker_priority {
+    background: url("marker_orange.gif");
+    width: 22px;
+    height: 32px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 11px;
+}
+
+#image_marker_indeed {
+    background: url("marker_blue.gif");
+    width: 22px;
+    height: 32px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 11px;
+}
+
+#image_marker_simplyHired {
+    background: url("marker_green.gif");
+    width: 22px;
+    height: 32px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 11px;
+}
+
+#image_marker_beyond {
+    background: url("marker_gray.gif");
+    width: 22px;
+    height: 32px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 11px;
+}
+/**********************************Invoice**************************************/
+.invoice_field {
+    padding:5px;
+}
+
+.invoice_align {
+    text-align:right;
+}
+
+.invoice_actions {
+    width: 140px;
+    text-align:center !important;
+}
+#noListingsFounds{
+    text-align: center;
+    padding-bottom: 10px;
+    display: none;
+}
+.noListingsFound{
+    text-align: center;
+    padding-bottom: 10px;
+}
+/********************************************************************************/

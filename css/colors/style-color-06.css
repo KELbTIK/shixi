@@ -1,0 +1,39 @@
+#wrapper { background-image: url(../../images/backgrounds/background_06.jpg); }
+		
+a.btn, a.btn:visited { 
+	border: solid 1px #fff; 
+	color:#333;  	
+	background: #fff; 	
+}
+
+a.btn:hover {
+	background:#333;	
+}
+
+a.btn-secondary {
+	color:#fff;	
+}
+
+.form-row input.btn {  
+	border: solid 1px #333; 
+	color:#fff;  
+	background: #333; 
+}
+
+.form-row input.btn:hover, .form-row input.btn:focus {
+	background:#333;
+} 
+
+.glyph-item { 
+	color:#333
+}
+
+.pricing .blocks .inner ul li.price {
+	background: #333;	
+	border-bottom: solid 5px #333; 
+	margin-top:-1px
+}
+
+.highlight h2 span {
+	color:#333
+}

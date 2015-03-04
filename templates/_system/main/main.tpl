@@ -18,8 +18,8 @@
 	<body />
 		{module name="users" function="cookie_preferences"}
 		<div class="headerpage">
-		{include file="../menu/header.tpl"}	
-		</div><div class="main">	
+		{include file="../menu/header.tpl"}
+		</div><div class="main">
 			{module name="menu" function="top_menu"}
 			<div class="content">
 				<div class="rightPanel">
@@ -45,7 +45,7 @@
 						<br/>
 						<!-- BLOCK -->
 						<div class="bbb" style="float: left;">
-									
+
 							<img src="{image}employers_img.png" style="float: left;"/>
 							<div style="width: 200px; float:left; margin-left: 20px;">
 								<div style="font-size: 14pt; padding:0; margin-top:2px; padding-bottom:10px;">[[Employers]]</div>
@@ -58,7 +58,7 @@
 						<div class="bbb">
 							<img src="{image}jobseekers_img.png" / style="float: left;">
 							<div style="width: 200px; float:left; margin-left: 20px;">
-								<div style="font-size: 14pt; padding:0; margin-top:2px; padding-bottom:10px;">[[Job Seekers]]</div>	
+								<div style="font-size: 14pt; padding:0; margin-top:2px; padding-bottom:10px;">[[Job Seekers]]</div>
 								<a href="{$GLOBALS.site_url}/registration/?user_group_id=JobSeeker">[[Register]]</a><br/>
 								<a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Resume">[[Post resumes]]</a><br/>
 								<a href="{$GLOBALS.site_url}/find-jobs/">[[Find jobs]]</a><br/>

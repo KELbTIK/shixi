@@ -89,7 +89,7 @@
 			return false;
 		});
 
-		$(".editTemplateMenu").live('click', function() {
+		$(".editTemplateMenu").on('click', function() {
 			var url = $(this).attr('href');
 			popUpWindow(url, 700, 'Edit Template', true);
 			return false;

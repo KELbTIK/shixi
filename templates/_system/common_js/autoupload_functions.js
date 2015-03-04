@@ -16,7 +16,7 @@ function getPreloaderCodeForFieldId(fieldId) {
 /**
  * Autoupload file to server (Common handler for ".autouploadField" class fields)
  */
-$(".autouploadField").live('change', function() {
+$(".autouploadField").on('change', function() {
 	// gets params from input=file field
 	var fieldAction = $(this).attr('field_action');
 	var fieldId     = $(this).attr('field_id');
@@ -46,7 +46,7 @@ $(".autouploadField").live('change', function() {
 	return false;
 });
 
-$(".delete_profile_video").live('click', function() {
+$(".delete_profile_video").on('click', function() {
 	var fileId  = $(this).attr('file_id');
 	var fieldId = $(this).attr('field_id');
 	var url     = window.SJB_GlobalSiteUrl + '/system/miscellaneous/ajax_file_upload_handler/';
@@ -78,7 +78,7 @@ $(".delete_profile_video").live('click', function() {
 	return false;
 });
 
-$(".delete_profile_logo").live('click', function() {
+$(".delete_profile_logo").on('click', function() {
 	var url     = window.SJB_GlobalSiteUrl + '/system/miscellaneous/ajax_file_upload_handler/';
 	var fileId  = $(this).attr('file_id');
 	var fieldId = $(this).attr('field_id');
@@ -144,7 +144,7 @@ function getClassifiedsVideoData(fieldId, listingId, formToken) {
 
 
 
-$(".delete_classifieds_video").live('click', function() {
+$(".delete_classifieds_video").on('click', function() {
 	var fieldId   = $(this).attr('field_id');
 	var fileId    = $(this).attr('file_id');
 	var listingId = $(this).attr('listing_id');
@@ -204,7 +204,7 @@ function getClassifiedsLogoData(fieldId, formToken, listingId) {
 	return false;
 }
 
-$(".delete_listing_logo").live('click', function() {
+$(".delete_listing_logo").on('click', function() {
 	var fieldId   = $(this).attr('field_id');
 	var fileId    = $(this).attr('file_id');
 	var listingId = $(this).attr('listing_id');
@@ -272,7 +272,7 @@ function getFileFieldData(fieldId, listingId, listingTypeId, formToken) {
 }
 
 
-$(".delete_file").live('click', function() {
+$(".delete_file").on('click', function() {
 	var fieldId   = $(this).attr('field_id');
 	var fileId    = $(this).attr('file_id');
 	var listingId = $(this).attr('listing_id');
@@ -310,7 +310,7 @@ $(".delete_file").live('click', function() {
 });
 
 
-$(".delete_file_complex").live('click', function() {
+$(".delete_file_complex").on('click', function() {
 	var fieldId   			= $(this).attr('field_id');
 	var fileId    			= $(this).attr('file_id');
 	var listingId 			= $(this).attr('listing_id');
@@ -350,7 +350,7 @@ $(".delete_file_complex").live('click', function() {
 	return false;
 });
 
-$(".delete_video_complex").live('click', function() {
+$(".delete_video_complex").on('click', function() {
 	var fieldId   			= $(this).attr('field_id');
 	var fileId    			= $(this).attr('file_id');
 	var listingId 			= $(this).attr('listing_id');

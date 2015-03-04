@@ -10,6 +10,35 @@
 <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />
 <link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />
 <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.autocomplete.css"  />
+	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/css/bootstrap.css"  />
+	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
+	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/animate.css"  />
+	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/skins/red.css"  />
+	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/normalize.css"  />
+
+
+
+
+
+
+
+
+	  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	  <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+	  <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+	  <link href="fonts/fontello/css/fontello.css" rel="stylesheet">
+	  <link href="plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
+	  <link href="plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
+	  <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+	  <link href="css/animations.css" rel="stylesheet">
+	  <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+	  <link href="css/custom.css" rel="stylesheet">
+
+
+
+
+
+
 {if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
 {if $GLOBALS.current_language_data.id == 'de'}<link rel="StyleSheet" type="text/css" href="{image src="design-de.css"}" />{/if}
 {if $GLOBALS.current_language_data.id == 'pl'}<link rel="StyleSheet" type="text/css" href="{image src="desing-pl.css"}" />{/if}
@@ -19,16 +48,18 @@
 {if $GLOBALS.current_language_data.id == 'sr'}<link rel="StyleSheet" type="text/css" href="{image src="design-sr.css"}" />{/if}
 <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{$GLOBALS.site_url}/rss/" />
 <link rel="Stylesheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.multiselect.css" />
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
+	  <script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.autocomplete.pack.js"></script>
 <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery-ui.css"  />
 <script language="JavaScript" type="text/javascript" src="{common_js}/main.js"></script>
 <script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
+<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/bootstrap/js/bootstrap.js"></script>
 <script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
 <script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="{common_js}/multilist_functions.js"></script>
 <script language="JavaScript" type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
 <script language="JavaScript" type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
+
 <!--[if IE 8]>
 	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/pie-ie.js"></script>
 	<script language="JavaScript" type="text/javascript">
@@ -156,7 +187,7 @@ $(function() {
 		{/if}
 		<h1 class="Companies">[[Featured Companies]]</h1>
 		{module name="users" function="featured_profiles" items_count="4"}
-				
+
 		{if $GLOBALS.settings.show_polls_on_main_page}
 			{module name="polls" function="polls"}
 		{/if}
@@ -176,7 +207,7 @@ $(function() {
 			</div>
 			<div class="JobSeekerBlockBottom"> </div>
 		</div>
-		
+
 		<div class="EmployerBlock">
 			<div class="EmployerBlockTop">[[Employers]]</div>
 			<div class="EmployerBlockBg">
@@ -189,7 +220,7 @@ $(function() {
 			<div class="EmployerBlockBottom"> </div>
 		</div>
 		<div class="clr"><br/></div>
-		
+
 		<div class="featuredJobsTop">[[Featured Jobs]]</div>
 		<div class="featuredJobs">{module name="classifieds" function="featured_listings" items_count="4" listing_type="Job"}</div>
 		<div class="featuredJobsBottom"> </div>
@@ -199,7 +230,7 @@ $(function() {
 		<div class="latestJobs">{module name="classifieds" function="latest_listings" items_count="4" listing_type="Job"}</div>
 		<div class="latestJobsBottom"> </div>
 		<div class="clr"><br/></div>
-		
+
 		{if isset($GLOBALS.plugins.WordPressBridgePlugin) && $GLOBALS.plugins.WordPressBridgePlugin.active && $GLOBALS.settings.display_blog_on_homepage}
 		<div class="blogTop">[[Blog Posts]]</div>
 		<div class="featuredJobs">
@@ -207,25 +238,25 @@ $(function() {
 		</div>
 		<div class="featuredJobsBottom"> </div>
 		{/if}
-		
+
 	</div>
 	<div class="rightColumn">
 		{module name="banners" function="show_banners" group="Side Banners"}
-	
+
 		{if $GLOBALS.settings.show_news_on_main_page}
 			<h1 class="Category">[[News]]</h1>
 			{module name="news" function="show_news"}
 		{/if}
 		<div class="clr"><br/></div>
-		
+
 		<h1 class="Category">[[Jobs by Category]]</h1>
 		{module name="classifieds" function="browse" browseUrl="/browse-by-category/" browse_template="browse_by_category.tpl"}
 		<div class="clr"><br /></div>
-		
+
 		<h1 class="City">[[Jobs by City]]</h1>
 		{module name="classifieds" function="browse" browseUrl="/browse-by-city/" browse_template="browse_by_city.tpl"}
 	</div>
-	
+
 	<div class="clr"><br/></div>
 	{module name="banners" function="show_banners" group="Bottom Banners"}
 

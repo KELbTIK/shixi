@@ -2874,3 +2874,22 @@ input#state {
 	width: 156px !important;
 }
 /********************************************************************************/
+
+.header-top-dropdown .dropdown>a {
+	padding: 8px 10px;
+	margin: 0;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+	min-width: 0;
+	background-color: transparent;
+	-moz-box-shadow: none !important;
+	-o-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	text-transform: none;
+}
+
+.language-select{
+	margin-top:3px;
+}

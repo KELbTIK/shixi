@@ -1,4 +1,5 @@
 system/cache
 backup
-pictures
+pictures/
 config.php
+.idea

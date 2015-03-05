@@ -24,7 +24,7 @@
 <script type="text/javascript">
 	{literal}
 	$(document).ready(function(){
-		$("#mch_subscribe").live("click", function(){
+		$("#mch_subscribe").on("click", function(){
 			var oEmail = $("#mch_email");
 			var oName = $("#mch_name");
 			var email = oEmail.val();

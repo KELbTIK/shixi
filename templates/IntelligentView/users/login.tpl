@@ -12,14 +12,60 @@
 	</script>
 	{/literal}
 {/if}
+
+
 {if $shopping_cart && $logged_in}
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
 	<script>
 		{literal}
 			 $("#shoppingCartForm").click();
 		{/literal}
 	</script>
 {/if}
+
+
+<h2 class="title">Login</h2>
+<hr>
+<form class="form-horizontal" action="{$GLOBALS.site_url}/login/" method="post" id="loginForm" {if $ajaxRelocate} onsubmit="return loginSubmit()" {/if}>
+	<input type="hidden" name="return_url" value="{$return_url}" />
+	<input type="hidden" name="action" value="login" />
+	{if $ajaxRelocate}<input type="hidden" name="ajaxRelocate" value="1" />{/if}
+	<div class="form-group has-feedback">
+		<label for="inputUserName" class="col-sm-3 control-label">User Name</label>
+		<div class="col-sm-8 ">
+			<input type="text" class="form-control" id="inputUserName" placeholder="User Name" required="">
+			<i class="fa fa-user form-control-feedback"></i>
+		</div>
+		
+	</div>
+	<div class="form-group has-feedback">
+		<label for="inputPassword" class="col-sm-3 control-label">Password</label>
+		<div class="col-sm-8">
+			<input type="password" class="form-control" id="inputPassword" placeholder="Password" required="">
+			<i class="fa fa-lock form-control-feedback"></i>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-3 col-sm-8">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" required=""> Remember me.
+				</label>
+			</div>
+			<button type="submit" class="btn btn-group btn-default btn-sm">Log In</button>
+			<ul>
+				<li><a href="#">Forgot your password?</a></li>
+			</ul>
+			<span class="text-center text-muted">Login with</span>
+			<ul class="social-links colored circle clearfix">
+				<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+				<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+				<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</form>
+
 {if $GLOBALS.user_page_uri == "/"}
 	<form action="{$GLOBALS.site_url}/login/" method="post" id="loginForm" {if $ajaxRelocate} onsubmit="return loginSubmit()" {/if}>
 		<input type="hidden" name="return_url" value="{$return_url}" />
@@ -77,3 +123,7 @@
 	<br/><a  href="{$GLOBALS.site_url}/password-recovery/">[[Forgot Your Password?]]</a>&nbsp;|&nbsp; <a href="{$GLOBALS.site_url}/registration/{if $shopping_cart}?fromShoppingCart=1{/if}">[[Registration]]</a>
 	<div class="soc_reg_form">{module name="social" function="social_plugins"}	</div>
 {/if}
+
+
+
+

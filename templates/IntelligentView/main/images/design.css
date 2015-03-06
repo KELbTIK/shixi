@@ -333,7 +333,7 @@ li#dropDown ul a {
 .rightColumn,
 .mainColumn {
 	display: block;
-	float: left;
+	/*float: left;*/
 	overflow: hidden;
 }
 .mainColumn {
@@ -341,7 +341,7 @@ li#dropDown ul a {
 	margin: 0 20px;
 }
 .leftColumn {
-	width: 173px;
+	width: 100%;
 }
 .rightColumn {
 	width: 193px;

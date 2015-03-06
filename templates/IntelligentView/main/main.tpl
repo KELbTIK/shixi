@@ -33,7 +33,7 @@
 	  <link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
 	  <link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
 
-	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
+
 
 
 {if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
@@ -44,6 +44,8 @@
 {if $GLOBALS.current_language_data.id == 'pt'}<link rel="StyleSheet" type="text/css" href="{image src="design-pt.css"}" />{/if}
 {if $GLOBALS.current_language_data.id == 'sr'}<link rel="StyleSheet" type="text/css" href="{image src="design-sr.css"}" />{/if}
 <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{$GLOBALS.site_url}/rss/" />
+
+	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
 
 <script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
 {*<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.autocomplete.pack.js"></script>*}
@@ -213,24 +215,34 @@ $(function() {
 	<div id="loading"></div>
 	<div id="messageBox"></div>
 	{include file="../menu/header.tpl"}
+
+
 	<div class="leftColumn">
-		{if !$GLOBALS.current_user.logged_in}
-			<div class="loginFormTop">[[Sign In]]</div>
-			<div class="loginFormBg">
-				<br/>{module name="users" function="login" template="login.tpl" internal="true"}<br/>
+		<div class="col-md-6">
+			{if !$GLOBALS.current_user.logged_in}
+
+				<div class="form-block">
+					<br/>{module name="users" function="login" template="login.tpl" internal="true"}<br/>
+				</div>
+				<div class="loginFormBottom"> </div>
+			{/if}
+		</div>
+
+		<div class="col-md-6">
+			<h1 class="Companies">[[Featured Companies]]</h1>
+			{module name="users" function="featured_profiles" items_count="4"}
+		</div>
+
+			<div class="col-md-6">
+				{if $GLOBALS.settings.show_polls_on_main_page}
+					{module name="polls" function="polls"}
+				{/if}
 			</div>
-			<div class="loginFormBottom"> </div>
-			<div class="clr"><br/></div>
-		{/if}
-		<h1 class="Companies">[[Featured Companies]]</h1>
-		{module name="users" function="featured_profiles" items_count="4"}
-
-		{if $GLOBALS.settings.show_polls_on_main_page}
-			{module name="polls" function="polls"}
-		{/if}
-
-		{module name="miscellaneous" function="mailchimp"}
+			<div class="col-md-6">
+				{module name="miscellaneous" function="mailchimp"}
+			</div>
 	</div>
+
 	<div class="mainColumn">
 		{$MAIN_CONTENT}
 		<div class="JobSeekerBlock">
@@ -261,12 +273,10 @@ $(function() {
 		<div class="featuredJobsTop">[[Featured Jobs]]</div>
 		<div class="featuredJobs">{module name="classifieds" function="featured_listings" items_count="4" listing_type="Job"}</div>
 		<div class="featuredJobsBottom"> </div>
-		<div class="clr"><br/></div>
 		<a href="{$GLOBALS.site_url}/listing-feeds/?feedId=10" id="mainRss">RSS</a>
 		<div class="latestJobsTop">[[Latest Jobs]]</div>
 		<div class="latestJobs">{module name="classifieds" function="latest_listings" items_count="4" listing_type="Job"}</div>
 		<div class="latestJobsBottom"> </div>
-		<div class="clr"><br/></div>
 
 		{if isset($GLOBALS.plugins.WordPressBridgePlugin) && $GLOBALS.plugins.WordPressBridgePlugin.active && $GLOBALS.settings.display_blog_on_homepage}
 		<div class="blogTop">[[Blog Posts]]</div>

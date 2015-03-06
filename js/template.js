@@ -504,8 +504,8 @@
 
 		// Fixed header
 		//-----------------------------------------------
-		var	headerTopHeight = $(".header-top").outerHeight(),
-		headerHeight = $("header.header.fixed").outerHeight();
+		var	headerTopHeight = $(".header-top").outerHeight(true),
+		headerHeight = $("header.header.fixed").outerHeight(true);
 		$(window).scroll(function() {
 			if (($(".header.fixed").length > 0)) { 
 				if(($(this).scrollTop() > headerTopHeight+headerHeight) && ($(window).width() > 767)) {

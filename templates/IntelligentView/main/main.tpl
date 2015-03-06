@@ -211,106 +211,148 @@ $(function() {
 		{/literal}
 	</head>
 <body>
-	{module name="users" function="cookie_preferences"}
-	<div id="loading"></div>
-	<div id="messageBox"></div>
-	{include file="../menu/header.tpl"}
+
+		{module name="users" function="cookie_preferences"}
+		<div id="loading"></div>
+		<div id="messageBox"></div>
+		{include file="../menu/header.tpl"}
 
 
-	<div class="leftColumn">
-		<div class="col-md-6">
-			{if !$GLOBALS.current_user.logged_in}
+		<div class="leftColumn">
+			<div class="container">
+				<div class="col-md-6">
 
-				<div class="form-block">
-					<br/>{module name="users" function="login" template="login.tpl" internal="true"}<br/>
+					{if !$GLOBALS.current_user.logged_in}
+
+							<h2 class="title" style="margin-top:20px;">Login</h2>
+							{module name="users" function="login" template="login.tpl" internal="true"}
+
+					{/if}
 				</div>
-				<div class="loginFormBottom"> </div>
+
+
+
+				<div class="col-md-6">
+					<h2 class="Companies">[[Featured Companies]]</h2>
+					{module name="users" function="featured_profiles" items_count="4"}
+				</div>
+
+
+				<div class="col-md-6">
+
+					{if $GLOBALS.settings.show_polls_on_main_page}
+
+						{module name="polls" function="polls"}
+					{/if}
+				</div>
+
+				<div class="col-md-6">
+
+					{module name="miscellaneous" function="mailchimp"}
+				</div>
+			</div>
+		</div>
+
+		<div class="mainColumn container">
+			{$MAIN_CONTENT}
+
+			<div class="JobSeekerBlock col-md-6" style="padding-left:0 !important;">
+				<div class="plan stripped" style="margin-bottom:0 !important;">
+					<div class="header">
+						<h3>[[Job Seekers]]</h3>
+					</div>
+				</div>
+
+				<div class="JobSeekerBlockBg" style="width:100%;">
+					<p><a href="{$GLOBALS.site_url}/registration/?user_group_id=JobSeeker">[[Register]]</a></p>
+					<p><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Resume">[[Post resumes]]</a></p>
+					<p><a href="{$GLOBALS.site_url}/find-jobs/">[[Find jobs]]</a></p>
+					<p><a href="{$GLOBALS.site_url}/job-alerts/?action=new">[[Get Jobs by Email]]</a></p>
+					<br/>
+				</div>
+			</div>
+
+			<div class="EmployerBlock col-md-6" style="padding-right:0 !important;">
+				<div class="plan stripped" style="margin-bottom:0 !important;">
+					<div class="header">
+						<h3>[[Employers]]</h3>
+					</div>
+				</div>
+				<div class="EmployerBlockBg" style="width:100%;">
+					<p><a href="{$GLOBALS.site_url}/registration/?user_group_id=Employer">[[Register]]</a></p>
+					<p><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Job">[[Post jobs]]</a></p>
+					<p><a href="{$GLOBALS.site_url}/search-resumes/">[[Search resumes]]</a></p>
+					<p><a href="{$GLOBALS.site_url}/resume-alerts/?action=new">[[Get Resumes by Email]]</a></p>
+					<br/>
+				</div>
+			</div>
+			<div class="clr"><br/></div>
+			<div class="plan stripped" style="margin-bottom:0 !important;">
+				<div class="header">
+					<h3>[[Featured Jobs]]</h3>
+				</div>
+			</div>
+			<div class="featuredJobs" style="width: 100%;">{module name="classifieds" function="featured_listings" items_count="4" listing_type="Job"}</div>
+			<a href="{$GLOBALS.site_url}/listing-feeds/?feedId=10" id="mainRss">RSS</a>
+			<div class="clr"><br/></div>
+			<div class="plan stripped" style="margin-bottom:0 !important;">
+				<div class="header">
+					<h3>[[Latest Jobs]]</h3>
+				</div>
+			</div>
+			<div class="latestJobs"  style="width: 100%;">{module name="classifieds" function="latest_listings" items_count="4" listing_type="Job"}</div>
+
+			{if isset($GLOBALS.plugins.WordPressBridgePlugin) && $GLOBALS.plugins.WordPressBridgePlugin.active && $GLOBALS.settings.display_blog_on_homepage}
+				<div class="plan stripped" style="margin-bottom:0 !important;">
+					<div class="header">
+						<h3>[[Blog Posts]]</h3>
+					</div>
+				</div>
+			<div class="featuredJobs"  style="width: 100%;">
+				<br/>{module name="miscellaneous" function="blog_page"}<br/>
+			</div>
 			{/if}
-		</div>
 
-		<div class="col-md-6">
-			<h1 class="Companies">[[Featured Companies]]</h1>
-			{module name="users" function="featured_profiles" items_count="4"}
 		</div>
-
+		<div class="rightColumn container">
+			{module name="banners" function="show_banners" group="Side Banners"}
+			<br>
+			{if $GLOBALS.settings.show_news_on_main_page}
+				<div class="plan stripped Category" style="margin-bottom:0 !important;">
+					<div class="header">
+						<h3>[[News]]</h3>
+					</div>
+				</div>
+				{module name="news" function="show_news"}
+			{/if}
+			<div class="clr"><br/></div>
 			<div class="col-md-6">
-				{if $GLOBALS.settings.show_polls_on_main_page}
-					{module name="polls" function="polls"}
-				{/if}
+				<div class="plan stripped Category" style="margin-bottom:0 !important;">
+					<div class="header">
+						<h3>[[Jobs by Category]]</h3>
+					</div>
+				</div>
+				{module name="classifieds" function="browse" browseUrl="/browse-by-category/" browse_template="browse_by_category.tpl"}
+				<div class="clr"><br /></div>
 			</div>
 			<div class="col-md-6">
-				{module name="miscellaneous" function="mailchimp"}
+				<div class="plan stripped City" style="margin-bottom:0 !important;">
+					<div class="header">
+						<h3>[[Jobs by City]]</h3>
+					</div>
+				</div>
+				{module name="classifieds" function="browse" browseUrl="/browse-by-city/" browse_template="browse_by_city.tpl"}
 			</div>
-	</div>
-
-	<div class="mainColumn">
-		{$MAIN_CONTENT}
-		<div class="JobSeekerBlock">
-			<div class="JobSeekerBlockTop">[[Job Seekers]]</div>
-			<div class="JobSeekerBlockBg">
-				<p><a href="{$GLOBALS.site_url}/registration/?user_group_id=JobSeeker">[[Register]]</a></p>
-				<p><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Resume">[[Post resumes]]</a></p>
-				<p><a href="{$GLOBALS.site_url}/find-jobs/">[[Find jobs]]</a></p>
-				<p><a href="{$GLOBALS.site_url}/job-alerts/?action=new">[[Get Jobs by Email]]</a></p>
-				<br/>
-			</div>
-			<div class="JobSeekerBlockBottom"> </div>
 		</div>
 
-		<div class="EmployerBlock">
-			<div class="EmployerBlockTop">[[Employers]]</div>
-			<div class="EmployerBlockBg">
-				<p><a href="{$GLOBALS.site_url}/registration/?user_group_id=Employer">[[Register]]</a></p>
-				<p><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Job">[[Post jobs]]</a></p>
-				<p><a href="{$GLOBALS.site_url}/search-resumes/">[[Search resumes]]</a></p>
-				<p><a href="{$GLOBALS.site_url}/resume-alerts/?action=new">[[Get Resumes by Email]]</a></p>
-				<br/>
-			</div>
-			<div class="EmployerBlockBottom"> </div>
-		</div>
 		<div class="clr"><br/></div>
-
-		<div class="featuredJobsTop">[[Featured Jobs]]</div>
-		<div class="featuredJobs">{module name="classifieds" function="featured_listings" items_count="4" listing_type="Job"}</div>
-		<div class="featuredJobsBottom"> </div>
-		<a href="{$GLOBALS.site_url}/listing-feeds/?feedId=10" id="mainRss">RSS</a>
-		<div class="latestJobsTop">[[Latest Jobs]]</div>
-		<div class="latestJobs">{module name="classifieds" function="latest_listings" items_count="4" listing_type="Job"}</div>
-		<div class="latestJobsBottom"> </div>
-
-		{if isset($GLOBALS.plugins.WordPressBridgePlugin) && $GLOBALS.plugins.WordPressBridgePlugin.active && $GLOBALS.settings.display_blog_on_homepage}
-		<div class="blogTop">[[Blog Posts]]</div>
-		<div class="featuredJobs">
-			<br/>{module name="miscellaneous" function="blog_page"}<br/>
+		<div class="container">
+		{module name="banners" function="show_banners" group="Bottom Banners"}
 		</div>
-		<div class="featuredJobsBottom"> </div>
+		{include file="../menu/footer.tpl"}
+		{module name="miscellaneous" function="profiler"}
+		{if $highlight_templates}
+			<div id="highlighterBlock"></div>
 		{/if}
-
-	</div>
-	<div class="rightColumn">
-		{module name="banners" function="show_banners" group="Side Banners"}
-
-		{if $GLOBALS.settings.show_news_on_main_page}
-			<h1 class="Category">[[News]]</h1>
-			{module name="news" function="show_news"}
-		{/if}
-		<div class="clr"><br/></div>
-
-		<h1 class="Category">[[Jobs by Category]]</h1>
-		{module name="classifieds" function="browse" browseUrl="/browse-by-category/" browse_template="browse_by_category.tpl"}
-		<div class="clr"><br /></div>
-
-		<h1 class="City">[[Jobs by City]]</h1>
-		{module name="classifieds" function="browse" browseUrl="/browse-by-city/" browse_template="browse_by_city.tpl"}
-	</div>
-
-	<div class="clr"><br/></div>
-	{module name="banners" function="show_banners" group="Bottom Banners"}
-
-	{include file="../menu/footer.tpl"}
-	{module name="miscellaneous" function="profiler"}
-	{if $highlight_templates}
-		<div id="highlighterBlock"></div>
-	{/if}
 </body>
 </html>

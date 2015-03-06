@@ -1,18 +1,19 @@
 {if $form_fields}
+<h2>Poll</h2>
 	<div id="poll">
-		<h2 class="pollTitle">[[Poll]]</h2>
-		<div class="clr"></div>
+
 		{if $isVoted == 0}
 			<form method="post" action="">
 				<input type="hidden" name="action" value="save"/>
 				<input type="hidden" name="sid" value="{$sid}"/>
 				{foreach from=$form_fields item=form_field}
-					<div class="text-center strong">[[$form_field.caption]]</div>
+					<div class="strong">[[$form_field.caption]]</div>
 					<div class="clr"></div>
 					{input property=$form_field.id template='radiobuttons.tpl'}
 				{/foreach}
 				<div class="clr"><br/></div>
-				<input id="pollButton" type="submit" name="vote" value="[[Vote]]"/>
+				<a id="pollButton" href="#" class="btn btn-default btn-sm">Vote</a>
+
 			</form>
 		{else}
 			{foreach from=$form_fields item=form_field}

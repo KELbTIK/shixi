@@ -9,6 +9,7 @@
 		<input type="hidden" name="listing_type[equal]" value="Job" />
 		<fieldset style="background-color:transparent;">
 			<div class="quickSearchInputField">[[Keywords]]<br/>{search property=keywords}</div>
+
 			<div class="quickSearchInputField">[[Category]]<br/>{search property=JobCategory template="list.tpl"}</div>
 		</fieldset>
 		<fieldset style="background-color:transparent;">

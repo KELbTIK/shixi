@@ -17,6 +17,40 @@
 	<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery-ui.css"  />
 	<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.autocomplete.css" />
 	<link rel="Stylesheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.multiselect.css" />
+
+		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/css/bootstrap.css"  />
+		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/animate.css"  />
+		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/skins/red.css"  />
+		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/normalize.css"  />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+		<link href="{$GLOBALS.site_url}/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="{$GLOBALS.site_url}/fonts/fontello/css/fontello.css" rel="stylesheet">
+		<link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
+		<link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
+		<link href="{$GLOBALS.site_url}/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="{$GLOBALS.site_url}/css/animations.css" rel="stylesheet">
+		<link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
+		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
+
+
+		<script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/modernizr.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/isotope/isotope.pkgd.min.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.appear.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.countTo.js"></script>
+		<script src="{$GLOBALS.site_url}/plugins/jquery.parallax-1.1.3.js"></script>
+		<script src="{$GLOBALS.site_url}/plugins/jquery.validate.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/js/template.js"></script>
+		<script type="text/javascript" src="{$GLOBALS.site_url}/js/custom.js"></script>
+
+
 	<script language="JavaScript" type="text/javascript" src="{common_js}/main.js"></script>
 	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
 	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
@@ -168,7 +202,7 @@
 		{module name="breadcrumbs" function="show_breadcrumbs"}
 		{module name='flash_messages' function='display'}
 		{$MAIN_CONTENT}
-		<div class="clr"></div>
+		<div class="clearfix"></div>
 	</div>
 	{if $GLOBALS.plugins.ShareThisPlugin.active == 1 && $GLOBALS.settings.display_for_all_pages == 1}
 		{if $GLOBALS.user_page_uri != '/news/' && $GLOBALS.user_page_uri != '/display-job/' && $GLOBALS.user_page_uri != '/display-resume/'}

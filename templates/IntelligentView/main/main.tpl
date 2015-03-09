@@ -53,11 +53,11 @@
 {*<script language="JavaScript" type="text/javascript" src="{common_js}/main.js"></script>*}
 <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
 
-{*<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>*}
-{*<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>*}
-{*<script  type="text/javascript" src="{common_js}/multilist_functions.js"></script>*}
-{*<script  type="text/javascript" src="{common_js}/autoupload_functions.js"></script>*}
-{*<script type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>*}
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
+<script  type="text/javascript" src="{common_js}/multilist_functions.js"></script>
+<script  type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
+<script type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
 
 
 

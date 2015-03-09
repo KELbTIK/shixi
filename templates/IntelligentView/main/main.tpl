@@ -32,6 +32,7 @@
 	  <link href="{$GLOBALS.site_url}/css/animations.css" rel="stylesheet">
 	  <link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
 	  <link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
+	  <link href="{$GLOBALS.site_url}/css/style-akord.css" rel="stylesheet">
 
 
 

@@ -1,0 +1,21 @@
+.fixed  .logo a img{
+	margin-top:15px;
+}
+
+.object-visible .logo a img{
+	margin-top:6px;
+}
+
+@media(max-width:767px){
+	.fixed  .logo a img{
+		margin-top:0;
+	}
+}
+
+.subfooter .container{
+	text-align:center;
+}
+
+.footer .logo-footer img {
+	max-width:200px;
+}

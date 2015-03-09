@@ -23,10 +23,7 @@
                 <label for="mch_email">[[Email]]:</label>
                 <input type="text" name="mch_email" id="mch_email" class="form-control" >
             </div>
-
-            <button id="mch_subscribe" type="submit" name="subscribe"  value="[[Subscribe]]" class="btn btn-group btn-default btn-sm">Vote</button>
-
-
+            <input type="submit" name="subscribe" value="Subscribe" id="mch_subscribe" class="btn btn-group btn-default btn-sm">
         </form>
     </div>
 </div>

@@ -12,7 +12,7 @@
 					{input property=$form_field.id template='radiobuttons.tpl'}
 				{/foreach}
 				<div class="clearfix"></div>
-				<a id="pollButton" href="#" class="btn btn-default btn-sm">Vote</a>
+				<input id="pollButton" class="btn btn-default btn-sm" type="submit" name="vote"	value="Vote">
 
 			</form>
 		{else}

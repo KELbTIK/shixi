@@ -12,10 +12,10 @@
 </div>
 
 {else}
-<div class="banner">
+<div class="banner-block">
 	{if $current_banner.bannerType == 'file'}
 	<a href="{$GLOBALS.site_url}/go-link/?bannerId={$current_banner.id}" target="{$current_banner.openBannerIn}">
-		<img src="{$GLOBALS.site_url}{$current_banner.image_path}" width="{$current_banner.width}" height="{$current_banner.height}" title="{$current_banner.title}" border="0"/>
+		<img src="{$GLOBALS.site_url}{$current_banner.image_path}" class="img-responsive" title="{$current_banner.title}" border="0"/>
 	</a>
 	{else}
 		<a href="{$GLOBALS.site_url}/go-link/?bannerId={$current_banner.id}" target="{$current_banner.openBannerIn}">

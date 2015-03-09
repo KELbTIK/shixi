@@ -2,7 +2,7 @@
 	{assign var="locationName" value=$id|replace:$parentID:''}
 	{assign var="locationName" value=$locationName|replace:'_':''}
 {/if}
-<select name='{$id}[multi_like][]' class="searchList {if $sort_by_alphabet}sortable-select{/if}" {if $parentID && !$list_values && !$enabled} disabled="disabled" {/if} {if $parentID && $locationName == "Country"} onchange = "get{$parentID}States(this.value)" {/if}>
+<select name='{$id}[multi_like][]' class="searchList form-control {if $sort_by_alphabet}sortable-select{/if}" {if $parentID && !$list_values && !$enabled} disabled="disabled" {/if} {if $parentID && $locationName == "Country"} onchange = "get{$parentID}States(this.value)" {/if}>
 	{if $id != 'email_frequency'}
 		<option value="">[[Any]] {tr}{$caption}{/tr|escape:'html'}</option>
 	{/if}

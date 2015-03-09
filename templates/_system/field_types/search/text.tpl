@@ -67,7 +67,7 @@
 	{/literal}
 
 {else}
-	<input type="text" value="{if $id == 'keywords'}{$value.all_words}{$value.exact_phrase}{$value.any_words}{$value.boolean}{else}{$value.like}{/if}" class="searchText" name="{$id}[{if $id == 'keywords'}all_words{else}like{/if}]"  id="{$id}" />
+	<input type="text" value="{if $id == 'keywords'}{$value.all_words}{$value.exact_phrase}{$value.any_words}{$value.boolean}{else}{$value.like}{/if}" class="searchText form-control" name="{$id}[{if $id == 'keywords'}all_words{else}like{/if}]"  id="{$id}" />
 {/if}
 {if $GLOBALS.settings.use_autocomplete_for_keywords != false}
 	{include file='../field_types/search/autocomplete.tpl'}

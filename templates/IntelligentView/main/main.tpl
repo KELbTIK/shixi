@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>{$GLOBALS.settings.site_title}{if $TITLE ne ""}: [[$TITLE]] {/if}</title>
 <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />
-<link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />
+{*<link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />*}
 <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.autocomplete.css"  />
 	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/css/bootstrap.css"  />
 	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/animate.css"  />
@@ -36,13 +36,13 @@
 
 
 
-{if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
-{if $GLOBALS.current_language_data.id == 'de'}<link rel="StyleSheet" type="text/css" href="{image src="design-de.css"}" />{/if}
-{if $GLOBALS.current_language_data.id == 'pl'}<link rel="StyleSheet" type="text/css" href="{image src="desing-pl.css"}" />{/if}
-{if $GLOBALS.current_language_data.id == 'ro'}<link rel="StyleSheet" type="text/css" href="{image src="design-ro.css"}" />{/if}
-{if $GLOBALS.current_language_data.id == 'fr'}<link rel="StyleSheet" type="text/css" href="{image src="design-fr.css"}" />{/if}
-{if $GLOBALS.current_language_data.id == 'pt'}<link rel="StyleSheet" type="text/css" href="{image src="design-pt.css"}" />{/if}
-{if $GLOBALS.current_language_data.id == 'sr'}<link rel="StyleSheet" type="text/css" href="{image src="design-sr.css"}" />{/if}
+{*{if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}*}
+{*{if $GLOBALS.current_language_data.id == 'de'}<link rel="StyleSheet" type="text/css" href="{image src="design-de.css"}" />{/if}*}
+{*{if $GLOBALS.current_language_data.id == 'pl'}<link rel="StyleSheet" type="text/css" href="{image src="desing-pl.css"}" />{/if}*}
+{*{if $GLOBALS.current_language_data.id == 'ro'}<link rel="StyleSheet" type="text/css" href="{image src="design-ro.css"}" />{/if}*}
+{*{if $GLOBALS.current_language_data.id == 'fr'}<link rel="StyleSheet" type="text/css" href="{image src="design-fr.css"}" />{/if}*}
+{*{if $GLOBALS.current_language_data.id == 'pt'}<link rel="StyleSheet" type="text/css" href="{image src="design-pt.css"}" />{/if}*}
+{*{if $GLOBALS.current_language_data.id == 'sr'}<link rel="StyleSheet" type="text/css" href="{image src="design-sr.css"}" />{/if}*}
 <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{$GLOBALS.site_url}/rss/" />
 
 	  <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
@@ -217,137 +217,137 @@ $(function() {
 		<div id="messageBox"></div>
 		{include file="../menu/header.tpl"}
 
-
-		<div class="leftColumn">
-			<div class="container">
-				<div class="col-md-6">
-
-					{if !$GLOBALS.current_user.logged_in}
-
-							<h2 class="title" style="margin-top:20px;">Login</h2>
-							{module name="users" function="login" template="login.tpl" internal="true"}
-
-					{/if}
-				</div>
+        <div class="mainColumn container">
+            <div class="page-top">
 
 
+            {$MAIN_CONTENT}
 
-				<div class="col-md-6">
-					<h2 class="Companies">[[Featured Companies]]</h2>
-					{module name="users" function="featured_profiles" items_count="4"}
-				</div>
+            <div class="">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#vtab1" role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-magic pr-10"></i>[[Job Seekers]]</a></li>
+                    <li class=""><a href="#vtab2" role="tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-life-saver pr-10"></i>[[Employers]]</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="vtab1">
+                        <ul class="list-icons">
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/registration/?user_group_id=JobSeeker">[[Register]]</a></li>
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Resume">[[Post resumes]]</a></li>
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/find-jobs/">[[Find jobs]]</a></li>
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/job-alerts/?action=new">[[Get Jobs by Email]]</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="vtab2">
+                        <ul class="list-icons">
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/registration/?user_group_id=Employer">[[Register]]</a></li>
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Job">[[Post jobs]]</a></li>
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/search-resumes/">[[Search resumes]]</a></li>
+                            <li><i class="icon-check pr-10"></i> <a href="{$GLOBALS.site_url}/resume-alerts/?action=new">[[Get Resumes by Email]]</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="plan stripped" style="margin-bottom:0 !important;">
+                <div class="header">
+                    <h3>[[Featured Jobs]]</h3>
+                </div>
+            </div>
+            <div class="featuredJobs" style="width: 100%;">{module name="classifieds" function="featured_listings" items_count="4" listing_type="Job"}</div>
+            <a href="{$GLOBALS.site_url}/listing-feeds/?feedId=10" id="mainRss" class="pull-right"><i class="fa fa-rss-square"></i> RSS</a>
+            <div class="clearfix"></div>
+            <div class="plan stripped" style="margin-bottom:0 !important;">
+                <div class="header">
+                    <h3>[[Latest Jobs]]</h3>
+                </div>
+            </div>
+            <div class="latestJobs"  style="width: 100%;">{module name="classifieds" function="latest_listings" items_count="4" listing_type="Job"}</div>
+
+            {if isset($GLOBALS.plugins.WordPressBridgePlugin) && $GLOBALS.plugins.WordPressBridgePlugin.active && $GLOBALS.settings.display_blog_on_homepage}
+                <div class="plan stripped" style="margin-bottom:0 !important;">
+                    <div class="header">
+                        <h3>[[Blog Posts]]</h3>
+                    </div>
+                </div>
+                <div class="featuredJobs"  style="width: 100%;">
+                    {module name="miscellaneous" function="blog_page"}
+                </div>
+            {/if}
+                <div class="rightColumn">
+                    {if $GLOBALS.settings.show_news_on_main_page}
+                        <div class="plan stripped Category" style="margin-bottom:0 !important;">
+                            <div class="header">
+                                <h3>[[News]]</h3>
+                            </div>
+                        </div>
+                        {module name="news" function="show_news"}
+                    {/if}
+                    <div class="clearfix"></div>
+                    <!-- accordion start -->
+                    <div class="panel-group panel-dark" id="accordion-2">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-2">
+                                        <i class="fa fa-leaf"></i>[[Jobs by Category]]
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne-2" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    {module name="classifieds" function="browse" browseUrl="/browse-by-category/" browse_template="browse_by_category.tpl"}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-2" href="#collapseTwo-2" class="collapsed">
+                                        <i class="fa fa-home"></i>[[Jobs by City]]
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo-2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    {module name="classifieds" function="browse" browseUrl="/browse-by-city/" browse_template="browse_by_city.tpl"}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion end -->
+                </div>
+                <div class="clearfix"></div>
+                <div class="leftColumn">
+                    <h1 class="text-center">[[Featured Companies]]</h1>
+                    <div class="separator"></div>
+                    {module name="users" function="featured_profiles" items_count="4"}
 
 
-				<div class="col-md-6">
+                    <div class="col-md-6">
 
-					{if $GLOBALS.settings.show_polls_on_main_page}
+                        {if $GLOBALS.settings.show_polls_on_main_page}
 
-						{module name="polls" function="polls"}
-					{/if}
-				</div>
+                            {module name="polls" function="polls"}
+                        {/if}
+                    </div>
 
-				<div class="col-md-6">
+                    <div class="col-md-6">
 
-					{module name="miscellaneous" function="mailchimp"}
-				</div>
-			</div>
-		</div>
+                        {module name="miscellaneous" function="mailchimp"}
+                    </div>
+                </div>
+                <div class="clearfix"></div>
 
-		<div class="mainColumn container">
-			{$MAIN_CONTENT}
+            </div>
+        </div>
 
-			<div class="JobSeekerBlock col-md-6" style="padding-left:0 !important;">
-				<div class="plan stripped" style="margin-bottom:0 !important;">
-					<div class="header">
-						<h3>[[Job Seekers]]</h3>
-					</div>
-				</div>
 
-				<div class="JobSeekerBlockBg" style="width:100%;">
-					<p><a href="{$GLOBALS.site_url}/registration/?user_group_id=JobSeeker">[[Register]]</a></p>
-					<p><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Resume">[[Post resumes]]</a></p>
-					<p><a href="{$GLOBALS.site_url}/find-jobs/">[[Find jobs]]</a></p>
-					<p><a href="{$GLOBALS.site_url}/job-alerts/?action=new">[[Get Jobs by Email]]</a></p>
-					<br/>
-				</div>
-			</div>
 
-			<div class="EmployerBlock col-md-6" style="padding-right:0 !important;">
-				<div class="plan stripped" style="margin-bottom:0 !important;">
-					<div class="header">
-						<h3>[[Employers]]</h3>
-					</div>
-				</div>
-				<div class="EmployerBlockBg" style="width:100%;">
-					<p><a href="{$GLOBALS.site_url}/registration/?user_group_id=Employer">[[Register]]</a></p>
-					<p><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Job">[[Post jobs]]</a></p>
-					<p><a href="{$GLOBALS.site_url}/search-resumes/">[[Search resumes]]</a></p>
-					<p><a href="{$GLOBALS.site_url}/resume-alerts/?action=new">[[Get Resumes by Email]]</a></p>
-					<br/>
-				</div>
-			</div>
-			<div class="clr"><br/></div>
-			<div class="plan stripped" style="margin-bottom:0 !important;">
-				<div class="header">
-					<h3>[[Featured Jobs]]</h3>
-				</div>
-			</div>
-			<div class="featuredJobs" style="width: 100%;">{module name="classifieds" function="featured_listings" items_count="4" listing_type="Job"}</div>
-			<a href="{$GLOBALS.site_url}/listing-feeds/?feedId=10" id="mainRss">RSS</a>
-			<div class="clr"><br/></div>
-			<div class="plan stripped" style="margin-bottom:0 !important;">
-				<div class="header">
-					<h3>[[Latest Jobs]]</h3>
-				</div>
-			</div>
-			<div class="latestJobs"  style="width: 100%;">{module name="classifieds" function="latest_listings" items_count="4" listing_type="Job"}</div>
 
-			{if isset($GLOBALS.plugins.WordPressBridgePlugin) && $GLOBALS.plugins.WordPressBridgePlugin.active && $GLOBALS.settings.display_blog_on_homepage}
-				<div class="plan stripped" style="margin-bottom:0 !important;">
-					<div class="header">
-						<h3>[[Blog Posts]]</h3>
-					</div>
-				</div>
-			<div class="featuredJobs"  style="width: 100%;">
-				<br/>{module name="miscellaneous" function="blog_page"}<br/>
-			</div>
-			{/if}
-
-		</div>
-		<div class="rightColumn container">
-			{module name="banners" function="show_banners" group="Side Banners"}
-			<br>
-			{if $GLOBALS.settings.show_news_on_main_page}
-				<div class="plan stripped Category" style="margin-bottom:0 !important;">
-					<div class="header">
-						<h3>[[News]]</h3>
-					</div>
-				</div>
-				{module name="news" function="show_news"}
-			{/if}
-			<div class="clr"><br/></div>
-			<div class="col-md-6">
-				<div class="plan stripped Category" style="margin-bottom:0 !important;">
-					<div class="header">
-						<h3>[[Jobs by Category]]</h3>
-					</div>
-				</div>
-				{module name="classifieds" function="browse" browseUrl="/browse-by-category/" browse_template="browse_by_category.tpl"}
-				<div class="clr"><br /></div>
-			</div>
-			<div class="col-md-6">
-				<div class="plan stripped City" style="margin-bottom:0 !important;">
-					<div class="header">
-						<h3>[[Jobs by City]]</h3>
-					</div>
-				</div>
-				{module name="classifieds" function="browse" browseUrl="/browse-by-city/" browse_template="browse_by_city.tpl"}
-			</div>
-		</div>
-
-		<div class="clr"><br/></div>
 		<div class="container">
-		{module name="banners" function="show_banners" group="Bottom Banners"}
+		{*{module name="banners" function="show_banners" group="Bottom Banners"}*}
 		</div>
 		{include file="../menu/footer.tpl"}
 		{module name="miscellaneous" function="profiler"}

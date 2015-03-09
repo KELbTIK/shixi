@@ -5044,7 +5044,7 @@ footer:not(.light) .footer-content .tag a,
 .header-top-dropdown .dropdown:last-child>button {
 	border-right-color: transparent;
 }
-.header-top-dropdown .dropdown>button {
+.header-top-dropdown .dropdown>button, .header-top-dropdown .dropdown>a {
 	padding: 8px 10px;
 	margin: 0;
 	font-size: 12px;
@@ -5069,7 +5069,7 @@ footer:not(.light) .footer-content .tag a,
 	width: 15px;
 }
 .header-top-dropdown .dropdown.open>button,
-.header-top-dropdown .dropdown>button:hover {
+.header-top-dropdown .dropdown>button:hover, .header-top-dropdown .dropdown>a:hover {
 	color: #e84c3d;
 	background-color: #fafafa;
 	border-right-color: #e3e3e3;
@@ -6027,4 +6027,16 @@ ul.tweets li span {
 .ie8 .overlay-container:hover a.overlay i,
 .ie8 .overlay-container:hover .overlay { 
 	display: block;
+}
+/*---------------------------------------------------------------------------*/
+.language-select form{
+    margin: 7px 0 7px 7px;
+}
+.header-top-dropdown .btn-group.dropdown > a{
+    margin: 0;
+    text-transform: none;
+    min-width: 0;
+}
+.blogpost{
+    margin-bottom: 20px;
 }

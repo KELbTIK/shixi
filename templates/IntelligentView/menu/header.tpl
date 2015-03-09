@@ -40,7 +40,7 @@
 
 					<div id="header-top-second" class="pull-right language-select">
 						<form class="pull-left" id="langSwitcherForm" method="get" action="">
-							<select name="lang" onchange="location.href='{$GLOBALS.site_url}{$url}?lang='+this.value+'&amp;{$params}'" style="width: 200px;">
+							<select name="lang" onchange="location.href='{$GLOBALS.site_url}{$url}?lang='+this.value+'&amp;{$params}'">
 								{foreach from=$GLOBALS.languages item=language}
 									<option value="{$language.id}"{if $language.id == $GLOBALS.current_language} selected="selected"{/if}>{$language.caption}</option>
 								{/foreach}
@@ -62,9 +62,19 @@
 								<a class="btn" href="{$GLOBALS.site_url}/logout/"> [[Logout]]</a>
 							{else}
 								<a class="btn" href="{$GLOBALS.site_url}/registration/"> [[Register]]</a>
-								<a class="btn" href="{$GLOBALS.site_url}/login/"><i class="fa fa-user"></i> [[Sign In]]</a>
 							{/if}
 						</div>
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Login</button>
+                            <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                <li>
+                                    {*{if !$GLOBALS.current_user.logged_in}*}
+                                        {module name="users" function="login" template="login.tpl" internal="true"}
+                                    {*{/if}*}
+
+                                </li>
+                            </ul>
+                        </div>
 					</div>
 				</div>
 			</div>

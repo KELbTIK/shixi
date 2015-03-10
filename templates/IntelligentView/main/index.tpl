@@ -32,7 +32,7 @@
 		<link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
 		<link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
 		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
-
+		<link href="{$GLOBALS.site_url}/css/style-akord.css" rel="stylesheet">
 
 		<script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="{$GLOBALS.site_url}/bootstrap/js/bootstrap.js"></script>
@@ -197,9 +197,9 @@
 	<div id="loading"></div>
 	<div id="messageBox"></div>
 	{include file="../menu/header.tpl"}
-	<div class="indexDiv">
+	<div class="container">
 		{module name="breadcrumbs" function="show_breadcrumbs"}
-		{module name='flash_messages' function='display'}
+	    {module name='flash_messages' function='display'}
 		{$MAIN_CONTENT}
 		<div class="clearfix"></div>
 	</div>

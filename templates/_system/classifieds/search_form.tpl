@@ -1,5 +1,6 @@
-<h1>[[Find Jobs]]{if $acl->isAllowed('open_search_by_company_form')}<span class="RightLink"><a href="{$GLOBALS.site_url}/browse-by-company/">[[Search by Company]]</a></span>{/if}</h1>
-<div class="clr"></div>
+<h1 class="col-xs-12">[[Find Jobs]] {if $acl->isAllowed('open_search_by_company_form')}<span class="RightLink pull-right small"><a href="{$GLOBALS.site_url}/browse-by-company/">[[Search by Company]]</a></span>{/if}</h1>
+<div class="clearfix"></div>
+<div class="col-sm-8">
 {if $id_saved}
 	<form action="{$GLOBALS.site_url}/saved-searches/" method="get" id="search_form">
 		<input type="hidden" name="action" value="{$action}" />
@@ -19,16 +20,15 @@
 
 		{include file="../builder/bf_searchform_fieldsholders.tpl"}
 
-		<fieldset>
-			<div class="inputName">&nbsp;</div>
-			<div class="inputField">
-				{if $id_saved}
-					<input class="button" type="submit" name="submit" value="[[Save]]"  id="search_button" />
-				{else}
-					<input class="button" type="submit" value="[[Search]]"  id="search_button" />
-				{/if}
-			</div>
-		</fieldset>
+        <div class="inputName">&nbsp;</div>
+        <div class="inputField">
+            {if $id_saved}
+                <input class="button btn btn-default" type="submit" name="submit" value="[[Save]]"  id="search_button" />
+            {else}
+                <input class="button btn btn-default" type="submit" value="[[Search]]"  id="search_button" />
+            {/if}
+        </div>
 	</div>
 </form>
+</div>
 <div id="adSpace">{module name="static_content" function="show_static_content" pageid="FindJobsAdSpace"}</div>

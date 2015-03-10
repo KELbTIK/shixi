@@ -69,7 +69,7 @@
                             <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
                                 <li>
                                     {*{if !$GLOBALS.current_user.logged_in}*}
-                                        {module name="users" function="login" template="login.tpl" internal="true"}
+                                        {module name="users" function="login" template="login-popup.tpl" internal="true"}
                                     {*{/if}*}
 
                                 </li>

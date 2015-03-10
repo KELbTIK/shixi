@@ -1,16 +1,18 @@
 {if $templateParams.type == "bool"}
-	<input type="text" value="{if $value.exact_phrase}{$value.exact_phrase}{elseif $value.all_words}{$value.all_words}{elseif $value.any_words}{$value.any_words}{elseif $value.boolean}{$value.boolean}{else}{$value.like}{/if}" class="searchText" name="{$id}[like]"  id="{$id}" /><br/>
-	<div style="display: inline-block; float: left;">
-		<select size="1" id="searchType-{$id}">
+	<input type="text" value="{if $value.exact_phrase}{$value.exact_phrase}{elseif $value.all_words}{$value.all_words}{elseif $value.any_words}{$value.any_words}{elseif $value.boolean}{$value.boolean}{else}{$value.like}{/if}" class="searchText form-control" name="{$id}[like]"  id="{$id}" /><br/>
+	<div>
+		<select class="form-control" size="1" id="searchType-{$id}">
 			<option value="all_words" {if $value.all_words}selected="selected"{/if}>[[Match all words]]</option>
 			<option value="any_words" {if $value.any_words}selected="selected"{/if}>[[Match any words]]</option>
 			<option value="exact_phrase" {if $value.exact_phrase}selected="selected"{/if}>[[Match exact phrase]]</option>
 			<option value="boolean" {if $value.boolean}selected="selected"{/if}>[[Boolean]]</option>
 		</select>
 	</div>
-	<div class="search-only">
-		<span>{if $templateParams.listingType == "Job"}[[Search job title only]]{elseif $templateParams.listingType == "Resume"}[[Search resume title only]]{else}[[Search by title]]{/if}</span>
-		<input type="checkbox" value="Title" id="titleOnly-{$id}" {if $title}checked="checked"{/if} style="margin: 3px 1px !important;" />
+	<div class="search-only checkbox">
+        <label>
+            <input type="checkbox" value="Title" id="titleOnly-{$id}" {if $title}checked="checked"{/if}/>
+            <span>{if $templateParams.listingType == "Job"}[[Search job title only]]{elseif $templateParams.listingType == "Resume"}[[Search resume title only]]{else}[[Search by title]]{/if}</span>
+        </label>
 	</div>
 	<div id="helplink"></div>
 	<script type="text/javascript">

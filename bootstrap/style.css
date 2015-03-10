@@ -3678,6 +3678,8 @@ a.overlay.small i {
 	margin-left: 0;
 	visibility: visible;
 	color: #666;
+    font-family: fontAwesome;
+    position: absolute;
 }
 .dropdown .dropdown.open>a:before,
 .transparent.header:not(.dark) .dropdown .dropdown.open>a:before {

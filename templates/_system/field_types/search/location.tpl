@@ -1,14 +1,14 @@
 {foreach from=$form_fields item=form_field}
-	<fieldset id="{$parentID}_{$form_field.id}" {if $form_field.id == 'State'} style="display: none;" {/if}>
-        <div class="inputName">
+	<div id="{$parentID}_{$form_field.id}" {if $form_field.id == 'State'} style="display: none;" {/if}>
+        <label class="inputName">
         	{if $form_field.id eq "ZipCode"}
 				[[Search Within]]
 			{else}
 				{tr}{$form_field.caption}{/tr|escape:'html'}
 			{/if}
-		</div>
+		</label>
         <div class="inputField">{if $form_field.type == 'location'}{search property=$form_field.id searchWithin=true template="location.like.tpl"}{elseif $form_field.id eq "City"}{search property=$form_field.id parent=$parentID template="string.like.tpl"}{else}{search property=$form_field.id parent=$parentID}{/if}</div>
-	</fieldset>
+	</div>
 {/foreach}
 <script language='JavaScript' type='text/javascript'>
 {if $form_field.id == 'State'} 

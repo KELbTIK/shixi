@@ -7,7 +7,7 @@
 	<meta name="description" content="[[$DESCRIPTION]]" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>{if !$GLOBALS.page_not_found}{$GLOBALS.settings.site_title}{/if}{if $TITLE ne ""}{if !$GLOBALS.page_not_found}:{/if} [[$TITLE]]{/if}</title>
-	<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />
+	{*<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />*}
 	{if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
 	{if $GLOBALS.current_language_data.id == 'pt'}<link rel="StyleSheet" type="text/css" href="{image src="design-pt.css"}" />{/if}
 	{if $GLOBALS.current_language_data.id == 'sr'}<link rel="StyleSheet" type="text/css" href="{image src="design-sr.css"}" />{/if}
@@ -197,17 +197,20 @@
 	<div id="loading"></div>
 	<div id="messageBox"></div>
 	{include file="../menu/header.tpl"}
-	<div class="indexDiv">
+	<div class="container">
 		{module name="breadcrumbs" function="show_breadcrumbs"}
 		{module name='flash_messages' function='display'}
+        <div class="main object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="300">
 		{$MAIN_CONTENT}
+        </div>
 		<div class="clearfix"></div>
+        {if $GLOBALS.plugins.ShareThisPlugin.active == 1 && $GLOBALS.settings.display_for_all_pages == 1}
+            {if $GLOBALS.user_page_uri != '/news/' && $GLOBALS.user_page_uri != '/display-job/' && $GLOBALS.user_page_uri != '/display-resume/'}
+                <div id="shareThis">{$GLOBALS.settings.header_code}{$GLOBALS.settings.code}</div>
+            {/if}
+        {/if}
 	</div>
-	{if $GLOBALS.plugins.ShareThisPlugin.active == 1 && $GLOBALS.settings.display_for_all_pages == 1}
-		{if $GLOBALS.user_page_uri != '/news/' && $GLOBALS.user_page_uri != '/display-job/' && $GLOBALS.user_page_uri != '/display-resume/'}
-			<div id="shareThis">{$GLOBALS.settings.header_code}{$GLOBALS.settings.code}</div>
-		{/if}
-	{/if}
+
 	<div id="grayBgBanner">{module name="banners" function="show_banners" group="Bottom Banners"}</div>
 	{include file="../menu/footer.tpl"}
 	{module name="miscellaneous" function="profiler"}

@@ -1,18 +1,25 @@
-{capture name="select_box_field_distance"}
-	{assign var=radiusArr value=','|explode:'0,10,20,30,40,50'}
-	<select class="searchGeoDistance" name="{$id}[location][radius]">
-		{foreach from=$radiusArr item=radius}
-			{if $radius == 0}
-				<option value="">[[Within $radius {$GLOBALS.radius_search_unit}]]</option>
-			{else}
-				<option value="{$radius}" {if $value.location.radius == $radius}selected="selected"{/if} >[[Within $radius {$GLOBALS.radius_search_unit}]]</option>
-			{/if}
-		{/foreach}
-	</select>
-{/capture}
-{assign var="select_box_field_distance" value="`$smarty.capture.select_box_field_distance`"}
+<div class="row">
+    {capture name="select_box_field_distance"}
+        {assign var=radiusArr value=','|explode:'0,10,20,30,40,50'}
+        <div class="col-sm-6">
+            <select class="searchGeoDistance form-control" name="{$id}[location][radius]">
+                {foreach from=$radiusArr item=radius}
+                    {if $radius == 0}
+                        <option value="">[[Within $radius {$GLOBALS.radius_search_unit}]]</option>
+                    {else}
+                        <option value="{$radius}" {if $value.location.radius == $radius}selected="selected"{/if} >[[Within $radius {$GLOBALS.radius_search_unit}]]</option>
+                    {/if}
+                {/foreach}
+            </select>
+        </div>
 
-<input type="text"  id="{$id}" name="{$id}[location][value]" value="{$value.location.value}" />
+    {/capture}
+    {assign var="select_box_field_distance" value="`$smarty.capture.select_box_field_distance`"}
+
+    <div class="col-sm-6">
+        <input type="text" class="form-control" id="{$id}" name="{$id}[location][value]" value="{$value.location.value}" />
+    </div>
+
 {if  $enable_search_by_radius}
 	{if $searchWithin}
 		{$select_box_field_distance}
@@ -63,7 +70,7 @@ $(function() {
 	});
 });
 </script>
-
+</div>
 {* BEGIN AUTOCOMPLETE *}
 {if $useAutocomplete == 1}
 	{assign var="parentID" value=false}

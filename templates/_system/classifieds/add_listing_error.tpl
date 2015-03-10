@@ -8,7 +8,5 @@
 {elseif $error eq 'NOT_ALLOW_TO_POST_LISTING'}
     [[Your current Product does not allow posting of listings. For posting please purchase another Product]]
 {elseif $error eq 'NOT_LOGGED_IN'}
-	[[Please log in to place a new posting. If you do not have an account, please]] <a href="{$GLOBALS.site_url}/registration/">[[Register.]]</a>
-	<br/><br/>
 	{module name="users" function="login"}
 {/if}

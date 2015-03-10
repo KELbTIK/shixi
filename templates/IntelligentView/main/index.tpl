@@ -193,6 +193,7 @@
 		{/if}
 	</head>
 <body>
+	<div class="scrollToTop" style="display: block;"><i class="icon-up-open-big"></i></div>
 	{module name="users" function="cookie_preferences"}
 	<div id="loading"></div>
 	<div id="messageBox"></div>

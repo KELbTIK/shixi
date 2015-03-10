@@ -1,5 +1,5 @@
 {if $message_sent == false}
-	{module name="static_content" function="show_static_content" pageid='Contact'}
+	<h1>{module name="static_content" function="show_static_content" pageid='Contact'}</h1>
 
 	{foreach key="key" item="value" from=$field_errors}
 		{if $key == 'EMAIL'}
@@ -15,7 +15,7 @@
 		{/if}
 	{/foreach}
 
-
+	<div class="row">
 		<div class="main col-md-8">
 			<div class="contact-form">
 				<form id="contact-form" role="form" novalidate="novalidate" method="post" action="" onsubmit="disableSubmitButton('submitContact');">
@@ -33,15 +33,16 @@
 
 					<div class="form-group has-feedback">
 						<label for="message">Comments*</label>
-						<textarea class="form-control" rows="6" id="message" name="message" placeholder="">{$comments|escape:'html'}</textarea>
+						<textarea class="form-control" rows="8" id="message" name="message" style="position:static;">{$comments|escape:'html'}</textarea>
 						<i class="fa fa-pencil form-control-feedback"></i>
 					</div>
 					<div>{module name="miscellaneous" function="captcha_handle" currentFunction="contact_form"}</div>
 					<input type="submit" value="[[Submit]]" id="submitContact" class="btn btn-default btn-sm">
+
 				</form>
 			</div>
 		</div>
-
+	</div>
 
 	{else}
 		<br />

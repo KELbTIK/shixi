@@ -204,11 +204,15 @@
 		{$MAIN_CONTENT}
         </div>
 		<div class="clearfix"></div>
-        {if $GLOBALS.plugins.ShareThisPlugin.active == 1 && $GLOBALS.settings.display_for_all_pages == 1}
-            {if $GLOBALS.user_page_uri != '/news/' && $GLOBALS.user_page_uri != '/display-job/' && $GLOBALS.user_page_uri != '/display-resume/'}
-                <div id="shareThis">{$GLOBALS.settings.header_code}{$GLOBALS.settings.code}</div>
+        <div class="col-xs-12">
+            {if $GLOBALS.plugins.ShareThisPlugin.active == 1 && $GLOBALS.settings.display_for_all_pages == 1}
+                {if $GLOBALS.user_page_uri != '/news/' && $GLOBALS.user_page_uri != '/display-job/' && $GLOBALS.user_page_uri != '/display-resume/'}
+                    <div id="shareThis">{$GLOBALS.settings.header_code}{$GLOBALS.settings.code}</div>
+                {/if}
             {/if}
-        {/if}
+            <br/><br/>
+        </div>
+
 	</div>
 
 	<div id="grayBgBanner">{module name="banners" function="show_banners" group="Bottom Banners"}</div>

@@ -48,43 +48,46 @@
 	{capture name="trLess"}&nbsp;&nbsp;&#171;&nbsp;[[less]]{/capture}
 	{capture name="trMore"}&nbsp;&nbsp;&#187;&nbsp;[[more]]{/capture}
 
-	<table cellpadding="0" cellspacing="0" width="100%" id="refineResults">
-		<thead>
-		<tr>
-			<th class="tableLeft">&nbsp;</th>
-			<th>[[Refine Results]]:</th>
-			<th class="tableRight">&nbsp;</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-			<td colspan="3">
-				{capture name="urlParams"}searchId={$searchId}&amp;action=refine{if $show_brief_or_detailed}&amp;show_brief_or_detailed={$show_brief_or_detailed}{/if}&amp;view={$view}{/capture}
-				{foreach from=$refineFields item=refineField}
-					{if $refineField.show && $refineField.count_results}
-						<div class="refine_button" id="{$refineField.field_name}"><div class="refine_icon">[+]</div><span class="strong">[[{$refineField.caption}]]</span></div>
-						<div class="refine_block" style="display: none">
-							{foreach from=$refineField.search_result item=val name=fieldValue}
-								{if $smarty.foreach.fieldValue.iteration == 6}
-									<div class="block_values" style="display: none">
-								{/if}
-								{capture name="refineFieldCriteria"}{$refineField.field_name}{if in_array($refineField.type, array('string'))}[multi_like_and]{else}[multi_like]{/if}[]={if $val.sid}{$val.sid}{else}{$val.value|escape:'url'}{/if}{/capture}
-								<div class="refineItem">
-									<a href="?{$smarty.capture.urlParams}&amp;{$smarty.capture.refineFieldCriteria}">{tr}{$val.value}{/tr|escape:'html'}</a>{if empty($refineField.criteria)}&nbsp;({$val.count}){/if}
-								</div>
-							{/foreach}
-							{if $smarty.foreach.fieldValue.total >= 6}
-								</div><div class="block_values_button">{$smarty.capture.trMore}</div>
-							{/if}
-						</div>
-						<script type="text/javascript">RefineSearchBlock.restore('{$refineField.field_name}', true); </script>
-					{/if}
-				{/foreach}
-				<br/>
-			</td>
-		</tr>
-		</tbody>
-	</table>
+	<div id="refineResults">
+        <h3>[[Refine Results]]:</h3>
+        <div class="separator"></div>
+        {capture name="urlParams"}searchId={$searchId}&amp;action=refine{if $show_brief_or_detailed}&amp;show_brief_or_detailed={$show_brief_or_detailed}{/if}&amp;view={$view}{/capture}
+        {foreach from=$refineFields item=refineField}
+            {if $refineField.show && $refineField.count_results}
+                <!-- accordion start -->
+                <div class="panel-group panel-dark" id="accordion-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-2" href="#{$refineField.field_name}" class="collapsed">
+                                    [[{$refineField.caption}]]
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="{$refineField.field_name}" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                {foreach from=$refineField.search_result item=val name=fieldValue}
+                                {if $smarty.foreach.fieldValue.iteration == 6}
+                                <div class="block_values" style="display: none">
+                                    {/if}
+                                    {capture name="refineFieldCriteria"}{$refineField.field_name}{if in_array($refineField.type, array('string'))}[multi_like_and]{else}[multi_like]{/if}[]={if $val.sid}{$val.sid}{else}{$val.value|escape:'url'}{/if}{/capture}
+                                    <div class="refineItem">
+                                        <a href="?{$smarty.capture.urlParams}&amp;{$smarty.capture.refineFieldCriteria}">{tr}{$val.value}{/tr|escape:'html'}</a>{if empty($refineField.criteria)}&nbsp;({$val.count}){/if}
+                                    </div>
+                                    {/foreach}
+                                    {if $smarty.foreach.fieldValue.total >= 6}
+                                </div><div class="block_values_button">{$smarty.capture.trMore}</div>
+                                {/if}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- accordion end -->
+                <script type="text/javascript">RefineSearchBlock.restore('{$refineField.field_name}', true); </script>
+            {/if}
+        {/foreach}
+        <br/>
+	</div>
 	<script type="text/javascript" language="JavaScript">
 		refineBlockBinder("{$smarty.capture.trLess|escape:"quotes"}", "{$smarty.capture.trMore|escape:"quotes"}");
 	</script>

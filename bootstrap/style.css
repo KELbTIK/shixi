@@ -6042,3 +6042,10 @@ ul.tweets li span {
 .blogpost{
     margin-bottom: 20px;
 }
+.table > thead > tr > th > a{
+    color: #fff;
+}
+.table > thead > tr > th > a > i{
+    top: -3px;
+    position: relative;
+}

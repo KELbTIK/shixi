@@ -3652,16 +3652,16 @@ a.overlay.small i {
 }
 
 /* arrows for parent menu items */
-/*.dropdown>a:before {*/
-	/*font-family: 'FontAwesome';*/
-	/*content: "\f107";*/
-	/*position: absolute;*/
-	/*left: auto;*/
-	/*top: 15px;*/
-	/*right: 6px;*/
-	/*line-height: 1;*/
-	/*color: #d1d1d1;*/
-/*}*/
+.dropdown>a:before {
+	font-family: 'FontAwesome';
+	content: "\f107";
+	position: absolute;
+	left: auto;
+	top: 15px;
+	right: 6px;
+	line-height: 1;
+	color: #d1d1d1;
+}
 .transparent.header:not(.dark) .dropdown>a:before { 
 	color: #666666;
 }
@@ -3908,7 +3908,7 @@ a.overlay.small i {
 @media (min-width:1200px) {
 	/* first level menu item */
 	.main-navigation .navbar-nav > li {
-		margin: 0 0 0 15px;
+		margin: 0 0 0 5px;
 	}
 	.main-navigation .navbar-nav > li:first-child {
 		margin: 0;

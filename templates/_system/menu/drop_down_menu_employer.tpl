@@ -1,4 +1,4 @@
-<ul>
+<ul class="dropdown-menu">
 	<li><a href="{$GLOBALS.site_url}/edit-profile/">[[My Profile]]</a></li>
 
 	{if $GLOBALS.current_user.subuser}

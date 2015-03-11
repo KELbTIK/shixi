@@ -49,7 +49,8 @@
 
 										<li><a href="{$GLOBALS.site_url}/">[[Home]]</a></li>
 										{if $GLOBALS.current_user.logged_in}
-											<li {if $GLOBALS.current_user.logged_in}id="dropDown"{/if}><a href="{$GLOBALS.site_url}/my-account/">[[My Account]]</a>
+											<li class="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="{$GLOBALS.site_url}/my-account/">[[My Account]]</a>
 												{if $GLOBALS.current_user.group.id == "Employer"}
 													{include file="drop_down_menu_employer.tpl"}
 												{elseif $GLOBALS.current_user.group.id == "JobSeeker"}

@@ -16,10 +16,15 @@
 				</div>
 			</div>
 		</div>
+        <br/>
+        <div class="plan stripped Category"  style="margin-bottom:0 !important;">
+            <div class="header">
+                <h3>[[Quick Stats]]</h3>
+            </div>
+        </div>
 
-		<h2>[[Quick Stats]]</h2>
 		<div id="quick-stats">
-			<table>
+			<table class="table">
 				<tbody>
 					<tr>
 						<td>[[Current live jobs]]</td>

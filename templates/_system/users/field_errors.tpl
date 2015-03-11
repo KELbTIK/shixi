@@ -1,5 +1,5 @@
 {foreach from=$errors item=error key=field_caption}
-	<p class="error">
+	<div class="error alert alert-danger">
 		{if $error eq 'EMPTY_VALUE'}
 			'[[{$field_caption}]]' [[is empty]]
 		{elseif $error eq 'NOT_UNIQUE_VALUE'}
@@ -35,7 +35,7 @@
 		{else}
 			[[{$error}]]
 		{/if}
-	</p>
+	</div>
 {/foreach}
 
 

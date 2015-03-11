@@ -1,5 +1,5 @@
 {foreach from=$field_errors item=error key=field_caption}
-	<p class="error">
+	<div class="error alert alert-danger">
         {if $error eq 'EMPTY_VALUE'}
     		{if $field_caption == "Enter code from image"}
             	[[Enter Security code]]
@@ -54,5 +54,5 @@
         {else}
        		{$error}
         {/if}
-    </p>
+    </div>
 {/foreach}

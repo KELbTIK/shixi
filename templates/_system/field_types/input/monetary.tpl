@@ -1,4 +1,4 @@
-<input type="text" value="{$value.value}" class="inputStringMoney {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}][value]{else}{$id}[value]{/if}" />
+<input type="text" value="{$value.value}" class="inputStringMoney form-control {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}][value]{else}{$id}[value]{/if}" />
 <select name="{if $complexField}{$complexField}[{$id}][{$complexStep}][add_parameter]{else}{$id}[add_parameter]{/if}" class="selectCurrency {if $complexField}complexField{/if}">
 	<option value="">[[Select]] [[Currency]]</option>
 	{foreach from=$list_currency item=list_curr}

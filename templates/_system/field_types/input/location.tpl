@@ -1,15 +1,17 @@
 {assign var="LocationValues" value=$value}
 {foreach from=$form_fields item=form_field}
-	<fieldset {if $form_field.hidden}style="display:none;"{/if} id="{$parentID}_{$form_field.id}">
+	<div class="form-group has-feedback" {if $form_field.hidden}style="display:none;"{/if} id="{$parentID}_{$form_field.id}">
 		{assign var="fixInstructionsForComplexField" value=true}
-		<div class="inputName">{tr}{$form_field.caption}{/tr|escape:'html'}</div>
-		<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-		<div class="inputField">{input property=$form_field.id parent=$parentID}</div>
+		<label class="inputName col-sm-3 control-label">
+            {tr}{$form_field.caption}{/tr|escape:'html'}
+            {if $form_field.is_required}<span class="text-danger small">*</span>{/if}
+        </label>
+		<div class="inputField col-sm-8">{input property=$form_field.id parent=$parentID}</div>
 		{if $form_field.instructions && $fixInstructionsForComplexField}{assign var="instructionsExist" value="1"}{include file="../classifieds/instructions.tpl" form_field=$form_field}{/if}
 		{if in_array($form_field.type, array('tree', 'multilist'))}
 			<div id="count-available-{$form_field.id}" class="mt-count-available"></div>
 		{/if}
-	</fieldset>
+	</div>
 {/foreach}
 <script language='JavaScript' type='text/javascript'>
 function get{$parentID}States(countrySID) {ldelim}

@@ -1,5 +1,5 @@
 {foreach from=$errors key=error item=errmess}
-	<p class="error">
+	<div class="error alert alert-danger">
 		{if $error eq 'NO_SUCH_USER'}
 			[[Login error]]
 		{elseif $error eq 'INVALID_PASSWORD'}
@@ -28,5 +28,5 @@
 		{else}
 			[[$error]] [[$errmess]]
 		{/if}
-	</p>
+	</div>
 {/foreach}

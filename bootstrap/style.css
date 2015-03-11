@@ -5609,8 +5609,10 @@ ul.tweets li span {
 	display: none;
 }
 .scrollToTop i {
-	line-height: 50px;
-	font-size: 24px;
+    line-height: 50px;
+    font-size: 24px;
+    top: 12px;
+    position: relative;
 }
 
 /* Small devices (tablets, phones less than 767px) */
@@ -6048,4 +6050,33 @@ ul.tweets li span {
 .table > thead > tr > th > a > i{
     top: -3px;
     position: relative;
+}
+.captcha-img{
+    width: 100%;
+    max-height: 40px;
+}
+.captcha-refresh{
+    padding-top: 10px;
+}
+@media (max-width: 767px){
+    .captcha-img{
+        max-width: 100%;
+        width: auto;
+        max-height:  40px;
+    }
+    .captcha-refresh{
+        text-align: left;
+    }
+    .captcha-refresh i{
+        margin: 3px 8px;
+    }
+}
+.file-field{
+    margin-top: 10px;
+}
+.cke_chrome{
+    width: 100%!important;
+}
+.btn-recovery{
+    margin: 0;
 }

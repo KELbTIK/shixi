@@ -1,3 +1,3 @@
 {foreach from=$errors item=error}
-	<p class='error'>[[{$error}]]</p>
+	<div class='error alert alert-danger'>[[{$error}]]</div>
 {/foreach}

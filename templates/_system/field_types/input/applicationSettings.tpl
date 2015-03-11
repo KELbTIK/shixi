@@ -69,7 +69,7 @@
 				[[Send applications online via web site]]<br/>
 				[[Send applications to this e-mail]]:<br/>
 			</label>
-			<input value="{if $value.add_parameter == 1}{$value.value|escape:'html'}{/if}" class="inputString"  name="{$id}[value]" {if $value.add_parameter == 2}disabled="disabled"{/if} id="{$id}_1" type="text" />
+			<input value="{if $value.add_parameter == 1}{$value.value|escape:'html'}{/if}" class="inputString form-control"  name="{$id}[value]" {if $value.add_parameter == 2}disabled="disabled"{/if} id="{$id}_1" type="text" />
 		</td>
 	</tr>
 	<tr>

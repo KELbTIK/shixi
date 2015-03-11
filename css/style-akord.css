@@ -46,3 +46,8 @@
 	float:left;
 	margin-right: 15px;
 }
+
+#shoppingCart{
+	padding: 3px 10px;
+	font-size:10px;
+}

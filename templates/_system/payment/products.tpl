@@ -9,8 +9,9 @@
 	<h1>[[Products]]</h1>
 {/if}
 
-<div class="row alert alert-danger" id="productsList" {if $GLOBALS.user_page_uri == "/employer-products/" ||  $GLOBALS.user_page_uri == "/jobseeker-products/"}class="productsList-nl"{/if}>
+<div class="row" id="productsList" {if $GLOBALS.user_page_uri == "/employer-products/" ||  $GLOBALS.user_page_uri == "/jobseeker-products/"}class="productsList-nl"{/if}>
 {if $availableProducts != false}
+    <div class="gray-bg section">
     {foreach from=$availableProducts item=product key=id name=pr}
 
 
@@ -53,7 +54,11 @@
             </div>
 
     {/foreach}
+        <div class="clearfix"></div>
+    </div>
 {else}
-    <p>[[There is no any Product]]</p>
+    <div class="col-xs-12">
+    <div class="alert alert-danger">[[There is no any Product]]</div>
+    </div>
 {/if}
 </div>

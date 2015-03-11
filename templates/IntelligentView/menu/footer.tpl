@@ -44,16 +44,16 @@
                                         <a href="{$GLOBALS.site_url}/">[[Home]]</a>
                                     </li>
                                     <li>
-                                        <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/my-account/">[[My Account]]</a>
+                                        <a href="{$GLOBALS.site_url}/my-account/">[[My Account]]</a>
                                     </li>
                                     <li>
-                                        <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/contact/" >[[Contact]]</a>
+                                        <a href="{$GLOBALS.site_url}/contact/" >[[Contact]]</a>
                                     </li>
                                     <li>
-                                        <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/about/">[[About Us]]</a>
+                                        <a href="{$GLOBALS.site_url}/about/">[[About Us]]</a>
                                     </li>
                                     <li>
-                                        <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/site-map/">[[Sitemap]]</a>
+                                       <a href="{$GLOBALS.site_url}/site-map/">[[Sitemap]]</a>
                                     </li>
 
 
@@ -61,12 +61,12 @@
                                 <ul class="nav nav-pills nav-stacked col-sm-6 ">
                                     {if isset($GLOBALS.mobileUrl)}
                                         <li>
-                                            <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.mobileUrl}{if $GLOBALS.SessionId}?authId={$GLOBALS.SessionId}{/if}">[[Mobile Version]]</a>
+                                           <a href="{$GLOBALS.mobileUrl}{if $GLOBALS.SessionId}?authId={$GLOBALS.SessionId}{/if}">[[Mobile Version]]</a>
                                         </li>
                                     {/if}
                                     {if $GLOBALS.settings.cookieLaw}
                                         <li>
-                                            <img src="{image}sepDot.png" border="0" alt="" /><a href="#" onClick="return cookiePreferencesPopupOpen();">[[Cookie Preferences]]</a>
+                                            <a href="#" onClick="return cookiePreferencesPopupOpen();">[[Cookie Preferences]]</a>
                                         </li>
                                     {/if}
                                     {if $GLOBALS.current_user.logged_in}
@@ -77,7 +77,7 @@
                                         {/if}
                                         {if ($acl->isAllowed('open_resume_search_form')) || $GLOBALS.current_user.group.id == "Employer"}
                                             <li>
-                                                <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/search-resumes/" >[[Search Resumes]]</a>
+                                                <a href="{$GLOBALS.site_url}/search-resumes/" >[[Search Resumes]]</a>
                                             </li>
                                         {/if}
                                         {foreach from=$listingTypesInfo item="listingTypeInfo"}
@@ -98,15 +98,15 @@
                                                <a href="{$GLOBALS.site_url}/find-jobs/" >[[Find Jobs]]</a>
                                             </li>
                                             <li>
-                                                <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Resume" >[[Post Resumes]]</a>
+                                               <a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Resume" >[[Post Resumes]]</a>
                                             </li>
                                         {/if}
                                         {if $GLOBALS.current_user.group.id != "JobSeeker"}
                                             <li>
-                                                <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/search-resumes/" >[[Search Resumes]]</a>
+                                                <a href="{$GLOBALS.site_url}/search-resumes/" >[[Search Resumes]]</a>
                                             </li>
                                             <li>
-                                                <img src="{image}sepDot.png" border="0" alt="" /><a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Job" >[[Post Jobs]]</a>
+                                                <a href="{$GLOBALS.site_url}/add-listing/?listing_type_id=Job" >[[Post Jobs]]</a>
                                             </li>
                                         {/if}
                                     {/if}

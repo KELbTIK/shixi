@@ -22,7 +22,7 @@
 	<form action="" method="post" enctype="multipart/form-data" >
 		<input type="hidden" name="product_sid" value="{$productSID}" />
 		<input type="hidden" name="event" value="add_product" />
-		<div id="productDetails">
+		<div id="productDetails" class="alert alert-danger">
 
 			[[{$productInfo.detailed_description}]]
 			{capture assign="productPrice"}{tr type="float"}{$productInfo.price}{/tr}{/capture}
@@ -30,7 +30,7 @@
 				{if $productInfo.period_name != 'unlimited'}
 					<div class="productDetails-name">[[Period]]:</div>
 					<div class="productDetails-info">{$productInfo.period} {if $productInfo.period > 1 }[[{$productInfo.period_name|capitalize}s]]{else}[[{$productInfo.period_name|capitalize}]]{/if}</div>
-					<div class="clr"></div>
+					<div class="clearfix"></div>
 				{/if}
 
 			{elseif $productInfo.fixed_period}
@@ -49,7 +49,7 @@
 				<div class="productDetails-info viewProductsPrice">{currencyFormat amount=$productPrice}</div>
 			{elseif $productInfo.volume_based_pricing}
 
-				<table class="table">
+				<table class="table table-bordered">
 
 					<thead>
 						<tr>

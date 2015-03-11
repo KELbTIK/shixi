@@ -26,5 +26,28 @@
 }
 
 .product-detail-button{
-	float:left; margin-right:5px;
+	float:left;
+	margin-right:5px;
+}
+
+.alert.alert-danger:after {
+	 content: none;
+}
+
+.label-cart{
+	margin-top:7px;
+}
+
+.input-cart{
+	margin:3px 0;
+}
+
+.input-checkout{
+	float:left;
+	margin-right: 15px;
+}
+
+#shoppingCart{
+	padding: 3px 10px;
+	font-size:10px;
 }

@@ -27,7 +27,7 @@
 	<input type="hidden" name="total_price" value="{$total_price}" />
 	<input type="hidden" name="discount_total_amount" value="{$discountTotalAmount}" />
 	<input type="hidden" name="sub_total_price" value="0" />
-	<table cellspacing="0" id="shoppingCartTable">
+	<table class="table table-striped" cellspacing="0" id="shoppingCartTable">
 		<thead>
 			<tr>
 				<th class="tableLeft"> </th>
@@ -163,17 +163,18 @@
 			{/strip} [[for the above item(s).]]</p>
 	{/if}
 	{if $GLOBALS.settings.enable_promotion_codes == 1 && !$promotionCodeAlreadyUsed}
-		<div id="promotionCode">
-			<span class="strong">[[Promotion code]]:</span> <input type="text" name="promotion_code" id="inputPromotionCode" value="" />
-			<input type="submit" name="applyPromoCode" value="[[Apply]]" id="applyPromoCode" />
+		<div class="form-group">
+		<div class="row">
+			<div  class="col-sm-2 label-cart"><label >Promotion code: </label></div>
+			<div class="col-sm-2"><input type="text" class="form-control" name="promotion_code" id="inputPromotionCode" value="" /></div>
+			<div class="col-sm-2"><input class="btn btn-default btn-sm input-cart" type="submit" name="applyPromoCode" value="[[Apply]]" id="applyPromoCode" /></div>
+		</div>
 		</div>
 	{/if}
-
-	<br/>
-	<div class="continue-shopping"><input type="button" name="continue" value="[[Continue Shopping]]" onClick="location.href = '{$GLOBALS.site_url}/{if $userGroupID}{$userGroupID|lower}-products{else}products{/if}/'" /></div>
-	<div><input type="submit" id="checkoutSubmit" name="submit" value="[[Checkout]]" {if !$GLOBALS.current_user.logged_in}onclick="popUpWindow('{$GLOBALS.site_url}/login/?shopping_cart=checkout&ajaxRelocate=1', 410, '[[Login]]', false, false); return false;"{/if} /></div>
-	<div style="visibility: hidden;"><input type="submit" name="shoppingCartForm" value="[[Checkout]]" id="shoppingCartForm" /></div>
-	<div class="clr"></div>
+	<div class="continue-shopping input-checkout"><input class="btn btn-primary btn-sm" type="button" name="continue" value="[[Continue Shopping]]" onClick="location.href = '{$GLOBALS.site_url}/{if $userGroupID}{$userGroupID|lower}-products{else}products{/if}/'" /></div>
+	<div><input class="btn btn-default btn-sm" type="submit" id="checkoutSubmit" name="submit" value="[[Checkout]]" {if !$GLOBALS.current_user.logged_in}onclick="popUpWindow('{$GLOBALS.site_url}/login/?shopping_cart=checkout&ajaxRelocate=1', 410, '[[Login]]', false, false); return false;"{/if} /></div>
+	<div style="visibility: hidden;"><input class="btn btn-default btn-sm" type="submit" name="shoppingCartForm" value="[[Checkout]]" id="shoppingCartForm" /></div>
+	<div class="clearfix"></div>
 	</form>
 	<script language="javascript" type="text/javascript">
 	var langSettings = {
@@ -206,7 +207,7 @@
 		{rdelim}
 		totalPrice();
 	{rdelim}
-	
+
 	function totalPrice()
 	{ldelim}
 		var sub_total = {$total_price};

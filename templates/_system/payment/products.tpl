@@ -9,7 +9,7 @@
 	<h1>[[Products]]</h1>
 {/if}
 
-<div class="row gray-bg section" id="productsList" {if $GLOBALS.user_page_uri == "/employer-products/" ||  $GLOBALS.user_page_uri == "/jobseeker-products/"}class="productsList-nl"{/if}>
+<div class="row alert alert-danger" id="productsList" {if $GLOBALS.user_page_uri == "/employer-products/" ||  $GLOBALS.user_page_uri == "/jobseeker-products/"}class="productsList-nl"{/if}>
 {if $availableProducts != false}
     {foreach from=$availableProducts item=product key=id name=pr}
 

@@ -30,10 +30,6 @@
 	margin-right:5px;
 }
 
-.alert.alert-danger:after {
-	 content: none;
-}
-
 .label-cart{
 	margin-top:7px;
 }
@@ -47,7 +43,12 @@
 	margin-right: 15px;
 }
 
-#shoppingCart{
-	padding: 3px 10px;
-	font-size:10px;
+#shoppingCart {
+	padding: 6px 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#number_of_listings{
+	margin-right:10px;
 }

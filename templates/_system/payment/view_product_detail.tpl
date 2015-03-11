@@ -19,10 +19,10 @@
 	{/foreach}
 {/if}
 {if $mayChooseProduct}
-	<form action="" method="post" enctype="multipart/form-data" >
+	<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data" >
 		<input type="hidden" name="product_sid" value="{$productSID}" />
 		<input type="hidden" name="event" value="add_product" />
-		<div id="productDetails" class="alert alert-danger">
+		<div id="productDetails">
 
 			[[{$productInfo.detailed_description}]]
 			{capture assign="productPrice"}{tr type="float"}{$productInfo.price}{/tr}{/capture}
@@ -49,8 +49,8 @@
 				<div class="productDetails-info viewProductsPrice">{currencyFormat amount=$productPrice}</div>
 			{elseif $productInfo.volume_based_pricing}
 
+			<div class="table-responsive">
 				<table class="table table-bordered">
-
 					<thead>
 						<tr>
 							<th class="tableLeft "> </th>
@@ -75,7 +75,9 @@
 					{/foreach}
 					</tbody>
 				</table>
-				<br/><br/>
+			</div>
+
+
 				<div id="productsSelect">
 					<select  name="number_of_listings" id="number_of_listings" class="pull-left" onChange="getPrice(this.value)">
 						{foreach from=$productInfo.count_listings item=count_listings}
@@ -102,7 +104,7 @@
 			{/if}
 		</div>
 		{if $productInfo.product_type == 'banners'}
-			<form class="form-horizontal" role="form">
+
 				<div class="form-group">
 					<label class="col-sm-3 control-label">[[Required Banner Width]]:</label>
 					<label class="col-sm-9 control-label">{$productInfo.width} Pixels</label>
@@ -113,24 +115,24 @@
 				</div>
 
 				<div class="form-group">
-					<label class="col-sm-2 control-label">[[Banner Name]]:</label>
-					<div class="col-sm-10">
+					<label class="col-sm-3 control-label">[[Banner Name]]:</label>
+					<div class="col-sm-9">
 						<input class="form-control" type="{$banner_fields.title.type}" name="{$banner_fields.title.id}" value="{$banner_fields.title.value}">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-2 control-label">[[Banner Link]]:</label>
-					<div class="col-sm-10">
+					<label class="col-sm-3 control-label">[[Banner Link]]:</label>
+					<div class="col-sm-9">
 						<input class="form-control type="{$banner_fields.link.type}" name="{$banner_fields.link.id}" value="{$banner_fields.link.value}" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-2 control-label">[[Banner File]]:</label>
-					<div class="col-sm-10">
+					<label class="col-sm-3 control-label">[[Banner File]]:</label>
+					<div class="col-sm-9">
 						<input type="{$banner_fields.image.type}" name="{$banner_fields.image.id}" value="{$banner_fields.image.value}" />
 					</div>
 				</div>
-			</form>
+
 		{/if}
 		<div class="clearfix"></div>
 		<br />
@@ -138,9 +140,9 @@
 			<div class="product-detail-button"><input class="btn btn-default btn-sm" type="button" name="continue" value="[[Back to Products]]" onClick="location.href = '{$GLOBALS.site_url}/{$userGroupID|lower}-products/'" /></div>
 			{if $GLOBALS.settings.allow_to_post_before_checkout == '1' && ($productInfo.product_type == 'post_listings' || $productInfo.product_type == 'mixed_product')}
 				<div class="product-detail-button">
-					<input type="hidden" name="productSID" value="{$productSID}" />
-					<input type="hidden" name="proceed_to_posting" value="done" />
-					<input type="hidden" name="listing_type_id" value="{$productInfo.listingTypeID}" />
+					<input class="btn btn-primary btn-sm" type="hidden" name="productSID" value="{$productSID}" />
+					<input class="btn btn-primary btn-sm" type="hidden" name="proceed_to_posting" value="done" />
+					<input class="btn btn-primary btn-sm" type="hidden" name="listing_type_id" value="{$productInfo.listingTypeID}" />
 					<input class="btn btn-primary btn-sm" type="button" value="[[Proceed to Posting]]" id="proceedToPosting" onclick="submitProductDetailForm('proceedToPosting');" />
 				</div>
 			{/if}

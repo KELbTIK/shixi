@@ -27,7 +27,8 @@
 	<input type="hidden" name="total_price" value="{$total_price}" />
 	<input type="hidden" name="discount_total_amount" value="{$discountTotalAmount}" />
 	<input type="hidden" name="sub_total_price" value="0" />
-	<table class="table table-striped" cellspacing="0" id="shoppingCartTable">
+	<div class="table-responsive">
+		<table class="table table-striped" cellspacing="0" id="shoppingCartTable">
 		<thead>
 			<tr>
 				<th class="tableLeft"> </th>
@@ -135,7 +136,7 @@
 		</tr>
 		</tbody>
 	</table>
-
+	</div>
 	{foreach from=$errors item=caption key=error}
 		{if $error eq 'EMPTY_VALUE'}
 			<p class="error">'[[{$caption}]]' [[is empty]]</p>
@@ -175,7 +176,9 @@
 	<div><input class="btn btn-default btn-sm" type="submit" id="checkoutSubmit" name="submit" value="[[Checkout]]" {if !$GLOBALS.current_user.logged_in}onclick="popUpWindow('{$GLOBALS.site_url}/login/?shopping_cart=checkout&ajaxRelocate=1', 410, '[[Login]]', false, false); return false;"{/if} /></div>
 	<div style="visibility: hidden;"><input class="btn btn-default btn-sm" type="submit" name="shoppingCartForm" value="[[Checkout]]" id="shoppingCartForm" /></div>
 	<div class="clearfix"></div>
+
 	</form>
+	
 	<script language="javascript" type="text/javascript">
 	var langSettings = {
 			thousands_separator : '{$GLOBALS.current_language_data.thousands_separator}',

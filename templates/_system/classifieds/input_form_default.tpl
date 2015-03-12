@@ -2,84 +2,79 @@
 	{$form_field=$form_field scope=global}
 	{if $form_field.id == 'video' || $form_field.id == 'youtube'}
 		{if $extraInfo.video}
-			<fieldset>
-				<div class="inputName">[[$form_field.caption]]</div>
-				<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-				<div class="inputField">{input property=$form_field.id}</div>
+			<div class="form-group has-feedback">
+				<label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+				<div class="inputField col-sm-8">{input property=$form_field.id}</div>
 				{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-			</fieldset>
+			</div>
 		{/if}
 	{elseif ($listing_type_id == "Job" || $listing.type.id == "Job") && $form_field.id == "anonymous"}
 		{* this empty place of 'anonymous' checkbox in 'Job' listing *}
 	{elseif ($listing_type_id == "Resume" || $listing.type.id == "Resume") && $form_field.id == "anonymous"}
-			<fieldset>
-				<div class="inputName">[[$form_field.caption]]</div>
-				<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-				<div class="inputField">{input property=$form_field.id}</div>
+			<div class="form-group has-feedback">
+				<label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+				<div class="inputField col-sm-8">{input property=$form_field.id}</div>
 				{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-			</fieldset>
+			</div>
 	{elseif $form_field.id == "access_type"}
 		{if $listing_type_id != "Job" && $listing.type.id != "Job"}{* *}
-			<fieldset>
-				<div class="inputName">[[$form_field.caption]]</div>
-				<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-				<div class="inputField">{input property=$form_field.id template='resume_access.tpl'}</div>
+			<div class="form-group has-feedback">
+				<label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+				<div class="inputField col-sm-8">{input property=$form_field.id template='resume_access.tpl'}</div>
 				{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-			</fieldset>
+			</div>
 		{/if}
 	{elseif ($listingTypeID == "Job" || $listing.type.id == "Job") && $form_field.id == 'ApplicationSettings'}
-		<fieldset>
-			<div class="inputName">[[$form_field.caption]]</div>
-			<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-			<div class="inputField">{input property=$form_field.id template='applicationSettings.tpl'}</div>
+		<div class="form-group has-feedback">
+			<label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+			<div class="inputField col-sm-8">{input property=$form_field.id template='applicationSettings.tpl'}</div>
 			{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-		</fieldset>
+		</div>
 	{elseif ($listingTypeID == "Job" || $listing.type.id == "Job") && $form_field.id == 'expiration_date'}
 		{capture assign="expirationField"}
-		<fieldset>
-			<div class="inputName">[[$form_field.caption]]</div>
-			<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-			<div class="inputField">{input property=$form_field.id template='expiration_date.tpl'}</div>
+		<div class="form-group has-feedback">
+			<label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+
+			<div class="inputField col-sm-8">{input property=$form_field.id template='expiration_date.tpl'}</div>
 			{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-		</fieldset>
+		</div>
 		{/capture}
 	{elseif $form_field.type == 'location'}
 		{input property=$form_field.id}
 	{else}
-		<fieldset>
+		<div class="form-group has-feedback">
 			{assign var="fixInstructionsForComplexField" value=false}
 			{if $form_field.type != 'complex'}
 				{assign var="fixInstructionsForComplexField" value=true}
 			{/if}
 			{if $form_field.id == 'ListingLogo'}
-				<div class="inputName">[[$form_field.caption]]</div>
-				<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-				<div class="inputField">{input property=$form_field.id template="logo_listing.tpl"}</div>
+				<label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+				<div class="inputField col-sm-8">{input property=$form_field.id template="logo_listing.tpl"}</div>
 				{if $form_field.instructions && $fixInstructionsForComplexField}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
 			{else}
-				<div class="inputName">[[$form_field.caption]]</div>
-				<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-				<div class="inputField">{input property=$form_field.id}</div>
+				<label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+				<div class="inputField col-sm-8">{input property=$form_field.id}
 				{if $form_field.instructions && $fixInstructionsForComplexField}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
 				{if in_array($form_field.type, array('multilist'))}
 					<div id="count-available-{$form_field.id}" class="mt-count-available"></div>
 				{/if}
+				</div>
 			{/if}
-		</fieldset>
+		</div>
 	{/if}
 {/foreach}
 
 {if !empty($showPic)}
-	<fieldset>
-		<div class="inputName"> [[Add Pictures]] </div>
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label"> [[Add Pictures]] </label>
 		<div class="inputReq">&nbsp;</div>
-		<div class="inputField">
+		<div class="inputField col-sm-8">
 			<div id="loading-progbar" class="add-picture-loading" style="display:none;">
 				<img class="progBarImg" src="{$GLOBALS.site_url}/system/ext/jquery/progbar.gif" alt="[[Please wait ...]]" /> [[Please wait ...]]
 			</div>
 			<div id="UploadPics" value="{$picValue}"></div>
 		</div>
-	</fieldset>
+	</div>
 {/if}
 
 {if $expirationField}{$expirationField}{/if}

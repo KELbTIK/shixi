@@ -26,7 +26,7 @@
 		{/foreach}
     </select>
 </div>
-	
+
 {literal}
 <script type="text/javascript">
 	$.ui.dialog.prototype.options.bgiframe = true;
@@ -45,10 +45,10 @@
 		});
 	});
 	$("#access_type_button").click( function(){
-		changeWin = false; 
+		changeWin = false;
 		access_set();
 	});
-	
+
 	function access_set() {
 {/literal}
 		var content = "<img src='{$GLOBALS.user_site_url}/system/ext/jquery/progbar.gif' />";
@@ -74,7 +74,7 @@
 		if((access_type_id == listValueID) && changeWin)
 			$("#employers_selected_readonly").html( $("#saved_employers").html() );
 		else if(changeWin)
-			$("#employers_selected_readonly").html('');	
+			$("#employers_selected_readonly").html('');
 		$("#employers_selected_readonly").prependTo("#access_div");
 		$("#access_div").attr({style: "display: block"});
 		$("#invisible_wrapper").remove();
@@ -98,7 +98,7 @@
 	        });
 		});
 	}
-	
+
 </script>
 {/literal}
 

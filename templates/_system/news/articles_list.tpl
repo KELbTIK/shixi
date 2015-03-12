@@ -40,7 +40,7 @@
 				{if $current_page-3 > 1}&nbsp;...{/if}
 				{if $current_page-2 > 0}&nbsp;<a href="?page={$current_page-2}">{$current_page-2}</a>{/if}
 				{if $current_page-1 > 0}&nbsp;<a href="?page={$current_page-1}">{$current_page-1}</a>{/if}
-				<span class="strong">{$czrrent_page}</span>
+				<span class="strong">{$current_page}</span>
 				{if $current_page+1 <= $pages}&nbsp;<a href="?page={$current_page+1}">{$current_page+1}</a>{/if}
 				{if $current_page+2 <= $pages}&nbsp;<a href="?page={$current_page+2}">{$current_page+2}</a>{/if}
 				{if $current_page+3 < $pages}&nbsp;...{/if}

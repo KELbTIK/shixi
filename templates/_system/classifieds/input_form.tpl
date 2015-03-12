@@ -10,9 +10,9 @@
 	<div class="input-form-bc">{if $page.sid == $pageSID}<b>[[{$page.page_name}]]</b>{else}{if $page.order <= $currentPage.order}<a href="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$page.page_id}/{$listingSID}">[[{$page.page_name}]]</a>{else}[[{$page.page_name}]]{/if}{/if}{if !$smarty.foreach.page_block.last} -&gt; {/if}&nbsp;</div>
 {/foreach}
 {/if}
-<div class="clr"></div>
+<div class="clearfix"></div>
 <h1>[[{$currentPage.page_name}]]</h1>
-<div>[[{$currentPage.description}]]</div>
+<div class="col-sm-8 col-sm-offset-3">[[{$currentPage.description}]]</div>
 {* SOCIAL PLUGIN: AUTOFILL *}
 {if $socialAutoFillData.allow}
 <div id="social_autoFill" class="{$socialAutoFillData.network}_16">
@@ -29,8 +29,8 @@
 {/if}
 {* END / SOCIAL PLUGIN: AUTOFILL *}
 {include file='field_errors.tpl'}
-<p>[[Fields marked with an asterisk (]]<font color="red">*</font>[[) are mandatory]]</p>
-<form method="post" action="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$currentPage.page_id}/{$listingSID}" enctype="multipart/form-data" onsubmit="disableSubmitButton('submitButton');{if $form_fields.ApplicationSettings}return validateForm('addListingForm');{/if}" id="addListingForm" class="inputForm">
+<p class="col-sm-8 col-sm-offset-3">[[Fields marked with an asterisk (]]<font color="red">*</font>[[) are mandatory]]</p>
+<form method="post" action="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$currentPage.page_id}/{$listingSID}" enctype="multipart/form-data" onsubmit="disableSubmitButton('submitButton');{if $form_fields.ApplicationSettings}return validateForm('addListingForm');{/if}" id="addListingForm" class="inputForm form-horizontal">
 	<input type="hidden" name="productSID" value="{$productSID}">
 	<input type="hidden" name="contract_id" value="{$contract_id}" />
 	<input type="hidden" name="listing_type_id" value="{$listingTypeID|escape:'html'}" />
@@ -41,31 +41,33 @@
 	{/if}
 {set_token_field}
 
+
 {$showPic = ($pic_limit > 0 && !$prevPage) ? true : false}
 {$picValue = (!empty($listing_sid)) ? "{$GLOBALS.site_url}/manage-pictures/?listing_sid={$listing_sid}" : "{$GLOBALS.site_url}/manage-pictures/?{if $contract_id != 0}contract_id={$contract_id}&amp;{/if}product_sid={$productSID}&amp;listing_sid={$listing_id}"}
 {include file="input_form_default.tpl" showPic=$showPic picValue=$picValue }
 
-<fieldset>
-	<div class="inputName">&nbsp;</div>
-	<div class="inputReq">&nbsp;</div>
-	<div class="inputField">
+<div class="form-group has-feedback">
+	<div class="inputName col-sm-3">&nbsp;</div>
+	<div class="inputField col-sm-8">
 		{if $prevPage}
 			<input type="button" name="action_add" value="[[Back]]" class="button" onclick="window.location = '{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$prevPage}/{$listingSID}'" />&nbsp;&nbsp;&nbsp;
 		{/if}
 		<input type="hidden" name="action_add" id="hidden_action_add" value=""/>
 		{if $nextPage}
-			<input type="submit" name="action_add" value="[[Next]]" class="button" id="submitButton"/>
+			<input type="submit" name="action_add" value="[[Next]]" class="btn btn-default btn-sm" id="submitButton"/>
 		{else}
-			<input type="submit" name="preview_listing" value="[[Preview]]" class="button" id="listingPreview"/>
+			<input type="submit" name="preview_listing" value="[[Preview]]" class="btn btn-default btn-sm" id="listingPreview"/>
 			{if $contract_id eq 0}
-				<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="button" id="submitButton" />
+				<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="btn btn-default btn-sm" id="submitButton" />
 			{else}
-				<input type="submit" name="action_add" value="[[Post]]" class="button" id="submitButton" />
+				<input type="submit" name="action_add" value="[[Post]]" class="btn btn-default btn-sm" id="submitButton" />
 			{/if}
 		{/if}
 	</div>
-</fieldset>
+</div>
 </form>
+
+
 
 <script type="text/javascript">
 	$(document).ready(function() {

@@ -1,5 +1,5 @@
 <div id="mailchimp-newsletter">
-    <h2>[[Newsletter]]</h2>
+    <h1>[[Newsletter]]</h1>
     <div id="mailchimp-nl-cont">
         {if $error}
             <p class="error">

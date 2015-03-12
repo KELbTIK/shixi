@@ -14,11 +14,11 @@
 						<li>[[Zip Code]]</li>
 					</ul>
 					<p>[[Keywords is a mandatory field for receiving people search results from LI. So the system will give a message if keywords are empty.]]</p>
-					<div class="clr"></div>
+					<div class="clearfix"></div>
 				</div>
-				<div class="clr"></div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="clr"></div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 </fieldset>

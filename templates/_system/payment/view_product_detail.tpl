@@ -107,28 +107,28 @@
 
 				<div class="form-group">
 					<label class="col-sm-3 control-label">[[Required Banner Width]]:</label>
-					<label class="col-sm-9 control-label">{$productInfo.width} Pixels</label>
+					<label class="col-sm-8 control-label pull-left">{$productInfo.width} Pixels</label>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">[[Required Banner Height]]:</label>
-					<label class="col-sm-9 control-label">{$productInfo.height} Pixels</label>
+					<label class="col-sm-8 control-label">{$productInfo.height} Pixels</label>
 				</div>
 
 				<div class="form-group">
 					<label class="col-sm-3 control-label">[[Banner Name]]:</label>
-					<div class="col-sm-9">
+					<div class="col-sm-8">
 						<input class="form-control" type="{$banner_fields.title.type}" name="{$banner_fields.title.id}" value="{$banner_fields.title.value}">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">[[Banner Link]]:</label>
-					<div class="col-sm-9">
+					<div class="col-sm-8">
 						<input class="form-control type="{$banner_fields.link.type}" name="{$banner_fields.link.id}" value="{$banner_fields.link.value}" />
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">[[Banner File]]:</label>
-					<div class="col-sm-9">
+					<div class="col-sm-8">
 						<input type="{$banner_fields.image.type}" name="{$banner_fields.image.id}" value="{$banner_fields.image.value}" />
 					</div>
 				</div>

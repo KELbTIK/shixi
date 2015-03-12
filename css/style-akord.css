@@ -52,3 +52,11 @@
 #number_of_listings{
 	margin-right:10px;
 }
+
+.dropdown>a[href="http://shixi.com/logout/"]:before {
+	content:none;
+}
+
+.dropdown>a[href="http://shixi.com/registration/"]:before {
+	content:none;
+}

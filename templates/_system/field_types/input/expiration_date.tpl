@@ -11,8 +11,8 @@
 {/if}
 
 {$fullPeriod = $maxExpirationDate == $value || $value == ''}
-
-<table id="expiration-date">
+<div class="table-responsive">
+	<table id="expiration-date">
 	<tr>
 		<td valign="top">
 			<input {if $fullPeriod}checked="checked"{/if} {if $expired}disabled="disabled"{/if} class="inputRadio{if $complexField} complexField{/if}" name="exp_date" value="1" type="radio" id="maximum-length" />
@@ -32,7 +32,7 @@
 		</td>
 	</tr>
 </table>
-
+</div>
 
 <script type="text/javascript">
 	var dFormat = '{$GLOBALS.current_language_data.date_format}';

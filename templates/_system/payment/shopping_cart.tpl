@@ -164,9 +164,10 @@
 			{/strip} [[for the above item(s).]]</p>
 	{/if}
 	{if $GLOBALS.settings.enable_promotion_codes == 1 && !$promotionCodeAlreadyUsed}
+
 		<div class="form-group">
 		<div class="row">
-			<div  class="col-sm-2 label-cart"><label >Promotion code: </label></div>
+			<div  class="col-sm-2 label-cart text-center"><label >Promotion code: </label></div>
 			<div class="col-sm-2"><input type="text" class="form-control" name="promotion_code" id="inputPromotionCode" value="" /></div>
 			<div class="col-sm-2"><input class="btn btn-default btn-sm input-cart" type="submit" name="applyPromoCode" value="[[Apply]]" id="applyPromoCode" /></div>
 		</div>
@@ -178,7 +179,7 @@
 	<div class="clearfix"></div>
 
 	</form>
-	
+
 	<script language="javascript" type="text/javascript">
 	var langSettings = {
 			thousands_separator : '{$GLOBALS.current_language_data.thousands_separator}',

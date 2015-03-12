@@ -5,7 +5,7 @@
 {else}
 	{if $show_categories_block}
 		<div id="newsCategory">
-			<h3>[[News Categories]]</h3>
+			<h1>[[News Categories]]</h1>
 			{if empty($current_category_sid)}
 				<span class="strong">&#187; All</span>
 			{else}
@@ -23,9 +23,11 @@
 		</div>
 	{/if}
 
-	<form action="{$GLOBALS.site_url}/news/">
-		<input type="hidden" name="action" value="search" />
-		<input type="text" name="search_text" value="{$searchText}" /> <input type="submit" name="submit" value="[[Search]]" />
+	<form action="{$GLOBALS.site_url}/news/" class="form-inline">
+			<input type="hidden" name="action" value="search" />
+			<div class="form-group"><input type="text" name="search_text" value="{$searchText}" class="form-control"/></div>
+
+			<div class="form-group"><input type="submit" name="submit" value="[[Search]]" class="btn btn-default btn-sm" /></div>
 	</form>
 	<br/>
 
@@ -52,24 +54,34 @@
 
 	{foreach from=$articles item=item}
 		<div class="newsItems">
-			{if $item.link}
-				<h2><a href="{$item.link}" target="_blank">{$item.title}</a></h2>
-			{else}
-				<h2><a href="{$GLOBALS.site_url}/news/{$item.sid}/{$item.title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html">{$item.title}</a></h2>
-			{/if}
-			<div class="newsPreview">
-				<span class="small">[[Posted]]: {tr type="date"}{$item.date}{/tr}</span>
-				{if $item.image}<img src="{$item.image_link}" align="left" width="100" vspace="5" hspace="5" />{/if}
-				<br/>{$item.brief}
-				{if $item.link}
-					<p align="right"><a href="{$item.link}" target="_blank">[[read more]]</a></p>
-				{else}
-					<p align="right"><a href="{$GLOBALS.site_url}/news/{$item.sid}/{$item.title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html">[[read more]]</a></p>
-				{/if}
-				<div class="clr"></div>
-			</div>
+			<article class="clearfix blogpost object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="200">
+				<div class="blogpost-body">
+					<div class="post-info">
+						<span class="day">{$item.date|date_format:"%d"}</span>
+						<span class="month">{$item|date_format:"%B %Y"}</span>
+					</div>
+					<div class="blogpost-content">
+						<header>
+							<h2 class="title">
+								{if $item.link}
+									<h2><a href="{$item.link}" target="_blank">{$item.title}</a></h2>
+								{else}
+									<h2><a href="{$GLOBALS.site_url}/news/{$item.sid}/{$item.title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html">{$item.title}</a></h2>
+								{/if}
+							</h2>
+						</header>
+						<p>{$item.brief}</p>
+					</div>
+				</div>
+				<footer class="clearfix">
+					{if $item.link}
+						<a href="{$item.link}" target="_blank" class="smallLink pull-right link">[[read more]]</a>
+					{else}
+						<a href="{$GLOBALS.site_url}/news/{$item.sid}/{$item.title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html" class="smallLink pull-right link">[[read more]]</a>
+					{/if}
+				</footer>
+			</article>
 		</div>
-		<div class="clr"><br/></div>
 	{/foreach}
 
 	{if $pages > 1}

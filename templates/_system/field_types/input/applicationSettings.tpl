@@ -59,28 +59,22 @@
 </script>
 
 <div id="dialog"></div>
-<table id="application-settings">
-	<tr>
-		<td valign="top">
-			<input  id="via-email" class="inputRadio {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}{$id}[add_parameter][{$complexStep}]{else}{$id}[add_parameter]{/if}" value="1" {if $value.add_parameter == 1 || $value.add_parameter == ''}checked="checked"{/if} onclick="displayInput(false, '{$id}_1');" type="radio" />
-		</td>
-		<td>
-			<label for="via-email">
-				[[Send applications online via web site]]<br/>
-				[[Send applications to this e-mail]]:<br/>
-			</label>
-			<input value="{if $value.add_parameter == 1}{$value.value|escape:'html'}{/if}" class="inputString form-control"  name="{$id}[value]" {if $value.add_parameter == 2}disabled="disabled"{/if} id="{$id}_1" type="text" />
-		</td>
-	</tr>
-	<tr>
-		<td valign="top">
-			<input  id="via-site" class="inputRadio{if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}[add_parameter][{$complexStep}]{else}{$id}[add_parameter]{/if}" value="2" {if $value.add_parameter == 2}checked="checked"{/if} onclick="displayInput(false, '{$id}_2');" type="radio" />
-		</td>
-		<td>
-			<label for="via-site">
-				[[Redirect to this URL]]:<br/>
-			</label>
-			<input value="{if $value.add_parameter == 2}{$value.value|escape:'html'}{/if}" class="inputString {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}][value]{else}{$id}[value]{/if}" id="{$id}_2" {if $value.add_parameter != 2}disabled="disabled"{/if} type="text" /> &nbsp; <input type="button" name="browse" value="[[Test URL]]" onclick="getUrl('{$id}_2')" /><br /><span class="small">[[Use the following format:]] <i><strong>http://</strong>yoursite.com</i></span>
-		</td>
-	</tr>
-</table>
+
+
+<div class="radio">
+	<label>
+		<input  id="via-email" class="inputRadio {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}{$id}[add_parameter][{$complexStep}]{else}{$id}[add_parameter]{/if}" value="1" {if $value.add_parameter == 1 || $value.add_parameter == ''}checked="checked"{/if} onclick="displayInput(false, '{$id}_1');" type="radio" />
+		[[Send applications online via web site]]<br/>
+	</label>
+</div>
+<input value="{if $value.add_parameter == 1}{$value.value|escape:'html'}{/if}" class="inputString form-control"  name="{$id}[value]" {if $value.add_parameter == 2}disabled="disabled"{/if} id="{$id}_1" type="text" />
+<div class="radio">
+	<label>
+		<input  id="via-site" class="inputRadio{if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}[add_parameter][{$complexStep}]{else}{$id}[add_parameter]{/if}" value="2" {if $value.add_parameter == 2}checked="checked"{/if} onclick="displayInput(false, '{$id}_2');" type="radio" />
+		[[Redirect to this URL]]:<br/>
+	</label>
+</div>
+<input value="{if $value.add_parameter == 2}{$value.value|escape:'html'}{/if}" class="inputString form-control {if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}][value]{else}{$id}[value]{/if}" id="{$id}_2" {if $value.add_parameter != 2}disabled="disabled"{/if} type="text" />
+<input class="btn btn-default btn-sm" type="button" name="browse" value="[[Test URL]]" onclick="getUrl('{$id}_2')" /><br />
+<span class="small">[[Use the following format:]] <i><strong>http://</strong>yoursite.com</i></span>
+

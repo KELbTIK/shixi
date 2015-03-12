@@ -1,53 +1,60 @@
 {if $display_layout eq "2cols-wide"}
 
-	<div  class="narrow-col">
+	<div  class="col-sm-6">
 		{module name="builder" function="get_fields" fieldsHolderID="col-narrow-left"}
 	</div>
-	<div  class="narrow-col">
+	<div  class="col-sm-6">
 		{module name="builder" function="get_fields" fieldsHolderID="col-narrow-right"}
 	</div>
-	<div class="clr"></div>
+	<div class="clearfix"></div>
 	{$smarty.capture.middleFHContent}
-	<div class="clr"></div>
-	{module name="builder" function="get_fields" fieldsHolderID="col-wide"}
+	<div class="clearfix"></div>
+    <div class="col-sm-12">
+        {module name="builder" function="get_fields" fieldsHolderID="col-wide"}
+    </div>
 
 {elseif $display_layout eq "1col-2rows"}
-	<div class="narrow-col narrow-1col">
+	<div class="col-sm-6 narrow-1col">
 		{module name="builder" function="get_fields" fieldsHolderID="col-narrow"}
 	</div>
 	{$smarty.capture.middleFHContent}
-	<div class="clr"></div>
-	{module name="builder" function="get_fields" fieldsHolderID="col-wide"}
+	<div class="clearfix"></div>
+    <div class="col-sm-12">
+	    {module name="builder" function="get_fields" fieldsHolderID="col-wide"}
+    </div>
 
 {elseif $display_layout eq "wide-2cols"}
-
+    <div class="col-sm-12">
 	{module name="builder" function="get_fields" fieldsHolderID="col-wide"}
-	<div class="clr"></div>
+    </div>
+	<div class="clearfix"></div>
 	{$smarty.capture.middleFHContent}
-	<div class="clr"></div>
-	<div class="narrow-col">
+	<div class="clearfix"></div>
+	<div class="col-sm-6">
 		{module name="builder" function="get_fields" fieldsHolderID="col-narrow-left"}
 	</div>
-	<div class="narrow-col">
+	<div class="col-sm-6">
 		{module name="builder" function="get_fields" fieldsHolderID="col-narrow-right"}
 	</div>
 
 {elseif $display_layout eq "2cols"}
-	<div class="clr"></div>
+	<div class="clearfix"></div>
 	{$smarty.capture.middleFHContent}
-	<div class="clr"></div>
-	<div class="narrow-col">
+	<div class="clearfix"></div>
+	<div class="col-sm-6">
 		{module name="builder" function="get_fields" fieldsHolderID="col-narrow-left"}
 	</div>
-	<div class="narrow-col">
+	<div class="col-sm-6">
 		{module name="builder" function="get_fields" fieldsHolderID="col-narrow-right"}
 	</div>
-	<div class="clr"></div>
+	<div class="clearfix"></div>
 
 {else}
-	<div class="clr"></div>
+	<div class="clearfix"></div>
 	{$smarty.capture.middleFHContent}
-	<div class="clr"></div>
-	{module name="builder" function="get_fields" fieldsHolderID="col-wide"}
+	<div class="clearfix"></div>
+    <div class="col-sm-12">
+	    {module name="builder" function="get_fields" fieldsHolderID="col-wide"}
+    </div>
 
 {/if}

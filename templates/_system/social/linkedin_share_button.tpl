@@ -1,4 +1,4 @@
-<div class="in_share">
+<div class="in_share col-xs-12">
 	<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={$articleUrl}&title={$articleTitle}&summary={$articleSummary}&source={$articleSource}" title=""
 	   onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url={$articleUrl}&title={$articleTitle}&summary={$articleSummary}&source={$articleSource}',
 		   'windowname1',

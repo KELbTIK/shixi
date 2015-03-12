@@ -231,15 +231,15 @@
         </div>
 
         {if count($pages) != 1}
-            <div class="pageNavigation">
-                <span class="prevBtn">
+            <ul class="pagination">
+                <li class="prevBtn">
                     {if $currentPage - 1 > 0}
                         <a href="?page={$currentPage - 1}&amp;appsPerPage={$appsPerPage}&amp;score={$score}&amp;appJobId={$current_filter}&amp;orderBy={$orderBy|escape:'html'}&amp;order={$order}">[[Previous]]</a>
                     {else}
                         <a>[[Previous]]</a>
                     {/if}
-                </span>
-                <span class="navigationItems">
+                </li>
+                <li class="navigationItems">
                     {foreach from=$pages item=page}
                         {if $page == $currentPage}
                             <span class="strong">{$page}</span>
@@ -249,15 +249,15 @@
                             {if $page == 1 && $currentPage > 4} ... {/if}
                         {/if}
                     {/foreach}
-                </span>
-                <span class="nextBtn">
+                </li>
+                <li class="nextBtn">
                     {if $currentPage + 1 < $totalPages}
                         <a href="?page={$currentPage + 1}&amp;appsPerPage={$appsPerPage}&amp;score={$score}&amp;appJobId={$current_filter}&amp;orderBy={$orderBy|escape:'html'}&amp;order={$order}">[[Next]]</a>
                     {else}
                         <a>[[Next]]</a>
                     {/if}
-                </span>
-            </div>
+                </li>
+            </ul>
         {/if}
     </div>
 </form>

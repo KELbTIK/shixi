@@ -10,8 +10,8 @@
 		<div id="reports-navigation">
 			<div id="reports-navigation-in">
 				<div id="reports-navigation-in-border">
-					<a href="{$GLOBALS.site_url}/my-reports/" class="first-item current">[[Quick Stats]]</a>
-					<a href="{$GLOBALS.site_url}/general-stats/" class="middle-item">[[General Stats]]</a>
+					<a href="{$GLOBALS.site_url}/my-reports/" class="first-item current">[[Quick Stats]]</a> |
+					<a href="{$GLOBALS.site_url}/general-stats/" class="middle-item">[[General Stats]]</a> |
 					<a href="{$GLOBALS.site_url}/job-stats/" class="last-item">[[Job Stats]]</a>
 				</div>
 			</div>

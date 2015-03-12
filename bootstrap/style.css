@@ -6094,7 +6094,7 @@ img.ui-datepicker-trigger{
     margin-top: 0;
 }
 .inline-form{
-    margin: 0;
+    margin: 0!important;
 }
 .lightblue{
     color: lightblue;

@@ -195,25 +195,26 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <div id="googleMap-pagging">
-													<span class="prevBtn">
-														<img src="{image}prev_btn.png" alt=""/>
+                                        <ul class="pagination">
+													<li class="prevBtn">
                                                         {if $listing_search.current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-1}&amp;view={$view}">[[Previous]]</a>{else}<a>[[Previous]]</a>{/if}
-													</span>
-													<span class="navigationItems">
+													</li>
+													<li class="navigationItems">
 														{if $listing_search.current_page-3 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page=1&amp;view={$view}">1</a>{/if}
                                                         {if $listing_search.current_page-3 > 1}...{/if}
                                                         {if $listing_search.current_page-2 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-2}&amp;view={$view}">{$listing_search.current_page-2}</a>{/if}
                                                         {if $listing_search.current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-1}&amp;view={$view}">{$listing_search.current_page-1}</a>{/if}
-                                                        <span class="strong">{$listing_search.current_page}</span>
+                                                        <a href="#">{$listing_search.current_page}</a>
                                                         {if $listing_search.current_page+1 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+1}&amp;view={$view}">{$listing_search.current_page+1}</a>{/if}
                                                         {if $listing_search.current_page+2 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+2}&amp;view={$view}">{$listing_search.current_page+2}</a>{/if}
                                                         {if $listing_search.current_page+3 < $listing_search.pages_number}...{/if}
                                                         {if $listing_search.current_page+3 < $listing_search.pages_number + 1}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.pages_number}&amp;view={$view}">{$listing_search.pages_number}</a>{/if}
-													</span>
-													<span class="nextBtn">
+													</li>
+													<li class="nextBtn">
 														{if $listing_search.current_page+1 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+1}&amp;view={$view}">[[Next]]</a>{else}<a>[[Next]]</a>{/if}
-                                                        <img src="{image}next_btn.png" alt=""/>
-													</span>
+
+													</li>
+                                        </ul>
                                     </div>
 								</div>
 								<div class="clearfix"></div>
@@ -315,7 +316,7 @@
                             {if $listing_search.current_page-3 > 1}...{/if}
                             {if $listing_search.current_page-2 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-2}&amp;view={$view}">{$listing_search.current_page-2}</a>{/if}
                             {if $listing_search.current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-1}&amp;view={$view}">{$listing_search.current_page-1}</a>{/if}
-                            <span class="strong">{$listing_search.current_page}</span>
+                            <a href="#">{$listing_search.current_page}</a>
                             {if $listing_search.current_page+1 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+1}&amp;view={$view}">{$listing_search.current_page+1}</a>{/if}
                             {if $listing_search.current_page+2 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+2}&amp;view={$view}">{$listing_search.current_page+2}</a>{/if}
                             {if $listing_search.current_page+3 < $listing_search.pages_number}...{/if}

@@ -30,19 +30,24 @@
 		<form id="uploadForm" method="post" action="{$GLOBALS.site_url}/manage-pictures/" enctype="multipart/form-data" onsubmit="return uploadPicture();">
 			<input type="hidden" name="action" value="add" />
 			<input type="hidden" id="listing_id" name="listing_sid" value="{$listing.id}" />
-			<fieldset>
-				<div class="inputField"><input type="file" name="picture" /></div>
-			</fieldset>
-			<fieldset>
-				<div class="inputField">
-					[[Caption]]<br/>
-					<input type="text" name="caption" value="" />
+			<div class="col-xs-12">
+				<div class="form-group has-feedback">
+					<div class="inputField"><input type="file" name="picture" /></div>
 				</div>
-			</fieldset>
-			<div class="clr"></div>
-			<input type="submit" value="[[Add Picture]]" class="button"/>
+				<div class="form-group has-feedback">
+					<div class="inputField">
+						[[Caption]]<br/>
+						<input class="form-control" type="text" name="caption" value="" />
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<input type="submit" value="[[Add Picture]]" class="btn btn-default btn-sm"/>
 		</form>
-		<div class="clr"><br/></div>
+		<div class="clearfix"></div>
+
+
+
 	{else}
 		<p class="information">[[You've reached the limit of number of pictures allowed by your product]]</p>
 	{/if}

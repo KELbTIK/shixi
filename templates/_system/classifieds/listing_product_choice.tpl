@@ -22,10 +22,12 @@
 <h1>[[Select a Product]]</h1>
 <form id="listing-product-choice-form" method="post" action="">
 	{foreach from=$products_info item="product" name="products" key="contract_id" }
-		<p  class="object-non-visible animated object-visible fadeInUpSmall" data-animation-effect="fadeInUpSmall">
-			<input type="radio" value="{$contract_id}" name="contract_id" id="product-{$contract_id}" />
-			<label for="product-{$contract_id}"><span class="strong">[[{$product.product_name|escape:'html'}]]</span> {if $product.expired_date}([[exp: {$product.expired_date}]]){/if}</label>
-		</p>
+		<div class="radio object-non-visible animated object-visible fadeInUpSmall" data-animation-effect="fadeInUpSmall">
+			<label for="product-{$contract_id}">
+				<input type="radio" value="{$contract_id}" name="contract_id" id="product-{$contract_id}" />
+				<span>[[{$product.product_name|escape:'html'}]]</span> {if $product.expired_date}([[exp: {$product.expired_date}]]){/if}
+			</label>
+		</div>
 	{/foreach}
 	<input type="hidden" name="listing_id" value="{$listing_id}" />
 	<input type="hidden" name="listing_type_id" value="{$listingTypeID|escape:'html'}" />

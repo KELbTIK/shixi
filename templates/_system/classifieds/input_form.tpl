@@ -12,7 +12,7 @@
 {/if}
 <div class="clearfix"></div>
 <h1>[[{$currentPage.page_name}]]</h1>
-<div class="col-sm-8 col-sm-offset-3">[[{$currentPage.description}]]</div>
+
 {* SOCIAL PLUGIN: AUTOFILL *}
 {if $socialAutoFillData.allow}
 <div id="social_autoFill" class="{$socialAutoFillData.network}_16">
@@ -29,6 +29,7 @@
 {/if}
 {* END / SOCIAL PLUGIN: AUTOFILL *}
 {include file='field_errors.tpl'}
+<div class="col-sm-8 col-sm-offset-3">[[{$currentPage.description}]]</div>
 <p class="col-sm-8 col-sm-offset-3">[[Fields marked with an asterisk (]]<font color="red">*</font>[[) are mandatory]]</p>
 <form method="post" action="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$currentPage.page_id}/{$listingSID}" enctype="multipart/form-data" onsubmit="disableSubmitButton('submitButton');{if $form_fields.ApplicationSettings}return validateForm('addListingForm');{/if}" id="addListingForm" class="inputForm form-horizontal">
 	<input type="hidden" name="productSID" value="{$productSID}">
@@ -50,7 +51,7 @@
 	<div class="inputName col-sm-3">&nbsp;</div>
 	<div class="inputField col-sm-8">
 		{if $prevPage}
-			<input type="button" name="action_add" value="[[Back]]" class="button" onclick="window.location = '{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$prevPage}/{$listingSID}'" />&nbsp;&nbsp;&nbsp;
+			<input type="button" name="action_add" value="[[Back]]" class="btn btn-default btn-sm" onclick="window.location = '{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$prevPage}/{$listingSID}'" />&nbsp;&nbsp;&nbsp;
 		{/if}
 		<input type="hidden" name="action_add" id="hidden_action_add" value=""/>
 		{if $nextPage}

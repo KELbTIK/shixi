@@ -65,16 +65,19 @@
 {/foreach}
 
 {if !empty($showPic)}
+
 	<div class="form-group has-feedback">
 		<label class="inputName col-sm-3 control-label"> [[Add Pictures]] </label>
-		<div class="inputReq">&nbsp;</div>
-		<div class="inputField col-sm-8">
-			<div id="loading-progbar" class="add-picture-loading" style="display:none;">
-				<img class="progBarImg" src="{$GLOBALS.site_url}/system/ext/jquery/progbar.gif" alt="[[Please wait ...]]" /> [[Please wait ...]]
+			<div class="inputField col-sm-8">
+					<div id="loading-progbar" class="add-picture-loading" style="display:none;">
+						<img class="progBarImg" src="{$GLOBALS.site_url}/system/ext/jquery/progbar.gif" alt="[[Please wait ...]]" /> [[Please wait ...]]
+					</div>
+					<div id="UploadPics" value="{$picValue}"></div>
 			</div>
-			<div id="UploadPics" value="{$picValue}"></div>
-		</div>
+
 	</div>
+
+
 {/if}
 
 {if $expirationField}{$expirationField}{/if}

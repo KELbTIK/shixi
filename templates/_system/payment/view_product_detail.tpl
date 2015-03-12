@@ -20,136 +20,139 @@
 {/if}
 {if $mayChooseProduct}
 	<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data" >
-		<input type="hidden" name="product_sid" value="{$productSID}" />
-		<input type="hidden" name="event" value="add_product" />
-		<div id="productDetails">
+		<div class="col-sm-8">
 
-			[[{$productInfo.detailed_description}]]
-			{capture assign="productPrice"}{tr type="float"}{$productInfo.price}{/tr}{/capture}
-			{if $productInfo.period}
-				{if $productInfo.period_name != 'unlimited'}
-					<div class="productDetails-name">[[Period]]:</div>
-					<div class="productDetails-info">{$productInfo.period} {if $productInfo.period > 1 }[[{$productInfo.period_name|capitalize}s]]{else}[[{$productInfo.period_name|capitalize}]]{/if}</div>
-					<div class="clearfix"></div>
+				<input type="hidden" name="product_sid" value="{$productSID}" />
+				<input type="hidden" name="event" value="add_product" />
+				<div id="productDetails">
+
+					[[{$productInfo.detailed_description}]]
+					{capture assign="productPrice"}{tr type="float"}{$productInfo.price}{/tr}{/capture}
+					{if $productInfo.period}
+						{if $productInfo.period_name != 'unlimited'}
+							<div class="productDetails-name col-sm-offset-1">[[Period]]:</div>
+							<div class="productDetails-info col-sm-offset-1">{$productInfo.period} {if $productInfo.period > 1 }[[{$productInfo.period_name|capitalize}s]]{else}[[{$productInfo.period_name|capitalize}]]{/if}</div>
+							<div class="clearfix"></div>
+						{/if}
+
+					{elseif $productInfo.fixed_period}
+						<div class="productDetails-name col-sm-offset-1">[[Qty]]:</div>
+						<div class="productDetails-info col-sm-offset-1">{$productInfo.number_of_listings}</div>
+						<div class="clearfix"></div>
+						<div class="productDetails-name col-sm-offset-1">[[Price]]:</div>
+						<div class="productDetails-info viewProductsPrice col-sm-offset-1">{currencyFormat amount=$productPrice}</div>
+					{elseif $productInfo.pricing_type == custom_period}
+						{if $productInfo.expiration_period}
+							<div class="productDetails-name col-sm-offset-1">[[Period]]:</div>
+							<div class="productDetails-info col-sm-offset-1">{$productInfo.expiration_period} [[days]]</div>
+							<div class="clearfix"></div>
+						{/if}
+						<div class="productDetails-name col-sm-offset-1">[[Price]]:</div>
+						<div class="productDetails-info viewProductsPrice col-sm-offset-2">{currencyFormat amount=$productPrice}</div>
+					{elseif $productInfo.volume_based_pricing}
+
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="tableLeft "> </th>
+									<th>[[Qty]]</th>
+									<th class="text-center">[[Price per Posting]]</th>
+									<th class="text-center">[[Savings]]</th>
+									<th class="tableRight"> </th>
+								</tr>
+							</thead>
+							<tbody>
+							{foreach from=$productInfo.volume_based_pricing item=pricing}
+								<tr class="{cycle values = 'evenrow,oddrow' advance=true}">
+									<td></td>
+									<td>{$pricing.range.from}{if $pricing.range.to} - {$pricing.range.to}{/if}</td>
+									<td class="text-center">
+										{capture assign="price"}{tr type="float"}{$pricing.price}{/tr}{/capture}
+										{currencyFormat amount=$price}
+									</td>
+									<td class="text-center">{if $pricing.savings}{$pricing.savings}%{/if}</td>
+									<td></td>
+								</tr>
+							{/foreach}
+							</tbody>
+						</table>
+					</div>
+
+
+						<div id="productsSelect">
+							<select  name="number_of_listings" id="number_of_listings" class="pull-left" onChange="getPrice(this.value)">
+								{foreach from=$productInfo.count_listings item=count_listings}
+									<option value="{$count_listings}">[[{$count_listings}]]</option>
+								{/foreach}
+							</select>
+						</div>
+						<div id="volume_price">&nbsp;</div>
+					{else}
+						{if $productInfo.number_of_listings}
+							<div class="productDetails-name">[[Qty]]:</div>
+							<div class="productDetails-info">{$productInfo.number_of_listings}</div>
+							<div class="clearfix"></div>
+						{/if}
+						{if $productInfo.expiration_period}
+
+							<div class="productDetails-name">[[Period]]:</div>
+							<div class="productDetails-info">{$productInfo.expiration_period} [[days]]</div>
+							<div class="clearfix"></div>
+
+						{/if}
+						<div class="productDetails-name">[[Price]]:</div>
+						<div class="productDetails-info viewProductsPrice">{currencyFormat amount=$productPrice}</div>
+					{/if}
+				</div>
+				{if $productInfo.product_type == 'banners'}
+					<br/><br/>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">[[Required Banner Width]]:</label>
+							<label class="col-sm-2 control-label pull-left">{$productInfo.width} Pixels</label>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">[[Required Banner Height]]:</label>
+							<label class="col-sm-2 control-label">{$productInfo.height} Pixels</label>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">[[Banner Name]]:</label>
+							<div class="col-sm-8">
+								<input class="form-control" type="{$banner_fields.title.type}" name="{$banner_fields.title.id}" value="{$banner_fields.title.value}">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">[[Banner Link]]:</label>
+							<div class="col-sm-8">
+								<input class="form-control type="{$banner_fields.link.type}" name="{$banner_fields.link.id}" value="{$banner_fields.link.value}" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">[[Banner File]]:</label>
+							<div class="col-sm-8">
+								<input type="{$banner_fields.image.type}" name="{$banner_fields.image.id}" value="{$banner_fields.image.value}" />
+							</div>
+						</div>
+
 				{/if}
-
-			{elseif $productInfo.fixed_period}
-				<div class="productDetails-name">[[Qty]]:</div>
-				<div class="productDetails-info">{$productInfo.number_of_listings}</div>
 				<div class="clearfix"></div>
-				<div class="productDetails-name">[[Price]]:</div>
-				<div class="productDetails-info viewProductsPrice">{currencyFormat amount=$productPrice}</div>
-			{elseif $productInfo.pricing_type == custom_period}
-				{if $productInfo.expiration_period}
-					<div class="productDetails-name">[[Period]]:</div>
-					<div class="productDetails-info">{$productInfo.expiration_period} [[days]]</div>
-					<div class="clearfix"></div>
-				{/if}
-				<div class="productDetails-name">[[Price]]:</div>
-				<div class="productDetails-info viewProductsPrice">{currencyFormat amount=$productPrice}</div>
-			{elseif $productInfo.volume_based_pricing}
+				<br />
 
-			<div class="table-responsive">
-				<table class="table table-bordered">
-					<thead>
-						<tr>
-							<th class="tableLeft "> </th>
-							<th>[[Qty]]</th>
-							<th class="text-center">[[Price per Posting]]</th>
-							<th class="text-center">[[Savings]]</th>
-							<th class="tableRight"> </th>
-						</tr>
-					</thead>
-					<tbody>
-					{foreach from=$productInfo.volume_based_pricing item=pricing}
-						<tr class="{cycle values = 'evenrow,oddrow' advance=true}">
-							<td></td>
-							<td>{$pricing.range.from}{if $pricing.range.to} - {$pricing.range.to}{/if}</td>
-							<td class="text-center">
-								{capture assign="price"}{tr type="float"}{$pricing.price}{/tr}{/capture}
-								{currencyFormat amount=$price}
-							</td>
-							<td class="text-center">{if $pricing.savings}{$pricing.savings}%{/if}</td>
-							<td></td>
-						</tr>
-					{/foreach}
-					</tbody>
-				</table>
-			</div>
+					<div class="product-detail-button"><input class="btn btn-default btn-sm" type="button" name="continue" value="[[Back to Products]]" onClick="location.href = '{$GLOBALS.site_url}/{$userGroupID|lower}-products/'" /></div>
+					{if $GLOBALS.settings.allow_to_post_before_checkout == '1' && ($productInfo.product_type == 'post_listings' || $productInfo.product_type == 'mixed_product')}
+						<div class="product-detail-button">
+							<input class="btn btn-primary btn-sm" type="hidden" name="productSID" value="{$productSID}" />
+							<input class="btn btn-primary btn-sm" type="hidden" name="proceed_to_posting" value="done" />
+							<input class="btn btn-primary btn-sm" type="hidden" name="listing_type_id" value="{$productInfo.listingTypeID}" />
+							<input class="btn btn-primary btn-sm" type="button" value="[[Proceed to Posting]]" id="proceedToPosting" onclick="submitProductDetailForm('proceedToPosting');" />
+						</div>
+					{/if}
+					<div>
+						<input class="btn btn-success btn-sm" type="button" name="checkout" id="addToCart" value="[[Add to Cart]]" onclick="submitProductDetailForm('addToCart');" />
+					</div>
 
-
-				<div id="productsSelect">
-					<select  name="number_of_listings" id="number_of_listings" class="pull-left" onChange="getPrice(this.value)">
-						{foreach from=$productInfo.count_listings item=count_listings}
-							<option value="{$count_listings}">[[{$count_listings}]]</option>
-						{/foreach}
-					</select>
-				</div>
-				<div id="volume_price">&nbsp;</div>
-			{else}
-				{if $productInfo.number_of_listings}
-					<div class="productDetails-name">[[Qty]]:</div>
-					<div class="productDetails-info">{$productInfo.number_of_listings}</div>
-					<div class="clearfix"></div>
-				{/if}
-				{if $productInfo.expiration_period}
-
-					<div class="productDetails-name">[[Period]]:</div>
-					<div class="productDetails-info">{$productInfo.expiration_period} [[days]]</div>
-					<div class="clearfix"></div>
-
-				{/if}
-				<div class="productDetails-name">[[Price]]:</div>
-				<div class="productDetails-info viewProductsPrice">{currencyFormat amount=$productPrice}</div>
-			{/if}
 		</div>
-		{if $productInfo.product_type == 'banners'}
-
-				<div class="form-group">
-					<label class="col-sm-3 control-label">[[Required Banner Width]]:</label>
-					<label class="col-sm-8 control-label pull-left">{$productInfo.width} Pixels</label>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">[[Required Banner Height]]:</label>
-					<label class="col-sm-8 control-label">{$productInfo.height} Pixels</label>
-				</div>
-
-				<div class="form-group">
-					<label class="col-sm-3 control-label">[[Banner Name]]:</label>
-					<div class="col-sm-8">
-						<input class="form-control" type="{$banner_fields.title.type}" name="{$banner_fields.title.id}" value="{$banner_fields.title.value}">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">[[Banner Link]]:</label>
-					<div class="col-sm-8">
-						<input class="form-control type="{$banner_fields.link.type}" name="{$banner_fields.link.id}" value="{$banner_fields.link.value}" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">[[Banner File]]:</label>
-					<div class="col-sm-8">
-						<input type="{$banner_fields.image.type}" name="{$banner_fields.image.id}" value="{$banner_fields.image.value}" />
-					</div>
-				</div>
-
-		{/if}
-		<div class="clearfix"></div>
-		<br />
-
-			<div class="product-detail-button"><input class="btn btn-default btn-sm" type="button" name="continue" value="[[Back to Products]]" onClick="location.href = '{$GLOBALS.site_url}/{$userGroupID|lower}-products/'" /></div>
-			{if $GLOBALS.settings.allow_to_post_before_checkout == '1' && ($productInfo.product_type == 'post_listings' || $productInfo.product_type == 'mixed_product')}
-				<div class="product-detail-button">
-					<input class="btn btn-primary btn-sm" type="hidden" name="productSID" value="{$productSID}" />
-					<input class="btn btn-primary btn-sm" type="hidden" name="proceed_to_posting" value="done" />
-					<input class="btn btn-primary btn-sm" type="hidden" name="listing_type_id" value="{$productInfo.listingTypeID}" />
-					<input class="btn btn-primary btn-sm" type="button" value="[[Proceed to Posting]]" id="proceedToPosting" onclick="submitProductDetailForm('proceedToPosting');" />
-				</div>
-			{/if}
-			<div>
-				<input class="btn btn-success btn-sm" type="button" name="checkout" id="addToCart" value="[[Add to Cart]]" onclick="submitProductDetailForm('addToCart');" />
-			</div>
-
 	</form>
 	<script language="javascript" type="text/javascript">
 		var langSettings = {

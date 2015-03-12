@@ -23,7 +23,7 @@
             </div>
         </div>
 
-		<div id="quick-stats">
+		<div id="quick-stats" class="table-responsive">
 			<table class="table">
 				<tbody>
 					<tr>

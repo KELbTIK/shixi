@@ -1,22 +1,27 @@
-<h1>[[My Invoices]]</h1>
-<form method="get" name="search_form" class="invoice-form" action="">
-	<fieldset>
-		<div class="inputName">[[Invoice]]&nbsp;&#35;</div>
-		<div class="inputField">{search property="sid"}</div>
-	</fieldset>
-	<fieldset>
-		<div class="inputName">[[From]]</div>
-		<div class="inputField">{search property="date"}</div>
-	</fieldset>
-	<fieldset>
-		<div class="inputName">[[Status]]</div>
-		<div class="inputField">{search property="status"}</div>
-	</fieldset>
-	<fieldset>
-		<div class="inputName">&nbsp;<input type="hidden" name="action" value="search" /></div>
-		<div class="inputField"><input type="submit" value="Search" class="grayButton" /></div>
-	</fieldset>
-</form>
+<div class="page-top">
+    <div class="form-block center-block">
+        <h2>[[My Invoices]]</h2>
+        <hr/>
+        <form method="get" name="search_form" class="invoice-form form-horizontal" action="">
+            <div class="form-group has-feedback">
+                <label class="inputName col-sm-3 control-label">[[Invoice]]&nbsp;&#35;</label>
+                <div class="inputField col-sm-8">{search property="sid"}</div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="inputName col-sm-3 control-label">[[From]]</label>
+                <div class="inputField col-sm-8">{search property="date"}</div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="inputName col-sm-3 control-label">[[Status]]</label>
+                <div class="inputField col-sm-8">{search property="status"}</div>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="action" value="search" />
+                <div class="inputField col-sm-8 col-sm-offset-3"><input type="submit" value="Search" class="btn btn-gray" /></div>
+            </div>
+        </form>
+    </div>
+</div>
 <script type="text/javascript">
 	$(function () {ldelim}
 	var dFormat = '{$GLOBALS.current_language_data.date_format}';

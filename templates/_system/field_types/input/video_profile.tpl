@@ -18,7 +18,7 @@
 	<div id="user_video_{$id}">
 		<div>
 		{$value.file_name|escape:'html'} ({$filesize|string_format:"%.2f"} {$size_token}) |
-			<a class="delete_profile_video"
+			<a class="delete_profile_video btn btn-warning"
 			   form_token="{$form_token}"
 			   field_id="{$id}"
 			   file_id="{$value.file_id}"
@@ -97,7 +97,7 @@
 			});
 		</script>
 		<div>
-			<a class="delete_profile_video"
+			<a class="delete_profile_video btn btn-warning"
 			   form_token="{$form_token}"
 			   field_id="{$id}"
 			   file_id="{$value.file_id}"

@@ -1,4 +1,5 @@
 {if $GLOBALS.current_user.logged_in}
+    <br/>
 	<a href="{$GLOBALS.site_url}/private-messages/inbox/" class="pm">{if $url == "/private-messages/inbox/" || $url == "/private-messages/inbox/read/"}<span class="strong">[[Inbox]]</span>{else}[[Inbox]]{/if}</a> ({$unread}) |
 	<a href="{$GLOBALS.site_url}/private-messages/outbox/" class="pm">{if $url == "/private-messages/outbox/" || $url == "/private-messages/outbox/read/"}<span class="strong">[[Outbox]]</span>{else}[[Outbox]]{/if}</a> |
 	<a href="{$GLOBALS.site_url}/private-messages/send/" class="pm">{if $url == "/private-messages/send/"}<span class="strong">[[Compose Message]]</span>{else}[[Compose Message]]{/if}</a> |

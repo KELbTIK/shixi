@@ -1,30 +1,30 @@
 {if $errors}
 	{foreach item='error' from=$errors}
-		<p class="error">
+		<div class="error alert alert-danger">
 			{if $error == 'ACCESS_DENIED'}
 				[[You don't have permissions to access this page.]]
 			{else}
 				{$error}
 			{/if}
-		</p>
+		</div>
 	{/foreach}
 {else}
 	{if $isSubuserRegistered}
-		<p class="message">[[Sub-user registered successfully]]</p>
+		<div class="message alert alert-success">[[Sub-user registered successfully]]</div>
 	{/if}
 
 	<div id="sub-accounts">
-		<a href="{$GLOBALS.site_url}/sub-accounts/new/">[[Create New Account]]</a>
-		<div class="clr"><br/></div>
+        <br/>
+		<a class="btn btn-dark" href="{$GLOBALS.site_url}/sub-accounts/new/">[[Create New Account]]</a>
 
 		<form method="post" action="{$GLOBALS.site_url}/sub-accounts/">
 			<input type="hidden" name="action_name" value="delete" />
-			[[Actions with Selected]]:
-			<input type="submit" name="action_delete" value="[[Delete]]" class="button" onclick="return confirm('[[Are you sure?]]')" />
-			<div class="clr"><br/></div>
+			[[Actions with Selected]]: &nbsp;
+			<input type="submit" name="action_delete" value="[[Delete]]" class="button btn btn-danger" onclick="return confirm('[[Are you sure?]]')" />
+			<div class="clearfix"></div>
 
-			<div class="results">
-				<table>
+			<div class="results table-responsive">
+				<table class="table table-condensed table-striped">
 					<thead>
 						<tr>
 							<th class="tableLeft"> </th>
@@ -39,15 +39,12 @@
 						{foreach from=$subusers item=subuser name=subuser_block}
 							<tr {if $listing.priority == 1}class="priorityListing"{else}class="{cycle values = 'evenrow,oddrow'}"{/if}>
 								<td> </td>
-								<td><input type="checkbox" name="user_id[]" value="{$subuser.sid}" id="checkbox_{$smarty.foreach.subuser_block.iteration}" /></td>
-								<td>{if !$isEmailAsUsername}<a href="{$GLOBALS.site_url}/sub-accounts/edit/?user_id={$subuser.sid}"><span class="strong"><span class="longtext-45">{$subuser.username}</span></span></a>{/if}</td>
-								<td><a href="{$GLOBALS.site_url}/sub-accounts/edit/?user_id={$subuser.sid}"><span class="strong"><span class="longtext-35">{$subuser.email}</span></span></a></td>
-								<td><a href="{$GLOBALS.site_url}/sub-accounts/edit/?user_id={$subuser.sid}">[[Edit]]</a></td>
-								<td><a href="{$GLOBALS.site_url}/sub-accounts/?action_name=delete&amp;user_id[]={$subuser.sid}" onclick="return confirm('[[Are you sure?]]')">[[Delete]]</a></td>
+								<td><div>&nbsp;</div><input type="checkbox" name="user_id[]" value="{$subuser.sid}" id="checkbox_{$smarty.foreach.subuser_block.iteration}" /></td>
+								<td><div>&nbsp;</div>{if !$isEmailAsUsername}<a href="{$GLOBALS.site_url}/sub-accounts/edit/?user_id={$subuser.sid}"><span class="strong"><span class="longtext-45">{$subuser.username}</span></span></a>{/if}</td>
+								<td><div>&nbsp;</div><a href="{$GLOBALS.site_url}/sub-accounts/edit/?user_id={$subuser.sid}"><span class="strong"><span class="longtext-35">{$subuser.email}</span></span></a></td>
+								<td><a class="btn btn-warning btn-sm radius" href="{$GLOBALS.site_url}/sub-accounts/edit/?user_id={$subuser.sid}">[[Edit]]</a></td>
+								<td><a class="btn btn-danger btn-sm radius" href="{$GLOBALS.site_url}/sub-accounts/?action_name=delete&amp;user_id[]={$subuser.sid}" onclick="return confirm('[[Are you sure?]]')">[[Delete]]</a></td>
 								<td> </td>
-							</tr>
-							<tr>
-								<td colspan="7" class="separateListing"> </td>
 							</tr>
 						{/foreach}
 					</tbody>

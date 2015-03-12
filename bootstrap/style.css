@@ -6076,7 +6076,29 @@ ul.tweets li span {
 }
 .cke_chrome{
     width: 100%!important;
+    box-sizing: border-box!important;
 }
 .btn-recovery{
     margin: 0;
+}
+img.ui-datepicker-trigger{
+    display: none;
+}
+.sorting-filters .pagination{
+    margin: 5px 0 0 0;
+}
+.pagination-bottom{
+    margin-top: 10px;
+}
+.btn-filter .btn{
+    margin-top: 0;
+}
+.inline-form{
+    margin: 0;
+}
+.lightblue{
+    color: lightblue;
+}
+.lightgray{
+    color: lightgray;
 }

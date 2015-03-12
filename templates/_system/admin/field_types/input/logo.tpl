@@ -59,6 +59,6 @@
 		{else}
 			<small>([[max.]] {$uploadMaxFilesize} M)</small>
 		{/if}
-		
+
 	</div>
 {/if}

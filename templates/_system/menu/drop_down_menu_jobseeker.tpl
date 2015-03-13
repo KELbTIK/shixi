@@ -1,4 +1,4 @@
-<ul>
+<ul class="dropdown-menu">
     <li><a href="{$GLOBALS.site_url}/edit-profile/">[[My Profile]]</a></li>
 	{foreach from=$listingTypesInfo item="listingTypeInfo"}
 		{if ($acl->isAllowed('post_'|cat:$listingTypeInfo.id)) || $listingTypeInfo.id == 'Resume'}

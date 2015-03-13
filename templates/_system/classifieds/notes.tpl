@@ -54,14 +54,14 @@
 	{/if}
 {else}
 	{foreach from=$errors key=error_code item=error_message}
-			<p class="error">
-				{if $error_code == 'UNDEFINED_LISTING_ID'}
-					[[Listing ID is not defined]]
-				{elseif $error_code == 'UNDEFINED_APPS_ID'}
-					[[Application ID is not defined]]
-				{else}
-					[[{$error_message}]]
-				{/if}
-			</p>
+		<div class="error alert alert-danger" role="alert">
+			{if $error_code == 'UNDEFINED_LISTING_ID'}
+				[[Listing ID is not defined]]
+			{elseif $error_code == 'UNDEFINED_APPS_ID'}
+				[[Application ID is not defined]]
+			{else}
+				[[{$error_message}]]
+			{/if}
+		</div>
 	{/foreach}
 {/if}

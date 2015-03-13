@@ -29,7 +29,7 @@
 			<label class="inputName col-sm-3 control-label">Message</label>
 			<div class="inputField col-sm-8">
 				{WYSIWYGEditor name="form_message" class="inputText" height="300px" value=$form_message conf="Basic"}
-				
+
 				<div class="radio">
 					<label>
 						<input type="checkbox" name="form_save" value="1" {if $save }checked="checked"{/if} />

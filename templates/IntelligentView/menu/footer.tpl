@@ -52,9 +52,7 @@
                                     <li>
                                         <a href="{$GLOBALS.site_url}/about/">[[About Us]]</a>
                                     </li>
-                                    <li>
-                                       <a href="{$GLOBALS.site_url}/site-map/">[[Sitemap]]</a>
-                                    </li>
+
 
 
                                 </ul>
@@ -110,6 +108,9 @@
                                             </li>
                                         {/if}
                                     {/if}
+                                    <li>
+                                        <a href="{$GLOBALS.site_url}/site-map/">[[Sitemap]]</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

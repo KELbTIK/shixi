@@ -1,9 +1,9 @@
 .fixed  .logo a img{
-	margin-top:15px;
+	margin-top:18px;
 }
 
 .object-visible .logo a img{
-	margin-top:6px;
+	margin-top:9px;
 }
 
 @media(max-width:767px){
@@ -85,4 +85,8 @@ right: -190px;
 
 .salary-abbr .text-center{
 	line-height: 40px;
+}
+
+.table-contacts td{
+	vertical-align: middle !important;
 }

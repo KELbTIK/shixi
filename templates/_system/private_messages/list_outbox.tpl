@@ -37,8 +37,8 @@
 				<th class="tableLeft"> </th>
 				<th width="1"><input type="checkbox" id="pm_all_check" /></th>
 				<th width="30%">[[To]]</th>
-				<th width="50%">[[Subject]]</th>
-				<th>[[Date]]</th>
+				<th width="40%">[[Subject]]</th>
+				<th width="20%">[[Date]]</th>
 				<th> </th>
 				<th class="tableRight"> </th>
 			</tr>
@@ -57,6 +57,7 @@
 					</td>
 					<td><a href="{$GLOBALS.site_url}/private-messages/outbox/read/?id={$one.id}">{$one.subject}</a></td>
 					<td>{$one.time|date_format:$GLOBALS.current_language_data.date_format} {$one.time|date_format:"%H:%M:%S"}</td>
+
 					<td>
 						{if $one.status == 0}<i class="fa fa-envelope lightblue"></i>
 						{elseif $one.status == 1}<i class="fa fa-envelope"></i>

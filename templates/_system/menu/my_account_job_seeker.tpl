@@ -186,7 +186,7 @@
 	</div>
 </div>
 
-<div id="adSpaceAccount" class="col-sm-5">
+<div id="adSpaceAccount" class="col-sm-5 table-corect">
 	{*<div class="clr"></div>*}
 	{module name="classifieds" function="recently_viewed_listings" count_listing="10"}
 	{module name="classifieds" function="suggested_jobs" count_listing="5"}

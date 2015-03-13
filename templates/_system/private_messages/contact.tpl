@@ -38,31 +38,31 @@
                     {/if}
                     <div class="clr"><br/></div>
 
-                    <fieldset>
-                        <div class="contact-detail-cap">[[Email]]:</div>
-                        <div class="contact-detail-info">{$contactInfo.email}</div>
-                    </fieldset>
-                    <fieldset>
+                    <div >
+                        <div class="contact-detail-cap"><h3>[[Email]]:</h3></div>
+                        <div class="contact-detail-info sorting-filters">{$contactInfo.email}</div>
+                    </div>
+                    <div>
                         <div class="contact-detail-cap">[[Phone Number]]:</div>
                         <div class="contact-detail-info">{$contactInfo.PhoneNumber}</div>
-                    </fieldset>
+                    </div>
                     {if $contactInfo.Location.City || $contactInfo.Location.State || $contactInfo.Location.Country}
-                        <fieldset>
+                        <div>
                             <div class="contact-detail-cap">[[Location]]:</div>
                             <div class="contact-detail-info">{locationFormat location=$contactInfo.Location format="long"}</div>
-                        </fieldset>
+                        </div>
                     {/if}
                     {if $contactInfo.Location.Address}
-                        <fieldset>
+                        <div>
                             <div class="contact-detail-cap">[[Address]]:</div>
                             <div class="contact-detail-info">{$contactInfo.Location.Address}</div>
-                        </fieldset>
+                        </div>
                     {/if}
                     {if $contactInfo.WebSite}
-                        <fieldset>
+                        <div>
                             <div class="contact-detail-cap">[[Web Site]]:</div>
                             <div class="contact-detail-info">{$contactInfo.PhoneNumber}</div>
-                        </fieldset>
+                        </div>
                     {/if}
                 </div>
 
@@ -75,44 +75,46 @@
                         <img src="{image}no-profile-picture.png" border="0" alt="" />
                     {/if}
                 </div>
-                <div class="clr"></div>
+                <div class="clearfix"></div>
+                <div class="col-sm-8">
+                    <div id="under-contact ">
+                        <div id="note-block">
+                            <span id = 'formNote_{$contactInfo.sid}'>
+                                {if $contactInfo.note && $contactInfo.note != ''}
+                                    <span class="strong">[[My notes]]:</span> {$contactInfo.note|escape:"html"}
+                                {/if}
+                            </span>
+                            <span id='notes_{$contactInfo.sid}'>
+                                {if $contactInfo.note && $contactInfo.note != ''}
+                                    <a href="{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=edit_note"
+                                       onclick="SaveAd( 'formNote_{$contactInfo.sid}', '{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=edit_note'); return false;"
+                                       class="action">[[Edit notes]]</a>&nbsp;&nbsp;
+                                    {else}
+                                    <a href="{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=add_note"
+                                       onclick="SaveAd( 'formNote_{$contactInfo.sid}', '{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=add_note'); return false;"
+                                       class="action">[[Add notes]]</a>&nbsp;&nbsp;
+                                {/if}
+                            </span>
+                        </div>
 
-                <div id="under-contact">
-                    <div id="note-block">
-                        <span id = 'formNote_{$contactInfo.sid}'>
-                            {if $contactInfo.note && $contactInfo.note != ''}
-                                <span class="strong">[[My notes]]:</span> {$contactInfo.note|escape:"html"}
-                            {/if}
-                        </span>
-                        <span id='notes_{$contactInfo.sid}'>
-                            {if $contactInfo.note && $contactInfo.note != ''}
-                                <a href="{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=edit_note"
-                                   onclick="SaveAd( 'formNote_{$contactInfo.sid}', '{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=edit_note'); return false;"
-                                   class="action">[[Edit notes]]</a>&nbsp;&nbsp;
-                                {else}
-                                <a href="{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=add_note"
-                                   onclick="SaveAd( 'formNote_{$contactInfo.sid}', '{$GLOBALS.site_url}/private-messages/contact/{$contactInfo.sid}/?action=add_note'); return false;"
-                                   class="action">[[Add notes]]</a>&nbsp;&nbsp;
-                            {/if}
-                        </span>
+                        {if $acl->isAllowed('use_private_messages')}
+                            <div id="cont-info-sendpm">
+                                <input class="btn btn-default btn-sm" type="button" name="send-message" value="[[Send private message]]" onclick="javascript: location.href='{$GLOBALS.site_url}/private-messages/send/?to={$contactInfo.sid}';"/>
+                            </div>
+                        {/if}
                     </div>
 
-                    {if $acl->isAllowed('use_private_messages')}
-                        <div id="cont-info-sendpm">
-                            <input type="button" name="send-message" value="[[Send private message]]" onclick="javascript: location.href='{$GLOBALS.site_url}/private-messages/send/?to={$contactInfo.sid}';"/>
-                        </div>
-                    {/if}
-                </div>
-                <div class="clr"></div>
 
-                <div class="user-listings">
-                    {if $contactInfo.group.id eq "Employer"}
-                        <a href="{$GLOBALS.site_url}/search-results-jobs/?action=search&amp;username[equal]={$contactInfo.sid}">[[View all jobs by this user]]</a>
-                    {elseif $contactInfo.group.id eq "JobSeeker" && $acl->isAllowed('view_resume_search_results')}
-                        <a href="{$GLOBALS.site_url}/search-results-resumes/?action=search&username[equal]={$contactInfo.sid}">[[View all resumes by this user]]</a>
-                    {/if}
-                </div>
+                    <div class="clearfix"></div>
 
+                    <div class="user-listings">
+                        {if $contactInfo.group.id eq "Employer"}
+                            <a href="{$GLOBALS.site_url}/search-results-jobs/?action=search&amp;username[equal]={$contactInfo.sid}">[[View all jobs by this user]]</a>
+                        {elseif $contactInfo.group.id eq "JobSeeker" && $acl->isAllowed('view_resume_search_results')}
+                            <a href="{$GLOBALS.site_url}/search-results-resumes/?action=search&username[equal]={$contactInfo.sid}">[[View all resumes by this user]]</a>
+                        {/if}
+                    </div>
+                </div>
             </div>
         </div>
 	</div>

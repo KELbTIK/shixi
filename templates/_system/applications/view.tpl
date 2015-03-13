@@ -11,7 +11,7 @@
 	{/foreach}
 {/if}
 <div class="app-tracking sorting-filters">
-	<form method="post" name="applicationFilter" action="" class="form-inline"  id="applicationFilter">
+	<form method="post" name="applicationFilter" action="" class="form-inlinid="applicationForm"e"  id="applicationFilter">
 		<input type="hidden" name="orderBy" value="{$orderBy|escape:'html'}" />
 		<input type="hidden" name="order" value="{$order}" />
 		<input type="hidden" name="appsPerPage" value="{$appsPerPage}" />

@@ -3,14 +3,14 @@
 	<input type="hidden" name="orderBy" value="{$orderBy}" />
 	<input type="hidden" name="order" value="{$order}" />
 	<input id="action" type="hidden" name="action" value="" />
-	<p><input type="submit" value="[[Delete]]"	class="button" onclick="if (confirm('[[Are you sure you want to delete selected application(s)?]]')) submitForm('delete');" /></p>
-	
-	<table border="0" cellpadding="0" cellspacing="0" class="tableSearchResultApplications" width="100%">
+	<p><input type="submit" value="[[Delete]]"	class="btn btn-default btn-sm" onclick="if (confirm('[[Are you sure you want to delete selected application(s)?]]')) submitForm('delete');" /></p>
+	<div class="table-responsive">
+		<table border="0" cellpadding="0" cellspacing="0" class="tableSearchResultApplications table">
 		<thead>
 			<tr>
 				<th class="tableLeft"> </th>
 				<th class="pointedInListingInfo2"><input type="checkbox" id="all_checkboxes_control" /></th>
-				<th class="pointedInListingInfo2" width="15%">
+				<th class="pointedInListingInfo2">
 					<a href="?orderBy=date&amp;order={if $orderBy == "date" && $order == "asc"}desc{else}asc{/if}">[[Date Applied]]</a>
 					{if $orderBy == 'date'}{if $order == 'asc'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
 				</th>
@@ -32,17 +32,17 @@
 		{foreach item=application from=$applications name=applications}
 		<tr>
 			<td>&nbsp;</td>
-			<td rowspan="2" class="ApplicationPointedInListingInfo2" width="1"><input type="checkbox" name="applications[{$application.id}]" value="1" id="checkbox_{$smarty.foreach.applications.iteration}" /></td>
-			<td class="ApplicationPointedInListingInfo" width="10%">[[$application.date]]</td>
+			<td rowspan="2" class="ApplicationPointedInListingInfo2"><input type="checkbox" name="applications[{$application.id}]" value="1" id="checkbox_{$smarty.foreach.applications.iteration}" /></td>
+			<td class="ApplicationPointedInListingInfo" >[[$application.date]]</td>
 			<td class="ApplicationPointedInListingInfo">{if $application.job != NULL}<a href="{$GLOBALS.site_url}/display-job/{$application.job.sid}/">{$application.job.Title}</a>{else}[[Not Available Anymore]]{/if}</td>
-			<td class="ApplicationPointedInListingInfo" width="20%">{$application.company.CompanyName}&nbsp; <br/>
+			<td class="ApplicationPointedInListingInfo" >{$application.company.CompanyName}&nbsp; <br/>
 				{if $acl->isAllowed('use_private_messages')}
 					<a href="{$GLOBALS.site_url}/private-messages/send/?to={$application.company.sid}" onclick="popUpWindow('{$GLOBALS.site_url}/private-messages/aj-send/?to={$application.company.username}', 700, '[[Send private message]]', true, {if $GLOBALS.current_user.logged_in}true{else}false{/if}); return false;"  class="pm_send_link">[[Send private message]]</a>
 				{elseif $acl->getPermissionParams('use_private_messages') == "message"}
 					<a href="{$GLOBALS.site_url}/private-messages/send/?to={$application.company.sid}" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=use_private_messages', 400, '[[Send private message]]'); return false;"  class="pm_send_link">[[Send private message]]</a>
 				{/if}
 			</td>
-			<td class="ApplicationPointedInListingInfo" width="10%">[[{$application.status}]]</td>
+			<td class="ApplicationPointedInListingInfo">[[{$application.status}]]</td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr class="table-application-border-bottom">
@@ -56,6 +56,7 @@
 		</tr>
 		{/foreach}
 	</table>
+	</div>
 </form>
 <br/>
 

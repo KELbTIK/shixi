@@ -30,7 +30,7 @@
 		dFormat = dFormat.replace('%d', "dd");
 		dFormat = dFormat.replace('%Y', "yy");
 
-		$("#date_notless, #date_notmore").datepicker({dateFormat: dFormat, showOn: 'button', yearRange: '-99:+99', buttonImage: '{/literal}{$GLOBALS.site_url}/system/ext/jquery/calendar.gif{literal}', buttonImageOnly: true });
+		$("#date_notless, #date_notmore").datepicker({dateFormat: dFormat, yearRange: '-99:+99'});
 
 	{/literal}
 	{rdelim});

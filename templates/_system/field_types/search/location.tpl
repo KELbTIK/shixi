@@ -1,13 +1,13 @@
 {foreach from=$form_fields item=form_field}
 	<div id="{$parentID}_{$form_field.id}" {if $form_field.id == 'State'} style="display: none;" {/if}>
-        <label class="inputName">
+        <label class="inputName col-sm-3 control-label">
         	{if $form_field.id eq "ZipCode"}
 				[[Search Within]]
 			{else}
 				{tr}{$form_field.caption}{/tr|escape:'html'}
 			{/if}
 		</label>
-        <div class="inputField">{if $form_field.type == 'location'}{search property=$form_field.id searchWithin=true template="location.like.tpl"}{elseif $form_field.id eq "City"}{search property=$form_field.id parent=$parentID template="string.like.tpl"}{else}{search property=$form_field.id parent=$parentID}{/if}</div>
+        <div class="inputField col-sm-8">{if $form_field.type == 'location'}{search property=$form_field.id searchWithin=true template="location.like.tpl"}{elseif $form_field.id eq "City"}{search property=$form_field.id parent=$parentID template="string.like.tpl"}{else}{search property=$form_field.id parent=$parentID}{/if}</div>
 	</div>
 {/foreach}
 <script language='JavaScript' type='text/javascript'>

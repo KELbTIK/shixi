@@ -6102,3 +6102,14 @@ img.ui-datepicker-trigger{
 .lightgray{
     color: lightgray;
 }
+.ui-icon{
+    margin-top: 5px;
+}
+.note-group{
+    display: block;
+    width: 100%;
+}
+.note-group > .form-control{
+    width: 100%;
+    position: static;
+}

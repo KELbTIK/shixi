@@ -118,9 +118,9 @@
 
 {if !$GLOBALS.is_ajax}
 	<!-- preloader row here -->
-	<tr id="ajax_preloader_listings_results" class="preloader">
-		<td colspan="6">&nbsp;<img src="{$GLOBALS.site_url}/templates/_system/main/images/ajax_preloader_circular_32.gif" /></td>
-	</tr>
+	{*<tr id="ajax_preloader_listings_results" class="preloader">*}
+		{*<td colspan="6">&nbsp;<img src="{$GLOBALS.site_url}/templates/_system/main/images/ajax_preloader_circular_32.gif" /></td>*}
+	{*</tr>*}
 {/if}
 <script type="text/javascript">
 	function addStatisticsForSimplyHired() {

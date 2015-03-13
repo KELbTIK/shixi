@@ -59,63 +59,63 @@
 			<!-- SAVE LISTING / PRINT LISTING -->
 			<div class="searchResultsHeaderLineNew">
 				<div id="header-searchres-left"></div>
-				<ul>
+				<ul class="list-inline col-xs-12">
 					{if $GLOBALS.user_page_uri != "/my-resume-details/" && $GLOBALS.user_page_uri != "/resume-preview/"}
 						{if $acl->isAllowed('save_resume')}
 							<li class="panelSavedIco">
-								<a onclick="popUpWindow('{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&displayForm=1&listing_type=resume', 400, '[[Save this Resume]]', true, {if $GLOBALS.current_user.logged_in}true{else}false{/if}); return false;" href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}">[[Save this Resume]]</a>
+								<a class="btn btn-success radius btn-sm" onclick="popUpWindow('{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&displayForm=1&listing_type=resume', 400, '[[Save this Resume]]', true, {if $GLOBALS.current_user.logged_in}true{else}false{/if}); return false;" href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}">[[Save this Resume]]</a>
 							</li>
 						{elseif $acl->getPermissionParams('save_resume') == "message"}
 							<li class="panelSavedIco">
-								<a onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=save_resume', 400, '[[Save this Resume]]'); return false;" href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}">[[Save this Resume]]</a>
+								<a class="btn btn-success radius btn-sm" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=save_resume', 400, '[[Save this Resume]]'); return false;" href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}">[[Save this Resume]]</a>
 							</li>
 						{/if}
 						{if $GLOBALS.current_user.logged_in}
 							{if $acl->isAllowed('save_resume')}
 								<li class="panelViewDitailsIco">
-									<a href="{$GLOBALS.site_url}/saved-resumes/">[[View Saved Resumes]]</a>
+									<a class="btn btn-primary radius btn-sm" href="{$GLOBALS.site_url}/saved-resumes/">[[View Saved Resumes]]</a>
 								</li>
 							{elseif $acl->getPermissionParams('save_resume') == "message"}
 								<li class="panelViewDitailsIco">
-									<a href="{$GLOBALS.site_url}/saved-resumes/" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=save_resume', 400, '[[View Saved Resumes]]'); return false;">[[View Saved Resumes]]</a>
+									<a class="btn btn-primary radius btn-sm" href="{$GLOBALS.site_url}/saved-resumes/" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=save_resume', 400, '[[View Saved Resumes]]'); return false;">[[View Saved Resumes]]</a>
 								</li>
 							{/if}
 						{else}
 							<li class="panelViewDitailsIco">
-								<a onclick="popUpWindow('{$GLOBALS.site_url}/saved-listings/?listing_type_id=resume', 400, '[[View Saved Resumes]]'); return false;" href="{$GLOBALS.site_url}/saved-listings/">[[View Saved Resumes]]</a>
+								<a class="btn btn-primary radius btn-sm" onclick="popUpWindow('{$GLOBALS.site_url}/saved-listings/?listing_type_id=resume', 400, '[[View Saved Resumes]]'); return false;" href="{$GLOBALS.site_url}/saved-listings/">[[View Saved Resumes]]</a>
 							</li>
 						{/if}
 					{/if}
 					{if $acl->isAllowed('flag_resume')}
 						<li class="printListingIco">
-							<a href="{$GLOBALS.site_url}/flag-listing/?listing_id={$listing.id}" onclick="popUpWindow('{$GLOBALS.site_url}/flag-listing/?listing_id={$listing.id}', 500, '[[Flag This Resume]]'); return false;">[[Flag This Resume]]</a>
+							<a class="btn btn-warning radius btn-sm" href="{$GLOBALS.site_url}/flag-listing/?listing_id={$listing.id}" onclick="popUpWindow('{$GLOBALS.site_url}/flag-listing/?listing_id={$listing.id}', 500, '[[Flag This Resume]]'); return false;">[[Flag This Resume]]</a>
 						</li>
 					{elseif $acl->getPermissionParams('flag_resume') == "message"}
 						<li class="printListingIco">
-							<a href="{$GLOBALS.site_url}/flag-listing/?listing_id={$listing.id}" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=flag_resume', 400, '[[Flag This Resume]]'); return false;">[[Flag This Resume]]</a>
+							<a class="btn btn-warning radius btn-sm" href="{$GLOBALS.site_url}/flag-listing/?listing_id={$listing.id}" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=flag_resume', 400, '[[Flag This Resume]]'); return false;">[[Flag This Resume]]</a>
 						</li>
 					{/if}
 					{if $GLOBALS.user_page_uri == "/display-resume/"}
 						<li class="printListingIco">
-							<a href="{$GLOBALS.site_url}/display-resume/{$listing.id}?action=download_pdf_version">[[PDF Version]]</a>
+							<a class="btn btn-dark radius btn-sm" href="{$GLOBALS.site_url}/display-resume/{$listing.id}?action=download_pdf_version">[[PDF Version]]</a>
 						</li>
 					{else}
 						<li class="printListingIco">
-							<a href="{$GLOBALS.site_url}/my-resume-details/{$listing.id}?action=download_pdf_version">[[PDF Version]]</a>
+							<a class="btn btn-dark radius btn-sm" href="{$GLOBALS.site_url}/my-resume-details/{$listing.id}?action=download_pdf_version">[[PDF Version]]</a>
 						</li>
 					{/if}
 					{if $GLOBALS.user_page_uri == "/my-resume-details/"}
 						<li class="printListingIco">
-							<a target="_blank" href="{$GLOBALS.site_url}/print-my-resume/?listing_id={$listing.id}">[[Print This Ad]]</a>
+							<a class="btn btn-info radius btn-sm" target="_blank" href="{$GLOBALS.site_url}/print-my-resume/?listing_id={$listing.id}">[[Print This Ad]]</a>
 						</li>
 					{else}
 						<li class="printListingIco">
-							<a target="_blank" href="{$GLOBALS.site_url}/print-listing/?listing_id={$listing.id}">[[Print This Ad]]</a>
+							<a class="btn btn-info radius btn-sm" target="_blank" href="{$GLOBALS.site_url}/print-listing/?listing_id={$listing.id}">[[Print This Ad]]</a>
 						</li>
 					{/if}
 					{if $listing.latitude && $listing.longitude && (!$GLOBALS.settings.cookieLaw || $smarty.cookies.cookiePreferences != "System")}
 						<li class="viewMapIco">
-							<a href="{$GLOBALS.site_url}/display-resume-map/?listing_id={$listing.id}&amp;searchId={$searchId}&amp;view=map" onclick="popUpWindowIframe('{$GLOBALS.site_url}/display-resume-map/?listing_id={$listing.id}&amp;searchId={$searchId}&amp;view=map&amp;lightbox=1', 810, 710, '[[Map]]'); return false;">[[Map View]]</a>
+							<a class="btn btn-default radius btn-sm" href="{$GLOBALS.site_url}/display-resume-map/?listing_id={$listing.id}&amp;searchId={$searchId}&amp;view=map" onclick="popUpWindowIframe('{$GLOBALS.site_url}/display-resume-map/?listing_id={$listing.id}&amp;searchId={$searchId}&amp;view=map&amp;lightbox=1', 810, 710, '[[Map]]'); return false;">[[Map View]]</a>
 						</li>
 					{/if}
 				</ul>
@@ -126,7 +126,7 @@
 			<!-- MODIFY RESULTS / RATING / COMMENTS / PAGGING -->
 			<div class="clr"></div>
 			<div class="underQuickLinks">
-				<div class="ModResults">&nbsp;
+				<div class="ModResults">
 					{if $searchId != "" && $GLOBALS.user_page_uri != "/my-resume-details/" && $GLOBALS.user_page_uri != "/resume-preview/"}
 						<ul>
 							<li class="arrow">
@@ -138,7 +138,7 @@
 						</ul>
 					{/if}
 				</div>
-				<div class="Rating">&nbsp;
+				<div class="Rating">
 					{if $show_rates && $acl->isAllowed('add_resume_ratings')}
 						<ul>
 							<li class="ratingPanel">
@@ -147,14 +147,14 @@
 						</ul>
 					{/if}
 				</div>
-				<div class="Comments">&nbsp;
+				<div class="Comments">
 					{if $show_comments && $acl->isAllowed('add_resume_comments')}
 						<ul><li class="comments"><a href="#comment_1">[[Comments]] (+{$listing.comments_num})</a></li></ul>
 					{elseif $show_comments && $acl->getPermissionParams('add_resume_comments') == "message"}
 						<ul><li class="comments"><a href="#comment_1" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=add_resume_comments', 400, '[[Comments]]'); return false;">[[Comments]] (+{$listing.comments_num})</a></li></ul>
 					{/if}
 				</div>
-				<div class="Pagging">&nbsp;
+				<div class="Pagging">
 					{if $searchId != "" || ($GLOBALS.user_page_uri == "/my-resume-details/" && $GLOBALS.user_page_uri != "/resume-preview/")}
 						<ul>
 							<li class="pagging">
@@ -173,11 +173,11 @@
 		</div>
 	</div>
 	
-	<div id="refineResults">
+	<div id="refineResults" class="col-xs-12">
 		<!-- PROFILE BLOCK -->
 		<div class="userInfo">
-			<div id="blockTop">&nbsp;</div>
-			<div class="compProfileTitle">[[User Info]]</div>
+			<div id="blockTop"></div>
+			<h2 class="compProfileTitle">[[User Info]]</h2>
 			<div class="compProfileInfo">
 				{if $listing.anonymous != 1 || $applications.anonymous === 0 }
 					<span class="strong"><span class="longtext-25">{$listing.user.FirstName|escape:'html'}</span> <span class="longtext-25">{$listing.user.LastName|escape:'html'}</span></span>
@@ -248,13 +248,14 @@
 	<div id="listingsResults">
 		<!-- LISTING INFO BLOCK -->
 		<div class="listingInfo">
-			<h2>{$listing.Title|escape:'html'}</h2>
+			<h2 class="col-xs-12 text-center">{$listing.Title|escape:'html'}</h2>
+            <div class="clearfix"></div>
+            <div class="separator"></div>
 
-			<div class="clr"></div>
 			{* >>>>>>>>>>>>> FIELDS >>>>>>>>>>>>>>>> *}
 			{include file="../builder/bf_displaylisting_fieldsholders.tpl"}
 			{* <<<<<<<<<<<<< FIELDS <<<<<<<<<<<<<<<< *}
-			<div class="clr"><br/></div>
+			<div class="clearfix"></div>
 
 			{* SOCIAL PLUGIN: FACEBOOK LIKE BUTTON *}
 			{module name="social" function="facebook_like_button" listing=$listing type="Resume"}

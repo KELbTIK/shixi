@@ -52,7 +52,8 @@
 						<div class="Results">{tr}Resumes by $firstName $lastName{/tr|escape:'html'}</div><span></span>
 					{/if}
 				{else}
-					<div class="Results">[[Resume Search Results]]</div><span>&nbsp;</span>
+					<h1 class="Results">[[Resume Search Results]]</h1>
+                    <div class="separator-2"></div>
 				{/if}
 				<!-- TOP QUICK LINKS -->
 				<div class="topResultsLinks">
@@ -109,10 +110,10 @@
 
 			{if $view_on_map}
 				<div id="googleMap-links">
-					<a href="{$GLOBALS.site_url}/search-results-resumes/?searchId={$searchId}&amp;action=search&amp;page=1&amp;view=list" id="listView-icon" {if $view == 'list'}onclick="return false;" class="listLink-active"{/if}>[[List View]]</a> &nbsp;
-					<a href="{$GLOBALS.site_url}/search-results-resumes/?searchId={$searchId}&amp;action=search&amp;page=1&amp;view=map" id="mapView-icon" {if $view == 'map'}onclick="return false;" class="listLink-active"{/if}>[[Map View]]</a>
+					<a class="btn btn-sm radius btn-primary" href="{$GLOBALS.site_url}/search-results-resumes/?searchId={$searchId}&amp;action=search&amp;page=1&amp;view=list" id="listView-icon" {if $view == 'list'}onclick="return false;" class="listLink-active"{/if}>[[List View]]</a> &nbsp;
+					<a class="btn btn-sm radius btn-default" href="{$GLOBALS.site_url}/search-results-resumes/?searchId={$searchId}&amp;action=search&amp;page=1&amp;view=map" id="mapView-icon" {if $view == 'map'}onclick="return false;" class="listLink-active"{/if}>[[Map View]]</a>
 				</div>
-				<div class="clr"></div>
+				<div class="clearfix"></div>
 			{/if}
 
 			<!-- TOP RESULTS - PER PAGE - PAGE NAVIGATION -->
@@ -133,9 +134,9 @@
 				</div>
 
 				<div class="numberPerPage">
-					<form method="get" action="" class="listings_per_page_form tableSRNavPerPage">
-						[[Number of resumes per page]]:
-						<select id="listings_per_page1" name="listings_per_page1" onchange="submitForm(1); return false;">
+					<form method="get" action="" class="listings_per_page_form tableSRNavPerPage form-inline">
+                        <label>[[Number of resumes per page]]:</label> &nbsp;
+						<select class="form-control" id="listings_per_page1" name="listings_per_page1" onchange="submitForm(1); return false;">
 							<option value="10" {if $listing_search.listings_per_page == 10}selected="selected"{/if}>10</option>
 							<option value="20" {if $listing_search.listings_per_page == 20}selected="selected"{/if}>20</option>
 							<option value="50" {if $listing_search.listings_per_page == 50}selected="selected"{/if}>50</option>
@@ -172,63 +173,7 @@
 			<div id="refineResults">
 				<div id="blockBg">
 					<div id="blockTop"></div>
-					<div id="blockInner">
-						{if $view == 'map' && $listings}
-							<table cellpadding="0" cellspacing="0" width="100%" id="refineResults">
-								<thead>
-								<tr>
-									<th class="tableLeft"> </th>
-									<th>[[Resume Search Results]]:</th>
-									<th class="tableRight"> </th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr>
-									<td colspan="3">
-										<div id="googleMap-searchResults">
-											{foreach from=$listings item=listing name=listings}
-												{if empty($index)}{assign var=index value=0}{/if}
-												<div class="mapListings-results {cycle values = 'evenrow,oddrow' advance=true}">
-													<div {if $listing.latitude && $listing.longitude}class="listingsWithLocation" onmouseover="javascript: google.maps.event.trigger(markersArray[{$index}], 'click');" onmouseout="javascript: infoWindows[{$index}].close();"{else}class="listingsWithoutLocation" title="No Location"{/if}>
-														<a href="{$GLOBALS.site_url}/display-resume/{$listing.id}/{$listing.Title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html?searchId={$searchId}&amp;page={$listing_search.current_page}" target="_blank"><span class="strong">{$listing.Title|escape:'html'}</span></a><br/>
-														{$listing.Location.City}
-													</div>
-												</div>
-												{if $listing.latitude && $listing.longitude}{assign var=index value=$index+1}{/if}
-											{/foreach}
-										</div>
-										<div class="clr"></div>
-										<div id="googleMap-pagging">
-                                            <ul class="pagination">
-                                                <li class="prevBtn">
-                                                    {if $listing_search.current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-1}&amp;view={$view}">[[Previous]]</a>{else}<a>[[Previous]]</a>{/if}</li>
-                                                <li class="navigationItems">
-                                                    {if $listing_search.current_page-3 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page=1&amp;view={$view}">1</a>{/if}
-                                                    {if $listing_search.current_page-3 > 1}...{/if}
-                                                    {if $listing_search.current_page-2 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-2}&amp;view={$view}">{$listing_search.current_page-2}</a>{/if}
-                                                    {if $listing_search.current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page-1}&amp;view={$view}">{$listing_search.current_page-1}</a>{/if}
-                                                    <a href="#">{$listing_search.current_page}</a>
-                                                    {if $listing_search.current_page+1 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+1}&amp;view={$view}">{$listing_search.current_page+1}</a>{/if}
-                                                    {if $listing_search.current_page+2 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+2}&amp;view={$view}">{$listing_search.current_page+2}</a>{/if}
-                                                    {if $listing_search.current_page+3 < $listing_search.pages_number}...{/if}
-                                                    {if $listing_search.current_page+3 < $listing_search.pages_number + 1}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.pages_number}&amp;view={$view}">{$listing_search.pages_number}</a>{/if}
-                                                </li>
-                                                <li class="nextBtn">{if $listing_search.current_page+1 <= $listing_search.pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$listing_search.current_page+1}&amp;view={$view}">[[Next]]</a>{else}<a>[[Next]]</a>{/if}
 
-                                                </li>
-                                            </ul>
-									</td>
-								</tr>
-								</tbody>
-							</table>
-							<div class="clr"><br/></div>
-						{/if}
-						{if $refineSearch}
-							<div id="ajaxRefineSearch">
-								{include file="search_results_refine_block.tpl"}
-							</div>
-						{/if}
-					</div>
 				</div>
 			</div>
 		{/if}
@@ -240,126 +185,110 @@
 				{if $view == 'map'}
 					{include file='google_map_results.tpl'}
 				{else}
-					<table cellspacing="0">
-						<thead>
-						<tr>
-							<th class="tableLeft"> </th>
-							<th width="24%">[[Name]]</th>
-							<th width="29%">
-								<a href="?searchId={$searchId}&amp;action=search&amp;sorting_field=Title&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field == 'Title'}DESC{else}ASC{/if}">[[Title]]</a>
-								{if $is_show_brief_or_detailed}
-									<a href="?{if $searchId}searchId={$searchId}&amp;{/if}{if $params|strpos:"searchId" !== false}{$params|regex_replace:"/searchId=$searchId&amp;/":""|regex_replace:"/&amp;show_brief_or_detailed=$show_brief_or_detailed/":""}{else}{$params}{/if}&amp;show_brief_or_detailed={if $show_brief_or_detailed == 'brief'}detailed{else}brief{/if}" id="showBriefOrDetailed">({if $show_brief_or_detailed == 'brief'}[[show detailed]]{else}[[Show Brief]]{/if})</a>
-								{/if}
-								{if $listing_search.sorting_field == 'Title'}{if $listing_search.sorting_order == 'ASC'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
-							</th>
-							<th width="14%">
-								<a href="?searchId={$searchId}&amp;action=search&amp;sorting_field=TotalYearsExperience&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field == 'TotalYearsExperience'}DESC{else}ASC{/if}">[[Experience]]</a>
-								{if $listing_search.sorting_field == 'TotalYearsExperience'}{if $listing_search.sorting_order == 'ASC'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
-							</th>
-							<th width="19%">
-								<a href="?searchId={$searchId}&amp;action=search&amp;sorting_field[0]=Location_City&amp;sorting_field[1]=Location_State&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field.0 == 'Location_City'}DESC{else}ASC{/if}">[[Location]]</a>
-								{if $listing_search.sorting_field.0 == 'Location_City'}{if $listing_search.sorting_order == 'ASC'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
-							</th>
-							<th width="9%">
-								<a href="?searchId={$searchId}&amp;action=search&amp;sorting_field=activation_date&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field == 'activation_date'}DESC{else}ASC{/if}">[[Posted]]</a>
-								{if $listing_search.sorting_field == 'activation_date'}{if $listing_search.sorting_order == 'ASC'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
-							</th>
-							<th class="tableRight"> </th>
-						</tr>
-						</thead>
-						<tbody>
-						<!-- Job Info Start -->
-						{assign var='index' value=$listing_search.current_page*$listing_search.listings_per_page-$listing_search.listings_per_page}
-						{foreach from=$listings item=listing name=listings}
-							{if $listing.anonymous == 1 && $search_criteria.username.value != ''}
-							{* it's anonimous resume and search resumes by name - don't show it *}
-							{else}
-								<tr {if $listing.priority == 1}class="priorityListing"{else}class="{cycle values = 'evenrow,oddrow' advance=true}"{/if}>
-									<td colspan="7">
-										<table>
-											<tr>
-												<td> </td>
-												<td width="24%">
-													<a name="listing_{$listing.id}">&nbsp;</a>
-													<span class="strong">{if $listing.anonymous == 1}[[Anonymous User]]{else}<span class="longtext-25">{$listing.user.FirstName}</span> <span class="longtext-25">{$listing.user.LastName}</span>{/if}</span>
-												</td>
-												<td width="29%">
-													<a href="{$GLOBALS.site_url}/display-resume/{$listing.id}/{$listing.Title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html?searchId={$searchId}&amp;page={$listing_search.current_page}" class="JobTittleSR"><span class="strong">{$listing.Title}</span></a>
-												</td>
-												<td width="14%"> {if $listing.TotalYearsExperience>0}{$listing.TotalYearsExperience} [[years]]{/if}</td>
-												<td width="19%"> {locationFormat location=$listing.Location format="short"}</td>
-												<td width="9%"> [[$listing.activation_date]]</td>
-												<td> </td>
-											</tr>
-											{if $show_brief_or_detailed != 'brief'}
-												{if $listing.Objective}
-													<tr>
-														<td> </td>
-														<td colspan="5">{$listing.Objective|strip_tags|truncate:120}</td>
-														<td> </td>
-													</tr>
-												{/if}
-											{/if}
-											<tr>
-												<td> </td>
-												<td colspan="5">
-													<ul>
-														{if $listing.saved_listing && $acl->isAllowed('save_resume')}
-															{if $listing.saved_listing.note && $listing.saved_listing.note != ''}
-																<li class="saved2Ico">
-																	<span id='notes_{$listing.id}'>
-																		<a href="{$GLOBALS.site_url}/edit-notes/?listing_id={$listing.id}" onclick="SaveAd( 'formNote_{$listing.id}', '{$GLOBALS.site_url}/edit-notes/?listing_sid={$listing.id}'); return false;"  class="action">[[Edit notes]]</a>&nbsp;&nbsp;
-																	</span>
-																</li>
-															{else}
-																<li class="saved2Ico">
-																	<span id='notes_{$listing.id}'>
-																		<a href="{$GLOBALS.site_url}/add-notes/?listing_id={$listing.id}" onclick="SaveAd( 'formNote_{$listing.id}', '{$GLOBALS.site_url}/add-notes/?listing_sid={$listing.id}'); return false;"  class="action">[[Add notes]]</a>&nbsp;&nbsp;
-																	</span>
-																</li>
-															{/if}
-														{else}
-															{if $acl->isAllowed('save_resume')}
-																<li class="saved2Ico">
-																	<span id='notes_{$listing.id}'>
-																		<a href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&amp;listing_type=resume" onclick="{if $GLOBALS.current_user.logged_in}SaveAd('notes_{$listing.id}', '{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&listing_type=resume'){else}popUpWindow('{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&listing_type=resume', 300, '[[Save this Resume]]', true, {if $GLOBALS.current_user.logged_in}true{else}false{/if}){/if}; return false;"  class="action">[[Save ad]]</a>
-																	</span>
-																</li>
-															{elseif $acl->getPermissionParams('save_resume') == "message"}
-																<li class="saved2Ico">
-																	<span id='notes_{$listing.id}'>
-																		<a href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=save_resume', 300, '[[Save ad]]'); return false;"  class="action">[[Save ad]]</a>
-																	</span>
-																</li>
-															{/if}
-														{/if}
-														<li class="viewDetails"><a href="{$GLOBALS.site_url}/display-resume/{$listing.id}/{$listing.Title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html?searchId={$searchId}&amp;page={$listing_search.current_page}">[[View resume details]]</a></li>
-														{if $listing.video.file_url}<li class="viewVideo"><a onclick="popUpWindow('{$GLOBALS.site_url}/video-player/?field_id=video&amp;listing_id={$listing.id}', 282, 'VideoPlayer'); return false;"  href="{$GLOBALS.site_url}/video-player/?field_id=video&amp;listing_id={$listing.id}">[[Watch a video]]</a></li>{/if}
-													</ul>
-													<div class="clr"><br/></div>
-													<span id = 'formNote_{$listing.id}'>
-														{if $listing.saved_listing && $listing.saved_listing.note && $listing.saved_listing.note != ''}
-															<b>[[My notes]]:</b> {$listing.saved_listing.note}
-														{/if}
-													</span>
-													<br/><br/>
-												</td>
-												<td> </td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="7" class="separateListing"> </td>
-								</tr>
-							{/if}
-						{/foreach}
-						<!-- END Job Info Start -->
-						</tbody>
-					</table>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-striped">
+                            <thead>
+                            <tr>
+                                <th>[[Name]]</th>
+                                <th>
+                                    <a href="?searchId={$searchId}&amp;action=search&amp;sorting_field=Title&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field == 'Title'}DESC{else}ASC{/if}">[[Title]]</a>
+                                    {if $is_show_brief_or_detailed}
+                                        <a href="?{if $searchId}searchId={$searchId}&amp;{/if}{if $params|strpos:"searchId" !== false}{$params|regex_replace:"/searchId=$searchId&amp;/":""|regex_replace:"/&amp;show_brief_or_detailed=$show_brief_or_detailed/":""}{else}{$params}{/if}&amp;show_brief_or_detailed={if $show_brief_or_detailed == 'brief'}detailed{else}brief{/if}" id="showBriefOrDetailed">({if $show_brief_or_detailed == 'brief'}[[show detailed]]{else}[[Show Brief]]{/if})</a>
+                                    {/if}
+                                    {if $listing_search.sorting_field == 'Title'}{if $listing_search.sorting_order == 'ASC'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
+                                </th>
+                                <th>
+                                    <a href="?searchId={$searchId}&amp;action=search&amp;sorting_field=TotalYearsExperience&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field == 'TotalYearsExperience'}DESC{else}ASC{/if}">[[Experience]]</a>
+                                    {if $listing_search.sorting_field == 'TotalYearsExperience'}{if $listing_search.sorting_order == 'ASC'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
+                                </th>
+                                <th>
+                                    <a href="?searchId={$searchId}&amp;action=search&amp;sorting_field[0]=Location_City&amp;sorting_field[1]=Location_State&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field.0 == 'Location_City'}DESC{else}ASC{/if}">[[Location]]</a>
+                                    {if $listing_search.sorting_field.0 == 'Location_City'}{if $listing_search.sorting_order == 'ASC'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
+                                </th>
+                                <th>
+                                    <a href="?searchId={$searchId}&amp;action=search&amp;sorting_field=activation_date&amp;sorting_order={if $listing_search.sorting_order == 'ASC' && $listing_search.sorting_field == 'activation_date'}DESC{else}ASC{/if}">[[Posted]]</a>
+                                    {if $listing_search.sorting_field == 'activation_date'}{if $listing_search.sorting_order == 'ASC'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Job Info Start -->
+                            {assign var='index' value=$listing_search.current_page*$listing_search.listings_per_page-$listing_search.listings_per_page}
+                            {foreach from=$listings item=listing name=listings}
+                                {if $listing.anonymous == 1 && $search_criteria.username.value != ''}
+                                {* it's anonimous resume and search resumes by name - don't show it *}
+                                {else}
+                                    <tr {if $listing.priority == 1}class="priorityListing"{else}class="{cycle values = 'evenrow,oddrow' advance=true}"{/if}>
+                                        <td>
+                                            <a name="listing_{$listing.id}">&nbsp;</a>
+                                            <span class="strong">{if $listing.anonymous == 1}[[Anonymous User]]{else}<span class="longtext-25">{$listing.user.FirstName}</span> <span class="longtext-25">{$listing.user.LastName}</span>{/if}</span>
+                                        </td>
+                                        <td>
+                                            <a href="{$GLOBALS.site_url}/display-resume/{$listing.id}/{$listing.Title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html?searchId={$searchId}&amp;page={$listing_search.current_page}" class="JobTittleSR"><span class="strong">{$listing.Title}</span></a>
+                                        </td>
+                                        <td> {if $listing.TotalYearsExperience>0}{$listing.TotalYearsExperience} [[years]]{/if}</td>
+                                        <td> {locationFormat location=$listing.Location format="short"}</td>
+                                        <td> [[$listing.activation_date]]</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="5">
+                                            {if $show_brief_or_detailed != 'brief'}
+                                                {if $listing.Objective}
+                                                    {$listing.Objective|strip_tags|truncate:120}
+                                                {/if}
+                                            {/if}
+                                            <ul>
+                                                {if $listing.saved_listing && $acl->isAllowed('save_resume')}
+                                                    {if $listing.saved_listing.note && $listing.saved_listing.note != ''}
+                                                        <li class="saved2Ico">
+                                                            <span id='notes_{$listing.id}'>
+                                                                <a href="{$GLOBALS.site_url}/edit-notes/?listing_id={$listing.id}" onclick="SaveAd( 'formNote_{$listing.id}', '{$GLOBALS.site_url}/edit-notes/?listing_sid={$listing.id}'); return false;"  class="action">[[Edit notes]]</a>&nbsp;&nbsp;
+                                                            </span>
+                                                        </li>
+                                                    {else}
+                                                        <li class="saved2Ico">
+                                                            <span id='notes_{$listing.id}'>
+                                                                <a href="{$GLOBALS.site_url}/add-notes/?listing_id={$listing.id}" onclick="SaveAd( 'formNote_{$listing.id}', '{$GLOBALS.site_url}/add-notes/?listing_sid={$listing.id}'); return false;"  class="action">[[Add notes]]</a>&nbsp;&nbsp;
+                                                            </span>
+                                                        </li>
+                                                    {/if}
+                                                {else}
+                                                    {if $acl->isAllowed('save_resume')}
+                                                        <li class="saved2Ico">
+                                                            <span id='notes_{$listing.id}'>
+                                                                <a href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&amp;listing_type=resume" onclick="{if $GLOBALS.current_user.logged_in}SaveAd('notes_{$listing.id}', '{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&listing_type=resume'){else}popUpWindow('{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}&listing_type=resume', 300, '[[Save this Resume]]', true, {if $GLOBALS.current_user.logged_in}true{else}false{/if}){/if}; return false;"  class="action">[[Save ad]]</a>
+                                                            </span>
+                                                        </li>
+                                                    {elseif $acl->getPermissionParams('save_resume') == "message"}
+                                                        <li class="saved2Ico">
+                                                            <span id='notes_{$listing.id}'>
+                                                                <a href="{$GLOBALS.site_url}/saved-ads/?listing_id={$listing.id}" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=save_resume', 300, '[[Save ad]]'); return false;"  class="action">[[Save ad]]</a>
+                                                            </span>
+                                                        </li>
+                                                    {/if}
+                                                {/if}
+                                                <li class="viewDetails"><a href="{$GLOBALS.site_url}/display-resume/{$listing.id}/{$listing.Title|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html?searchId={$searchId}&amp;page={$listing_search.current_page}">[[View resume details]]</a></li>
+                                                {if $listing.video.file_url}<li class="viewVideo"><a onclick="popUpWindow('{$GLOBALS.site_url}/video-player/?field_id=video&amp;listing_id={$listing.id}', 282, 'VideoPlayer'); return false;"  href="{$GLOBALS.site_url}/video-player/?field_id=video&amp;listing_id={$listing.id}">[[Watch a video]]</a></li>{/if}
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                            <span id = 'formNote_{$listing.id}'>
+                                                {if $listing.saved_listing && $listing.saved_listing.note && $listing.saved_listing.note != ''}
+                                                    <b>[[My notes]]:</b> {$listing.saved_listing.note}
+                                                {/if}
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                {/if}
+                            {/foreach}
+                            <!-- END Job Info Start -->
+                            </tbody>
+                        </table>
+                    </div>
 				{/if}
 			{else}
-				<div class="noListingsFound"><p class="information">[[There are no postings meeting the criteria you specified]]</p></div>
+				<div class="alert alert-info">[[There are no postings meeting the criteria you specified]]</div>
 			{/if}
 		</div>
 		<!-- END LISTINGS TABLE -->
@@ -383,9 +312,9 @@
 						{/if}
 					</div>
 					<div class="numberPerPage">
-						<form method="get" action="" class="listings_per_page_form tableSRNavPerPage">
-							[[Number of resumes per page]]:
-							<select id="listings_per_page2" name="listings_per_page2" onchange="submitForm(2); return false;">
+						<form method="get" action="" class="listings_per_page_form tableSRNavPerPage form-inline">
+                            <label>[[Number of resumes per page]]:</label> &nbsp;
+							<select class="form-control" id="listings_per_page2" name="listings_per_page2" onchange="submitForm(2); return false;">
 								<option value="10" {if $listing_search.listings_per_page == 10}selected="selected"{/if}>10</option>
 								<option value="20" {if $listing_search.listings_per_page == 20}selected="selected"{/if}>20</option>
 								<option value="50" {if $listing_search.listings_per_page == 50}selected="selected"{/if}>50</option>

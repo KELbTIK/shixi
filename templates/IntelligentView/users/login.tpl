@@ -98,16 +98,12 @@
                             </label>
                         </div>
                         {module name="miscellaneous" function="captcha_handle" displayMode="fieldset"}
-                        <input type="submit" class="btn btn-group btn-default btn-sm" value="[[Login]]" class="button" />
+                        <input type="submit" class="btn btn-group btn-default btn-sm" value="[[Login]]"/>
                         <ul>
                             <li><a  href="{$GLOBALS.site_url}/password-recovery/">[[Forgot Your Password?]]</a></li>
                         </ul>
                         <span class="text-center text-muted">Login with</span>
-                        <ul class="social-links colored circle clearfix">
-                            <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-                            <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-                            <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
+                        <div class="soc_reg_form">{module name="social" function="social_plugins" shoppingCart=$shopping_cart}</div>
                     </div>
                 </div>
             </form>

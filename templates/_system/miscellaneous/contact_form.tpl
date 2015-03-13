@@ -3,15 +3,15 @@
 
 	{foreach key="key" item="value" from=$field_errors}
 		{if $key == 'EMAIL'}
-			<p class="error">[[Please specify a valid email address.]]</p>
+			<div class="error alert alert-danger">[[Please specify a valid email address.]]</div>
 		{elseif $key == 'NAME'}
-			<p class="error">[[Please provide your full name.]]</p>
+            <div class="error alert alert-danger">[[Please provide your full name.]]</div>
 		{elseif $key == 'COMMENTS'}
-			<p class="error">[[Please include your comments.]]</p>
+            <div class="error alert alert-danger">[[Please include your comments.]]</div>
 		{elseif $key == 'EMPTY_VALUE'}
-			<p class="error">[[Enter Security code]]</p>
+            <div class="error alert alert-danger">[[Enter Security code]]</div>
 		{elseif $key == 'NOT_VALID'}
-			<p class="error">[[Security code is not valid]]</p>
+            <div class="error alert alert-danger">[[Security code is not valid]]</div>
 		{/if}
 	{/foreach}
 
@@ -45,7 +45,5 @@
 	</div>
 
 	{else}
-		<br />
-		<p>[[Thank you very much for your message. We will respond to you as soon as possible.]]</p>
-		<br />
+		<div class="alert alert-success">[[Thank you very much for your message. We will respond to you as soon as possible.]]</div>
 	{/if}

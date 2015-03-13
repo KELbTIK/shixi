@@ -45,9 +45,11 @@
 		<input type="hidden" name="apps_id" value='{$apps_id}'/>
 		<input type="hidden" id='close' name="close" value=''/>
 		<input type="hidden" name="listing_sid" value='{$listing_sid}'/>
-		<textarea style='width:100%;' cols=3 name='note'>{$saved_listing.note}</textarea><br/>
-		<input type="submit" value="[[Save]]" class="button" {if $view == 'map'}onclick="$('#messageBox').dialog('close'); editNote({$listing_sid});"{/if}/>
-		<input type="submit" value="[[Close]]" class="button" {if $view == 'map'}onclick="$('#messageBox').dialog('close');"{else}onclick='$("#close").val("close")'{/if}/>
+        <div class="note-group">
+            <textarea class="form-control" name='note'>{$saved_listing.note}</textarea>
+        </div>
+		<input type="submit" value="[[Save]]" class="button btn btn-sm btn-success" {if $view == 'map'}onclick="$('#messageBox').dialog('close'); editNote({$listing_sid});"{/if}/>
+		<input type="submit" value="[[Close]]" class="button btn btn-sm btn-danger" {if $view == 'map'}onclick="$('#messageBox').dialog('close');"{else}onclick='$("#close").val("close")'{/if}/>
 	</form>
 	{/if}
 {else}

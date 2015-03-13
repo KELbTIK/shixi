@@ -35,10 +35,10 @@
             <thead>
                 <tr>
                     <th class="tableLeft"> </th>
-                    <th width="1"><input type="checkbox" id="pm_all_check" /></th>
-                    <th width="30%">[[From]]</th>
-                    <th width="40%">[[Subject]]</th>
-                    <th width="15%">[[Date]]</th>
+                    <th><input type="checkbox" id="pm_all_check" /></th>
+                    <th>[[From]]</th>
+                    <th>[[Subject]]</th>
+                    <th>[[Date]]</th>
                     <th> </th>
                     <th class="tableRight"> </th>
                 </tr>

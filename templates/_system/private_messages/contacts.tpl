@@ -35,10 +35,10 @@
 			<thead>
 			<tr>
 				<th class="tableLeft"> </th>
-				<th width="1"><input type="checkbox" id="pm_all_check" /></th>
-				<th width="30%">[[Name]]</th>
-				<th width="40%">[[Email]]</th>
-				<th width="15%">[[Phone Number]]</th>
+				<th><input type="checkbox" id="pm_all_check" /></th>
+				<th>[[Name]]</th>
+				<th>[[Email]]</th>
+				<th>[[Phone Number]]</th>
 				<th> </th>
 				<th class="tableRight"> </th>
 			</tr>
@@ -68,7 +68,6 @@
 						{elseif $one.status == 2}<i class="fa fa-envelope lightgray"></i>
 						{/if}
 					</td>
-					<td> </td>
 				</tr>
 			{/foreach}
 			</tbody>

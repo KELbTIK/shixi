@@ -1,12 +1,12 @@
 <h1>[[My Reports]]</h1>
 <div id="recentlyViewedJobs" class="table-responsive">
-    <div id="recentlyViewedJobs-title"><h2>[[Recently Viewed Jobs]]</h2></div>
+    <div id="recentlyViewedJobs-title" class="table-correct"><h2>[[Recently Viewed Jobs]]</h2></div>
     <table class="table">
         <thead>
             <tr>
                 <th class="tableLeft"> </th>
-                <th class="rec-sug-title-th" width="48%">[[Job Title]]</th>
-                <th class="rec-sug-comp-th" width="25%">[[Company]]</th>
+                <th class="rec-sug-title-th">[[Job Title]]</th>
+                <th class="rec-sug-comp-th">[[Company]]</th>
                 <th class="rec-sug-loc-th">[[Location]]</th>
                 <th class="tableRight"> </th>
             </tr>

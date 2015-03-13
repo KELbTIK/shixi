@@ -54,9 +54,9 @@
 								[[Welcome]] <span class="longtext-50">{if $GLOBALS.current_user.subuser}{$GLOBALS.current_user.subuser.username}{else}{$GLOBALS.current_user.username}{/if}</span>,
 								{if $GLOBALS.current_user.new_messages > 0}
 									{if $acl->isAllowed('use_private_messages')}
-										<a class="btn" href="{$GLOBALS.site_url}/private-messages/inbox/"><img src="{image}new_msg.gif" border="0" alt="[[You have]] {$GLOBALS.current_user.new_messages} [[message]]"  title="[[You have]] {$GLOBALS.current_user.new_messages} [[message]]" /></a>
+										<a class="btn" href="{$GLOBALS.site_url}/private-messages/inbox/"><i class="fa fa-envelope" title="[[You have]] {$GLOBALS.current_user.new_messages} [[message]]"></i></a>
 									{elseif $acl->getPermissionParams('use_private_messages') == "message"}
-										<a class="btn" href="{$GLOBALS.site_url}/private-messages/inbox/" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=use_private_messages', 300, '[[You have]] {$GLOBALS.current_user.new_messages} [[message]]'); return false;" ><img src="{image}new_msg.gif" border="0" alt="[[You have]] {$GLOBALS.current_user.new_messages} [[message]]"  title="[[You have]] {$GLOBALS.current_user.new_messages} [[message]]" /></a>
+										<a class="btn" href="{$GLOBALS.site_url}/private-messages/inbox/" onclick="popUpWindow('{$GLOBALS.site_url}/access-denied/?permission=use_private_messages', 300, '[[You have]] {$GLOBALS.current_user.new_messages} [[message]]'); return false;" ><i class="fa fa-envelope" title="[[You have]] {$GLOBALS.current_user.new_messages} [[message]]"></i></a>
 									{/if}
 								{/if}
 								<a class="btn" href="{$GLOBALS.site_url}/logout/"> [[Logout]]</a>

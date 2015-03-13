@@ -5,33 +5,33 @@
 	<input id="action" type="hidden" name="action" value="" />
 	<p><input type="submit" value="[[Delete]]"	class="button btn btn-danger" onclick="if (confirm('[[Are you sure you want to delete selected application(s)?]]')) submitForm('delete');" /></p>
 	<div class="table-responsive">
-        <table class="tableSearchResultApplications table table-condensed">
+        <table class="tableSearchResultApplications table table-condensed table_view_seeker">
             <thead>
                 <tr>
                     <th class="tableLeft"> </th>
                     <th class="pointedInListingInfo2"><input type="checkbox" id="all_checkboxes_control" /></th>
                     <th class="pointedInListingInfo2" width="15%">
                         <a href="?orderBy=date&amp;order={if $orderBy == "date" && $order == "asc"}desc{else}asc{/if}">[[Date Applied]]</a>
-                        {if $orderBy == 'date'}{if $order == 'asc'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
+                        {if $orderBy == 'date'}{if $order == 'asc'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
                     </th>
                     <th class="pointedInListingInfo2">
                         <a href="?orderBy=title&amp;order={if $orderBy == "title" && $order == "asc"}desc{else}asc{/if}">&nbsp; [[Job Title]]</a>
-                        {if $orderBy == 'title'}{if $order == 'asc'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
+                        {if $orderBy == 'title'}{if $order == 'asc'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
                     </th>
                     <th class="pointedInListingInfo2">
                         <a href="?orderBy=company&amp;order={if $orderBy == "company" && $order == "asc"}desc{else}asc{/if}">&nbsp; [[Company]]</a>
-                        {if $orderBy == 'company'}{if $order == 'asc'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
+                        {if $orderBy == 'company'}{if $order == 'asc'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
                     </th>
                     <th class="pointedInListingInfo2">
                         <a href="?orderBy=status&amp;order={if $orderBy == "status" && $order == "asc"}desc{else}asc{/if}">&nbsp; [[Status]]</a>
-                        {if $orderBy == 'status'}{if $order == 'asc'}<img src="{image}b_up_arrow.png" alt="Up" />{else}<img src="{image}b_down_arrow.png" alt="Down" />{/if}{/if}
+                        {if $orderBy == 'status'}{if $order == 'asc'}<i class="fa fa-sort-up"></i>{else}<i class="fa fa-sort-down"></i>{/if}{/if}
                     </th>
                     <th class="tableRight"> </th>
                 </tr>
             </thead>
             {foreach item=application from=$applications name=applications}
             <tr>
-                <td>&nbsp;</td>
+                <td></td>
                 <td rowspan="2" class="ApplicationPointedInListingInfo2" width="1"><input type="checkbox" name="applications[{$application.id}]" value="1" id="checkbox_{$smarty.foreach.applications.iteration}" /></td>
                 <td class="ApplicationPointedInListingInfo" width="10%">[[$application.date]]</td>
                 <td class="ApplicationPointedInListingInfo">{if $application.job != NULL}<a href="{$GLOBALS.site_url}/display-job/{$application.job.sid}/">{$application.job.Title}</a>{else}[[Not Available Anymore]]{/if}</td>

@@ -1,35 +1,44 @@
 {if $errors}
 	{foreach from=$errors item=error key=error_code}
-		<p class="error">[[{$error_code}]]</p>
+		<div class="error alert alert-danger" role="alert">
+			[[{$error_code}]]
+		</div>
 	{/foreach}
 {else}
 	{if $show_categories_block}
 		<div id="newsCategory">
 			<h1>[[News Categories]]</h1>
 			{if empty($current_category_sid)}
-				<span class="strong">&#187; All</span>
+				<span class="strong">All</span>
 			{else}
 				<a href="{$GLOBALS.site_url}/news/">[[All]]</a>
 			{/if}
+			<span> | </span>
 			{foreach from=$categories item=category}
 				{if $category.name != 'Archive' && $category.count > 0}
 					{if $current_category_sid == $category.sid}
-						<span class="strong">&#187; [[{$category.name}]]</span>
+						<span class="strong">[[{$category.name}]]</span>
 					{else}
 						<a href="{$GLOBALS.site_url}/news/category/{$category.sid}/">[[{$category.name}]]</a>
 					{/if}
+					<span> | </span>
 				{/if}
+
 			{/foreach}
 		</div>
 	{/if}
 
 	<form action="{$GLOBALS.site_url}/news/" class="form-inline">
 			<input type="hidden" name="action" value="search" />
-			<div class="form-group"><input type="text" name="search_text" value="{$searchText}" class="form-control"/></div>
 
-			<div class="form-group"><input type="submit" name="submit" value="[[Search]]" class="btn btn-default btn-sm" /></div>
+					<div class="form-group">
+						<input type="text" name="search_text" value="{$searchText}" class="form-control"/>
+					</div>
+
+					<div class="form-group">
+						<input type="submit" name="submit" value="[[Search]]" class="btn btn-default" />
+					</div>
 	</form>
-	<br/>
 
 	{if $pages > 1}
 		<!-- PAGINATION -->

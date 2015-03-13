@@ -40,28 +40,28 @@
 
                     <div >
                         <div class="contact-detail-cap"><h3>[[Email]]:</h3></div>
-                        <div class="contact-detail-info sorting-filters">{$contactInfo.email}</div>
+                        <div class="contact-detail-info">{$contactInfo.email}</div>
                     </div>
                     <div>
-                        <div class="contact-detail-cap">[[Phone Number]]:</div>
+                        <div class="contact-detail-cap">[[Phone Number]]:<h3>[[Email]]:</h3></div>
                         <div class="contact-detail-info">{$contactInfo.PhoneNumber}</div>
                     </div>
                     {if $contactInfo.Location.City || $contactInfo.Location.State || $contactInfo.Location.Country}
                         <div>
-                            <div class="contact-detail-cap">[[Location]]:</div>
+                            <div class="contact-detail-cap"><h3>[[Location]]:</h3></div>
                             <div class="contact-detail-info">{locationFormat location=$contactInfo.Location format="long"}</div>
                         </div>
                     {/if}
                     {if $contactInfo.Location.Address}
                         <div>
-                            <div class="contact-detail-cap">[[Address]]:</div>
+                            <div class="contact-detail-cap"><h3>[[Address]]:</h3></div>
                             <div class="contact-detail-info">{$contactInfo.Location.Address}</div>
                         </div>
                     {/if}
                     {if $contactInfo.WebSite}
                         <div>
-                            <div class="contact-detail-cap">[[Web Site]]:</div>
-                            <div class="contact-detail-info">{$contactInfo.PhoneNumber}</div>
+                            <div class="contact-detail-cap"><h3>[[Web Site]]:</div>
+                            <div class="contact-detail-info">{$contactInfo.WebSite}</div>
                         </div>
                     {/if}
                 </div>

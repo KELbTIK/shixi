@@ -90,3 +90,18 @@ right: -190px;
 .table-contacts td{
 	vertical-align: middle !important;
 }
+.table_view_seeker td{
+	vertical-align: middle !important;
+}
+
+.table-correct h2{
+	margin-top:10px !important;
+}
+
+.dropdown>a:before {
+	content: none;
+}
+
+.fa-envelope[title^="You have"]{
+	margin-top:3px;
+}

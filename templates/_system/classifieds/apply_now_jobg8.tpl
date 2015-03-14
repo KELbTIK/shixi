@@ -5,11 +5,11 @@
 
 {if $errors}
 	{foreach from=$errors item=error key=error_code}
-		<p class="error">
+		<div class="error alert alert-danger">
 			{if $error_code == 'UNDEFINED_LISTING_ID'}[[Undefined Listing ID for apply]]
 			{elseif $error_code == 'WRONG_LISTING_ID_SPECIFIED'} [[Listing does not exist]]
 			{/if}
-		</p>
+		</div>
 	{/foreach}
 {else}
 	<div class="text-center">

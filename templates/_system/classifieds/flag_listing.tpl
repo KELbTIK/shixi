@@ -1,7 +1,7 @@
 {capture name='flagListingPermission'}flag_{$listing_type_id}{/capture}
 {if ($listing_type_id && $acl->isAllowed($smarty.capture.flagListingPermission))}
 	{foreach from=$errors item=error key=error_code}
-		<p class="error">
+		<div class="error alert alert-danger">
 			{if $error_code == 'EMPTY_VALUE'}
 				[[Enter Security code]]
 			{elseif $error_code == 'NOT_VALID'}
@@ -11,38 +11,38 @@
 			{else}
 				[[{$error}]]
 			{/if}
-		</p>
+		</div>
 	{/foreach}
 
 	<form method="post" id="flagForm" action="" onsubmit="disableSubmitButton('submitForm'); sendFlagForm(); return false;" >
 		<input type="hidden" name="listing_id" value="{$listing_id|htmlspecialchars}" />
 		<input type="hidden" name="action" value="flag" />
 		{if count($flag_types)}
-			<fieldset>
+			<div class="form-group has-feedback">
 				<div class="inputName">[[Select Flag Type]]</div>
 				<div class="inputField">
-					<select name="reason">
+					<select class="form-control"   name="reason">
 						{foreach from=$flag_types item=type}
 							<option value="{$type.sid}" {if $reason == $type.sid} selected="selected"{/if}>[[{$type.value}]]</option>
 						{/foreach}
 					</select>
 				</div>
-			</fieldset>
+			</div>
 		{/if}
-		<fieldset>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Comment]]</div>
-			<div class="inputField"><textarea name="comment" cols="42" rows="3">{$comment}</textarea></div>
-		</fieldset>
-		<fieldset>
+			<div class="inputField"><textarea class="form-control"   name="comment" cols="42" rows="3">{$comment}</textarea></div>
+		</div>
+		<div class="form-group has-feedback">
 			{module name="miscellaneous" function="captcha_handle" currentFunction="flag_listing" displayMode="fieldset"}
-		</fieldset>
-		<fieldset>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">&nbsp;</div>
-			<div class="inputButton"><input type="submit" name="sendForm" value="[[Send]]" class="button" id="submitForm" /></div>
-		</fieldset>
+			<div class="inputButton"><input type="submit" name="sendForm" value="[[Send]]" class="btn btn-default" id="submitForm" /></div>
+		</div>
 	</form>
 {elseif $listing_type_id == ''}
-	<p class="error">[[Listing does not exist]]</p>
+	<div class="error alert alert-danger">  [[Listing does not exist]]</div>
 {else}
-	<p class="error">[[You do not have permissions to flag listing]]</p>
+	<div class="error alert alert-danger">[[You do not have permissions to flag listing]]</div>
 {/if}

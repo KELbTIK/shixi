@@ -1,1 +1,1 @@
-<input type="text" name="{$id}[geo][location]" value="{$value.location}" />
+<input class="form-control" type="text" name="{$id}[geo][location]" value="{$value.location}" />

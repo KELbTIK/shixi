@@ -1,6 +1,6 @@
 <div style="min-height: 26px;">
 	<img id="multilist-preloader-{$id}" src="{$GLOBALS.site_url}/templates/_system/main/images/ajax_preloader_circular_32.gif" height="16px" />
-	<select multiple="multiple" style="display: none;" id="{$id}" class="inputList fieldType{$id} {if $sort_by_alphabet}sortable-select{/if}" name="{$id}[multi_like][]">
+	<select multiple="multiple" style="display: none;" id="{$id}" class="inputList fieldType form-control{$id} {if $sort_by_alphabet}sortable-select{/if}" name="{$id}[multi_like][]">
 		{foreach from=$list_values item=list_value}
 			<option value='{$list_value.id}' {foreach from=$value.multi_like item=value_id}{if $list_value.id == $value_id}selected="selected"{/if}{/foreach} {foreach from=$value.multi_like_and item=value_id}{if $list_value.id == $value_id}selected="selected"{/if}{/foreach} >{tr mode="raw"}{$list_value.caption}{/tr|escape:"html"}</option>
 		{/foreach}

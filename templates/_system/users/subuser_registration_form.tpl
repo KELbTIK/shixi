@@ -5,13 +5,13 @@
 	<form method="post" action="{$GLOBALS.site_url}/sub-accounts/new/" enctype="multipart/form-data" >
 		<input type="hidden" name="action_name" value="new" />
 		{foreach from=$form_fields item=form_field}
-			<fieldset>
+			<div class="form-group has-feedback">
 				<div class="inputName">[[$form_field.caption]]</div>
 				<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
 				<div class="inputField">{input property=$form_field.id}</div>
-			</fieldset>
+			</div>
 		{/foreach}
-		<fieldset>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Permissions]]:</div>
 			<div class="inputReq">&nbsp;</div>
 			<div class="inputField">
@@ -22,11 +22,11 @@
 					<li><input type="checkbox" {if $acl->isAllowed('subuser_use_screening_questionnaires', $user_info.sid)} checked="checked"{/if} name="subuser_use_screening_questionnaires" value="allow" />Manage Questionnaries</li>
 				</ul>
 			</div>
-		</fieldset>
-		<fieldset>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">&nbsp;</div>
 			<div class="inputReq">&nbsp;</div>
 			<div class="inputField"><input type="hidden" name="user_group_id" value="{$user_group_info.id}" /> <input type="submit" value="[[Register]]" /></div>
-		</fieldset>
+		</div>
 	</form>
 </div>

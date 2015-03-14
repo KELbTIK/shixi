@@ -20,14 +20,14 @@
 	{foreach from=$form_fields item="formField"}
 		<div style="display:none;">{input property=$formField.id}</div>
 	{/foreach}
-    <div class="replace-email">
-        <p class="error">
+        <div class="replace-email">
+        <div class="error alert alert-danger">
             [[We're already sending an email alert to this address.]]<br/>
-            [[If you'd like to replace the email alert, click the replace button, or register to save more email alerts.]]
-        </p>
-        <div class="inputButton"><input type="button" name="register" value="[[Register]]" class="button" onclick="location.href='{$GLOBALS.site_url}/registration/'"/></div>
-        <div class="inputButton"><input type="submit" name="replace" value="[[Replace]]" class="button" /></div>
-        <div class="clr"></div>
+                [[If you'd like to replace the email alert, click the replace button, or register to save more email alerts.]]
+        </div>
+        <div class="inputButton"><input type="button" name="register" value="[[Register]]" class="btn btn-success" onclick="location.href='{$GLOBALS.site_url}/registration/'"/></div>
+        <div class="inputButton"><input type="submit" name="replace" value="[[Replace]]" class="btn btn-primary" /></div>
+        <div class="clearfix"></div>
     </div>
 </form>
 

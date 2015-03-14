@@ -22,17 +22,19 @@
 	{/if}
 {else}
 	{foreach from=$errors key=error item=error_message}
-		{if $error == 'PARAMETERS_MISSED'}
-			<p class="error">[[The key parameters are not specified]]</p>
-		{elseif $error == 'WRONG_PARAMETERS_SPECIFIED'}
-			<p class="error">[[Wrong parameters are specified]]</p>
-		{elseif $error == 'NOT_OWNER'}
-			<p class="error">[[You are not owner of this listing]]</p>
-		{elseif $error == 'NOT_LOGGED_IN'}
-			{assign var="url" value=$GLOBALS.site_url|cat:"/registration/"}
-			<p class="error">[[Please log in to access this page. If you do not have an account, please]] <a href="{$url}">[[Register]]</a></p>
-			<br/><br/>
-			{module name="users" function="login"}
-		{/if}
+		<div class="error alert alert-danger">
+			{if $error == 'PARAMETERS_MISSED'}
+				[[The key parameters are not specified]]
+			{elseif $error == 'WRONG_PARAMETERS_SPECIFIED'}
+				[[Wrong parameters are specified]]
+			{elseif $error == 'NOT_OWNER'}
+				[[You are not owner of this listing]]
+			{elseif $error == 'NOT_LOGGED_IN'}
+				{assign var="url" value=$GLOBALS.site_url|cat:"/registration/"}
+				[[Please log in to access this page. If you do not have an account, please]] <a href="{$url}">[[Register]]</a>
+				<br/><br/>
+				{module name="users" function="login"}
+			{/if}
+		</div>
 	{/foreach}
 {/if}

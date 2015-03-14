@@ -21,7 +21,7 @@ function submitForm(id) {
 			<form class="companies_per_page_form tableSRNavPerPage" method="get" action="">
 				<input type="hidden" name="searchId" value="{$searchId}" />
 				[[Number of companies per page]]:
-				<select id="companies_per_page1" name="companies_per_page1" onchange="submitForm(1); return false;">
+				<select class="form-control"  id="companies_per_page1" name="companies_per_page1" onchange="submitForm(1); return false;">
 					<option value="10" {if $companies_per_page == 10}selected="selected"{/if}>10</option>
 					<option value="20" {if $companies_per_page == 20}selected="selected"{/if}>20</option>
 					<option value="50" {if $companies_per_page == 50}selected="selected"{/if}>50</option>
@@ -48,11 +48,12 @@ function submitForm(id) {
 		</div>
 	</div>
 	<div class="topNavBarRight"></div>
-	<div class="clr"><br/></div>
+		<div class="clearfix"></div>
 	<!-- END RESULTS / PER PAGE / NAVIGATION -->
 
 	{if $found_users_sids}
-	<table cellspacing="0">
+	<div class="table-responsive">
+		<table cellspacing="0">
 		<thead>
 			<tr>
 				<th class="tableLeft"> </th>
@@ -96,9 +97,9 @@ function submitForm(id) {
 			{/foreach}
 		</tbody>
 	</table>
-	
+	</div>
 	<!-- RESULTS / PER PAGE / NAVIGATION -->
-	<div class="clr"><br/></div>
+		<div class="clearfix"></div>
 	<div class="topNavBarLeft"></div>
 	<div class="topNavBar">
 		<div class="numberResults">[[Results:]] {$usersCount} {if $usersCount == 1}[[Company]]{else}[[Companies]]{/if}</div>
@@ -106,7 +107,7 @@ function submitForm(id) {
 			<form class="companies_per_page_form tableSRNavPerPage" method="get" action="">
 				<input type="hidden" name="searchId" value="{$searchId}" />
 				[[Number of companies per page]]:
-				<select id="companies_per_page2" name="companies_per_page2" onchange="submitForm(2); return false;">
+				<select class="form-control" id="companies_per_page2" name="companies_per_page2" onchange="submitForm(2); return false;">
 				<option value="10" {if $companies_per_page == 10}selected="selected"{/if}>10</option>
 				<option value="20" {if $companies_per_page == 20}selected="selected"{/if}>20</option>
 				<option value="50" {if $companies_per_page == 50}selected="selected"{/if}>50</option>

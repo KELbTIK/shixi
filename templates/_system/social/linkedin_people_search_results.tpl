@@ -1,10 +1,11 @@
 {if $liNumResults > 0}
-	<div class="clr"><br/></div>
+	<div class="clearfix"></div>
 	<h1>[[LinkedIn People Search Results]]:</h1>
 	{if $liKeywordEmpty}
-		<p class="message">[[To see people outside your network, please enter a search keyword.]]</p>
+		<div class="message alert alert-info"> [[To see people outside your network, please enter a search keyword.]]</div>
 	{/if}
-	<table>
+	<div class="table-responsive">
+		<table>
 		<thead>
 			<tr>
 				<th class="tableLeft"></th>
@@ -28,10 +29,11 @@
 			{/foreach}
 		</tbody>
 	</table>
+	</div>
 {elseif isset($liNumResults)}
 	<h1>[[LinkedIn People Search Results]]:</h1>
 	{if $liKeywordEmpty}
-		<p class="message">[[To see people outside your network, please enter a search keyword.]]</p>
+		<div class="message alert alert-info">[[To see people outside your network, please enter a search keyword.]]</div>
 	{/if}
-	<p class="message">[[no results from linkedin]]</p>
+	<div class="message alert alert-info">[[no results from linkedin]]</div>
 {/if}

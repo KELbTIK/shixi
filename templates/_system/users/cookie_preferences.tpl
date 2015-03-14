@@ -55,14 +55,14 @@
 						<p>
 							[[We use cookies to make your experience of using our website better. To comply with the e-Privacy Directive we need to ask your consent to set these cookies.]]
 						</p>
-						<input type="button" id="closeCookiePreferences_front-end"  value="[[AGREE AND PROCEED]]" />
-						<input type="button" onClick="cookiePreferencesPopupOpen();"  value="[[VIEW COOKIE PREFERENCES]]" />
+						<input type="button" class="btn btn-success" id="closeCookiePreferences_front-end"  value="[[AGREE AND PROCEED]]" />
+						<input type="button" class="btn btn-default" onClick="cookiePreferencesPopupOpen();"  value="[[VIEW COOKIE PREFERENCES]]" />
 					{else}
 						<p class="error">
 							[[You have opted out from usage of cookies on the website. This makes your journey on our website not so comfortable. If you wish you can enable cookies now.]]
 						</p>
-						<input type="button" onClick="cookiePreferencesSave('Advertising');" value="[[Enable]]" />
-						<input type="button" id="closeCookiePreferences_front-end" value="[[No thanks]]" />
+						<input type="button" onClick="cookiePreferencesSave('Advertising');" value="[[Enable]]" class="btn btn-success"/>
+						<input type="button" id="closeCookiePreferences_front-end" value="[[No thanks]]" class="btn btn-default" />
 					{/if}
 				</div>
 			</div>

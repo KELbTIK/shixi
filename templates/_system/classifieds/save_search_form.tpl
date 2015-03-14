@@ -15,36 +15,36 @@
 	<form method="post" action='{$GLOBALS.site_url}/save-search/' id="saveSearchForm" onsubmit="return saveSearchSubmit()">
 		<input type="hidden" name="action" value="save" />
 		<input type="hidden" name="searchId" value="{$searchId}" />
-		<fieldset>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Alert Name]]</div>
-			<div class="inputField"><input type="text" name="search_name" /></div>
-		</fieldset>
-		<fieldset>
+			<div class="inputField"><input class="form-control" type="text" name="search_name" /></div>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Email frequency]]</div>
 			<div class="inputField">
-				<select name="email_frequency">
+				<select class="form-control" name="email_frequency">
 					<option value="daily">[[Daily]]</option>
 					<option value="weekly">[[Weekly]]</option>
 					<option value="monthly">[[Monthly]]</option>
 				</select>
 			</div>
-		</fieldset>
-		<fieldset>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName"><input type="hidden" name="alert" value="1" /></div>
-			<div class="inputButton"><input type="submit" value="[[Save]]" class="button" /></div>
-		</fieldset>
+			<div class="inputButton"><input type="submit" value="[[Save]]" class="btn btn-success" /></div>
+		</div>
 	</form>
 {else}
 	<form method="post" action='{$GLOBALS.site_url}/save-search/' id="saveSearchForm" onsubmit="return saveSearchSubmit()">
 		<input type="hidden" name="action" value="save" />
 		<input type="hidden" name="searchId" value="{$searchId}" />
-		<fieldset>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Search Name]]</div>
-			<div class="inputField"><input type="text" name="search_name" /></div>
-		</fieldset>
-		<fieldset>
+			<div class="inputField"><input class="form-control" type="text" name="search_name" /></div>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">&nbsp;</div>
-			<div class="inputButton"><input type="submit" value="[[Save]]" class="button" /></div>
-		</fieldset>
+			<div class="inputButton"><input type="submit" value="[[Save]]" class="btn btn-success" /></div>
+		</div>
 	</form>
 {/if}

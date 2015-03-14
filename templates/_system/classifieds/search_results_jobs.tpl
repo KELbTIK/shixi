@@ -23,7 +23,7 @@
 		{if !empty($errors)}
 			{foreach from=$errors key='error' item='error_msg'}
 				{if $error == 'SIMPLY_HIRED_XML_READ_FAILED'}
-					<p class="error">[[Failed to read XML from url]] - {$error_msg}</p>
+					<div class="error alert alert-danger">[[Failed to read XML from url]] - {$error_msg}</div>
 				{/if}
 			{/foreach}
 		{/if}

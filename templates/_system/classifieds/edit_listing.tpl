@@ -2,23 +2,25 @@
 <h1>[[Edit Listing]]</h1>
 {if $errors}
 	{foreach from=$errors item="error_data" key="error_id"}
-		{if $error_id == 'MAX_FILE_SIZE_EXCEEDED'}
-			<p class="error">[[Maximum file size is exceeded]]. [[Max available size]] {$post_max_size}</p>
-		{elseif $error_id == 'NOT_OWNER_OF_LISTING'}
-			{assign var="listing_id" value=$error_data}
-			<p class="error">[[You're not the owner of this posting]]</p>
-		{elseif $error_id == 'NO_SUCH_FILE'}<p class="error">[[No such file found in the system]]</p>
-		{elseif $error_id == 'NOT_LOGGED_IN'}
-			<p class="error">[[You are not logged in]]</p>
-			[[Please log in to edit this posting. If you do not have an account, please]] <a href="{$GLOBALS.site_url}/registration/">[[Register.]]</a>
-			<br/><br/>
-			{module name="users" function="login"}
-		{/if}
+		<div class="error alert alert-danger">
+			{if $error_id == 'MAX_FILE_SIZE_EXCEEDED'}
+					[[Maximum file size is exceeded]]. [[Max available size]] {$post_max_size}
+				{elseif $error_id == 'NOT_OWNER_OF_LISTING'}
+					{assign var="listing_id" value=$error_data}
+					[[You're not the owner of this posting]]
+				{elseif $error_id == 'NO_SUCH_FILE'}<p class="error">[[No such file found in the system]]</p>
+				{elseif $error_id == 'NOT_LOGGED_IN'}
+					[[You are not logged in]]
+					[[Please log in to edit this posting. If you do not have an account, please]] <a href="{$GLOBALS.site_url}/registration/">[[Register.]]</a>
+					<br/><br/>
+					{module name="users" function="login"}
+				{/if}
+		</div>
 	{/foreach}
 {else}
 	{include file='field_errors.tpl'}
 	{if $form_is_submitted && !$errors && !$field_errors}
-		<p class="message">[[Your changes were successfully saved]]</p>
+		<div class="message alert alert-info">[[Your changes were successfully saved]]</div>
 	{/if}
 	{* SOCIAL PLUGINGS: AUTOFILL *}
 	{if $socialAutoFillData.allow}
@@ -68,14 +70,14 @@
 		
 		</div>
 		
-		<fieldset>
+		<div class="form-group has-feedback">
 			<div class="inputName">&nbsp;</div>
 			<div class="inputReq">&nbsp;</div>
 			<div class="inputField">
-				<input type="submit" name="preview_listing" value="[[Preview]]" class="button" id="listingPreview"/>
-				<input type="submit" value="[[Post]]" class="button" />
+				<input type="submit" name="preview_listing" value="[[Preview]]" class="btn btn-primary" id="listingPreview"/>
+				<input type="submit" value="[[Post]]" class="btn btn-default" />
 			</div>
-		</fieldset>
+		</div>
 	</form>
 {/if}
 

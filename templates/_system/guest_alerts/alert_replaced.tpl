@@ -1,5 +1,5 @@
 {if !empty($error)}
-<p class="error">[[{$error}]]</p>
-{else}
-<p class="message">[[You have successfully replaced the email alert.]]</p>
+<div class="error alert alert-danger">[[{$error}]]</div>
+    {else}
+<div class="message alert alert-info">[[You have successfully replaced the email alert.]]</div>
 {/if}

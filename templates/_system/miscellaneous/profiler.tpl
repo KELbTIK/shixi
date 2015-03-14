@@ -186,7 +186,7 @@ function changeProfilerSize()
 
 <div id="profilerContainer" class="profiler" style="display:none">
 	<div id="blockResize" class="blockResize"></div>
-	<div id="profiler" class="profilerHead">
+	<div id="profiler" class="profilerHead table-responsive">
 		<table id="metrics" class="metrics" cellspacing="0">
 			<tr>
 				<td id="infometr">
@@ -207,7 +207,7 @@ function changeProfilerSize()
 			</tr>
 		</table>
 		<div id="logsBlock" class="logsBlock">
-			<div id="functionsLog" class="functionsTab">
+			<div id="functionsLog" class="functionsTab  table-responsive">
 				{if $functionCount == 0}<h3>[[This panel has no log items]].</h3>
 					{else}
 					<table class='main' align='center'>
@@ -237,7 +237,8 @@ function changeProfilerSize()
 				{if $queryCount == 0}
 					<h3>[[This panel has no log items]]</h3>
 				{else}
-					<table class='main' cellspacing='0'>
+				<div class="table-responsive">
+						<table class='main' cellspacing='0'>
 						<thead>
 						<tr>
 							<td class="sort">[[Number]]</td>
@@ -272,6 +273,7 @@ function changeProfilerSize()
 							{/foreach}
 						</tbody>
 					</table>
+				</div>
 				{/if}
 			</div>
 		</div>

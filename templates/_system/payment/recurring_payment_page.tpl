@@ -11,13 +11,13 @@
 		<b>[[Errors]]:</b>
 		<ul>
 			{foreach from=$errors item=error}
-				<p class="error"">[[{$error}]]</p>
+				<div class="error alert alert-danger">[[{$error}]]</div>
 			{/foreach}
 		</ul>
 		<hr/>
 		<br/>
 	{/if}
-
+<div class="table-responsive">
 	<table>
 		<tr>
 			<td colspan="2"><b>[[Order Information]]</b></td>
@@ -51,13 +51,13 @@
 		<tr>
 			<td>[[Card Number]] <span style="color:#ff0000;">*</span>:</td>
 			<td>
-				<input type="text" class="input_text" id="x_card_num" name="x_card_num" maxLength="16" value="{$form_data_source.x_card_num}" />&nbsp;([[enter number without spaces or dashes]])
+				<input type="text" class="input_text form-control" id="x_card_num" name="x_card_num" maxLength="16" value="{$form_data_source.x_card_num}" />&nbsp;([[enter number without spaces or dashes]])
 			</td>
 		</tr>
 		<tr>
 			<td>[[Expiration Date]] <span style="color:#ff0000;">*</span>:</td>
 			<td>
-				<input type="text" class="input_text" id="x_exp_date" name="x_exp_date" maxLength="20" value="{$form_data_source.x_exp_date}" />&nbsp;(mmyy)
+				<input type="text" class="input_text form-control" id="x_exp_date" name="x_exp_date" maxLength="20" value="{$form_data_source.x_exp_date}" />&nbsp;(mmyy)
 			</td>
 		</tr>
 		<tr>
@@ -69,67 +69,67 @@
 		<tr>
 			<td>[[First Name]] <span style="color:#ff0000;">*</span>:</td>
 			<td>
-				<input type="text" class="input_text" id="x_first_name" name="x_first_name" maxLength="50" value="{$form_data_source.x_first_name}"/>
+				<input type="text" class="input_text form-control" id="x_first_name" name="x_first_name" maxLength="50" value="{$form_data_source.x_first_name}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Last Name]] <span style="color:#ff0000;">*</span>:</td>
 			<td>
-				<input type="text" class="input_text" id="x_last_name" name="x_last_name" maxLength="50" value="{$form_data_source.x_last_name}"/>
+				<input type="text" class="input_text form-control" id="x_last_name" name="x_last_name" maxLength="50" value="{$form_data_source.x_last_name}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Company]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_company" name="x_company" maxLength="50" value="{$form_data_source.x_company}"/>
+				<input type="text" class="input_text form-control" id="x_company" name="x_company" maxLength="50" value="{$form_data_source.x_company}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Address]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_address" name="x_address" maxLength="60" value="{$form_data_source.x_address}"/>
+				<input type="text" class="input_text form-control" id="x_address" name="x_address" maxLength="60" value="{$form_data_source.x_address}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[City]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_city" name="x_city" maxLength="40" value="{$form_data_source.x_city}"/>
+				<input type="text" class="input_text form-control" id="x_city" name="x_city" maxLength="40" value="{$form_data_source.x_city}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[State]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_state" name="x_state" maxLength="40" value="{$form_data_source.x_state}"/>
+				<input type="text" class="input_text form-control" id="x_state" name="x_state" maxLength="40" value="{$form_data_source.x_state}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Zip Code]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_zip" name="x_zip" maxLength="20" value="{$form_data_source.x_zip}"/>
+				<input type="text" class="input_text form-control" id="x_zip" name="x_zip" maxLength="20" value="{$form_data_source.x_zip}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Country]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_country" name="x_country" maxLength="60" value="{$form_data_source.x_country}"/>
+				<input type="text" class="input_text form-control" id="x_country" name="x_country" maxLength="60" value="{$form_data_source.x_country}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Email]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_email" name="x_email" maxLength="255" value="{$form_data_source.x_email}"/>
+				<input type="text" class="input_text form-control" id="x_email" name="x_email" maxLength="255" value="{$form_data_source.x_email}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Phone]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_phone" name="x_phone" maxLength="25" value="{$form_data_source.x_phone}"/>
+				<input type="text" class="input_text form-control" id="x_phone" name="x_phone" maxLength="25" value="{$form_data_source.x_phone}"/>
 			</td>
 		</tr>
 		<tr>
 			<td>[[Fax]]:</td>
 			<td>
-				<input type="text" class="input_text" id="x_fax" name="x_fax" maxLength="25" value="{$form_data_source.x_fax}"/>
+				<input type="text" class="input_text form-control" id="x_fax" name="x_fax" maxLength="25" value="{$form_data_source.x_fax}"/>
 			</td>
 		</tr>
 		<tr>
@@ -138,9 +138,10 @@
 		<tr>
 			<td>&nbsp;</td>
 			<td>
-				<input type="submit" value="[[Submit]]" />
-				<input type="reset" value="[[Reset]]" />
+				<input class="btn btn-default" type="submit" value="[[Submit]]" />
+				<input class="btn btn-dark" type="reset" value="[[Reset]]" />
 			</td>
 		</tr>
 	</table>
+</div>
 </form>

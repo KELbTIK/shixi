@@ -1,7 +1,7 @@
 <h1>[[All Polls]]</h1>
 <div style="float: left;">
 	<span class="strong">[[Number of polls per page]]:</span>
-	<select id="polls_per_page" name="polls_per_page" onchange="window.location = '?polls_per_page='+this.value;">
+		<select class="form-control" id="polls_per_page" name="polls_per_page" onchange="window.location = '?polls_per_page='+this.value;">
 		<option value="10" {if $polls_per_page == 10}selected="selected"{/if}>10</option>
 		<option value="20" {if $polls_per_page == 20}selected="selected"{/if}>20</option>
 		<option value="50" {if $polls_per_page == 50}selected="selected"{/if}>50</option>

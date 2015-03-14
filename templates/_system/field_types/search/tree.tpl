@@ -10,7 +10,7 @@
 		<div id="tree-{$id}-values-more" style="display: none;"></div>
 		<div id="tree-{$id}-values-more-button" class="more-button" onclick="buttonMoreTreeValuesClick('{$id}', '{$smarty.capture.trLess}', '{$smarty.capture.trMore}');" style="display: none; cursor: pointer;">{$smarty.capture.trMore}</div>
 	</div>
-	<div class="clr"></div>
+	<div class="clearfix"></div>
 </div>
 <input type="hidden" name="{$id}[tree]" id="tree-{$id}-selected" value="" />
 

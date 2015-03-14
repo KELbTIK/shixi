@@ -1,2 +1,2 @@
 <h1>[[Registration]]</h1>
-<p>[[Registration process is successfully completed and your account is waiting for approval by Administrator.]]</p>
+<div class="alert alert-succes">[[Registration process is successfully completed and your account is waiting for approval by Administrator.]]</div>

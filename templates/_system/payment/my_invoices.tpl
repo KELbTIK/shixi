@@ -1,5 +1,5 @@
-<div class="clr"><br/></div>
-<div class="box" id="displayResults">
+<div class="clearfix"></div>
+<div class="box table-responsive" id="displayResults" >
 	<table width="100%">
 		<thead>
 			<tr>

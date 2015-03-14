@@ -1,15 +1,15 @@
 {if $errors}
 	{foreach from=$errors item=message key=error}
 		{if $error eq 'INVOICE_IS_NOT_VERIFIED'}
-			<p class="error">[[Invoice is not verified]]</p>
+			<div class="error alert alert-danger"> [[Invoice is not verified]]
 		{elseif $error eq 'INVALID_INVOICE_ID'}
-			<p class="error">[[Invalid invoice ID is specified]]</p>
+			<div class="error alert alert-danger">[[Invalid invoice ID is specified]]</div>
 		{/if}
 	{/foreach}
 {else}
 	{foreach from=$products item=product name=products_block}
 		{if $product.error}
-			<p class="error">
+			<div class="error alert alert-danger">
 				[[{$product.name}]]:
 				{if $product.error eq 'INVALID_LISTING_ID'}
 					[[Invalid listing ID is specified]] ([[ID]]: {$product.listingSid})
@@ -20,7 +20,7 @@
 				{elseif $product.error eq 'LISTING_ALREADY_ACTIVE'}
 					[[Listing is already active]] ([[ID]]: {$product.listingSid})
 				{/if}
-			</p>
+			</div>
 		{/if}
 	{/foreach}
 	<div style="padding: 20px 0;">

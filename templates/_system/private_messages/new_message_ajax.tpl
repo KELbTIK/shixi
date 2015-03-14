@@ -1,11 +1,11 @@
 <script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
 {if !empty($errors)}
 	{foreach from=$errors item="error"}
-		<p class="error">[[{$error}]]</p>
+		<div class="error alert alert-danger">[[{$error}]]</div>
 	{/foreach}
 {/if}
 <form method="post" action="{$GLOBALS.site_url}/private-messages/aj-send/" id="pm_send_form" onsubmit="disableSubmitButton('pm_send_button');">
-	<fieldset>
+	<div class="form-group has-feedback">
 		<div class="inputName"><span class="strong">[[Message to]]:</span></div>
 		<div class="inputField">
 			{if $anonym}
@@ -16,29 +16,29 @@
 			{/if}
 			<input type="hidden" name="form_to" id="form_to" value="{if $form_to != ""}{$form_to}{else}{$to}{/if}"/>
 		</div>
-	</fieldset>
-	<fieldset>
+	</div>
+	<div class="form-group has-feedback">
 		<div class="inputName"><span class="strong">[[Subject]]:</span></div>
-		<div class="inputField"><input type="text" name="form_subject" id="form_subject" value="{$form_subject}"></div>
-	</fieldset>
-	<fieldset>
+		<div class="inputField"><input class="form-control" type="text" name="form_subject" id="form_subject" value="{$form_subject}"></div>
+	</div>
+	<div class="form-group has-feedback">
 		<div class="inputName"><span class="strong">[[Message]]:</span></div>
 		<div class="inputField">{WYSIWYGEditor name="form_message" class="inputText" height="250px" value="$form_message" conf="Basic"}</div>
-	</fieldset>
-	<fieldset>
+	</div>
+	<div class="form-group has-feedback">
 		<div class="inputName"><span class="strong">[[Save to outbox]]:</span></div>
 		<div class="inputField"><input type="checkbox" name="form_save" id="pm_checkbox" value="1" {if $save }checked="checked"{/if} /></div>
-	</fieldset>
-	<fieldset>
+	</div>
+	<div class="form-group has-feedback">
 		<div class="inputName"></div>
 		<div class="inputButton">
-			<input type="submit" id="pm_send_button" value="[[Send]]" class="button"  />
+			<input type="submit" id="pm_send_button" value="[[Send]]" class="btn btn-default"  />
 			<input type="hidden" name="act" value="send" />
 			{if $cc}
 				<input type="hidden" name="cc" value="{$cc}" />
 			{/if}
 		</div>
-	</fieldset>
+	</div>
 </form>
 
 <script language="JavaScript" type="text/javascript">

@@ -1,4 +1,4 @@
-<div style="padding: 5px; margin: 0; {if $iteration is even};background-color: #efefef;border: 1px solid #eee{else};background-color: #fefefe;border: 1px solid #ccc{/if}" class="comment_item">
+<div style="padding: 5px; margin: 0; {if $iteration is even};background-color: #efefef;border: 1px solid #eee{else};background-color: #fefefe;border: 1px solid #ccc{/if}" class="comment_item table-responsive">
 	<table>
 		<tr>
 			<td rowspan="2">

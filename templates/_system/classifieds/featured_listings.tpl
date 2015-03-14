@@ -7,7 +7,7 @@
 				<br />{$listing.user.CompanyName|escape:'html'}
 			</span>
 		</div>
-		{if $smarty.foreach.listings_block.iteration is div by $number_of_cols}<div class="clr"><br/></div>{/if}
+		{if $smarty.foreach.listings_block.iteration is div by $number_of_cols}<div class="clearfix"></div>{/if}
 	{/foreach}
 {else}
 	<div class="text-center">[[There are no listings with requested parameters in the system.]]</div>

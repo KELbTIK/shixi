@@ -4,7 +4,7 @@
 		{foreach from=$errors item="error_data" key="error_id"}	
 			{if $error_id == 'NOT_OWNER_OF_LISTING'}
 				{assign var="listing_id" value=$error_data}
-				<p class="error">[[You're not the owner of this posting]]</p>
+				<div class="error alert alert-danger">[[You're not the owner of this posting]]</div>
 			{/if}
 		{/foreach}
 	{else}
@@ -34,14 +34,9 @@
 			{if !$smarty.foreach.editBlock.last}</div>{/if}
 		{/foreach}
 		</div>
-		<table>
-			<tr>
-				<td>
-					<input type="submit" value="[[Save]]" class="button" id="submitSave"/>&nbsp;
-				</td>
-			</tr>
-		</table>
-	</form>
+
+					<input type="submit" value="[[Save]]" class="btn btn-success" id="submitSave"/>&nbsp;
+
 	{/if}
 
 {literal}

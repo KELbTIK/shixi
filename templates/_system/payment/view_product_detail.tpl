@@ -2,19 +2,19 @@
 {if $errors}
 	{foreach from=$errors item=error}
 		{if $error eq "PRODUCT_IS_ONLY_ONCE_AVAILABLE"}
-			<p class="error">[[This product is available only once]]</p>
+<div class="error alert alert-danger">[[This product is available only once]]</div>
 		{elseif $error eq 'UPLOAD_ERR_INI_SIZE'}
-			<p class="error">[[File size exceeds system limit]]</p>
+	<div class="error alert alert-danger">[[File size exceeds system limit]]</div>
 		{elseif $error eq 'UPLOAD_ERR_FORM_SIZE'}
-			<p class="error">[[File size exceeds system limit]]</p>
+		<div class="error alert alert-danger">[[File size exceeds system limit]]</div>
 		{elseif $error eq 'UPLOAD_ERR_PARTIAL'}
-			<p class="error">[[There was an error during file upload]]</p>
+			<div class="error alert alert-danger">[[There was an error during file upload]]</div>
 		{elseif $error eq 'UPLOAD_ERR_NO_FILE'}
-			<p class="error">[[file not specified]]</p>
+				<div class="error alert alert-danger">[[file not specified]]</div>
 		{elseif $error eq 'NOT_UPLOAD_FILE'}
-			<p class="error">[[The file was not uploaded. Please try another file]]</p>
+					<div class="error alert alert-danger">[[The file was not uploaded. Please try another file]]</div>
 		{else}
-			<p class="error">[[{$error}]]</p>
+						<div class="error alert alert-danger">[[{$error}]]</div>
 		{/if}
 	{/foreach}
 {/if}
@@ -81,7 +81,7 @@
 
 
 						<div id="productsSelect">
-							<select  name="number_of_listings" id="number_of_listings" class="pull-left" onChange="getPrice(this.value)">
+							<select  class="form-control"   name="number_of_listings" id="number_of_listings" class="pull-left" onChange="getPrice(this.value)">
 								{foreach from=$productInfo.count_listings item=count_listings}
 									<option value="{$count_listings}">[[{$count_listings}]]</option>
 								{/foreach}

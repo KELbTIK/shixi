@@ -2,16 +2,16 @@
     <h1>[[Newsletter]]</h1>
     <div id="mailchimp-nl-cont">
         {if $error}
-            <p class="error">
+            <div class="error alert alert-danger"></div>
                 {if $error eq 'EMPTY_FIELD'}
                     [[All fields are required!]]
                 {else}
                     [[{$error}]]
                 {/if}
-            </p>
+            </div>
         {/if}
         {if $message}
-            <p class="message">[[{$message}]]</p>
+            <div class="message alert alert-info">[[{$message}]]</div>
         {/if}
         <form action="{$GLOBALS.site_url}/system/miscellaneous/mailchimp/" method="get" id="mailchimp-form">
             <p class="mailchimp-nl-desc">[[Fill the form to subscribe]]</p>

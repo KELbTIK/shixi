@@ -10,7 +10,7 @@
 			{/foreach}
 		</select>
 	</div>
-	<div class="clr"></div>
+	<div class="clearfix"></div>
 	<div id="tree_{$name}_level_{$level+1}"></div>
 </div>
 

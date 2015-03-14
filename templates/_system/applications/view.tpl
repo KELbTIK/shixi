@@ -1,13 +1,15 @@
 <h1>[[Application Tracking]]</h1>
 {if $errors}
 	{foreach from=$errors key=error_code item=error_message}
-			{if $error_code == 'NO_SUCH_FILE'} <p class="error">[[No such file found in the system]]</p>
-			{elseif $error_code == 'NO_SUCH_APPS'} <p class="error">[[No such application with this ID]]</p>
-			{elseif $error_code == 'APPLICATIONS_NOT_FOUND'}
-				{if $score == 'passed'} <p class="error">[[There are no applications with "Passed" score]]</p>
-				{elseif $score == 'not_passed'} <p class="error">[[There are no applications with "Not Passed" score]]</p>
-				{/if}
-			{/if}
+        <div class="error alert alert-danger">
+            {if $error_code == 'NO_SUCH_FILE'} [[No such file found in the system]]
+                {elseif $error_code == 'NO_SUCH_APPS'} [[No such application with this ID]]
+                {elseif $error_code == 'APPLICATIONS_NOT_FOUND'}
+                    {if $score == 'passed'} [[There are no applications with "Passed" score]]
+                    {elseif $score == 'not_passed'} [[There are no applications with "Not Passed" score]]
+                    {/if}
+                {/if}
+        </div>
 	{/foreach}
 {/if}
 <div class="app-tracking sorting-filters">

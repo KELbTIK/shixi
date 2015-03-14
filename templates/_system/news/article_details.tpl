@@ -3,7 +3,7 @@
 {title} {$article.title} {/title}
 {if $errors}
 	{foreach from=$errors item=error key=error_code}
-		<p class="error">{$error_code}</p>
+		<div class="error alert alert-danger">{$error_code}</div>
 	{/foreach}
 {else}
 	<div class="NewsItems">

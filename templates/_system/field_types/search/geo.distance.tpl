@@ -1,4 +1,4 @@
-<select name="{$id}[geo][radius]">
+<select class="form-control"  name="{$id}[geo][radius]">
 	<option value="any">[[Any Distance]]</option>
 	<option value="10" {if $value.radius == 10}selected="selected"{/if}>[[Within]] 10 [[{$GLOBALS.radius_search_unit}]]</option>
 	<option value="20" {if $value.radius == 20}selected="selected"{/if}>[[Within]] 20 [[{$GLOBALS.radius_search_unit}]]</option>

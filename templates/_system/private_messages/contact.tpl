@@ -4,12 +4,12 @@
 {description} {$listing.Title} {/description}
 {if $errors}
 	{foreach from=$errors key=error_code item=error_message}
-		<p class="error">
+		<div class="error alert alert-danger">
 			{if $error_code == 'UNDEFINED_CONTACT_ID'} [[Contact ID is not defined]]
 				{title} [[404 Not Found]] {/title}
 			{elseif $error_code == 'WRONG_CONTACT_ID_SPECIFIED'} [[There is no contact in the system with the specified ID]]
 			{/if}
-		</p>
+		</div>
 	{/foreach}
 	{else}
 	<script type="text/javascript">
@@ -36,7 +36,7 @@
                         <h1>{$contactInfo.FirstName} {$contactInfo.LastName}</h1>
                         <div id="contact-group">{$contactInfo.group.caption}</div>
                     {/if}
-                    <div class="clr"><br/></div>
+                    <div class="clearfix"></div>
 
                     <div >
                         <div class="contact-detail-cap"><h3>[[Email]]:</h3></div>

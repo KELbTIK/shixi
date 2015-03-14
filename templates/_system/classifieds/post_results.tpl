@@ -17,13 +17,13 @@
 				{foreach from=$error.params item="param" key="paramKey"}
 					{assign var="param_$paramKey" value=$param}
 				{/foreach}
-				<p class="error">[[{$error.message}]]</p>
+				<div class="error alert alert-danger"> [[{$error.message}]]</div>
 			{/foreach}
 		</div>
 	{/if}
 	{if !empty($errors.common)}
 		{foreach from=$errors.common item="error"}
-		<p class="error">[[{$error}]]</p>
+			<div class="error alert alert-danger">[[{$error}]]</div>
 		{/foreach}
 	{/if}
 

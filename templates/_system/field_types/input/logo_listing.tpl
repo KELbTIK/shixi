@@ -1,9 +1,13 @@
 {if $GLOBALS.is_ajax || $smarty.get.ajax_submit}
     {foreach from=$errors key=key item=error}
         {if $key == 'NOT_SUPPORTED_VIDEO_FORMAT' || $key == 'NOT_ACCEPTABLE_FILE_FORMAT'}
-            <p class="error">[[Not supported video format]]</p>
+            <div class="error alert alert-danger" role="alert">
+                [[Not supported video format]]
+            </div>
         {else}
-            <p class="error">[[{$key}]]</p>
+            <div class="error alert alert-danger" role="alert">
+                [[{$key}]]
+            </div>
         {/if}
     {/foreach}
     {if $value.file_name ne null}

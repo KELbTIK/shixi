@@ -20,7 +20,7 @@
 				<div class="text-center strong"">[[$form_field.caption]]</div>
                 <div class="clearfix"></div>
 			{/foreach}
-			<p class="message">[[You've already voted]]</p>
+			<div class="message alert alert-info">[[You've already voted]]</div>
 		{/if}
 
 		{if $display_results} &nbsp; <a href="{$GLOBALS.site_url}/poll-results/{$sid}/{$question|regex_replace:"/[\\/\\\:*?\"<>|%#$\s]/":"-"}.html">[[View Results]]</a>{/if}

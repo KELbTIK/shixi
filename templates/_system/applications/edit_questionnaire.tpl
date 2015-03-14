@@ -1,20 +1,22 @@
 <h1>[[Edit Questionnaire]]</h1>
 <a href="{$GLOBALS.site_url}/edit-questions/{$sid}/">[[Edit Questions]]</a><br/><br/>
 {foreach from=$errors item=error key=field_caption}
-	{if $error eq 'EMPTY_VALUE'}
-		<p class="error">'{$field_caption}' [[is empty]]</p>
-	{elseif $error eq 'NOT_UNIQUE_VALUE'}
-		<p class="error">'{$field_caption}' [[this value is already used in the system]]</p>
-	{elseif $error eq 'NOT_FLOAT_VALUE'}
-		<p class="error">'{$field_caption}' [[is not an float value]]</p>
-	{elseif $error eq 'NOT_VALID_ID_VALUE'}
-		<p class="error">'{$field_caption}' [[is not valid]]</p>
-	{elseif $error eq 'CAN_NOT_EQUAL_NULL'}
-		<p class="error">'{$field_caption}' [[can not equal "0"]]</p>
-	{/if}
+    <div class="error alert alert-danger">
+        {if $error eq 'EMPTY_VALUE'}
+            {$field_caption}' [[is empty]]
+        {elseif $error eq 'NOT_UNIQUE_VALUE'}
+            {$field_caption}' [[this value is already used in the system]]
+        {elseif $error eq 'NOT_FLOAT_VALUE'}
+            '{$field_caption}' [[is not an float value]]
+        {elseif $error eq 'NOT_VALID_ID_VALUE'}
+            '{$field_caption}' [[is not valid]]
+        {elseif $error eq 'CAN_NOT_EQUAL_NULL'}
+            '{$field_caption}' [[can not equal "0"]]
+        {/if}
+    </div>
 {/foreach}
 {if $edit}
-	<p class="message">[[Your changes were successfully saved]]</p>
+	<div class="message alert alert-info">[[Your changes were successfully saved]]</div>
 {/if}
 
 <form method="post" action="">
@@ -25,41 +27,41 @@
     {/if}
     {foreach from=$form_fields item=form_field}
         {if $form_field.id == 'email_text_more'}
-            <fieldset id="email_text_more_set" {if $request.send_auto_reply_more != 1}style="display:none"{/if}>
+            <div class="form-group has-feedback" id="email_text_more_set" {if $request.send_auto_reply_more != 1}style="display:none"{/if}>
                 <div class="inputName">[[$form_field.caption]]</div>
                 <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
                 <div class="inputField">{input property=$form_field.id}</div>
-            </fieldset>
+            </div>
         {elseif $form_field.id == 'email_text_less'}
-            <fieldset id="email_text_less_set" {if $request.send_auto_reply_less != 1}style="display:none"{/if}>
+            <div class="form-group has-feedback" id="email_text_less_set" {if $request.send_auto_reply_less != 1}style="display:none"{/if}>
                 <div class="inputName">[[$form_field.caption]]</div>
                 <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
                 <div class="inputField">{input property=$form_field.id}</div>
-            </fieldset>
+            </div>
         {elseif $form_field.id == "send_auto_reply_more"}
             <p><span class="strong">[[Send Auto-Reply email to candidates whose score is]]</span></p>
-            <fieldset>
+            <div class="form-group has-feedback">
                 <div class="inputName">[[$form_field.caption]]</div>
                 <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
                 <div class="inputField">{input property=$form_field.id}</div>
-            </fieldset>
+            </div>
         {else}
-            <fieldset>
+            <div class="form-group has-feedback">
                 <div class="inputName">[[$form_field.caption]]</div>
                 <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
                 <div class="inputField">{input property=$form_field.id}</div>
-            </fieldset>
+            </div>
         {/if}
     {/foreach}
-    <fieldset>
+    <div class="form-group has-feedback">
         <div class="inputName">&nbsp;</div>
         <div class="inputReq">&nbsp;</div>
         {if $action == 'edit'}
-            <div class="inputField"><input type="submit" name="action_add" value="[[Edit]]" class="button" /></div>
+            <div class="inputField"><input type="submit" name="action_add" value="[[Edit]]" class="btn btn-default" /></div>
         {else}
-            <div class="inputField"><input type="submit" name="action_add" value="[[Add]]" class="button" /></div>
+            <div class="inputField"><input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" /></div>
         {/if}
-    </fieldset>
+    </div>
 </form>
 {literal}
 <script type="text/javascript">

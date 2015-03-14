@@ -1,5 +1,5 @@
 {if $message}
-	<p class="message">[[{$message}]]</p>
+	<div class="message alert alert-info"> [[{$message}]]</div>
 {else}
-	<p class="error">[[This action is not allowed within your current product]]</p>
+	<div class="error alert alert-danger">[[This action is not allowed within your current product]]</div>
 {/if}

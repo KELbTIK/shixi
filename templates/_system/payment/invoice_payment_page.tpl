@@ -1,14 +1,14 @@
 {foreach from=$checkPaymentErrors key=error item=value}
 	{if $error == 'NOT_OWNER'}
-		<p class="error">[[You're not the owner of this payment]]</p>
+		<div class="error alert alert-danger">[[You're not the owner of this payment]]</div>
 	{elseif $error == 'NOT_LOGGED_IN'}
-		<p class="error">[[Please log in to place a listing. If you do not have an account, please]] <a href="{$GLOBALS.site_url}">[[Register]]</a></p>
+		<div class="error alert alert-danger">[[Please log in to place a listing. If you do not have an account, please]] <a href="{$GLOBALS.site_url}">[[Register]]</a></div>
 		<br/><br/>
 		{module name="users" function="login"}
 	{elseif $error == 'WRONG_INVOICE_PARAMETERS'}
-		<p class="error">[[Invoice contains wrong parameters. Check all items listed in it.]]</p>
+		<div class="error alert alert-danger">  [[Invoice contains wrong parameters. Check all items listed in it.]]</div>
 	{elseif $error == 'PROMOTION_TOO_MANY_USES'}
-		<p class="error">[[Promotion code that was applied to this invoice is expired. Invoice cannot be paid for. Please generate a new invoice by purchasing product(s) again.]]</p>
+		<div class="error alert alert-danger">[[Promotion code that was applied to this invoice is expired. Invoice cannot be paid for. Please generate a new invoice by purchasing product(s) again.]]</div>
 	{/if}
 {foreachelse}
 	<br />
@@ -36,7 +36,7 @@
 					});
 				</script>
 			{else}
-				<br/><input type='submit' value="{$smarty.capture.trGatewayCaption|escape:'html'}" class="paymentButton" id="submit_{$gatewayID}"/>
+				<br/><input type='submit' value="{$smarty.capture.trGatewayCaption|escape:'html'}" class="btn btn-primary" id="submit_{$gatewayID}"/>
 			{/if}
 		</form>
 	{/foreach}

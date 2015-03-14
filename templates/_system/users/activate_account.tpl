@@ -1,6 +1,6 @@
 {if $errors && !$activated}
 	{foreach from=$errors item="error_message" key="error"}
-		<p class="error">
+		<div class="error alert alert-danger">
 			{if $error == "PARAMETERS_MISSED"}
 				[[The key parameters are not specified]]
 			{elseif $error == "USER_NOT_FOUND"}
@@ -12,11 +12,11 @@
 			{else}
 				[[$error]] [[$error_message]]
 			{/if}
-		</p>
+		</div>
 	{/foreach}
 {else}
 	{if $activated}
-		<p class="message">
+		<div class="message alert alert-info">
 			{if $approvalStatus == 'Pending'}
 				[[Registration process is successfully completed and your account is waiting for approval by Administrator.]]
 			{elseif $approvalStatus == 'Rejected'}
@@ -24,8 +24,8 @@
 			{else}
 				[[Your account was successfully activated. Thank you. {if $isLoggedIn == 0}Please <a href="{$GLOBALS.user_site_url|cat:"/login/"}">login</a>.{/if}]]
 			{/if}
-		</p>
+		</div>
 	{else}
-		<p class="error">[[Cannot activate account. Please contact administrator.]]</p>
+		<div class="error alert alert-danger"> [[Cannot activate account. Please contact administrator.]]</div>
 	{/if}
 {/if}

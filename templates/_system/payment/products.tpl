@@ -1,7 +1,7 @@
 {if $account_activated}
-	<p class="message">
+	<div class="message alert alert-info">
         [[Your account was successfully activated. Thank you.]]
-	</p>
+    </div>
 {/if}
 {if $postingProductsOnly}
 	<h1>[[Select Posting Product]]</h1>

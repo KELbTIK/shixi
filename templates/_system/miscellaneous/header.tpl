@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>  	
 <title>{if !$GLOBALS.page_not_found}{$GLOBALS.settings.site_title}{/if}{if $TITLE ne ""}{if !$GLOBALS.page_not_found}:{/if} [[$TITLE]]{/if}</title>
 <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />
-<link rel="StyleSheet" type="text/css" href="{image src="../../main/images/design.css"}" />
+{*<link rel="StyleSheet" type="text/css" href="{image src="../../main/images/design.css"}" />*}
 {if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
 <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{$GLOBALS.site_url}/rss/" />
 <link rel="stylesheet" href="{$GLOBALS.site_url}/system/lib/rating/style.css" type="text/css" />

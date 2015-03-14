@@ -10,20 +10,20 @@
 <input type="hidden" name="action" value="add" />
 {foreach from=$form_fields key=field_name item=form_field}
 {if $form_field.id == 'type'}
-	<fieldset>
+	<div class="form-group has-feedback">
 		<div class="inputName">[[$form_field.caption]]</div>
 		<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
 		<div class="inputField">{input property=$form_field.id  template='radio.tpl'}</div>
-	</fieldset>
+	</div>
 {else}
-	<fieldset>
+	<div class="form-group has-feedback">
 		<div class="inputName">[[$form_field.caption]]</div>
 		<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
 		<div class="inputField">{input property=$form_field.id}</div>
-	</fieldset>
+	</div>
 {/if}
 {/foreach}
-<fieldset id="boolean" {if !$answer_boolean}style="display:none"{/if}>
+<div class="form-group has-feedback" id="boolean" {if !$answer_boolean}style="display:none"{/if}>
 	<div class="inputName">[[Answers]]</div>
 	<div class="inputReq">&nbsp;</div>
 	<div class="inputField">
@@ -38,7 +38,7 @@
 			<option value="4" {if $score_boolean.yes == 4} selected="selected"{/if}>[[Excellent - 4]]</option>
 		</select>
 		</div>
-		<div class="clr"></div>
+		<div class="clearfix"></div>
 		<div style="width:50px; float:left; padding: 10px 0 0 0;">[[No]]&nbsp;<input type="hidden" name="answer_boolean[]" value="No" /></div>
 		<div>
 		<select name="score_boolean[]">
@@ -51,17 +51,17 @@
 		</select>
 		</div>
 	</div>
-</fieldset>
-<fieldset id="answers"  {if !$answers}style="display:none"{/if}>
+</div >
+<div class="form-group has-feedback" id="answers"  {if !$answers}style="display:none"{/if}>
 	<div class="inputName">[[Answers]]</div>
 	<div class="inputReq">&nbsp;</div>
 	<div class="inputField">
 		{if $answers}
             {foreach from=$answers key=key item=answer}
                 <div id="answerBlock{$key}" >
-                    <div style="float:left;padding-bottom:10px"><input type="text" name="answer[]" value="{$answer}" />&nbsp;</div>
+                    <div style="float:left;padding-bottom:10px"><input class="form-control" type="text" name="answer[]" value="{$answer}" />&nbsp;</div>
                     <div style="float:left;">
-                        <select name="score[]">
+                        <select class="form-control" name="score[]">
                             <option value="no" {if $score.$key == 'no'} selected="selected"{/if}>[[Don’t assign score]]</option>
                             <option value="0" {if $score.$key == '0'} selected="selected"{/if}>[[Not acceptable - 0]]</option>
                             <option value="1" {if $score.$key == 1} selected="selected"{/if}>[[Acceptable - 1]]</option>
@@ -72,16 +72,16 @@
                     </div>
                     <div>&nbsp;&nbsp;<a href="#" onclick="deleteAnswerBlock('answerBlock{$key}'); return false;" class="remove">[[Delete]]</a></div>
                 </div>
-                <div class="clr"></div>
+				<div class="clearfix"></div>
             {/foreach}
-            <div class="clr"></div>
+			<div class="clearfix"></div>
 		    <div id="answerAdd"></div>
 		    <div id="add_answer"><a href="#" onclick="addAnswerBlock();  return false;" class="add">[[Add Answer]]</a></div>
         {else}
             <div id="answerBlock">
-                <div style="float:left;padding-bottom:10px"><input type="text" name="answer[]" value="" />&nbsp;</div>
+                <div style="float:left;padding-bottom:10px"><input class="form-control" type="text" name="answer[]" value="" />&nbsp;</div>
                 <div style="float:left;">
-                    <select name="score[]">
+                    <select class="form-control" name="score[]">
                         <option value="no">[[Don’t assign score]]</option>
                         <option value="0">[[Not acceptable - 0]]</option>
                         <option value="1">[[Acceptable - 1]]</option>
@@ -92,14 +92,14 @@
                 </div>
                 <div>&nbsp;&nbsp;<a href="#" onclick="deleteAnswerBlock('answerBlock'); return false;" class="remove">[[Delete]]</a></div>
             </div>
-            <div class="clr"></div>
+			<div class="clearfix"></div>
             <div id="answerAdd"></div>
             <div id="add_answer"><a href="#" onclick="addAnswerBlock();  return false;" class="add">[[Add Answer]]</a></div>
         {/if}
 		<div id="answerBlockNone"  style="display: none">
-		<div style="float:left;padding-bottom:10px"><input type="text" name="answer[]" value="" />&nbsp;</div>
+		<div style="float:left;padding-bottom:10px"><input class="form-control" type="text" name="answer[]" value="" />&nbsp;</div>
 		<div style="float:left;">
-		<select name="score[]">
+		<select class="form-control" name="score[]">
 			<option value="no">[[Don’t assign score]]</option>
 			<option value="0">[[Not acceptable - 0]]</option>
 			<option value="1">[[Acceptable - 1]]</option>
@@ -110,12 +110,12 @@
 		</div>
 		</div>
 	</div>
-</fieldset>
-<fieldset>
+</div >
+<div class="form-group has-feedback">
 	<div class="inputName">&nbsp;</div>
 	<div class="inputReq">&nbsp;</div>
-	<div class="inputField">{if $action == 'edit'}<input type="submit" name="action_add" value="[[Save]]" class="button" />{else}<input type="submit" name="action_add" value="[[Add]]" class="button" />{/if}</div>
-</fieldset>
+	<div class="inputField">{if $action == 'edit'}<input type="submit" name="action_add" value="[[Save]]" class="btn btn-default" />{else}<input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" />{/if}</div>
+</div>
 </form>
 {literal}
 <script type="text/javascript">
@@ -128,7 +128,7 @@ function addAnswerBlock() {
 	block.appendTo('#'+id); 
 	block.show();
 	$('#'+ id +' input[type=text]').val('');
-	$('#'+ id).html($('#'+ id).html() + "<div>&nbsp;&nbsp;<a href='#' onclick=\"deleteAnswerBlock('"+id+"'); return false;\" class=\"remove\">{/literal}[[Delete]]{literal}<\/a><\/div><div class='clr'><\/div>");
+	$('#'+ id).html($('#'+ id).html() + "<div>&nbsp;&nbsp;<a href='#' onclick=\"deleteAnswerBlock('"+id+"'); return false;\" class=\"remove\">{/literal}[[Delete]]{literal}<\/a><\/div><div class='clearfix'><\/div>");
 	i++;
 }
 

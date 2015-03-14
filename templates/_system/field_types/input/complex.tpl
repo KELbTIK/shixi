@@ -7,48 +7,46 @@
         {foreach from=$form_fields item=form_field}
             {if $form_field.id == 'youtube'}
                 {if $contract.video}
-                    <fieldset>
-                        <div class="inputName">{tr}{$form_field.caption}{/tr|escape:'html'}</div>
-                        <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                        <div class="inputField">{input property=$form_field.id complexParent=$complexField complexStep=$complexElementKey}</div>
+                    <div class="form-group has-feedback">
+                        <label class="inputName col-sm-3 control-label">{tr}{$form_field.caption}{/tr|escape:'html'} <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                        <div class="inputField col-sm-8">{input property=$form_field.id complexParent=$complexField complexStep=$complexElementKey}</div>
 						{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-                    </fieldset>
+                    </div>
                 {/if}
             {elseif $listingTypeID == "Job" && $form_field.id == "anonymous"}
                 {* this empty place of 'anonymous' checkbox in 'Job' listing *}
             {elseif $form_field.id == "access_type"}
                 {if $listingTypeID != "Job" && $listing.type.id != "Job"}{* *}
-                    <fieldset>
-                        <div class="inputName">{tr}{$form_field.caption}{/tr|escape:'html'}</div>
-                        <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                        <div class="inputField">{input property=$form_field.id template='resume_access.tpl' complexParent=$complexField complexStep=$complexElementKey}</div>
+
+                    <div class="form-group has-feedback">
+                        <label class="inputName col-sm-3 control-label">{tr}{$form_field.caption}{/tr|escape:'html'} <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                        <div class="inputField col-sm-8">{input property=$form_field.id template='resume_access.tpl' complexParent=$complexField complexStep=$complexElementKey}</div>
 						{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-                    </fieldset>
+                    </div>
                 {/if}
             {elseif ($listingTypeID == "Job" || $listing.type.id == "Job") && $form_field.id =='ApplicationSettings'}
-                <fieldset>
-                    <div class="inputName">{tr}{$form_field.caption}{/tr|escape:'html'}</div>
-                    <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                    <div class="inputField">{input property=$form_field.id template='applicationSettings.tpl' complexParent=$complexField complexStep=$complexElementKey}</div>
+                <div class="form-group has-feedback">
+                    <label class="inputName col-sm-3 control-label">{tr}{$form_field.caption}{/tr|escape:'html'} <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                    <div class="inputField col-sm-8">{input property=$form_field.id template='applicationSettings.tpl' complexParent=$complexField complexStep=$complexElementKey}</div>
 					{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-                </fieldset>
+                </div>
             {else}
-                <fieldset>
-                    <div class="inputName">{tr}{$form_field.caption}{/tr|escape:'html'}</div>
-                    <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                    <div class="inputField">{input property=$form_field.id complexParent=$complexField complexStep=$complexElementKey}</div>
+                <div class="form-group has-feedback">
+                    <label class="inputName col-sm-3 control-label">{tr}{$form_field.caption}{/tr|escape:'html'} <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                    <div class="inputField col-sm-8">{input property=$form_field.id complexParent=$complexField complexStep=$complexElementKey}</div>
 					{if $form_field.instructions}{assign var="instructionsExist" value="1"}{include file="instructions.tpl" form_field=$form_field}{/if}
-                </fieldset>
+                </div>
             {/if}
         {/foreach}
         {if $complexElementKey == 1}
             </div><div id='complexFieldsAdd_{$complexField}'>
-        {else}
+            {else}
             <a href="#" class="remove" onclick='removeComplexField_{$complexField}({$complexElementKey}); return false;' >[[Remove]]</a></div>
         {/if}
     {/foreach}
 </div>
-<a href='#' class="add" onclick='addComplexField_{$complexField}(); return false;' >[[Add]]</a>
+
+<div class="col-sm-8 col-sm-offset-3"><a href='#' class="add" onclick='addComplexField_{$complexField}(); return false;' >[[Add]]</a></div>
 
 <script type="text/javascript">
 

@@ -1,4 +1,5 @@
-<table border="0" cellpadding="2" cellspacing="4">
+<div class="table-responsive">
+	<table border="0" cellpadding="2" cellspacing="4">
 	<tr>
 		<td style="text-align: left;">
 			<br />
@@ -38,6 +39,7 @@
 		</td>
 	</tr>
 </table>
+</div>
 {include file="../builder/bf_displaylisting_fieldsholders_for_pdf.tpl"}
 {if $listing.pictures[1].thumbnail_url}
 	<table border="0" cellpadding="2" cellspacing="4">

@@ -9,7 +9,7 @@
 		<a class='browseItem' href="{$GLOBALS.site_url}/browse-by-company/?first_char={$char}">{$char}</a>
 	</div>
 	{/foreach}
-	<div class="clr"></div>
+	<div class="clearfix"></div>
 </div>
 {/foreach}
 

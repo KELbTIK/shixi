@@ -8,7 +8,7 @@
 	{if $errors}
 		<div class="noRefine">
 			{foreach from=$errors key=error_code item=error_message}
-				<p class="error">
+				<div class="error alert alert-danger">
 					{if $error_code == 'UNDEFINED_LISTING_ID'} [[Listing ID is not defined]]
 						{title} [[404 Not Found]] {/title}
 					{elseif $error_code == 'WRONG_LISTING_ID_SPECIFIED'} [[Listing does not exist]]
@@ -20,7 +20,7 @@
 						{title} [[404 Not Found]] {/title}
 					{elseif $error_code == 'WRONG_DISPLAY_TEMPLATE'} [[Wrong template to display listing]]
 					{/if}
-				</p>
+				</div>
 			{/foreach}
 		</div>
 	{else}
@@ -270,7 +270,7 @@
 					{capture assign='applyBtn_onClick'}onclick="popUpWindow('{$GLOBALS.site_url}/login/?return_url={$uri}', 400, '[[Login]]', false, false)"{/capture}
 				{/if}
 				{if isset($applyBtn_onClick)}
-					<span class="apply-button"><input type="button" class="buttonApply" {$applyBtn_onClick} value='[[Apply Now]]' /></span>
+					<span class="apply-button"><input type="button" class="btn btn-succes" {$applyBtn_onClick} value='[[Apply Now]]' /></span>
 				{/if}
 			</h2>
 			<div class="clearfix"></div>
@@ -297,12 +297,12 @@
 		<div class="preview-buttons">
 			<form action="{$referer}" method="post">
 				<input type="hidden" name="from-preview" value="1" />
-				<input type="submit" name="edit_temp_listing" value="[[Edit]]" class="button" id="listingPreview" />
+				<input type="submit" name="edit_temp_listing" value="[[Edit]]" class="btn btn-default" id="listingPreview" />
 				{if $contract_id == 0 && !$checkouted}
 					<input type="hidden" name="proceed_to_checkout" />
-					<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="button" />
+					<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="btn btn-primary" />
 				{else}
-					<input type="submit" name="action_add" value="[[Post]]" class="button" />
+					<input type="submit" name="action_add" value="[[Post]]" class="btn btn-success" />
 				{/if}
 			</form>
 		</div>

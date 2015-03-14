@@ -1,5 +1,5 @@
 {if !empty($error)}
-	<p class="error">
+	<div class="error alert alert-danger"></div>
 		{if $error == "PARAMETERS_MISSED"}
 			[[The key parameters are not specified]]
 		{elseif $error == "INVALID_CONFIRMATION_KEY"}
@@ -7,9 +7,9 @@
 		{else}
 			[[{$error}]]
 		{/if}
-	</p>
+	</div>
 {else}
-	<p class="message">
+	<div class="message  alert alert-danger"></div>
 		[[Your email $email was successfully unsubscribed from the Email Alert]]
-	</p>
+	</div>
 {/if}

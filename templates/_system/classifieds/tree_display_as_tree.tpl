@@ -2,7 +2,7 @@
 <div id="tree-deselect-all" onclick="treeDeselectAll();">
 	<small>[[Deselect all]]</small>
 </div>
-<div class="clr"></div>
+<div class="clearfix"></div>
 
 <div id="tree-block"></div>
 <div id="tree-buttons">

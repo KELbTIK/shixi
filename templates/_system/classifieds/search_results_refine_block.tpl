@@ -1,5 +1,6 @@
 {if !empty($currentSearch)}
-	<table cellpadding="0" cellspacing="0" id="currentSearch">
+	<div class="table-responsive">
+		<table cellpadding="0" cellspacing="0" id="currentSearch">
 		<thead>
 			<tr>
 				<th class="tableLeft">&nbsp;</th>
@@ -39,6 +40,7 @@
 			</tr>
 		</tbody>
 	</table>
+	</div>
 	<br/>
 {/if}
 

@@ -4,7 +4,7 @@
 	<head>
 	    <title>{$GLOBALS.settings.site_title} {if $TITLE ne ""} :: [[{$TITLE}]] {/if}</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />
+		{*<link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />*}
 		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />
 		{if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
 		{literal}<style type="text/css">body {background: white !important;}</style>{/literal}

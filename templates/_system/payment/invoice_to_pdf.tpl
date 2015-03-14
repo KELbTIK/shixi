@@ -21,33 +21,35 @@
 		td.align_right {text-align: right;}
 	</style>
 {/literal}
-<table border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td width="47%" valign="top"><img src="{image}logo.png" border="0" /><br/></td>
-		<td width="6%" rowspan="2">&nbsp;</td>
-		<td width="47%" valign="top" class="align_right">
-			<h2>[[Invoice]]</h2>
-			<br/>[[Date]]: {display property="date"}
-			<br/>[[Invoice]] &#35;{$invoice_sid}
-			{display property="payment_method" assign = payment_method}
-			<br/>[[Invoice Status]]: {display property="status"}{if $payment_method}&nbsp;({display property="payment_method"}){/if}
-			<br/>
-		</td>
-	</tr>
-	<tr>
-		<td valign="top" class="invoice-border-top">
-			{capture name="location"}{locationFormat location=$user.Location format="middle"}{/capture}
-			<br/><h2>[[Bill To]]</h2>
-			<br/>{$username}
-			<br/>{$user.Location.Address}
-			<br/>{$smarty.capture.location|trim:",\t "}
-			<br/>{tr}{$user.Location.Country}{/tr|escape:'html'}
-		</td>
-		<td valign="top" class="invoice-border-top">
-			<br/><h2>[[Send Payment To]]</h2>
-			<br/>{$GLOBALS.settings.send_payment_to}
-		</td>
-	</tr>
-</table>
-<div class="clr"></div>
+<div class="table-responsive">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="47%" valign="top"><img src="{image}logo.png" border="0" /><br/></td>
+			<td width="6%" rowspan="2">&nbsp;</td>
+			<td width="47%" valign="top" class="align_right">
+				<h2>[[Invoice]]</h2>
+				<br/>[[Date]]: {display property="date"}
+				<br/>[[Invoice]] &#35;{$invoice_sid}
+				{display property="payment_method" assign = payment_method}
+				<br/>[[Invoice Status]]: {display property="status"}{if $payment_method}&nbsp;({display property="payment_method"}){/if}
+				<br/>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" class="invoice-border-top">
+				{capture name="location"}{locationFormat location=$user.Location format="middle"}{/capture}
+				<br/><h2>[[Bill To]]</h2>
+				<br/>{$username}
+				<br/>{$user.Location.Address}
+				<br/>{$smarty.capture.location|trim:",\t "}
+				<br/>{tr}{$user.Location.Country}{/tr|escape:'html'}
+			</td>
+			<td valign="top" class="invoice-border-top">
+				<br/><h2>[[Send Payment To]]</h2>
+				<br/>{$GLOBALS.settings.send_payment_to}
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="clearfix"></div>
 {display property="items" template="items_complex.tpl"}

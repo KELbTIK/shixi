@@ -1,7 +1,7 @@
 <h1>[[Sub-user Profile]]</h1>
 {include file='field_errors.tpl'}
 {if $form_is_submitted && !$errors}
-	<p class="message">[[You have successfully changed sub-user profile info!]]</p>
+	<div class="message alert alert-info">[[You have successfully changed sub-user profile info!]]</div>
 {/if}
 <div id="sub-accounts">
 	<form method="post" action="{$GLOBALS.site_url}/sub-accounts/edit/">
@@ -31,7 +31,7 @@
 		<fieldset>
 			<div class="inputName">&nbsp;</div>
 			<div class="inputReq">&nbsp;</div>
-			<div class="inputField"><input type="submit" value="[[Save]]" class="button" /></div>
+			<div class="inputField"><input type="submit" value="[[Save]]" class="button btn btn-success" /></div>
 		</fieldset>
 	</form>
 </div>

@@ -2,8 +2,8 @@
 {if $errors}
 	{foreach from=$errors item="errorData" key="errorId"}
 		{if $errorId == 'NOT_EMPLOYER'}
-			<p class="error">[[You are not employer]]</p>
-		{/if}
+			<div class="error alert alert-danger">[[You are not employer]]</div>
+        {/if}
 	{/foreach}
 {else}
 	<div id="reports">

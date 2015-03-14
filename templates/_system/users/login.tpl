@@ -31,25 +31,25 @@
 	{if $productSID}<input type="hidden" name="productSID" value="{$productSID}" />{/if}
 	{if $listingTypeID}<input type="hidden" name="listing_type_id" value="{$listingTypeID}" />{/if}
 	{if $ajaxRelocate}<input type="hidden" name="ajaxRelocate" value="1" />{/if}
-	<fieldset>
+	<div class="form-group has-feedback">
 		<div class="inputName">[[Username]]</div>
-		<div class="inputField"><input type="text" name="username" /></div>
-	</fieldset>
-	<fieldset>
+		<div class="inputField"><input class="form-control"   type="text" name="username" /></div>
+	</div>
+	<div class="form-group has-feedback">
 		<div class="inputName">[[Password]]</div>
-		<div class="inputField"><input type="password" name="password" /></div>
-	</fieldset>
-	<fieldset>
+		<div class="inputField"><input class="form-control"  type="password" name="password" /></div>
+	</div>
+	<div class="form-group has-feedback">
 		<div class="inputName">&nbsp;</div>
 		<div class="inputField"><input type="checkbox" name="keep" id="keep" /><label for="keep"> [[Keep me signed in]]</label></div>
-	</fieldset>
-	<fieldset>
+	</div>
+	<div class="form-group has-feedback">
 		{module name="miscellaneous" function="captcha_handle" displayMode="fieldset"}
-	</fieldset>
-	<fieldset>
+	</div>
+	<div class="form-group has-feedback">
 		<div class="inputName">&nbsp;</div>
-		<div class="inputButton"><input type="submit" value="[[Login]]" class="button" /></div>
-	</fieldset>
+		<div class="inputButton"><input type="submit" value="[[Login]]" class="button btn btn-default" /></div>
+	</div>
 </form>
 
 <br/><a  href="{$GLOBALS.site_url}/password-recovery/">[[Forgot Your Password?]]</a>&nbsp;|&nbsp; <a href="{$GLOBALS.site_url}/registration/{if $shopping_cart}?fromShoppingCart=1{/if}">[[Registration]]</a>

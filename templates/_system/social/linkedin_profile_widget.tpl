@@ -25,4 +25,4 @@
 {/literal}
 
 <div class="in_ProfileWidget"></div>
-<div class="clr"></div>
+<div class="clearfix"></div>

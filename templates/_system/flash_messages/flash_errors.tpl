@@ -1,5 +1,6 @@
 {foreach from=$messagesArray key=type item=messages}
-	{foreach from=$messages item=message}
+	<div class="error alert alert-danger">
+		{foreach from=$messages item=message}
 		{if is_array($message)}
 			{assign var='messageId' value=$message.messageId}
 		{else}
@@ -40,4 +41,5 @@
 		
 		<p class="{$type}">{$messageValue|escape:'html'}</p>
 	{/foreach}
+	</div>
 {/foreach}

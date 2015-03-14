@@ -59,8 +59,8 @@
 <div class="listingInfo">
 	<h2>[[Company Description]]:</h2>
 	{$userInfo.CompanyDescription}
-	<div class="clr"><br/></div>
+	<<div class="clearfix"></div>
 	<div id="company-profile-video">{display property="video"}</div>
 </div>
 {module name="social" function="company_insider_widget" companyName=$companyName}
-<div class="clr"><br /></div>
+<div class="clearfix"></div>

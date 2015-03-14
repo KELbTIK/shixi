@@ -1,19 +1,19 @@
 <form name="employers_selected_list" id="employers_selected_list" action="">
-
-<table cellspacing="0" cellpadding="3" width="550" border=0>
+<div class="table-responsive">
+	<table cellspacing="0" cellpadding="3" width="550" border=0>
 	<tr>
 		<td width="265">[[Employers List]]</td>
 		<td width="30px">&nbsp;</td>
 		<td width="265">[[Selected Employers]]</td>
 	</tr>
 	<tr>
-		<td><input type="text" id="find_name" name="find_name" value=""><input type="button" id="find_button" name="find_button" value="[[Search]]"></td>
+		<td><input class="form-control"   type="text" id="find_name" name="find_name" value=""><input type="button" class="btn btn-default" id="find_button" name="find_button" value="[[Search]]"></td>
 		<td></td>
 		<td></td>
 	</tr>
 	<tr>
 		<td align="center">
-		<select id="employers_for_select" name="employers_for_select" size=10 multiple style="width: 250px;">
+		<select class="form-control" id="employers_for_select" name="employers_for_select" size=10 multiple style="width: 250px;">
 			{foreach from=$employers item=emp}
 				<option value="{$emp.sid}">{$emp.name}</option>
 			{/foreach}
@@ -21,12 +21,12 @@
 		</td>
 
 		<td>
-			<input type="button" id="move_to_selected" value=" > ">
-			<input type="button" id="remove_from_selected" value=" < ">
+			<input class="btn btn-default" type="button" id="move_to_selected" value=" > ">
+			<input class="btn btn-default" type="button" id="remove_from_selected" value=" < ">
 		</td>
 		
 		<td align="center">
-		<select id="employers_selected" name="employers_selected" size=10 multiple style="width: 250px;">
+		<select class="form-control" id="employers_selected" name="employers_selected" size=10 multiple style="width: 250px;">
 		</select>
 		</td>
 	</tr>
@@ -34,10 +34,10 @@
 		<td colspan="3"><span class="small">[[* Use CTRL key to select two or more employers]]</span></td>
 	</tr>
 	<tr>
-		<td colspan="3"><input type="button" class="button" id="set_employers_list" value="OK"></td>
+		<td colspan="3"><input type="button" class="btn btn-success" id="set_employers_list" value="OK"></td>
 	</tr>
 </table>
-
+</div>
 </form>
 
 {literal}

@@ -1,13 +1,13 @@
 {foreach from=$errors key=error_code item=error_message}
     {if $error_code == 'EMPTY_USERNAME'}
-		<p class="error">[[Username is empty]]</p>
-    {elseif $error_code == 'EMPTY_VERIFICATION_KEY'}
-		<p class="error">[[Verification key is empty]]</p>
+		<div class="error alert alert-danger">[[Username is empty]]</div>
+	{elseif $error_code == 'EMPTY_VERIFICATION_KEY'}
+		<div class="error alert alert-danger">[[Verification key is empty]]</div>
     {elseif $error_code == 'WRONG_VERIFICATION_KEY'}
-		<p class="error">[[Wrong verification key is specified]]</p>
+		<div class="error alert alert-danger">[[Wrong verification key is specified]]</div>
 	{elseif $error_code == 'PASSWORD_NOT_CONFIRMED'}
-		<p class="error">[[Password is not confirmed or empty]]</p>
-	{/if}
+		<div class="error alert alert-danger">[[Password is not confirmed or empty]]</div>
+			{/if}
 {/foreach}
 
 <form method="post" action="">
@@ -19,13 +19,13 @@
 			</td>
 		</tr>
 		<tr>
-			<td>[[Password]]:</td><td><input type="password" name="password" class="text" /></td>
+			<td>[[Password]]:</td><td><input type="password" name="password" class="text form-control" /></td>
 		</tr>
 		<tr>
-			<td>[[Confirm Password]]:</td><td><input type="password" name="confirm_password" class="text" /></td>
+			<td>[[Confirm Password]]:</td><td><input type="password" name="confirm_password" class="text form-control" /></td>
 		</tr>
 		<tr>
-			<td>&nbsp;</td><td><input type="submit" name="submit" value="[[Submit]]" class="button" /></td>
+			<td>&nbsp;</td><td><input type="submit" name="submit" value="[[Submit]]" class="btn btn-default" /></td>
 		</tr>
 	</table>
 </form>

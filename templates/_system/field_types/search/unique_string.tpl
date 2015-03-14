@@ -1,2 +1,2 @@
 
-<input type="text" name="{$id}[equal]" value="{$value.equal}" />
+<input class="form-control" type="text" name="{$id}[equal]" value="{$value.equal}" />

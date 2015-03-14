@@ -1,1 +1,1 @@
-<p class="error">[[Under construction]]</p>
+<div class="error alert alert-danger">[[Under construction]]</div>

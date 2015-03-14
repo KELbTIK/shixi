@@ -23,7 +23,7 @@
 </script>
 {include file="error.tpl"}
 {if empty($listings)}
-	<div class="noRefine">
+	<div class="noRefine table-responsive">
 		<table width="90%" cellpadding="7" cellspacing="5" id="browse-items">
 			<tr valign=top>
 				{assign var="columnCount" value="5"}

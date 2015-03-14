@@ -16,11 +16,13 @@
 </script>
 {/literal}
 {if $error}
-	{if $error eq 'LISTING_ID_NOT_SPECIFIED'}
-		<p class="error">[[Listing ID not specified]]</p>
-	{elseif $error eq 'DENIED_SAVE_LISTING'}
-		<p class="error">[[You have no permission to save an ad]]</p>
-	{/if}
+	<div class="error alert alert-danger">
+		{if $error eq 'LISTING_ID_NOT_SPECIFIED'}
+			[[Listing ID not specified]]
+		{elseif $error eq 'DENIED_SAVE_LISTING'}
+			[[You have no permission to save an ad]]
+		{/if}
+	</div>
 {else}
 	{if !$from_login && !$displayForm}
 	    {if $view == 'map'}
@@ -30,25 +32,27 @@
         {/if}
 	{else}
 		{if $error eq null}
-			{if $listing_type == "resume"}
-				<p class="message">[[Resume has been saved]]</p>
-			{else}
-				<p class="message">[[Job has been saved]]</p>
-			{/if}
+			<div class="message alert alert-info">
+				{if $listing_type == "resume"}
+					[[Resume has been saved]]
+				{else}
+					[[Job has been saved]]
+				{/if}
+			</div>
 			{if $displayForm}<a href='{$GLOBALS.site_url}/add-notes' onclick='addNote();return false;'>[[Add notes]]</a>
 			<div id='add_notes_block' style='display:none;'>
 			<form id='notesForm' action='{$GLOBALS.site_url}/add-notes/' onsubmit="return Submit()">
 				<input type="hidden" name="actionNew" value='save'/>
 				<input type="hidden" name="listing_sid" value='{$listing_sid}'/>
-				<textarea name="note" style="width: 100%; margin: 10px 0;"></textarea>
-				<br/><input type="submit" value="[[Add]]" class="button" />
+				<textarea "form-control"  name="note" style="width: 100%; margin: 10px 0;"></textarea>
+				<br/><input type="submit" value="[[Add]]" class="btn btn-success" />
 			</form>
 			</div>
 			{/if}
 		{elseif $error eq 'LISTING_ID_NOT_SPECIFIED'}
-			<p class="error">[[Listing ID not specified]]</p>
+			<div class="error alert alert-danger">[[Listing ID not specified]]</div>
 		{elseif $error eq 'DENIED_SAVE_LISTING'}
-		<p class="error">[[You're not allowed to open this page]]</p>
+		<div class="error alert alert-danger"> [[You're not allowed to open this page]]</div>
 		{/if}
 		{literal}
 			<script type="text/javascript">

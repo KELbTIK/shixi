@@ -5,7 +5,7 @@
 	{if $errors}
 		<div class="noRefine">
 			{foreach from=$errors key=error_code item=error_message}
-				<p class="error">
+				<div class="error alert alert-danger">
 					{if $error_code == 'UNDEFINED_LISTING_ID'} [[Listing ID is not defined]]
 						{title} [[404 Not Found]] {/title}
 					{elseif $error_code == 'WRONG_LISTING_ID_SPECIFIED'} [[Listing does not exist]]
@@ -17,7 +17,7 @@
 						{title} [[404 Not Found]] {/title}
 					{elseif $error_code == 'WRONG_DISPLAY_TEMPLATE'} [[Wrong template to display listing]]
 					{/if}
-				</p>
+				</div>
 			{/foreach}
 		</div>
 	{else}
@@ -87,7 +87,7 @@
 				<!-- END SAVE LISTING / PRINT LISTING -->
 
 				<!-- MODIFY RESULTS / RATING / COMMENTS / PAGGING -->
-				<div class="clr"></div>
+				<div class="clearfix"></div>
 				<div class="underQuickLinks">
 					<div class="ModResults">
 						{if $searchId != "" && $GLOBALS.user_page_uri != "/my-{$listing.type.id|lower}-details/" && $GLOBALS.user_page_uri != "/{$listing.type.id|lower}-preview/"}
@@ -200,13 +200,13 @@
 			<!-- LISTING INFO BLOCK -->
 			<div class="listingInfo">
 				<h2>{$listing.Title}</h2>
-				<div class="clr"><br/></div>
+				<div class="clearfix"></div>
 
-				<div class="clr"></div>
+				<div class="clearfix"></div>
 				{* >>>>>>>>>>>>> FIELDS >>>>>>>>>>>>>>>> *}
 				{include file="../builder/bf_displaylisting_fieldsholders.tpl"}
 				{* <<<<<<<<<<<<< FIELDS <<<<<<<<<<<<<<<< *}
-				<div class="clr"><br/></div>
+				<div class="clearfix"></div>
 
 				{if !$myListing && $GLOBALS.plugins.ShareThisPlugin.active == 1}
 					{$GLOBALS.settings.header_code}
@@ -214,7 +214,7 @@
 				{/if}
 				{module name="social" function="facebook_like_button" listing=$listing type="{$listing.type.id|lower}"}
 				{module name="social" function="linkedin_share_button" listing=$listing}
-				<div class="clr"><br/></div>
+				<div class="clearfix"></div>
 
 				{if $show_comments && $acl->isAllowed('add_'|cat:{$listing.type.id|lower}|cat:'_comments')}
 					{include file="listing_comments.tpl" listing=$listing}
@@ -226,12 +226,12 @@
 			<div class="preview-buttons">
 				<form action="{$referer}" method="post">
 					<input type="hidden" name="from-preview" value="1" />
-					<input type="submit" name="edit_temp_listing" value="[[Edit]]" class="button" id="listingPreview" />
+					<input type="submit" name="edit_temp_listing" value="[[Edit]]" class="btn btn-default" id="listingPreview" />
 					{if $contract_id == 0 && !$checkouted}
 						<input type="hidden" name="proceed_to_checkout" />
-						<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="button" />
+						<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="btn btn-primary" />
 					{else}
-						<input type="submit" name="action_add" value="[[Post]]" class="button" />
+						<input type="submit" name="action_add" value="[[Post]]" class="btn btn-success" />
 					{/if}
 				</form>
 			</div>

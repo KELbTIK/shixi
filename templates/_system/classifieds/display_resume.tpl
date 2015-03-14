@@ -5,7 +5,7 @@
 	{if $errors}
 		<div class="noRefine">
 			{foreach from=$errors key=error_code item=error_message}
-				<p class="error">
+				<div class="message alert alert-info">
 					{if $error_code == 'UNDEFINED_LISTING_ID'} [[Listing ID is not defined]]
 						{title} [[404 Not Found]] {/title}
 					{elseif $error_code == 'WRONG_LISTING_ID_SPECIFIED'} [[Listing does not exist]]
@@ -18,7 +18,7 @@
 					{elseif $error_code == 'WRONG_DISPLAY_TEMPLATE'} [[Wrong template to display listing]]
 					{elseif $error_code == 'NO_SUCH_FILE'} [[No such file found in the system]]
 					{/if}
-				</p>
+				</div>
 			{/foreach}
 		</div>
 	{else}
@@ -54,7 +54,7 @@
 	<div class="results">
 		<div id="topResults">
 			{if $tcpdfError}
-				<p class="error">[[Error generating PDF]]</p>
+				<div class="message alert alert-info"></div>  [[Error generating PDF]]</div>
 			{/if}
 			<!-- SAVE LISTING / PRINT LISTING -->
 			<div class="searchResultsHeaderLineNew">
@@ -124,7 +124,7 @@
 			<!-- END SAVE LISTING / PRINT LISTING -->
 			
 			<!-- MODIFY RESULTS / RATING / COMMENTS / PAGGING -->
-			<div class="clr"></div>
+			<div class="clearfix"></div>
 			<div class="underQuickLinks">
 				<div class="ModResults">
 					{if $searchId != "" && $GLOBALS.user_page_uri != "/my-resume-details/" && $GLOBALS.user_page_uri != "/resume-preview/"}
@@ -264,8 +264,8 @@
 				{$GLOBALS.settings.header_code}
 				{$GLOBALS.settings.code}
 			{/if}
-			
-			<div class="clr"><br/></div>
+
+			<div class="clearfix"></div>
 
 			{if $show_comments && $acl->isAllowed('add_resume_comments')}
 				{include file="listing_comments.tpl" listing=$listing }
@@ -295,12 +295,12 @@
 		<div class="preview-buttons">
 			<form action="{$referer}" method="post">
 				<input type="hidden" name="from-preview" value="1" />
-				<input type="submit" name="edit_temp_listing" value="[[Edit]]" class="button" id="listingPreview"/>
+				<input type="submit" name="edit_temp_listing" value="[[Edit]]" class="btn btn-default" id="listingPreview"/>
 				{if $contract_id == 0 && !$checkouted}
 					<input type="hidden" name="proceed_to_checkout" />
-					<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="button" />
+					<input type="submit" name="action_add" value="[[Proceed to Checkout]]" class="btn btn-primary" />
 				{else}
-					<input type="submit" name="action_add" value="[[Post]]" class="button" />
+					<input type="submit" name="action_add" value="[[Post]]" class="btn btn-success" />
 				{/if}
 			</form>
 		</div>

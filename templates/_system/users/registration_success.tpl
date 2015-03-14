@@ -1,2 +1,2 @@
 <br/><br/>
-[[You have successfully registered in our site]]
+<div class="alert alert-succes">[[You have successfully registered in our site]]</div>

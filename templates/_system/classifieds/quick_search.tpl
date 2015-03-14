@@ -6,14 +6,15 @@
 	<form action="{$GLOBALS.site_url}/search-results-jobs/">
 		<input type="hidden" name="action" value="search" />
 		<input type="hidden" name="listing_type[equal]" value="Job" />
-		<table cellpadding="0" cellspacing="0" width="80%">
+		<div class="table-responsive">
+			<table cellpadding="0" cellspacing="0" width="80%">
 			<tr style="height:40px">
 				<td>&nbsp; [[Keywords]]</td>
 				<td>&nbsp; {search property=keywords}</td>
 				<td>&nbsp; [[Category]]</td>
 				<td>&nbsp; {search property=JobCategory  template='list.tpl'}</td>
 				<td>&nbsp; 
-					<input type="submit" class="button" style="width:100px;" value="[[Find]]" />
+					<input type="submit" class="btn btn-default" style="width:100px;" value="[[Find]]" />
 				</td>
 			</tr>
 			<tr>
@@ -31,5 +32,6 @@
 				</td>
 			</tr>
 		</table>
+		</div>
 	</form>
 </div>

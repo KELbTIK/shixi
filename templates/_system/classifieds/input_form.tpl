@@ -1,14 +1,20 @@
 <script language="JavaScript" type="text/javascript" src="{common_js}/picture_actions.js"></script>
 {if $account_activated}
-	<p class="message">
+	<div class="message alert alert-info">
 		[[Your account was successfully activated. Thank you.]]
-	</p>
+	</div>
 {/if}
 {title}{tr}Post {$listingTypeStructure.name}{/tr|escape:'html'}{/title}
 {if $nextPage || $prevPage}
-{foreach from=$pages item=page name=page_block}
-	<div class="input-form-bc">{if $page.sid == $pageSID}<b>[[{$page.page_name}]]</b>{else}{if $page.order <= $currentPage.order}<a href="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$page.page_id}/{$listingSID}">[[{$page.page_name}]]</a>{else}[[{$page.page_name}]]{/if}{/if}{if !$smarty.foreach.page_block.last} -&gt; {/if}&nbsp;</div>
+	<div class="page-intro">
+		<div class="col-sm-12">
+			{foreach from=$pages item=page name=page_block}
+	<span class="input-form-bc">{if $page.sid == $pageSID}<b>[[{$page.page_name}]]</b>{else}{if $page.order <= $currentPage.order}<a href="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$page.page_id}/{$listingSID}">[[{$page.page_name}]]</a>{else}[[{$page.page_name}]]{/if}{/if}{if !$smarty.foreach.page_block.last} / {/if}&nbsp;</span>
+
 {/foreach}
+		</div>
+		<div class="clearfix"></div>
+	</div>
 {/if}
 <div class="clearfix"></div>
 <h1>[[{$currentPage.page_name}]]</h1>

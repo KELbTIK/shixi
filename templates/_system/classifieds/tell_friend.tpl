@@ -12,57 +12,59 @@
 	--></script>
 {/literal}
 {if $is_data_submitted && !$errors}
-   	<p class="message">[[Your letter was sent]]</p>
+   	<div class="message alert alert-info">[[Your letter was sent]]</div>
 {else}
 	{if $errors}
-		<p class="error">[[Cannot send letter]]</p>
+		<div class="error alert alert-danger">[[Cannot send letter]]</div>
 	{/if}
 	{if $fatal_errors}
 		{foreach from=$fatal_errors key=fatal_error_code item=error_message}
-			{if $fatal_error_code == 'UNDEFINED_LISTING_ID'}<p class="error"> [[Listing ID is not defined]] </p>
-			{elseif $fatal_error_code == 'LISTING_ID_IS_NOT_NUMERIC'} <p class="error">[[{$error_message}]] </p>
-			{/if}
+			<div class="error alert alert-danger">
+				{if $fatal_error_code == 'UNDEFINED_LISTING_ID'}[[Listing ID is not defined]]
+				{elseif $fatal_error_code == 'LISTING_ID_IS_NOT_NUMERIC'} [[{$error_message}]]
+				{/if}
+			</div>
 		{/foreach}
 	{else}
 	{foreach from=$errors key=error_code item=error_message}
-		<p class="error">
+		<div class="error alert alert-danger">
 			{if $error_code  eq 'EMPTY_VALUE'} [[Enter Security code]] 
 			{elseif $error_code eq 'NOT_VALID'} [[Security code is not valid]]
 			{elseif $error_code eq 'NOT_VALID_EMAIL_FORMAT'} [[Email format is not valid]]
 			{elseif $error_code eq 'SEND_ERROR'} [[Error while sending mail]]
 			{/if}
-		</p>
+		</div>
 	{/foreach}
 	<form method="post" action="{$GLOBALS.site_url}/tell-friends/" id="tellFriendForm" onsubmit="disableSubmitButton('submitTellFriend'); return tellFriendSubmit();">
 		<input type="hidden" name="is_data_submitted" value="1" />
 		<input type="hidden" name="listing_id" value="{$listing_info.id|htmlspecialchars}" />
 
 		<div class="text-center strong">[[Recommend]]: {$listing_info.Title}</div>
-		<div class="clrBorder"><br/></div>
+		<div class="clearfix"></div>
 
-		<fieldset>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Your name]]</div>
-			<div class="inputField"><input type="text" name="name" value="{$info.name|escape:"html"}" /></div>
-		</fieldset>
-		<fieldset>
+			<div class="inputField"><input class="form-control" type="text" name="name" value="{$info.name|escape:"html"}" /></div>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Your friend's name]]</div>
-			<div class="inputField"><input type="text" name="friend_name" value="{$info.friend_name|escape:"html"}" /></div>
-		</fieldset>
-		<fieldset>
+			<div class="inputField"><input class="form-control" type="text" name="friend_name" value="{$info.friend_name|escape:"html"}" /></div>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Your friend's e-mail address]]</div>
-			<div class="inputField"><input type="text" name="friend_email" value="{$info.friend_email|escape:"html"}" /></div>
-		</fieldset>
-		<fieldset>
+			<div class="inputField"><input class="form-control" type="text" name="friend_email" value="{$info.friend_email|escape:"html"}" /></div>
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[Your comment (will be sent with the recommendation)]]</div>
-			<div class="inputField"><textarea name="comment" rows="5">{$info.comment|escape:"html"}</textarea></div>
-		</fieldset>
-		<fieldset>
-			{module name="miscellaneous" function="captcha_handle" currentFunction="tell_friend" displayMode='fieldset'}
-		</fieldset>
-		<fieldset>
+			<div class="inputField"><textarea class="form-control" name="comment" rows="5">{$info.comment|escape:"html"}</textarea></div>
+		</div>
+		<div class="form-group has-feedback">
+			{module name="miscellaneous" function="captcha_handle" currentFunction="tell_friend" displayMode='div'}
+		</div>
+		<div class="form-group has-feedback">
 			<div class="inputName">&nbsp;</div>
-			<div class="inputButton"><input type="submit" value="[[Send]]" id="submitTellFriend" /></div>
-		</fieldset>
+			<div class="inputButton"><input class="btn btn-default" type="submit" value="[[Send]]" id="submitTellFriend" /></div>
+		</div>
 	</form>
 	{/if}
 {/if}

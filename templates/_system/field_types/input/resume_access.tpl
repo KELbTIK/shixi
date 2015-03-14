@@ -5,7 +5,7 @@
 </select>
 
 <div id="access_div" {if empty($listing_access_list)}style="display: none;"{/if}>
-	<select id="employers_selected_readonly" name="employers_selected_readonly[]" size="10" multiple="multiple" style="width:315px" readonly="readonly">
+	<select class="form-control"   id="employers_selected_readonly" name="employers_selected_readonly[]" size="10" multiple="multiple" style="width:315px" readonly="readonly">
 		{foreach from=$listing_access_list item=elem}
 		    <option value="{$elem.user_id}">{$elem.value|escape:'html'}</option>
 		{/foreach}
@@ -20,7 +20,7 @@
 </div>
 
 <div id="saved_employers_div" style='display:none'>
-    <select id="saved_employers" name="saved_employers">
+    <select class="form-control"   id="saved_employers" name="saved_employers">
 		{foreach from=$listing_access_list item=elem}
 			<option value="{$elem.user_id}">{$elem.value|escape:'html'}</option>
 		{/foreach}

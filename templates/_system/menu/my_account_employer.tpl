@@ -1,7 +1,7 @@
 {if $account_activated}
-	<p class="message">
+	<div class="message alert alert-info">
 		[[Your account was successfully activated. Thank you.]]
-	</p>
+    </div>
 {/if}
 <div class="MyAccount col-sm-8">
     <div class="row">

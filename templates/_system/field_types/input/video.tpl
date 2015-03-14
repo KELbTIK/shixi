@@ -1,7 +1,7 @@
 {capture assign='listingId'}{if $listing_id}{$listing_id}{else}{$listing.id}{/if}{/capture}
 {if $GLOBALS.is_ajax || $smarty.get.ajax_submit}
 	{foreach from=$errors key=key item=error}
-		<p class="error">
+		<div class="error alert alert-danger">
 			{if $key == 'NOT_SUPPORTED_VIDEO_FORMAT' || $key == 'NOT_ACCEPTABLE_FILE_FORMAT'}
 				[[Not supported video format]]
 			{elseif $key == 'NOT_CONVERT_VIDEO'}
@@ -9,7 +9,7 @@
 			{else}
 				[[{$key}]]
 			{/if}
-		</p>
+		</div>
 	{/foreach}
 
 	<div id="classifieds_video_{$id}">

@@ -5,8 +5,8 @@
             <thead>
                 <tr>
                     <th class="tableLeft"> </th>
-                    <th class="rec-sug-title-th" width="48%">[[Job Title]]</th>
-                    <th class="rec-sug-comp-th" width="25%">[[Company]]</th>
+                    <th class="rec-sug-title-th">[[Job Title]]</th>
+                    <th class="rec-sug-comp-th">[[Company]]</th>
                     <th class="rec-sug-loc-th">[[Location]]</th>
                     <th class="tableRight"> </th>
                 </tr>

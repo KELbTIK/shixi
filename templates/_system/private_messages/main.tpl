@@ -5,10 +5,10 @@
 	<a href="{$GLOBALS.site_url}/private-messages/send/" class="pm">{if $url == "/private-messages/send/"}<span class="strong">[[Compose Message]]</span>{else}[[Compose Message]]{/if}</a> |
 	<a href="{$GLOBALS.site_url}/private-messages/contacts/" class="pm">{if $url == "/private-messages/contacts/"}<span class="strong">[[Contacts]]</span>{else}[[Contacts]]{/if}</a><br />
 	{if $errors.NOT_EXISTS_MESSAGE}
-		<p class="error">[[Message with specified ID does not exist in your mailbox]]</p>
+		<div class="error alert alert-danger">[[Message with specified ID does not exist in your mailbox]]</div>
 		{assign var="include" value=''}
 	{/if}
-	<div class="clr"><br/></div>
+	<div class="clearfix"></div>
 	{if $include != ""}{include file="$include"}{/if}
 	<script type="text/javascript">
 		{literal}
@@ -47,6 +47,6 @@
 	</script>
 {else}
 	{assign var="url" value=$GLOBALS.site_url|cat:"/registration/"}
-	<p class="error">[[Please log in to access this page. If you do not have an account, please]] <a href="{$url}">[[Register.]]</a></p>
-	{module name="users" function="login"}
+	<div class="error alert alert-danger"><[[Please log in to access this page. If you do not have an account, please]] <a href="{$url}">[[Register.]]</a>/div>
+		{module name="users" function="login"}
 {/if}

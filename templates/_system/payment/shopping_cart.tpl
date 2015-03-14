@@ -1,7 +1,7 @@
 {if $account_activated}
-	<p class="message">
+	<div class="message alert alert-info">
 		[[Your account was successfully activated. Thank you.]]
-	</p>
+	</div>
 {/if}
 {if $confirmation}
 	<form action="{$GLOBALS.site_url}/payment-page/" method="post" enctype="multipart/form-data" >
@@ -11,16 +11,16 @@
 		{foreach from=$products item=product name=products_block}
 			{if $product.recurring}<p><span class="strong">[[{$product.name}]]</span></p>{/if}
 		{/foreach}
-		<div class="clr"><br/></div>
+		<div class="clearfix"></div>
 		<div class="text-center"><input type="submit" name="buy" value="[[Buy]]" > &nbsp; <input type="submit" name="subscribe" value="[[Subscribe]]" ></div>
 	</form>
 {else}
 	<h1>[[Shopping Cart]]</h1>
-	<div class="clr"><br/></div>
+	<div class="clearfix"></div>
 	{if $error == 'user_group'}
-		<p class="error">[[You have logged in as {$GLOBALS.current_user.group.caption} but the products you have chosen belong to another User Group. They were automatically deleted from your Shopping Cart]]</p>
+		<div class="error alert alert-danger">[[You have logged in as {$GLOBALS.current_user.group.caption} but the products you have chosen belong to another User Group. They were automatically deleted from your Shopping Cart]]</div>
 	{elseif $error == 'trial_product'}
-		<p class="error">[[One of the products in your Shopping Cart seems to be a Trial Product. You cannot subscribe for a Trial Product again because you have already subscribed for it. The Trial Product was automatically removed from your Shopping Cart]]</p>
+		<div class="error alert alert-danger">[[One of the products in your Shopping Cart seems to be a Trial Product. You cannot subscribe for a Trial Product again because you have already subscribed for it. The Trial Product was automatically removed from your Shopping Cart]]</div>
 	{/if}
 	<form action="" method="post" enctype="multipart/form-data" name="shoppingCartForm" onsubmit="disableSubmitButton('checkoutSubmit');">
 	<input type="hidden" name="action" value="checkout" />
@@ -57,7 +57,7 @@
 						{elseif $product.QtyPeriod}
 							{$product.QtyPeriod}
 						{elseif $product.volume_based_pricing}
-							<select name="number_of_listings[{$product.sid}][{$product.item_sid}]" id="number_of_listings_{$product.sid}_{$product.item_sid}" onChange="getPrice(this.value, '{$product.sid}', '{$product.item_sid}')" class="numberOfListings">
+							<select name="number_of_listings[{$product.sid}][{$product.item_sid}]" id="number_of_listings_{$product.sid}_{$product.item_sid}" onChange="getPrice(this.value, '{$product.sid}', '{$product.item_sid}')" class="form-control numberOfListings">
 								{foreach from=$product.count_listings item=count_listings_info}
 									<option value="{$count_listings_info.number_of_listings}" {if $count_listings_info.number_of_listings == $product.number_of_listings} selected="selected" {/if} >[[{$count_listings_info.number_of_listings}]]</option>
 								{/foreach}
@@ -139,13 +139,13 @@
 	</div>
 	{foreach from=$errors item=caption key=error}
 		{if $error eq 'EMPTY_VALUE'}
-			<p class="error">'[[{$caption}]]' [[is empty]]</p>
+			<div class="error alert alert-danger">'[[{$caption}]]' [[is empty]]</div>
 		{elseif $error eq 'NOT_VALID'}
-			<p class="error">[[{$caption}]]</p>
+		<div class="error alert alert-danger">[[{$caption}]]</div>
 		{/if}
 	{/foreach}
 	{if $applied_products}
-		<p class="message">
+		<div class="message alert alert-info">
 			[[You have successfully applied the promotion code to the following product(s):]]<br/>
 			{foreach from=$applied_products item=applied_product name=applied_product_block}
 				[[{$applied_product.name}]]
@@ -153,7 +153,7 @@
 					,&nbsp;
 				{/if}
 			{/foreach}
-		</p>
+		</div>
 		<p class="information">[[You have received a discount of]] {strip}
 				{if $code_info.type == 'percentage'}
 					{$code_info.discount}%

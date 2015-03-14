@@ -17,8 +17,8 @@
 		<form method="post" action="" onsubmit="return false">
 			<input type="hidden" name="listing_id" id="listing_id" value="{$listing_id}" />
 			<input type="hidden" name="total" value="{$comments_total}" id="total" />
-			<textarea name="message" id="message" cols="60" rows="3"></textarea><br/>
-			<input type="button" id="but_send" name="send" value="[[Add]]" class="button"/>
+			<textarea class="form-control"   name="message" id="message" cols="60" rows="3"></textarea><br/>
+			<input type="button" id="but_send" name="send" value="[[Add]]" class="btn btn-success"/>
 		</form>
 	</div>
 </div>

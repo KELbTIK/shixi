@@ -22,13 +22,13 @@
     <input type="hidden" name="searchId" value="{$searchId}" />
     <input type="hidden" name="action" value="save" />
 	{foreach from=$form_fields item="formField"}
-		<fieldset>
+		<div class="form-group has-feedback">
 			<div class="inputName">[[{$formField.caption}]]</div>
 			<div class="inputField">{input property=$formField.id}</div>
-		</fieldset>
+		</div>
 	{/foreach}
-	<fieldset>
+	<div class="form-group has-feedback">
 		<div class="inputName">&nbsp;</div>
-		<div class="inputButton"><input type="submit" name="save" value="[[Save]]" class="button" /></div>
-	</fieldset>
+		<div class="inputButton"><input type="submit" name="save" value="[[Save]]" class="btn btn-success" /></div>
+	</div>
 </form>

@@ -1,8 +1,8 @@
 <h1>[[Bulk job import from exl/csv file]]</h1>
 <p class="smallh1">[[Please review the file examples below and ascertain that your file is up to sample]]</p>
-<div class="clr"></div>
+<div class="clearfix"></div>
 {if $error}
-	<p class="error">
+	<div class="error alert alert-danger">
 		{if $error eq 'LISTINGS_NUMBER_LIMIT_EXCEEDED'}
 			[[You've reached the limit of number of listings allowed by your product]]
 			<a href="{$GLOBALS.site_url}/products/">[[Please choose new product]]</a>
@@ -16,15 +16,16 @@
 		{else}
 			[[{$error}]]
 		{/if}
-	</p>
+	</div>
 	<br/>
 {else}
 	{if $warning}
-		<p class="error">[[{$warning}]]</p>
+		<div class="error alert alert-danger">[[{$warning}]]</div>
 	{/if}
 	<form method="post" action="" enctype="multipart/form-data">
 		<input type="hidden" name="contract_id" value="{$contract_id}" />
-		<table class="formtable">
+		<div class="table-responsive">
+			<table class="formtable">
 			<tr class="headrow">
 				<td colspan="2">[[Data Import]]</td>
 				<td align='right'>
@@ -34,12 +35,12 @@
 			</tr>
 			<tr class="oddrow">
 				<td>[[Please choose Excel or csv file]]:</td>
-				<td colspan="2"><input type="file" name="import_file" value="" class="text" /></td>
+				<td colspan="2"><input type="file" name="import_file" value="" class="text form-control"  /></td>
 			</tr>
 			<tr>
 				<td>[[Encoding]]<br /><small>([[for CSV-file only]])</small></td>
 				<td colspan="2">
-					<select name="encodingFromCharset" >
+					<select class="form-control"  name="encodingFromCharset" >
 						<option value="UTF-8">[[Default]]</option>
 						{foreach from=$charSets item=charSet}
 							<option value="{$charSet}">{$charSet}</option>
@@ -50,8 +51,9 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td colspan="2" align="right"><input type="submit" name="action" value="Import" class="button" /></td>
+				<td colspan="2" align="right"><input type="submit" name="action" value="Import" class="btn btn-default" /></td>
 			</tr>
 		</table>
+		</div>
 	</form>
 {/if}

@@ -1,13 +1,13 @@
 {if $GLOBALS.is_ajax || $smarty.get.ajax_submit}
 	{foreach from=$errors key=key item=error}
 		{if $key == 'NOT_SUPPORTED_VIDEO_FORMAT'}
-			<p class="error">[[Not supported video format]]</p>
+			<div class="error alert alert-danger">[[Not supported video format]]</div>
 		{elseif $key == 'NOT_ACCEPTABLE_FILE_FORMAT'}
-			<p class="error">[[Not acceptable file type]]</p>
+			<div class="error alert alert-danger">[[Not acceptable file type]]</div>
 		{elseif $key == 'UPLOAD_ERR_INI_SIZE'}
-			<p class="error">[[File size exceeds system limit. Please check the file size limits on your hosting or upload another file.]]</p>
+			<div class="error alert alert-danger">[[File size exceeds system limit. Please check the file size limits on your hosting or upload another file.]]</div>
 		{else}
-			<p class="error">{$key}</p>
+			<div class="error alert alert-danger">{$key}</div>
 		{/if}
 	{/foreach}
 

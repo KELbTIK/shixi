@@ -25,7 +25,7 @@
             <br/>{module name="payment" function="show_shopping_cart"}
 		</div>
 	</div>
-	<div class="clr"></div>
+	<div class="clearfix"></div>
     <div id="underHeader">
 	    {module name="menu" function="top_menu"}
         <div id="chooseLanguage">
@@ -38,4 +38,4 @@
             </form>
         </div>
     </div>
-    <div class="clr"></div>
+	<div class="clearfix"></div>

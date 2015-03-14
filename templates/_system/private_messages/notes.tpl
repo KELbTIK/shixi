@@ -36,11 +36,11 @@
 	{/if}
 {else}
 	{foreach from=$errors key=error_code item=error_message}
-		<p class="error"
+		<div class="error alert alert-danger">
 			{if $error_code == 'UNDEFINED_CONTACT_ID'} [[Contact ID is not defined]]
 			{else}[[{$error_message}]]
 			{/if}
-		</p>
+		</div>
 		<br />
 	{/foreach}
 {/if}

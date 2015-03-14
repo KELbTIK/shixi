@@ -4,7 +4,7 @@
 {capture assign="productPrice"}{currencyFormat amount=$amount}{/capture}
 
 {foreach from=$errors item=message key=error}
-<p class="error">
+ <div class="error alert alert-danger">
 	{if $error == 'INVALID_INVOICE_ID'}
 		[[Invalid invoice ID is specified]]
 	{elseif $error == 'NOT_OWNER'}
@@ -14,8 +14,8 @@
 	{else}
 		[[{$error}]]: [[{$message}]]
 	{/if}
-</p>
-{foreachelse}
+ </div>
+	{foreachelse}
 [[Dear $username, <br /><br />Please send us a payment in the amount of $productPrice for]] [[{$item_name|regex_replace:"/(Payment for)/":" "}]]<br />
 [[Your transaction reference number is $invoice_sid. <br />Once your payment is endorsed by Admin the product(s) from your Shopping Cart would be added to your account.<br /><br />Thank you!]]
 {/foreach}

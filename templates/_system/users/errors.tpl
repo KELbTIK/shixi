@@ -1,32 +1,32 @@
 {foreach from=$errors key=error item=errmess}
-	<div class="error alert alert-danger">
+
 		{if $error eq 'NO_SUCH_USER'}
-			[[Login error]]
+			<div class="error alert alert-danger">[[Login error]]</div>
 		{elseif $error eq 'INVALID_PASSWORD'}
-			[[Login error]]
+			<div class="error alert alert-danger">[[Login error]]</div>
 		{elseif $error eq 'EMPTY_VALUE'}
-			[[Enter Security code]]
+			<div class="error alert alert-danger">[[Enter Security code]]</div>
 		{elseif $error eq 'NOT_VALID'}
-			[[Security code is not valid]]
+			<div class="error alert alert-danger">[[Security code is not valid]]</div>
 		{elseif $error eq 'USER_NOT_ACTIVE'}
-			[[Your account is not active]]
+			<div class="error alert alert-danger">[[Your account is not active]]</div>
 		{elseif $error eq 'USER_NOT_APPROVED'}
-			[[Your account is not approved]]
+			<div class="error alert alert-danger">[[Your account is not approved]]</div>
 		{elseif $error eq 'BANNED_USER'}
-			[[Your IP address was banned by site administrator. Please contact at $adminEmail for any questions.]]
+			<div class="error alert alert-danger">[[Your IP address was banned by site administrator. Please contact at $adminEmail for any questions.]]</div>
 		{elseif $error eq 'SOCIAL_ACCESS_ERROR'}
 			{if !empty($errmess)}
 				{if $errmess == 'oAuth Problem: user_refused'}
-					[[Access is refused.]]
+					<div class="error alert alert-danger">[[Access is refused.]]</div>
 				{else}
 					{assign var="socialNetwork" value=$errmess}
-					[[The $socialNetwork Plugin is set up incorrectly. Please check this issue with the website Administrator.]]
+					<div class="error alert alert-danger">[[The $socialNetwork Plugin is set up incorrectly. Please check this issue with the website Administrator.]]</div>
 				{/if}
 			{/if}
 		{elseif $error eq 'NO_SUCH_USER_GROUP_IN_THE_SYSTEM'}
-			[[Registration form cannot be displayed. There is no such User Group in the system.]]
+			<div class="error alert alert-danger">[[Registration form cannot be displayed. There is no such User Group in the system.]]</div>
 		{else}
-			[[$error]] [[$errmess]]
+			<div class="error alert alert-danger">[[$error]] [[$errmess]]</div>
 		{/if}
-	</div>
+
 {/foreach}

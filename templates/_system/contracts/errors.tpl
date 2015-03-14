@@ -6,6 +6,6 @@
 	<br/><br/></div>
 	{module name="users" function="login"}
 {elseif $error eq "ALREADY_SUBSCRIBED"}
-	<<div class="error alert alert-danger">[[You have already subscribed]]</div>
+	<div class="error alert alert-danger">[[You have already subscribed]]</div>
 {/if}
 {/foreach}

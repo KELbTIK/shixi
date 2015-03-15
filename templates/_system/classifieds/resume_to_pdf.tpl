@@ -1,13 +1,13 @@
 <div class="table-responsive">
-	<table border="0" cellpadding="2" cellspacing="4">
+	<table class="table table-condensed">
 	<tr>
-		<td style="text-align: left;">
+		<td class="text-left">
 			<br />
 			{if $listing.pictures[0].thumbnail_url}
-				<img src="{$listing.pictures[0].thumbnail_url}" border="0" />
+				<img class="img-responsive" src="{$listing.pictures[0].thumbnail_url}" border="0" />
 			{/if}
 		</td>
-		<td style="text-align: right;">
+		<td class="text-right">
 			<br />
 			{if $myListing || $listing.anonymous != 1 || $applications.anonymous === 0}
 				{if $allowViewContactInfo || $myListing}
@@ -25,9 +25,8 @@
 			{/if}
 		</td>
 	</tr>
-	<hr>
 	<tr>
-		<td colspan="2" style="text-align: center">
+		<td colspan="2" class="text-center">
 			{if $listing.anonymous != 1 || $applications.anonymous === 0 || $myListing}
 				<h1>{if $listing.user.FirstName}{$listing.user.FirstName}&nbsp;{/if}{if $listing.user.LastName}{$listing.user.LastName}{/if}</h1>
 			{else}
@@ -42,21 +41,23 @@
 </div>
 {include file="../builder/bf_displaylisting_fieldsholders_for_pdf.tpl"}
 {if $listing.pictures[1].thumbnail_url}
-	<table border="0" cellpadding="2" cellspacing="4">
-		<tr>
-			{foreach from=$listing.pictures key=key item=picture name=picimages}
-				{if !$smarty.foreach.picimages.first}
-					<td><img src="{$picture.thumbnail_url}" border="0" /></td>
-					{if ($smarty.foreach.picimages.iteration - 1) is div by 5}
-						{if !$smarty.foreach.picimages.last}
-							</tr>
-							</table>
-							<table>
-							<tr>
-						{/if}
-					{/if}
-				{/if}
-			{/foreach}
-		</tr>
-	</table>
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <tr>
+                {foreach from=$listing.pictures key=key item=picture name=picimages}
+                    {if !$smarty.foreach.picimages.first}
+                        <td><img src="{$picture.thumbnail_url}" class="img-responsive" /></td>
+                        {if ($smarty.foreach.picimages.iteration - 1) is div by 5}
+                            {if !$smarty.foreach.picimages.last}
+                                </tr>
+                                </table>
+                                <table>
+                                <tr>
+                            {/if}
+                        {/if}
+                    {/if}
+                {/foreach}
+            </tr>
+        </table>
+    </div>
 {/if}

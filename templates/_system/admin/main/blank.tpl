@@ -2,7 +2,7 @@
 <html>
 	<head>
 	    <title>
-			SmartJobBoard
+			Shixi.com
 			{if $TITLE ne ""} :: [[{$TITLE}]] {/if}
 	    </title>
 	        <link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />

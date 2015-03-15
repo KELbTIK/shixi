@@ -2,7 +2,7 @@
     <h1>[[Newsletter]]</h1>
     <div id="mailchimp-nl-cont">
         {if $error}
-            <div class="error alert alert-danger"></div>
+            <div class="error alert alert-danger">
                 {if $error eq 'EMPTY_FIELD'}
                     [[All fields are required!]]
                 {else}
@@ -13,15 +13,19 @@
         {if $message}
             <div class="message alert alert-info">[[{$message}]]</div>
         {/if}
-        <form action="{$GLOBALS.site_url}/system/miscellaneous/mailchimp/" method="get" id="mailchimp-form">
+        <form action="{$GLOBALS.site_url}/system/miscellaneous/mailchimp/" method="get" id="mailchimp-form" class="form-horizontal">
             <p class="mailchimp-nl-desc">[[Fill the form to subscribe]]</p>
             <div class="form-group">
-                <label for="mch_name">[[Your name]]:</label>
-                <input type="text" name="mch_name" id="mch_name" class="form-control" >
+                <label for="mch_name" class="control-label col-sm-3">[[Your name]]:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mch_name" id="mch_name" class="form-control" >
+                </div>
             </div>
             <div class="form-group">
-                <label for="mch_email">[[Email]]:</label>
-                <input type="text" name="mch_email" id="mch_email" class="form-control" >
+                <label for="mch_email" class="control-label col-sm-3">[[Email]]:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="mch_email" id="mch_email" class="form-control" >
+                </div>
             </div>
             <input type="submit" name="subscribe" value="Subscribe" id="mch_subscribe" class="btn btn-group btn-default btn-sm">
         </form>

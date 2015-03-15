@@ -22,11 +22,11 @@
 	{foreach from=$errors item=error_message key=error}
 		<div class="error alert alert-danger">
 			{if $error eq 'WRONG_PARAMETERS_SPECIFIED'}
-				<p class="error">[[Wrong parameters are specified]]</p>
+				[[Wrong parameters are specified]]
 			{elseif $error eq 'PARAMETERS_MISSED'}
-				<p class="error">[[The key parameters are not specified]]</p>
+				[[The key parameters are not specified]]
 			{elseif $error eq 'NOT_OWNER'}
-				<p class="error">[[You are not owner of this listing]]</p>
+				[[You are not owner of this listing]]
 			{/if}
 		</div>
 	{/foreach}
@@ -58,7 +58,7 @@
 	{/if}
 	{if $pictures}
 		<div class="table-responsive">
-			<table id="manage-pictures">
+			<table id="manage-pictures" class="table table-condensed">
 				<thead>
 					<tr>
 						<th class="tableLeft"></th>

@@ -9,5 +9,5 @@
 		{/if}
 	</div>
 {foreachelse}
-	<div class="message alert alert-info"> [[Your listing succesfully upgraded to priority]]</div>
+	<div class="message alert alert-success"> [[Your listing succesfully upgraded to priority]]</div>
 {/foreach}

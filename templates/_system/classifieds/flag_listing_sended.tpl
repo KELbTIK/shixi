@@ -1,1 +1,1 @@
-<div class="message alert alert-info">[[Your information was successfully sent]]</div>
+<div class="message alert alert-success">[[Your information was successfully sent]]</div>

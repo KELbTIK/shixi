@@ -58,12 +58,9 @@
                     </td>
                     <td>&nbsp;</td>
                 </tr>
-                <tr>
-                    <td colspan="7" class="separateListing">&nbsp;</td>
-                </tr>
             {foreachelse}
                 <tr>
-                    <td colspan="7"><div class="text-center">[[You have not saved any searches yet.]]</div></td>
+                    <td colspan="7"><div class="alert alert-info">[[You have not saved any searches yet.]]</div></td>
                 </tr>
             {/foreach}
         </tbody>

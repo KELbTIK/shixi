@@ -1,20 +1,18 @@
 <h1>[[Sub-user]] [[Registration]]</h1>
 {include file='field_errors.tpl'}
-<p>[[Fields marked with an asterisk (]]<font color="red">*</font>[[) are mandatory]]</p>
+<div class="alert alert-info">[[Fields marked with an asterisk (]]<span class="small text-danger">*</span>[[) are mandatory]]</div>
 <div id="sub-accounts">
-	<form method="post" action="{$GLOBALS.site_url}/sub-accounts/new/" enctype="multipart/form-data" >
+	<form method="post" action="{$GLOBALS.site_url}/sub-accounts/new/" enctype="multipart/form-data" class="form-horizontal">
 		<input type="hidden" name="action_name" value="new" />
 		{foreach from=$form_fields item=form_field}
 			<div class="form-group has-feedback">
-				<div class="inputName">[[$form_field.caption]]</div>
-				<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-				<div class="inputField">{input property=$form_field.id}</div>
+                <label class="inputName control-label col-sm-3">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+				<div class="inputField col-sm-8">{input property=$form_field.id}</div>
 			</div>
 		{/foreach}
 		<div class="form-group has-feedback">
-			<div class="inputName">[[Permissions]]:</div>
-			<div class="inputReq">&nbsp;</div>
-			<div class="inputField">
+			<label class="inputName control-label col-sm-3">[[Permissions]]:</label>
+			<div class="inputField col-sm-8">
 				<ul class="sub-user-permissions">
 					<li><input type="checkbox" {if $acl->isAllowed('subuser_add_listings', $user_info.sid)} checked="checked"{/if} name="subuser_add_listings" value="allow" />[[Add new listings]]</li>
 					<li><input type="checkbox" {if $acl->isAllowed('subuser_manage_listings', $user_info.sid)} checked="checked"{/if} name="subuser_manage_listings" value="allow" />[[Manage listings and applications of other sub users]]</li>
@@ -24,9 +22,7 @@
 			</div>
 		</div>
 		<div class="form-group has-feedback">
-			<div class="inputName">&nbsp;</div>
-			<div class="inputReq">&nbsp;</div>
-			<div class="inputField"><input type="hidden" name="user_group_id" value="{$user_group_info.id}" /> <input type="submit" value="[[Register]]" /></div>
+			<div class="inputField col-sm-8 col-sm-offset-3"><input type="hidden" name="user_group_id" value="{$user_group_info.id}" /> <input type="submit" class="btn btn-default" value="[[Register]]" /></div>
 		</div>
 	</form>
 </div>

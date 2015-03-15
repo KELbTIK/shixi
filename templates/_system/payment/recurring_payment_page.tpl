@@ -9,16 +9,12 @@
 
 	{if $errors}
 		<b>[[Errors]]:</b>
-		<ul>
-			{foreach from=$errors item=error}
-				<div class="error alert alert-danger">[[{$error}]]</div>
-			{/foreach}
-		</ul>
-		<hr/>
-		<br/>
+        {foreach from=$errors item=error}
+            <div class="error alert alert-danger">[[{$error}]]</div>
+        {/foreach}
 	{/if}
 <div class="table-responsive">
-	<table>
+	<table class="table table-condensed">
 		<tr>
 			<td colspan="2"><b>[[Order Information]]</b></td>
 		</tr>

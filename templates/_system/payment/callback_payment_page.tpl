@@ -11,5 +11,5 @@
 		  </div>
 	{/foreach}
 {elseif $message}
-	<div class="message alert alert-info">[[Your payment was successfully completed. Please wait for product/service activation.]]</div>
+	<div class="message alert alert-success">[[Your payment was successfully completed. Please wait for product/service activation.]]</div>
 {/if}

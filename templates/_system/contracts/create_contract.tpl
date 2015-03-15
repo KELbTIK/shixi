@@ -23,20 +23,19 @@
 			</div>
 		{/if}
 	{/foreach}
-	<div style="padding: 20px 0;">
-		<br />
+	<div>
 		{assign var='firstProduct' value=false}
 		{foreach from=$products item=product name=products_block}
 			{if !$product.error}
 				{if !$firstProduct}
 					{assign var='firstProduct' value=true}
-					<div style="padding: 20px 0;">[[You have successfully purchased the product(s) below]]:</div>
+					<div class="alert alert-success">[[You have successfully purchased the product(s) below]]:</div>
 				{/if}
-				<div style="padding: 3px 0;">[[{$product.name}]]</div>
+				<div>[[{$product.name}]]</div>
 			{/if}
 		{/foreach}
 		{if $firstProduct}
-			[[Thank you for the purchase. Now you can manage your products from My Products section of our website]]: <a href="{$GLOBALS.site_url}/my-products/">{$GLOBALS.site_url}/my-products/</a><br />
+			<div class="alert alert-info">[[Thank you for the purchase. Now you can manage your products from My Products section of our website]]: <a href="{$GLOBALS.site_url}/my-products/">{$GLOBALS.site_url}/my-products/</a></div>
 		{/if}
 		{if isset($listingTypes)}
 			{foreach from=$listingTypes item=listingType name='types'}

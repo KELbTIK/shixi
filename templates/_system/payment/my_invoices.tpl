@@ -1,6 +1,6 @@
 <div class="clearfix"></div>
 <div class="box table-responsive" id="displayResults" >
-	<table width="100%">
+	<table class="table table-condensed">
 		<thead>
 			<tr>
 				<th class="tableLeft"> </th>

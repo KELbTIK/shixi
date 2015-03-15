@@ -1,7 +1,7 @@
 <h1>[[My Reports]]</h1>
 <div id="recentlyViewedJobs" class="table-responsive">
     <div id="recentlyViewedJobs-title" class="table-correct"><h2>[[Recently Viewed Jobs]]</h2></div>
-    <table class="table">
+    <table class="table table-condensed">
         <thead>
             <tr>
                 <th class="tableLeft"> </th>

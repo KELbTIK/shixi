@@ -1,2 +1,2 @@
 
-<div class="message alert alert-info">[[Your password was successfully changed]]</div>
+<div class="message alert alert-success">[[Your password was successfully changed]]</div>

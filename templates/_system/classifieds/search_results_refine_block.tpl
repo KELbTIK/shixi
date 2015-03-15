@@ -1,6 +1,6 @@
 {if !empty($currentSearch)}
 	<div class="table-responsive">
-		<table cellpadding="0" cellspacing="0" id="currentSearch">
+		<table class="table table-condensed" id="currentSearch">
 		<thead>
 			<tr>
 				<th class="tableLeft">&nbsp;</th>

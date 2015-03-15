@@ -2,7 +2,7 @@
 	{assign var='refineSearch' value=false}
 {/if}
 <div id="no-padding">
-	<script type="text/javascript" language="JavaScript">
+	<script type="text/javascript">
 	
 	$.ui.dialog.prototype.options.bgiframe = true;
 	function submitForm(id) {

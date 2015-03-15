@@ -9,7 +9,7 @@
 		{/if}
 	</div>
 {else}
-	<div class="message  alert alert-danger"></div>
+	<div class="message  alert alert-success"></div>
 		[[Your email $email was successfully unsubscribed from the Email Alert]]
 	</div>
 {/if}

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>SmartJobBoard [[Admin Panel]] {if $TITLE ne ""} :: [[{$TITLE}]] {/if}</title>
+    <title>Shixi.com [[Admin Panel]] {if $TITLE ne ""} :: [[{$TITLE}]] {/if}</title>
 
 	<link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />
 	{if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
@@ -120,324 +120,324 @@
 	{capture name=url_for_wiki}
 	{* Dashboard *}
 		{if $url === '/system/dashboard/view/' || $url === '/'}
-			http://wiki.smartjobboard.com/display/sjb42/Dashboard
+			http://wiki.shixi.com/display/sjb42/Dashboard
 		{elseif $url === '/upload-logo'}
-			http://wiki.smartjobboard.com/display/sjb42/Upload+Your+Logo
+			http://wiki.shixi.com/display/sjb42/Upload+Your+Logo
 		{elseif $url === '/edit-css/' && $params}
 			{if $params === 'action=edit&amp;file=../templates/IntelligentView/main/images/design.css'}
-				http://wiki.smartjobboard.com/display/sjb42/Edit+CSS+File
+				http://wiki.shixi.com/display/sjb42/Edit+CSS+File
 			{elseif $params === 'action=edit&amp;file=../templates/_system/main/images/css/form.css'}
-				http://wiki.smartjobboard.com/display/sjb42/Edit+Forms+CSS+file
+				http://wiki.shixi.com/display/sjb42/Edit+Forms+CSS+file
 			{/if}
 	{* Listing Configuration *}
 		{elseif $url === '/listing-fields/'}
-			http://wiki.smartjobboard.com/display/sjb42/Common+Fields
+			http://wiki.shixi.com/display/sjb42/Common+Fields
 		{elseif $url === '/add-listing-field/'}
-			http://wiki.smartjobboard.com/display/sjb42/Common+Fields#CommonFields-AddingaNewListingField
+			http://wiki.shixi.com/display/sjb42/Common+Fields#CommonFields-AddingaNewListingField
 		{elseif strpos($url, '/edit-listing-field/') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Common+Fields
+			http://wiki.shixi.com/display/sjb42/Common+Fields
 		{elseif $url === '/listing-types/'}
-			http://wiki.smartjobboard.com/display/sjb42/Listing+Types
+			http://wiki.shixi.com/display/sjb42/Listing+Types
 		{elseif $url === '/add-listing-type/'}
-			http://wiki.smartjobboard.com/display/sjb42/Listing+Types#ListingTypes-AddinaNewListingType
+			http://wiki.shixi.com/display/sjb42/Listing+Types#ListingTypes-AddinaNewListingType
 		{elseif $url === '/edit-listing-type/'}
-			http://wiki.smartjobboard.com/display/sjb42/Listing+Types#ListingTypes-EditingaListingType
+			http://wiki.shixi.com/display/sjb42/Listing+Types#ListingTypes-EditingaListingType
 		{elseif $url === '/add-listing-type-field/'}
-			http://wiki.smartjobboard.com/display/sjb42/Listing+Types#ListingTypes-AddingaNewListingField
+			http://wiki.shixi.com/display/sjb42/Listing+Types#ListingTypes-AddingaNewListingField
 		{elseif $url === '/edit-listing-type-field/'}	
-			http://wiki.smartjobboard.com/display/sjb42/Listing+Types#ListingTypes-EditingListingFields
+			http://wiki.shixi.com/display/sjb42/Listing+Types#ListingTypes-EditingListingFields
 		{elseif strpos($url, '/posting-pages/job/new') !== false || strpos($url, '/posting-pages/resume/new') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Posting+Pages#PostingPages-AddingaNewPostingPage
+			http://wiki.shixi.com/display/sjb42/Posting+Pages#PostingPages-AddingaNewPostingPage
 		{elseif strpos($url, '/posting-pages/') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Posting+Pages
+			http://wiki.shixi.com/display/sjb42/Posting+Pages
 	{* Listing Management *}
 		{elseif $url == '/manage-resumes/' || $GLOBALS.wikiExtraParam == 'Resume'}
-			http://wiki.smartjobboard.com/display/sjb42/Manage+Resumes
+			http://wiki.shixi.com/display/sjb42/Manage+Resumes
 		{elseif $url == '/manage-jobs/' || $GLOBALS.wikiExtraParam == 'Job'}
-			http://wiki.smartjobboard.com/display/sjb42/Manage+Jobs
+			http://wiki.shixi.com/display/sjb42/Manage+Jobs
 		{elseif $url == '/add-listing/' && (strpos($params, 'listing_type_id=resume') !== false || strpos($params, 'listing_type_id=Resume') !== false)}
-			http://wiki.smartjobboard.com/display/sjb42/Adding+New+Resumes
+			http://wiki.shixi.com/display/sjb42/Adding+New+Resumes
 		{elseif $url == '/add-listing/' && (strpos($params, 'listing_type_id=job') !== false || strpos($params, 'listing_type_id=Job') !== false)}
-			http://wiki.smartjobboard.com/display/sjb42/Adding+New+Jobs
+			http://wiki.shixi.com/display/sjb42/Adding+New+Jobs
 		{elseif $url === '/import_listings/'}
-			http://wiki.smartjobboard.com/display/sjb42/Import+Listings
+			http://wiki.shixi.com/display/sjb42/Import+Listings
 		{elseif $url === '/export-listings/'}
-			http://wiki.smartjobboard.com/display/sjb42/Export+Listings
+			http://wiki.shixi.com/display/sjb42/Export+Listings
 		{elseif $url === '/listing-feeds/'}
-			http://wiki.smartjobboard.com/display/sjb42/XML+Feeds
+			http://wiki.shixi.com/display/sjb42/XML+Feeds
 		{elseif $url === '/show-import/'}
-			http://wiki.smartjobboard.com/display/sjb42/XML+Import
+			http://wiki.shixi.com/display/sjb42/XML+Import
 		{elseif $url === '/edit-import/'}
-			http://wiki.smartjobboard.com/display/sjb42/XML+Import
+			http://wiki.shixi.com/display/sjb42/XML+Import
 		{elseif $url === '/flagged-listings/'}
-			http://wiki.smartjobboard.com/display/sjb42/Flagged+listings
+			http://wiki.shixi.com/display/sjb42/Flagged+listings
 		{elseif $url === '/import-listings/'}
-			http://wiki.smartjobboard.com/display/sjb42/Import+Listings
+			http://wiki.shixi.com/display/sjb42/Import+Listings
 		{elseif $url === '/add-import/'}
-			http://wiki.smartjobboard.com/display/sjb42/XML+Import
+			http://wiki.shixi.com/display/sjb42/XML+Import
 	{* Users *}
 		{elseif $url === '/user-groups/'}
-			http://wiki.smartjobboard.com/display/sjb42/User+Groups
+			http://wiki.shixi.com/display/sjb42/User+Groups
 		{elseif $url === '/add-user-group/'}
-			http://wiki.smartjobboard.com/display/sjb42/User+Groups#UserGroups-AddingaNewUserGroup
+			http://wiki.shixi.com/display/sjb42/User+Groups#UserGroups-AddingaNewUserGroup
 		{elseif $url === '/edit-user-group/'}
-			http://wiki.smartjobboard.com/display/sjb42/User+Groups#UserGroups-EditingaUserGroup
+			http://wiki.shixi.com/display/sjb42/User+Groups#UserGroups-EditingaUserGroup
 		{elseif $url === '/edit-user-profile/'}
-			http://wiki.smartjobboard.com/display/sjb42/User+Groups
+			http://wiki.shixi.com/display/sjb42/User+Groups
 		{elseif $url === '/system/users/acl/' && $params}
-			http://wiki.smartjobboard.com/display/sjb42/User+Groups
+			http://wiki.shixi.com/display/sjb42/User+Groups
 		{elseif $url === '/manage-users/jobseeker/' || $url === '/add-user/jobseeker/' || $GLOBALS.wikiExtraParam == 'JobSeeker'}
-			http://wiki.smartjobboard.com/display/sjb42/Manage+Job+Seekers
+			http://wiki.shixi.com/display/sjb42/Manage+Job+Seekers
 		{elseif $url === '/manage-users/employers/' || $url === '/add-user/employer/' || $GLOBALS.wikiExtraParam == 'Employer'}
-			http://wiki.smartjobboard.com/display/sjb42/Manage+Employers
+			http://wiki.shixi.com/display/sjb42/Manage+Employers
 		{elseif $url === '/mailing/'}
-			http://wiki.smartjobboard.com/display/sjb42/Mass+Mailing
+			http://wiki.shixi.com/display/sjb42/Mass+Mailing
 		{elseif $url === '/banned-ips/'}
-			http://wiki.smartjobboard.com/display/sjb42/Banned+IPs
+			http://wiki.shixi.com/display/sjb42/Banned+IPs
 		{elseif $url === '/add-user-profile-field/'}
-			http://wiki.smartjobboard.com/display/sjb42/User+Groups#UserGroups-EditUserGroupProfileFields
+			http://wiki.shixi.com/display/sjb42/User+Groups#UserGroups-EditUserGroupProfileFields
 		{elseif $url === '/export-users/'}
-			http://wiki.smartjobboard.com/display/sjb42/Export+Users
+			http://wiki.shixi.com/display/sjb42/Export+Users
 		{elseif $url === '/guest-alerts/'}
-			http://wiki.smartjobboard.com/display/sjb42/Guest+Email+Alerts
+			http://wiki.shixi.com/display/sjb42/Guest+Email+Alerts
 	{* Layout and Content *}
 		{elseif $url === '/edit-templates/'}
-			http://wiki.smartjobboard.com/display/sjb42/System+Templates
+			http://wiki.shixi.com/display/sjb42/System+Templates
 		{elseif $url === '/edit_themes/'}
-			http://wiki.smartjobboard.com/display/sjb42/Themes
+			http://wiki.shixi.com/display/sjb42/Themes
 		{elseif $url === '/user-pages/'}
 			{if strpos($params, 'action=new_page') !== false }
-				http://wiki.smartjobboard.com/display/sjb42/Site+Pages#SitePages-AddingaNewUserPage
+				http://wiki.shixi.com/display/sjb42/Site+Pages#SitePages-AddingaNewUserPage
 			{elseif strpos($params, 'action=edit_page') !== false }
-				http://wiki.smartjobboard.com/display/sjb42/Site+Pages#SitePages-EditingUserPages
+				http://wiki.shixi.com/display/sjb42/Site+Pages#SitePages-EditingUserPages
 			{else}
-				http://wiki.smartjobboard.com/display/sjb42/Site+Pages
+				http://wiki.shixi.com/display/sjb42/Site+Pages
 			{/if}
 		{elseif $url === '/stat-pages/'}
 			{if strpos($params, 'action=edit') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Static+Content#StaticContent-EditingStaticContent
+				http://wiki.shixi.com/display/sjb42/Static+Content#StaticContent-EditingStaticContent
 			{else}
-				http://wiki.smartjobboard.com/display/sjb42/Static+Content
+				http://wiki.shixi.com/display/sjb42/Static+Content
 			{/if}
 		{elseif $url === '/manage-banner-groups/'}
-			http://wiki.smartjobboard.com/display/sjb42/Banners
+			http://wiki.shixi.com/display/sjb42/Banners
 		{elseif $url === '/add-banner-group/'}
-			http://wiki.smartjobboard.com/display/sjb42/Banners#Banners-AddingaNewBannerGroup
+			http://wiki.shixi.com/display/sjb42/Banners#Banners-AddingaNewBannerGroup
 		{elseif $url === '/edit-banner-group/'}
-			http://wiki.smartjobboard.com/display/sjb42/Banners#Banners-EditingBannersGroup
+			http://wiki.shixi.com/display/sjb42/Banners#Banners-EditingBannersGroup
 		{elseif $url === '/edit-banner/'}
-			http://wiki.smartjobboard.com/display/sjb42/Banners#Banners-EditingaBanner
+			http://wiki.shixi.com/display/sjb42/Banners#Banners-EditingaBanner
 		{elseif $url === '/form-builders/'}
-			http://wiki.smartjobboard.com/display/sjb42/Form+Builder
+			http://wiki.shixi.com/display/sjb42/Form+Builder
 		{elseif $url === '/edit-themes/'}
-			http://wiki.smartjobboard.com/display/sjb42/Themes
+			http://wiki.shixi.com/display/sjb42/Themes
 		{elseif $url === '/add-banner/'}
-			http://wiki.smartjobboard.com/display/sjb42/Banners#Banners-AddingaNewBannertoaGroup
+			http://wiki.shixi.com/display/sjb42/Banners#Banners-AddingaNewBannertoaGroup
 		{elseif $url === '/news-categories/' && !$params}
-			http://wiki.smartjobboard.com/display/sjb42/News
+			http://wiki.shixi.com/display/sjb42/News
 		{elseif $url === '/news-categories/'}
 			{if strpos($params, 'category_sid=1') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/News#News-Archive
+				http://wiki.shixi.com/display/sjb42/News#News-Archive
 			{elseif strpos($params, 'action=edit') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/News#News-NewsCategories
+				http://wiki.shixi.com/display/sjb42/News#News-NewsCategories
 			{/if}
 		{elseif $url === '/manage-news/'}
 			{if strpos($params, 'action=add') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/News#News-AddingaNews
+				http://wiki.shixi.com/display/sjb42/News#News-AddingaNews
 			{elseif strpos($params, 'action=edit') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/News#News-EditingNews
+				http://wiki.shixi.com/display/sjb42/News#News-EditingNews
 			{/if}
 		{elseif $url === '/manage-polls/'}
 			{if strpos($params, 'action=new') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Polls#Polls-AddingaNewPoll
+				http://wiki.shixi.com/display/sjb42/Polls#Polls-AddingaNewPoll
 			{elseif strpos($params, 'action=edit') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Polls#Polls-EditingPolls
+				http://wiki.shixi.com/display/sjb42/Polls#Polls-EditingPolls
 			{elseif strpos($params, 'edit_answer') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Polls#Polls-EditAnswers
+				http://wiki.shixi.com/display/sjb42/Polls#Polls-EditAnswers
 			{else}
-				http://wiki.smartjobboard.com/display/sjb42/Polls
+				http://wiki.shixi.com/display/sjb42/Polls
 			{/if}
 	{* Billing *}
 		{elseif $url === '/system/payment/gateways/'}
-			http://wiki.smartjobboard.com/display/sjb42/Payment+Gateways
+			http://wiki.shixi.com/display/sjb42/Payment+Gateways
 		{elseif $url === '/configure-gateway/' && $params}
 			{if $params === 'gateway=2checkout'}
-				http://wiki.smartjobboard.com/display/sjb42/2checkout
+				http://wiki.shixi.com/display/sjb42/2checkout
 			{elseif $params === 'gateway=authnet_sim'}
-				http://wiki.smartjobboard.com/display/sjb42/Authorize.Net+SIM
+				http://wiki.shixi.com/display/sjb42/Authorize.Net+SIM
 			{elseif $params === 'gateway=cash_gateway'}
-				http://wiki.smartjobboard.com/display/sjb42/Cash+Payment
+				http://wiki.shixi.com/display/sjb42/Cash+Payment
 			{elseif $params === 'gateway=paypal_standard'}
-				http://wiki.smartjobboard.com/display/sjb42/Paypal+Standard
+				http://wiki.shixi.com/display/sjb42/Paypal+Standard
 			{elseif $params === 'gateway=wire_transfer'}
-				http://wiki.smartjobboard.com/display/sjb42/Wire+Transfer
+				http://wiki.shixi.com/display/sjb42/Wire+Transfer
 			{elseif $params === 'gateway=paypal_pro'}
-				http://wiki.smartjobboard.com/display/sjb42/PayPal+Pro
+				http://wiki.shixi.com/display/sjb42/PayPal+Pro
 			{/if}
 		{elseif $url === '/payments/'}
-			http://wiki.smartjobboard.com/display/sjb42/Transaction+History
+			http://wiki.shixi.com/display/sjb42/Transaction+History
 		{elseif $url === '/payment-log/'}
-			http://wiki.smartjobboard.com/display/sjb42/Payment+Log
+			http://wiki.shixi.com/display/sjb42/Payment+Log
 		{elseif $url === '/manage-taxes/' || $url === '/add-tax/' || $url === '/edit-tax/'}
-			http://wiki.smartjobboard.com/display/sjb42/Tax+Rules?moved=true
+			http://wiki.shixi.com/display/sjb42/Tax+Rules?moved=true
 		{elseif $url === '/manage-invoices/' || $url === '/add-invoice/' || $url === '/edit-invoice/'}
-			http://wiki.smartjobboard.com/display/sjb42/Invoices
+			http://wiki.shixi.com/display/sjb42/Invoices
 	{* Reports *}
 		{elseif $url === '/statistics/guest-alerts/'}
-			http://wiki.smartjobboard.com/display/sjb42/Guest+Alerts
+			http://wiki.shixi.com/display/sjb42/Guest+Alerts
 	{* System Configuration *}
 		{elseif $url === '/adminpswd/'}
-			http://wiki.smartjobboard.com/display/sjb42/Admin+Password
+			http://wiki.shixi.com/display/sjb42/Admin+Password
 		{elseif $url === '/settings/'}
-			http://wiki.smartjobboard.com/display/sjb42/System+Settings
+			http://wiki.shixi.com/display/sjb42/System+Settings
 		{elseif $url === '/alphabet-letters/'}
 			{if strpos($params, 'action=edit') !== false}
-				http://wiki.smartjobboard.com/pages/viewpage.action?pageId=327723#AlphabetLettersforSearchbyCompany-EditingAlphabet
+				http://wiki.shixi.com/pages/viewpage.action?pageId=327723#AlphabetLettersforSearchbyCompany-EditingAlphabet
 			{elseif strpos($params, 'action=new') !== false}
-				http://wiki.smartjobboard.com/pages/viewpage.action?pageId=327723#AlphabetLettersforSearchbyCompany-AddingaNewAlphabet
+				http://wiki.shixi.com/pages/viewpage.action?pageId=327723#AlphabetLettersforSearchbyCompany-AddingaNewAlphabet
 			{else}
-				http://wiki.smartjobboard.com/pages/viewpage.action?pageId=327723
+				http://wiki.shixi.com/pages/viewpage.action?pageId=327723
 			{/if}
 		{elseif $url == '/social-media/'}
 			{if strpos($params, 'soc_network=facebook') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Facebook#Facebook-Addingnewfeed
+				http://wiki.shixi.com/display/sjb42/Facebook#Facebook-Addingnewfeed
 			{elseif strpos($params, 'soc_network=linkedin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Linkedin#Linkedin-Addingnewfeed
+				http://wiki.shixi.com/display/sjb42/Linkedin#Linkedin-Addingnewfeed
 			{elseif strpos($params, 'soc_network=twitter') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Twitter#Twitter-Addingnewfeed
+				http://wiki.shixi.com/display/sjb42/Twitter#Twitter-Addingnewfeed
 			{else}
-				http://wiki.smartjobboard.com/display/sjb42/Social+Media
+				http://wiki.shixi.com/display/sjb42/Social+Media
 			{/if}
 		{elseif strpos($url, '/social-media/facebook') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Facebook
+			http://wiki.shixi.com/display/sjb42/Facebook
 		{elseif strpos($url, '/social-media/linkedin') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Linkedin
+			http://wiki.shixi.com/display/sjb42/Linkedin
 		{elseif strpos($url, '/social-media/twitter') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Twitter
+			http://wiki.shixi.com/display/sjb42/Twitter
 		{elseif strpos($url, '/social-media/googleplus') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Google+Plus
+			http://wiki.shixi.com/display/sjb42/Google+Plus
 		{elseif strpos($url, '/social-media/bitly') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Bitly
+			http://wiki.shixi.com/display/sjb42/Bitly
 		{elseif $url === '/geographic-data/'}
-			http://wiki.smartjobboard.com/display/sjb42/ZipCode+Database
+			http://wiki.shixi.com/display/sjb42/ZipCode+Database
 		{elseif $url === '/manage-breadcrumbs/'}
-			http://wiki.smartjobboard.com/display/sjb42/Breadcrumbs+Config
+			http://wiki.shixi.com/display/sjb42/Breadcrumbs+Config
 		{elseif $url === '/filters/'}
-			http://wiki.smartjobboard.com/display/sjb42/HTML+filters
+			http://wiki.shixi.com/display/sjb42/HTML+filters
 		{elseif $url === '/currency-list/'}
 			{if strpos($params, 'action=add') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Manage+Currencies#ManageCurrencies-AddingaNewCurrency
+				http://wiki.shixi.com/display/sjb42/Manage+Currencies#ManageCurrencies-AddingaNewCurrency
 			{elseif strpos($params, 'action=edit') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Manage+Currencies#ManageCurrencies-EditingCurrencies
+				http://wiki.shixi.com/display/sjb42/Manage+Currencies#ManageCurrencies-EditingCurrencies
 			{else}
-				http://wiki.smartjobboard.com/display/sjb42/Manage+Currencies
+				http://wiki.shixi.com/display/sjb42/Manage+Currencies
 			{/if}
 		{elseif $url === '/task-scheduler-settings/'}
-			http://wiki.smartjobboard.com/display/sjb42/Task+Scheduler
+			http://wiki.shixi.com/display/sjb42/Task+Scheduler
 		{elseif $url === '/system/miscellaneous/plugins/' && !$params}
-			http://wiki.smartjobboard.com/display/sjb42/Plugins
+			http://wiki.shixi.com/display/sjb42/Plugins
 		{elseif $url === '/system/miscellaneous/plugins/' && $params}
 			{if $params === 'action=settings&amp;plugin=PhpBBBridgePlugin'}
-				http://wiki.smartjobboard.com/display/sjb42/PhpBB+forum+integration+plugin
+				http://wiki.shixi.com/display/sjb42/PhpBB+forum+integration+plugin
 			{elseif strpos($params, 'WordPressBridgePlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Wordpress+integration+plugin
+				http://wiki.shixi.com/display/sjb42/Wordpress+integration+plugin
 			{elseif strpos($params, 'TwitterIntegrationPlugin') !== false}
 				{if strpos($params, 'action=edit_feed') !== false}
-					http://wiki.smartjobboard.com/display/sjb42/Twitter+Integration+Plugin
+					http://wiki.shixi.com/display/sjb42/Twitter+Integration+Plugin
 				{elseif strpos($params, 'action=add_feed') !== false}
-					http://wiki.smartjobboard.com/display/sjb42/Twitter+Integration+Plugin#TwitterIntegrationPlugin-CreatingaNewFeed
+					http://wiki.shixi.com/display/sjb42/Twitter+Integration+Plugin#TwitterIntegrationPlugin-CreatingaNewFeed
 				{/if}
 			{elseif strpos($params, 'GooglePlusSocialPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Google+Plus
+				http://wiki.shixi.com/display/sjb42/Google+Plus
 			{elseif strpos($params, 'FacebookSocialPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Facebook+Plugin
+				http://wiki.shixi.com/display/sjb42/Facebook+Plugin
 			{elseif strpos($params, 'LinkedinSocialPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/LinkedIn+Plugin
+				http://wiki.shixi.com/display/sjb42/LinkedIn+Plugin
 			{elseif strpos($params, 'ShareThisPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/ShareThis+Plugin
+				http://wiki.shixi.com/display/sjb42/ShareThis+Plugin
 			{elseif strpos($params, 'ShareThisPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/ShareThis+Plugin
+				http://wiki.shixi.com/display/sjb42/ShareThis+Plugin
 			{elseif strpos($params, 'CaptchaPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/CAPTCHA+Plugin
+				http://wiki.shixi.com/display/sjb42/CAPTCHA+Plugin
 			{elseif strpos($params, 'BeyondPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Beyond+Plugin
+				http://wiki.shixi.com/display/sjb42/Beyond+Plugin
 			{elseif strpos($params, 'IndeedPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Indeed+Plugin
+				http://wiki.shixi.com/display/sjb42/Indeed+Plugin
 			{elseif strpos($params, 'SimplyHiredPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/SimplyHired+Plugin
+				http://wiki.shixi.com/display/sjb42/SimplyHired+Plugin
 			{elseif strpos($params, 'MailChimpPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/MailChimp+plug-in
+				http://wiki.shixi.com/display/sjb42/MailChimp+plug-in
 			{elseif strpos($params, 'GoogleAnalyticsPlugin') !== false}
-				http://wiki.smartjobboard.com/display/sjb42/Google+Analytics+Plugin
+				http://wiki.shixi.com/display/sjb42/Google+Analytics+Plugin
 			{/if}
 		{elseif $url === '/refine-search-settings/'}
-			http://wiki.smartjobboard.com/display/sjb42/Refine+Search+Settings
+			http://wiki.shixi.com/display/sjb42/Refine+Search+Settings
 		{elseif $url === '/backup/'}
-			http://wiki.smartjobboard.com/display/sjb42/Backup-Restore
+			http://wiki.shixi.com/display/sjb42/Backup-Restore
 		{elseif $url === '/flag-listing-settings/'}
-			http://wiki.smartjobboard.com/display/sjb42/Flag+Listing+Settings
+			http://wiki.shixi.com/display/sjb42/Flag+Listing+Settings
 		{elseif $url === '/manage-subadmins/'}
-			http://wiki.smartjobboard.com/display/sjb42/Admin+Sub+Accounts
+			http://wiki.shixi.com/display/sjb42/Admin+Sub+Accounts
 		{elseif $url === '/add-subadmin/'}
-			http://wiki.smartjobboard.com/display/sjb42/Admin+Sub+Accounts#AdminSubAccounts-CreatingaNewSub-Account
+			http://wiki.shixi.com/display/sjb42/Admin+Sub+Accounts#AdminSubAccounts-CreatingaNewSub-Account
 		{elseif $url === '/edit-subadmin/'}
-			http://wiki.smartjobboard.com/display/sjb42/Admin+Sub+Accounts
+			http://wiki.shixi.com/display/sjb42/Admin+Sub+Accounts
 		{elseif $url === '/countries/' || $url === '/add-country/' || $url === '/edit-country/' || $url === '/import-countries/'}
-			http://wiki.smartjobboard.com/display/sjb42/Countries 
+			http://wiki.shixi.com/display/sjb42/Countries 
 		{elseif $url === '/states/' || $url === '/add-state/' || $url === '/edit-state/' || $url === '/import-states/'}
-			http://wiki.smartjobboard.com/pages/viewpage.action?pageId=6193229
+			http://wiki.shixi.com/pages/viewpage.action?pageId=6193229
 	{* Language Management *}
 		{elseif $url === '/manage-languages/'}
-			http://wiki.smartjobboard.com/display/sjb42/Manage+Languages
+			http://wiki.shixi.com/display/sjb42/Manage+Languages
 		{elseif $url === '/add-language/'}
-			http://wiki.smartjobboard.com/display/sjb42/Manage+Languages#ManageLanguages-AddingaNewLanguage
+			http://wiki.shixi.com/display/sjb42/Manage+Languages#ManageLanguages-AddingaNewLanguage
 		{elseif $url === '/edit-language/'}
-			http://wiki.smartjobboard.com/display/sjb42/Manage+Languages#ManageLanguages-EditingLanguages
+			http://wiki.shixi.com/display/sjb42/Manage+Languages#ManageLanguages-EditingLanguages
 		{elseif $url === '/manage-phrases/'}
-			http://wiki.smartjobboard.com/display/sjb42/Translate+Phrases
+			http://wiki.shixi.com/display/sjb42/Translate+Phrases
 		{elseif $url === '/import-language/'}
-			http://wiki.smartjobboard.com/display/sjb42/Import+Language
+			http://wiki.shixi.com/display/sjb42/Import+Language
 		{elseif $url === '/export-language/'}
-			http://wiki.smartjobboard.com/display/sjb42/Export+Language
+			http://wiki.shixi.com/display/sjb42/Export+Language
 		{elseif $url === '/add-phrase/'}
-			http://wiki.smartjobboard.com/display/sjb42/Translate+Phrases#TranslatePhrases-AddingaNewPhrase
+			http://wiki.shixi.com/display/sjb42/Translate+Phrases#TranslatePhrases-AddingaNewPhrase
 	{* Products *}
 		{elseif $url === '/products/'}
-			http://wiki.smartjobboard.com/display/sjb42/Products
+			http://wiki.shixi.com/display/sjb42/Products
 		{elseif $url === '/add-product/'}
-			http://wiki.smartjobboard.com/display/sjb42/Products#Products-AddingaNewProduct
+			http://wiki.shixi.com/display/sjb42/Products#Products-AddingaNewProduct
 		{elseif $url === '/edit-product/' && $params}
 			{if $params}
-				http://wiki.smartjobboard.com/display/sjb42/Products#Products-EditingaProduct
+				http://wiki.shixi.com/display/sjb42/Products#Products-EditingaProduct
 			{/if}
 		{elseif $url === '/promotions/'}
-			http://wiki.smartjobboard.com/display/sjb42/Promotions
+			http://wiki.shixi.com/display/sjb42/Promotions
 		{elseif $url === '/add-promotion-code/'}
-			http://wiki.smartjobboard.com/display/sjb42/Promotions#Promotions-Addinganewpromotioncode
+			http://wiki.shixi.com/display/sjb42/Promotions#Promotions-Addinganewpromotioncode
 		{elseif strpos($url, '/promotions/log/') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Promotions
+			http://wiki.shixi.com/display/sjb42/Promotions
 		{elseif $url == '/statistics/promotions/'}
-			http://wiki.smartjobboard.com/display/sjb42/Promotions+Usage
+			http://wiki.shixi.com/display/sjb42/Promotions+Usage
 		{elseif strpos($url, '/edit-promotion-code/') !== false}
-			http://wiki.smartjobboard.com/display/sjb42/Promotions
+			http://wiki.shixi.com/display/sjb42/Promotions
 	{* Reports *}
 		{elseif $url === '/general-statistics/'}
-			http://wiki.smartjobboard.com/display/sjb42/General+Statistics
+			http://wiki.shixi.com/display/sjb42/General+Statistics
 		{elseif $url === '/listings-statistics/'}
-			http://wiki.smartjobboard.com/display/sjb42/Listings
+			http://wiki.shixi.com/display/sjb42/Listings
 		{elseif $url === '/applications-and-views/'}
-			http://wiki.smartjobboard.com/display/sjb42/Applications+and+Views
+			http://wiki.shixi.com/display/sjb42/Applications+and+Views
 		{elseif $url === '/sales/'}
-			http://wiki.smartjobboard.com/display/sjb42/Sales
+			http://wiki.shixi.com/display/sjb42/Sales
 	{* email *}
 		{elseif $url === '/email-log/'}
-			http://wiki.smartjobboard.com/display/sjb42/Email+Log
+			http://wiki.shixi.com/display/sjb42/Email+Log
 		{elseif $url === '/edit-email-templates/'}
-			http://wiki.smartjobboard.com/display/sjb42/Email+Templates
+			http://wiki.shixi.com/display/sjb42/Email+Templates
 		{elseif $url === '/update-to-new-version/'}
-			http://wiki.smartjobboard.com/display/sjb42/Updates
+			http://wiki.shixi.com/display/sjb42/Updates
 		{else}
-			http://wiki.smartjobboard.com/display/sjb42/
+			http://wiki.shixi.com/display/sjb42/
 		{/if}
 	{/capture}
 	<table border="0" cellpadding="0" cellspacing="0" width="100%" id="structure"  height="100%">
@@ -445,7 +445,7 @@
 			<td id="left" valign="top" height="100%">
 				<div id="leftHeader" style="text-align:right">
 					<a href="{$GLOBALS.user_site_url}" id="logoLink"></a>
-                    <span class="packageVersion">[[version]] {$GLOBALS.version.major}.{$GLOBALS.version.minor} [[build]] {$GLOBALS.version.build}</span>
+                    
 				</div>
 				<div class="clr"><br/></div>
 				{if $GLOBALS.subAdminSID > 0}
@@ -480,7 +480,7 @@
 						<a href="{$GLOBALS.site_url}/">[[Dashboard]]</a> | <a href="{$GLOBALS.site_url}/system/users/logout/">[[Log out]]</a>
 					</div>
 					<div id="suggest-feature">
-						<a href="http://ideas.smartjobboard.com" target="_blank">[[Suggest a Feature]]</a>
+						
 					</div>
 				</div>
 				
@@ -497,7 +497,7 @@
 		<tr>
 			<td colspan="2">
 				<div id="footer">
-					[[Copyright]] &copy; 2013 [[Powered by]] <a href="http://www.smartjobboard.com/">SmartJobBoard</a> &#124; <a href="http://wiki.smartjobboard.com/display/sjb42/SmartJobBoard+v4.2+User+Manual">[[User Manual]]</a>
+					[[Copyright]] &copy; 2015 Shixi.com
 				</div>
 			</td>
 		</tr>

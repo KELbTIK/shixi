@@ -7,5 +7,4 @@
 		<p>{$education.notes}</p>
 		<p>[[Activities and Societies:]] {$education.activities}</p>
 	{/foreach}
-	<p>&nbsp;</p>
 {/if}

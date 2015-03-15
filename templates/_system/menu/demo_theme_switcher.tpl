@@ -30,7 +30,7 @@
 			<li>
 				<form id="themeSwitcher" method="get" action="">
 					<span class="strong">Theme:</span>
-					<select class="form-control"  name="theme" onchange="location.href='{$GLOBALS.site_url}{$url}?theme='+this.value+'&amp;{$params}'">
+					<select class="form-control" name="theme" onchange="location.href='{$GLOBALS.site_url}{$url}?theme='+this.value+'&amp;{$params}'">
 						<option disabled="disabled">Select Theme</option>
 						<option value="ProgressiveView" {if $smarty.session.theme == "ProgressiveView"} selected="selected"{/if}>Progressive View</option>
 						<option value="OfficeView" {if $smarty.session.theme == "OfficeView"} selected="selected"{/if}>Office View</option>
@@ -54,9 +54,9 @@
 			<li class="demo-info-sep"></li>
 			<li><span><a href="{$GLOBALS.admin_site_url}/" target="_blank">Admin Demo</a></span></li>
 			<li class="demo-info-sep"></li>
-			<li><span><a href="http://www.smartjobboard.com/">Back to Site</a></span></li>
+			<li><span><a href="http://www.shixi.com/">Back to Site</a></span></li>
 			<li class="demo-info-sep"></li>
-			<li class="demo-order"><span><a href="https://www.smartjobboard.com/ca/cart.php">Buy Now</a></span></li>
+			<li class="demo-order"><span><a href="https://www.shixi.com/ca/cart.php">Buy Now</a></span></li>
 			<li class="demo-info-sep"></li>
 		</ul>
 	</div>

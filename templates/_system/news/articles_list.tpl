@@ -23,41 +23,41 @@
 					{/if}
 					<span> | </span>
 				{/if}
-
 			{/foreach}
 		</div>
 	{/if}
 
 	<form action="{$GLOBALS.site_url}/news/" class="form-inline">
-			<input type="hidden" name="action" value="search" />
+        <input type="hidden" name="action" value="search" />
+        <div class="form-group">
+            <input type="text" name="search_text" value="{$searchText}" class="form-control"/>
+        </div>
 
-					<div class="form-group">
-						<input type="text" name="search_text" value="{$searchText}" class="form-control"/>
-					</div>
-
-					<div class="form-group">
-						<input type="submit" name="submit" value="[[Search]]" class="btn btn-default" />
-					</div>
+        <div class="form-group">
+            <input type="submit" name="submit" value="[[Search]]" class="btn btn-default" />
+        </div>
 	</form>
 
 	{if $pages > 1}
 		<!-- PAGINATION -->
-		<p>
-			<form id="news_per_page_form" method="get" action="?">
-				{if $current_page-1 > 0}&nbsp;<a href="?page={$current_page-1}">[[Previous]]</a>{else}[[Previous]]{/if}
-				{if $current_page-3 > 0}&nbsp;<a href="?page=1">1</a>{/if}
-				{if $current_page-3 > 1}&nbsp;...{/if}
-				{if $current_page-2 > 0}&nbsp;<a href="?page={$current_page-2}">{$current_page-2}</a>{/if}
-				{if $current_page-1 > 0}&nbsp;<a href="?page={$current_page-1}">{$current_page-1}</a>{/if}
-				<span class="strong">{$current_page}</span>
-				{if $current_page+1 <= $pages}&nbsp;<a href="?page={$current_page+1}">{$current_page+1}</a>{/if}
-				{if $current_page+2 <= $pages}&nbsp;<a href="?page={$current_page+2}">{$current_page+2}</a>{/if}
-				{if $current_page+3 < $pages}&nbsp;...{/if}
-				{if $current_page+3 < $pages + 1}&nbsp;<a href="?page={$pages}">{$pages}</a>{/if}
-				{if $current_page+1 <= $pages}&nbsp;<a href="?page={$current_page+1}">[[Next]]</a>{else}[[Next]]{/if}
-				<input type="hidden" name="page" value="1" />
-			</form>
-		</p>
+        <form id="news_per_page_form" method="get" action="?">
+            <ul class="pagination">
+                {if $current_page-1 > 0}<li><a href="?page={$current_page-1}">[[Previous]]</a></li>{else}<li><a
+                            href="#">[[Previous]]</a></li>{/if}
+                {if $current_page-3 > 0}<li><a href="?page=1">1</a></li>{/if}
+                {if $current_page-3 > 1}<li><a href="#">...</a></li>{/if}
+                {if $current_page-2 > 0}<li><a href="?page={$current_page-2}">{$current_page-2}</a></li>{/if}
+                {if $current_page-1 > 0}<li><a href="?page={$current_page-1}">{$current_page-1}</a></li>{/if}
+                <li><a href="#">{$current_page}</a></li>
+                {if $current_page+1 <= $pages}<li><a href="?page={$current_page+1}">{$current_page+1}</a></li>{/if}
+                {if $current_page+2 <= $pages}<li><a href="?page={$current_page+2}">{$current_page+2}</a></li>{/if}
+                {if $current_page+3 < $pages}<li><a href="#">...</a></li>{/if}
+                {if $current_page+3 < $pages + 1}<li><a href="?page={$pages}">{$pages}</a></li>{/if}
+                {if $current_page+1 <= $pages}<li><a href="?page={$current_page+1}">[[Next]]</a></li>{else}<li><a
+                            href="#">[[Next]]</a></li>{/if}
+            </ul>
+            <input type="hidden" name="page" value="1" />
+        </form>
 		<!-- END OF PAGINATION -->
 	{/if}
 
@@ -94,22 +94,23 @@
 	{/foreach}
 
 	{if $pages > 1}
-		<p>
-			<form id="news_per_page_form" method="get" action="?">
-				{if $current_page-1 > 0}&nbsp;<a href="?page={$current_page-1}">[[Previous]]</a>{else}[[Previous]]{/if}
-				{if $current_page-3 > 0}&nbsp;<a href="?page=1">1</a>{/if}
-				{if $current_page-3 > 1}&nbsp;...{/if}
-				{if $current_page-2 > 0}&nbsp;<a href="?page={$current_page-2}">{$current_page-2}</a>{/if}
-				{if $current_page-1 > 0}&nbsp;<a href="?page={$current_page-1}">{$current_page-1}</a>{/if}
-				<b>{$current_page}</b>
-				{if $current_page+1 <= $pages}&nbsp;<a href="?page={$current_page+1}">{$current_page+1}</a>{/if}
-				{if $current_page+2 <= $pages}&nbsp;<a href="?page={$current_page+2}">{$current_page+2}</a>{/if}
-				{if $current_page+3 < $pages}&nbsp;...{/if}
-				{if $current_page+3 < $pages + 1}&nbsp;<a href="?page={$pages}">{$pages}</a>{/if}
-				{if $current_page+1 <= $pages}&nbsp;<a href="?page={$current_page+1}">[[Next]]</a>{else}[[Next]]{/if}
-				<input type="hidden" name="page" value="1" />
-			</form>
-
-		</p>
+        <form id="news_per_page_form" method="get" action="?">
+            <ul class="pagination">
+                {if $current_page-1 > 0}<li><a href="?page={$current_page-1}">[[Previous]]</a></li>{else}<li><a
+                            href="#">[[Previous]]</a></li>{/if}
+                {if $current_page-3 > 0}<li><a href="?page=1">1</a></li>{/if}
+                {if $current_page-3 > 1}<li><a href="#">...</a></li>{/if}
+                {if $current_page-2 > 0}<li><a href="?page={$current_page-2}">{$current_page-2}</a></li>{/if}
+                {if $current_page-1 > 0}<li><a href="?page={$current_page-1}">{$current_page-1}</a></li>{/if}
+                <li><a href="#">{$current_page}</a></li>
+                {if $current_page+1 <= $pages}<li><a href="?page={$current_page+1}">{$current_page+1}</a></li>{/if}
+                {if $current_page+2 <= $pages}<li><a href="?page={$current_page+2}">{$current_page+2}</a></li>{/if}
+                {if $current_page+3 < $pages}<li><a href="#">...</a></li>{/if}
+                {if $current_page+3 < $pages + 1}<li><a href="?page={$pages}">{$pages}</a></li>{/if}
+                {if $current_page+1 <= $pages}<li><a href="?page={$current_page+1}">[[Next]]</a></li>{else}<li><a
+                            href="#">[[Next]]</a></li>{/if}
+            </ul>
+            <input type="hidden" name="page" value="1" />
+        </form>
 	{/if}
 {/if}

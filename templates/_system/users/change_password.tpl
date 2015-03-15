@@ -11,21 +11,23 @@
 {/foreach}
 
 <form method="post" action="">
-	<table>
-		<tr>
-			<td colspan="2">
-				<input type="hidden" name="username" value="{$username}" />
-				<input type="hidden" name="verification_key" value="{$verification_key}" />
-			</td>
-		</tr>
-		<tr>
-			<td>[[Password]]:</td><td><input type="password" name="password" class="text form-control" /></td>
-		</tr>
-		<tr>
-			<td>[[Confirm Password]]:</td><td><input type="password" name="confirm_password" class="text form-control" /></td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td><td><input type="submit" name="submit" value="[[Submit]]" class="btn btn-default" /></td>
-		</tr>
-	</table>
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <tr>
+                <td colspan="2">
+                    <input type="hidden" name="username" value="{$username}" />
+                    <input type="hidden" name="verification_key" value="{$verification_key}" />
+                </td>
+            </tr>
+            <tr>
+                <td>[[Password]]:</td><td><input type="password" name="password" class="text form-control" /></td>
+            </tr>
+            <tr>
+                <td>[[Confirm Password]]:</td><td><input type="password" name="confirm_password" class="text form-control" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><input type="submit" name="submit" value="[[Submit]]" class="btn btn-default" /></td>
+            </tr>
+        </table>
+    </div>
 </form>

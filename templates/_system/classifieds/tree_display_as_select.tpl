@@ -3,7 +3,7 @@
 		<div class="tree-as-sb-cptn">[[$levelName]]:</div>
 	{/if}
 	<div class="tree-as-sb-vals">
-		<select name="select_tree_{$name}_level_{$level}" id="select_tree_{$name}_level_{$level}">
+		<select class="form-control" name="select_tree_{$name}_level_{$level}" id="select_tree_{$name}_level_{$level}">
 			<option value="">[[Select {$name} {$levelName}]]</option>
 			{foreach from=$tree_values item=treeItem}
 			<option value="{$treeItem.sid}" {if in_array($treeItem.sid,$checked)}selected="selected"{/if}>{$treeItem.caption}</option>

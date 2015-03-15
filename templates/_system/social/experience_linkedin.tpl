@@ -7,5 +7,4 @@
 		<p>{$position.start_date.month} {$position.start_date.year} - {$position.end_date} {if $position.present}[[Present]]{/if}</p>
 		<p>{$position.summary}</p>
 	{/foreach}
-	<p>&nbsp;</p>
 {/if}

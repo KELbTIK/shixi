@@ -22,11 +22,11 @@
 	</style>
 {/literal}
 <div class="table-responsive">
-	<table border="0" cellpadding="0" cellspacing="0">
+	<table class="table table-condensed">
 		<tr>
-			<td width="47%" valign="top"><img src="{image}logo.png" border="0" /><br/></td>
-			<td width="6%" rowspan="2">&nbsp;</td>
-			<td width="47%" valign="top" class="align_right">
+			<td valign="top"><img src="{image}logo.png" border="0" /><br/></td>
+			<td rowspan="2">&nbsp;</td>
+			<td valign="top" class="align_right">
 				<h2>[[Invoice]]</h2>
 				<br/>[[Date]]: {display property="date"}
 				<br/>[[Invoice]] &#35;{$invoice_sid}

@@ -187,7 +187,7 @@ function changeProfilerSize()
 <div id="profilerContainer" class="profiler" style="display:none">
 	<div id="blockResize" class="blockResize"></div>
 	<div id="profiler" class="profilerHead table-responsive">
-		<table id="metrics" class="metrics" cellspacing="0">
+		<table id="metrics" class="metrics table table-condensed">
 			<tr>
 				<td id="infometr">
 					<h4>[[RAM]]: {$memory}</h4>
@@ -238,7 +238,7 @@ function changeProfilerSize()
 					<h3>[[This panel has no log items]]</h3>
 				{else}
 				<div class="table-responsive">
-						<table class='main' cellspacing='0'>
+						<table class='main table table-condensed'>
 						<thead>
 						<tr>
 							<td class="sort">[[Number]]</td>

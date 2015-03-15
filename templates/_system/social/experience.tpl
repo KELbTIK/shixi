@@ -7,5 +7,4 @@
 		<p>{$position.start_date} - {$position.end_date}</p>
 		<p>{$position.description}</p>
 	{/foreach}
-	<p>&nbsp;</p>
 {/if}

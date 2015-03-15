@@ -270,7 +270,7 @@
 		<div class="innerpadding">
 			<table width="100%">
 				<tr class="{cycle values = 'evenrow,oddrow' advance=true}">
-					<td><a href="http://wiki.smartjobboard.com/" target="_blank">[[User Manual]]</a></td>
+					<td><a href="http://wiki.shixi.com/" target="_blank">[[User Manual]]</a></td>
 				</tr>
 				<tr class="{cycle values = 'evenrow,oddrow' advance=true}">
 					<td><a href="{$GLOBALS.site_url}/upload-logo/">[[Upload your logo]]</a></td>
@@ -320,7 +320,7 @@
 							<img src="{$GLOBALS.user_site_url}/templates/_system/main/images/ajax_preloader_circular_16.gif" alt="[[Please wait ...]]" />
 						</div>
 						<small id="updateNone" style="color: green; display: none;">[[You have the latest version of SJB installed. No need to update.]]</small>
-						<small id="updateDeprecated" style="color: red; display: none;">[[Your current version is outdated and doesn't have fresh updates. Please upgrade to the latest version of Smart Job Board]]</small>
+						<small id="updateDeprecated" style="color: red; display: none;">[[Your current version is outdated and doesn't have fresh updates. Please upgrade to the latest version of Shixi.com]]</small>
 						<small id="updateError" style="color: red; display: none;">[[Update check failed]]</small>
 					</td>
 				</tr>

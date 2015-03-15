@@ -12,7 +12,7 @@
 
 {foreachelse}
 
-<div class="message alert alert-info">[[File deleted successfully]]</div>
+<div class="message alert alert-success">[[File deleted successfully]]</div>
 <a href="{$GLOBALS.site_url}/edit-profile/">[[Back to edit profile]]</a>
 
 {/foreach}

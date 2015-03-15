@@ -35,7 +35,7 @@
 				$("#"+noteId).html(data);
 			});
 		}
-		
+
 	</script>
 	{if $ERRORS}
 		{include file="error.tpl"}

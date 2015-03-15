@@ -1,1 +1,1 @@
-[[Your payment was successfully processed and completed]]
+<div class="alert alert-success">[[Your payment was successfully processed and completed]]</div>

@@ -24,7 +24,7 @@
 {include file="error.tpl"}
 {if empty($listings)}
 	<div class="noRefine table-responsive">
-		<table width="90%" cellpadding="7" cellspacing="5" id="browse-items">
+		<table class="table table-condensed" id="browse-items">
 			<tr valign=top>
 				{assign var="columnCount" value="5"}
 				{foreach from=$browseItems key=elementId item=elementCount name=browseItems}

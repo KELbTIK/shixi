@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Shixi [[Admin Panel]]</title>
+	<title>Shixi.com [[Admin Panel]]</title>
 	<link rel="StyleSheet" type="text/css" href="{image src="auth.css"}"/>
 	{if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
 	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
@@ -16,7 +16,7 @@
 	<div id="loginForm">
 		<div id="headerLogo">
 			<img src="{image}authLogo.png" border="0" width="199" height="30"/><br/>
-			{*<span>SmartJobBoard [[version]] {$GLOBALS.version.major}.{$GLOBALS.version.minor} [[build]] {$GLOBALS.version.build}</span>*}
+			
 		</div>
 		<div class="clr"></div>
 		<div id="authFormLogin">

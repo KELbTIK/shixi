@@ -1,6 +1,6 @@
-<fieldset>
-	<div class="inputName">[[Search LinkedIn]]:</div>
-	<div class="inputField">
+<div class="form-group has-feedback">
+	<label class="inputName control-label col-sm-3">[[Search LinkedIn]]:</label>
+	<div class="inputField col-sm-8">
 		<input type="checkbox" name="li_search" value="1" {if $linkedinSearch != 'notChecked'}checked="checked"{/if} style="float:left;"/>
 		<div class="instruction">
 			<div onmouseout="javascript:$(this).next('.instr_block').hide();" onmouseover="javascript:$(this).next('.instr_block').show();" class="instr_icon"></div>
@@ -21,4 +21,4 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-</fieldset>
+</div>

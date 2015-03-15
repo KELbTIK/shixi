@@ -9,6 +9,6 @@
 		{/if}
 	</div>
 {foreachelse}
-	<div class="message alert alert-info">[[File deleted successfully]]</div>
+	<div class="message alert alert-success">[[File deleted successfully]]</div>
 	<a href="{$GLOBALS.site_url}/edit-{$listingTypeSID|lower}/?listing_id={$listing_id}">[[Back to edit listing]]</a>
 {/foreach}

@@ -1,16 +1,16 @@
-<form action="{$GLOBALS.site_url}/browse-by-company/" id="search_form" >
+<form action="{$GLOBALS.site_url}/browse-by-company/" id="search_form" class="form-horizontal">
 	<input type="hidden" name="action" value="search" />
-	<fieldset>
+	<div class="form-group has-feedback">
 		<div class="bcName">[[Company Name]]</div>
 		<div class="bcField">{search property=CompanyName  template="string.like.tpl"}</div>
-	</fieldset>
+	</div>
 	{foreach from=$userGroupFields item=field}
 		{if $field.id == 'Location'}
 			{search property=$field.id fields=$field.fields template="locationCompany.tpl"}
 		{/if}
 	{/foreach}
-	<fieldset>
+	<div class="form-group has-feedback">
 		<div class="bcName">&nbsp;</div>
-		<div class="bcField"><input type="submit" class="button" value="[[Find]]" /></div>
-	</fieldset>
+		<div class="bcField"><input type="submit" class="button btn btn-primary" value="[[Find]]" /></div>
+	</div>
 </form>

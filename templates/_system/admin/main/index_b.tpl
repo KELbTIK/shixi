@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	    <title>SmartJobBoard [[Admin Panel]] {if $TITLE ne ""} :: [[{$TITLE}]] {/if}</title>
+	    <title>Shixi.com [[Admin Panel]] {if $TITLE ne ""} :: [[{$TITLE}]] {/if}</title>
 		<link rel="StyleSheet" type="text/css" href="{image src="design.css"}" />
 		<link rel="StyleSheet" type="text/css" href="{image src="./css/formbuilder.css"}" />
 		<link rel="StyleSheet" type="text/css" href="{$GLOBALS.user_site_url}/system/ext/jquery/css/jquery-ui.css"  />

@@ -1,10 +1,10 @@
 <form name="employers_selected_list" id="employers_selected_list" action="">
 <div class="table-responsive">
-	<table cellspacing="0" cellpadding="3" width="550" border=0>
+	<table class="table table-condensed">
 	<tr>
-		<td width="265">[[Employers List]]</td>
-		<td width="30px">&nbsp;</td>
-		<td width="265">[[Selected Employers]]</td>
+		<td>[[Employers List]]</td>
+		<td>&nbsp;</td>
+		<td>[[Selected Employers]]</td>
 	</tr>
 	<tr>
 		<td><input class="form-control"   type="text" id="find_name" name="find_name" value=""><input type="button" class="btn btn-default" id="find_button" name="find_button" value="[[Search]]"></td>

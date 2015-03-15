@@ -26,4 +26,4 @@
 		{/if}
 
 	</div>
-{/foreach}search-col-wide
+{/foreach}

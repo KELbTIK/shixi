@@ -88,7 +88,7 @@
 	<strong>5)</strong> [[Click Submit]]<br/>
 	<strong>6)</strong> [[Go to Settings &#187; API Login ID and Transaction Key. There you will get the 'Current API Login ID' and the 'Current Transaction Key' (copy them).]]<br/>
 	<strong>7)</strong> [[Also go to Settings &#187; MD5-Hash. And enter any descired value for the MD5-Hash. (copy it).]]<br/>
-	<strong>8)</strong> [[Then you need to go to your SmartJobBoard Admin Panel &#187; Payments &#187; Authorize.Net SIM (edit) and specify there the API Login ID, Transaction Key and MD5-Hash.]]<br/>
+	<strong>8)</strong> [[Then you need to go to your Shixi.com Admin Panel &#187; Payments &#187; Authorize.Net SIM (edit) and specify there the API Login ID, Transaction Key and MD5-Hash.]]<br/>
 </span>
 {/if}
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <source>
-<publisher>SmartJobBoard</publisher>
+<publisher>Shixi.com</publisher>
 <publisherurl><![CDATA[{$GLOBALS.site_url}]]></publisherurl>
 <lastBuildDate>{$lastBuildDate}</lastBuildDate>
 {foreach from=$listings item=listing}

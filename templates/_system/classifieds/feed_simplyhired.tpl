@@ -5,7 +5,7 @@
 	<title><![CDATA[{$listing.Title}]]></title>
 	<job-code>{$listing.id}</job-code>
 	<action/>
-	<job-board-name>SmartJobBoard</job-board-name>
+	<job-board-name>Shixi.com</job-board-name>
 	<job-board-url><![CDATA[{$GLOBALS.site_url}]]></job-board-url>
 	<detail-url><![CDATA[{$listing.listing_url}]]></detail-url>
 	<apply-url/>

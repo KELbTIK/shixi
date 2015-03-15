@@ -16,10 +16,10 @@
     </div>
 {/foreach}
 {if $edit}
-	<div class="message alert alert-info">[[Your changes were successfully saved]]</div>
+	<div class="message alert alert-success">[[Your changes were successfully saved]]</div>
 {/if}
 
-<form method="post" action="">
+<form method="post" action="" class="form-horizontal">
     {if $action == 'edit'}
         <input type="hidden" name="submit" value="edit" />
     {else}
@@ -28,38 +28,32 @@
     {foreach from=$form_fields item=form_field}
         {if $form_field.id == 'email_text_more'}
             <div class="form-group has-feedback" id="email_text_more_set" {if $request.send_auto_reply_more != 1}style="display:none"{/if}>
-                <div class="inputName">[[$form_field.caption]]</div>
-                <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                <div class="inputField">{input property=$form_field.id}</div>
+                <label class="inputName control-label col-sm-3">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                <div class="inputField col-sm-8">{input property=$form_field.id}</div>
             </div>
         {elseif $form_field.id == 'email_text_less'}
             <div class="form-group has-feedback" id="email_text_less_set" {if $request.send_auto_reply_less != 1}style="display:none"{/if}>
-                <div class="inputName">[[$form_field.caption]]</div>
-                <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                <div class="inputField">{input property=$form_field.id}</div>
+                <label class="inputName control-label col-sm-3">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                <div class="inputField col-sm-8">{input property=$form_field.id}</div>
             </div>
         {elseif $form_field.id == "send_auto_reply_more"}
             <p><span class="strong">[[Send Auto-Reply email to candidates whose score is]]</span></p>
             <div class="form-group has-feedback">
-                <div class="inputName">[[$form_field.caption]]</div>
-                <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                <div class="inputField">{input property=$form_field.id}</div>
+                <<label class="inputName control-label col-sm-3">[[$form_field.caption]]  <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                <div class="inputField col-sm-8">{input property=$form_field.id}</div>
             </div>
         {else}
             <div class="form-group has-feedback">
-                <div class="inputName">[[$form_field.caption]]</div>
-                <div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-                <div class="inputField">{input property=$form_field.id}</div>
+                <label class="inputName control-label col-sm-3">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+                <div class="inputField col-sm-8">{input property=$form_field.id}</div>
             </div>
         {/if}
     {/foreach}
     <div class="form-group has-feedback">
-        <div class="inputName">&nbsp;</div>
-        <div class="inputReq">&nbsp;</div>
         {if $action == 'edit'}
-            <div class="inputField"><input type="submit" name="action_add" value="[[Edit]]" class="btn btn-default" /></div>
+            <div class="inputField col-sm-8 col-sm-offset-3"><input type="submit" name="action_add" value="[[Edit]]" class="btn btn-default" /></div>
         {else}
-            <div class="inputField"><input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" /></div>
+            <div class="inputField col-sm-8 col-sm-offset-3"><input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" /></div>
         {/if}
     </div>
 </form>

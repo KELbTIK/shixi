@@ -125,58 +125,60 @@
 		</script>
 		{/literal}
 		<form action="" method="post">
-		<table>
-			<tr>
-				<td colspan="2">
-					[[Our website uses cookies. For more information on cookies visit www.allaboutcookies.org. Below you can check what cookies we use and opt out of them if needed:]]
-				</td>
-			</tr>
-			<tr>
-				<td class="cookiePreferencesDescription">
-					<h1>
-						[[System Cookies]]
-					</h1>
-					<span>
-						[[Required to enable the core site functionality. These cookies cannot be disabled.]]
-					</span>
-				</td>
-				<td>
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <tr>
+                        <td colspan="2">
+                            [[Our website uses cookies. For more information on cookies visit www.allaboutcookies.org. Below you can check what cookies we use and opt out of them if needed:]]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cookiePreferencesDescription">
+                            <h1>
+                                [[System Cookies]]
+                            </h1>
+                            <span>
+                                [[Required to enable the core site functionality. These cookies cannot be disabled.]]
+                            </span>
+                        </td>
+                        <td>
 
-				</td>
-			</tr>
-			<tr>
-				<td class="cookiePreferencesDescription">
-					<h1>
-						[[Functional Cookies]]
-					</h1>
-					<span>
-						[[Required to enable functionality of third-party applications.]]
-					</span>
-				</td>
-				<td>
-					<input type="checkbox" name="Functional" {if $smarty.cookies.cookiePreferences != "System"}checked="checked"{/if} onClick="return cookieCheckboxClick(this);">
-				</td>
-			</tr>
-			<tr>
-				<td class="cookiePreferencesDescription">
-					<h1>
-						[[Advertising Cookies]]
-					</h1>
-					<span>
-						[[Used by advertising companies to serve ads relevant to your interests.]]
-					</span>
-				</td>
-				<td>
-					<input type="checkbox" name="Advertising" {if $smarty.cookies.cookiePreferences == "Advertising"}checked="checked"{/if} onClick="return cookieCheckboxClick(this);">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<a href="{$smarty.session.cookiePreferencesMobileReferer}"><input type="button" onClick="" value="[[Cancel]]"></a>
-					<input type="submit" name="cookiePreferencesSave"  value="[[Save]]">
-				</td>
-			</tr>
-		</table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cookiePreferencesDescription">
+                            <h1>
+                                [[Functional Cookies]]
+                            </h1>
+                            <span>
+                                [[Required to enable functionality of third-party applications.]]
+                            </span>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="Functional" {if $smarty.cookies.cookiePreferences != "System"}checked="checked"{/if} onClick="return cookieCheckboxClick(this);">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cookiePreferencesDescription">
+                            <h1>
+                                [[Advertising Cookies]]
+                            </h1>
+                            <span>
+                                [[Used by advertising companies to serve ads relevant to your interests.]]
+                            </span>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="Advertising" {if $smarty.cookies.cookiePreferences == "Advertising"}checked="checked"{/if} onClick="return cookieCheckboxClick(this);">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="{$smarty.session.cookiePreferencesMobileReferer}"><input type="button" onClick="" value="[[Cancel]]"></a>
+                            <input type="submit" name="cookiePreferencesSave"  value="[[Save]]">
+                        </td>
+                    </tr>
+                </table>
+            </div>
 		</form>
 	{else}
 		{literal}

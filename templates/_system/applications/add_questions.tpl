@@ -6,30 +6,27 @@
 {/if}
 <h1>[[Questions]]</h1>
 {include file="../classifieds/field_errors.tpl" field_errors=$errors}
-<form method="post" action="">
+<form method="post" action="" class="form-horizontal">
 <input type="hidden" name="action" value="add" />
 {foreach from=$form_fields key=field_name item=form_field}
 {if $form_field.id == 'type'}
 	<div class="form-group has-feedback">
-		<div class="inputName">[[$form_field.caption]]</div>
-		<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-		<div class="inputField">{input property=$form_field.id  template='radio.tpl'}</div>
+        <label class="inputName control-label col-sm-3">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+		<div class="inputField col-sm-8">{input property=$form_field.id  template='radio.tpl'}</div>
 	</div>
 {else}
 	<div class="form-group has-feedback">
-		<div class="inputName">[[$form_field.caption]]</div>
-		<div class="inputReq">&nbsp;{if $form_field.is_required}*{/if}</div>
-		<div class="inputField">{input property=$form_field.id}</div>
+        <label class="inputName control-label col-sm-3">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
+		<div class="inputField col-sm-8">{input property=$form_field.id}</div>
 	</div>
 {/if}
 {/foreach}
 <div class="form-group has-feedback" id="boolean" {if !$answer_boolean}style="display:none"{/if}>
-	<div class="inputName">[[Answers]]</div>
-	<div class="inputReq">&nbsp;</div>
-	<div class="inputField">
+    <label class="inputName control-label col-sm-3">[[Answers]]</label>
+	<div class="inputField col-sm-8">
 		<div style="width:50px; float:left; padding: 10px 0 0 0;">[[Yes]]&nbsp;<input type="hidden" name="answer_boolean[]" value="Yes" /></div>
 		<div>
-		<select name="score_boolean[]">
+		<select name="score_boolean[]" class="form-control">
 			<option value="no" {if $score_boolean.yes == 'no'} selected="selected"{/if}>[[Don’t assign score]]</option>
 			<option value="0" {if $score_boolean.yes == '0'} selected="selected"{/if}>[[Not acceptable - 0]]</option>
 			<option value="1" {if $score_boolean.yes == 1} selected="selected"{/if}>[[Acceptable - 1]]</option>
@@ -41,7 +38,7 @@
 		<div class="clearfix"></div>
 		<div style="width:50px; float:left; padding: 10px 0 0 0;">[[No]]&nbsp;<input type="hidden" name="answer_boolean[]" value="No" /></div>
 		<div>
-		<select name="score_boolean[]">
+		<select name="score_boolean[]" class="form-control">
 			<option value="no" {if $score_boolean.no == 'no'} selected="selected"{/if}>[[Don’t assign score]]</option>
 			<option value="0" {if $score_boolean.no == '0'} selected="selected"{/if}>[[Not acceptable - 0]]</option>
 			<option value="1" {if $score_boolean.no == 1} selected="selected"{/if}>[[Acceptable - 1]]</option>
@@ -53,14 +50,13 @@
 	</div>
 </div >
 <div class="form-group has-feedback" id="answers"  {if !$answers}style="display:none"{/if}>
-	<div class="inputName">[[Answers]]</div>
-	<div class="inputReq">&nbsp;</div>
-	<div class="inputField">
+    <label class="inputName control-label col-sm-3">[[Answers]]</label>
+	<div class="inputField col-sm-8">
 		{if $answers}
             {foreach from=$answers key=key item=answer}
                 <div id="answerBlock{$key}" >
-                    <div style="float:left;padding-bottom:10px"><input class="form-control" type="text" name="answer[]" value="{$answer}" />&nbsp;</div>
-                    <div style="float:left;">
+                    <div class="pull-left"><input class="form-control" type="text" name="answer[]" value="{$answer}" />&nbsp;</div>
+                    <div class="pull-left">
                         <select class="form-control" name="score[]">
                             <option value="no" {if $score.$key == 'no'} selected="selected"{/if}>[[Don’t assign score]]</option>
                             <option value="0" {if $score.$key == '0'} selected="selected"{/if}>[[Not acceptable - 0]]</option>
@@ -70,17 +66,17 @@
                             <option value="4" {if $score.$key == 4} selected="selected"{/if}>[[Excellent - 4]]</option>
                         </select>
                     </div>
-                    <div>&nbsp;&nbsp;<a href="#" onclick="deleteAnswerBlock('answerBlock{$key}'); return false;" class="remove">[[Delete]]</a></div>
+                    <div>&nbsp;&nbsp;<a href="#" onclick="deleteAnswerBlock('answerBlock{$key}'); return false;" class="remove btn btn-sm btn-danger">[[Delete]]</a></div>
                 </div>
 				<div class="clearfix"></div>
             {/foreach}
 			<div class="clearfix"></div>
 		    <div id="answerAdd"></div>
-		    <div id="add_answer"><a href="#" onclick="addAnswerBlock();  return false;" class="add">[[Add Answer]]</a></div>
+		    <div id="add_answer"><a href="#" onclick="addAnswerBlock();  return false;" class="add btn btn-sm btn-success">[[Add Answer]]</a></div>
         {else}
             <div id="answerBlock">
-                <div style="float:left;padding-bottom:10px"><input class="form-control" type="text" name="answer[]" value="" />&nbsp;</div>
-                <div style="float:left;">
+                <div class="pull-left"><input class="form-control" type="text" name="answer[]" value="" />&nbsp;</div>
+                <div class="pull-left">
                     <select class="form-control" name="score[]">
                         <option value="no">[[Don’t assign score]]</option>
                         <option value="0">[[Not acceptable - 0]]</option>
@@ -90,15 +86,15 @@
                         <option value="4">[[Excellent - 4]]</option>
                     </select>
                 </div>
-                <div>&nbsp;&nbsp;<a href="#" onclick="deleteAnswerBlock('answerBlock'); return false;" class="remove">[[Delete]]</a></div>
+                <div>&nbsp;&nbsp;<a href="#" onclick="deleteAnswerBlock('answerBlock'); return false;" class="remove btn btn-sm btn-danger">[[Delete]]</a></div>
             </div>
 			<div class="clearfix"></div>
             <div id="answerAdd"></div>
-            <div id="add_answer"><a href="#" onclick="addAnswerBlock();  return false;" class="add">[[Add Answer]]</a></div>
+            <div id="add_answer"><a href="#" onclick="addAnswerBlock();  return false;" class="add btn btn-sm btn-success">[[Add Answer]]</a></div>
         {/if}
 		<div id="answerBlockNone"  style="display: none">
-		<div style="float:left;padding-bottom:10px"><input class="form-control" type="text" name="answer[]" value="" />&nbsp;</div>
-		<div style="float:left;">
+		<div class="pull-left"><input class="form-control" type="text" name="answer[]" value="" />&nbsp;</div>
+		<div class="pull-left">
 		<select class="form-control" name="score[]">
 			<option value="no">[[Don’t assign score]]</option>
 			<option value="0">[[Not acceptable - 0]]</option>
@@ -112,9 +108,7 @@
 	</div>
 </div >
 <div class="form-group has-feedback">
-	<div class="inputName">&nbsp;</div>
-	<div class="inputReq">&nbsp;</div>
-	<div class="inputField">{if $action == 'edit'}<input type="submit" name="action_add" value="[[Save]]" class="btn btn-default" />{else}<input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" />{/if}</div>
+	<div class="inputField col-sm-8 col-sm-offset-3">{if $action == 'edit'}<input type="submit" name="action_add" value="[[Save]]" class="btn btn-default" />{else}<input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" />{/if}</div>
 </div>
 </form>
 {literal}

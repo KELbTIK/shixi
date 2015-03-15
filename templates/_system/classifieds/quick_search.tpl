@@ -7,8 +7,8 @@
 		<input type="hidden" name="action" value="search" />
 		<input type="hidden" name="listing_type[equal]" value="Job" />
 		<div class="table-responsive">
-			<table cellpadding="0" cellspacing="0" width="80%">
-			<tr style="height:40px">
+			<table class="table table-condensed">
+			<tr>
 				<td>&nbsp; [[Keywords]]</td>
 				<td>&nbsp; {search property=keywords}</td>
 				<td>&nbsp; [[Category]]</td>

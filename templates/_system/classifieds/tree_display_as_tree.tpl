@@ -6,11 +6,11 @@
 
 <div id="tree-block"></div>
 <div id="tree-buttons">
-	<input type="button" onClick="saveSelected = true; $('#messageBox').dialog('close');"  value="[[Select]]" />
-	<input type="button" onClick="$('#messageBox').dialog('close');"  value="[[Cancel]]" />
+	<input class="btn btn-primary" type="button" onClick="saveSelected = true; $('#messageBox').dialog('close');"  value="[[Select]]" />
+	<input class="btn btn-danger" type="button" onClick="$('#messageBox').dialog('close');"  value="[[Cancel]]" />
 </div>
 
-<script language='JavaScript' type='text/javascript'>
+<script type='text/javascript'>
 	saveSelected = false;
 	$(document).ready(function() {
 		var treeHtml = getTreeHtml("{$fieldId}", new Object({ {$treeValues} }), [{$checked}], 0, 0);

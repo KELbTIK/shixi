@@ -24,5 +24,4 @@
 		{/if}
 	</p>
 	{/foreach}
-	<p>&nbsp;</p>
 {/if}

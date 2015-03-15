@@ -25,7 +25,7 @@
 	<form method="post" action="" enctype="multipart/form-data">
 		<input type="hidden" name="contract_id" value="{$contract_id}" />
 		<div class="table-responsive">
-			<table class="formtable">
+			<table class="formtable table table-condensed">
 			<tr class="headrow">
 				<td colspan="2">[[Data Import]]</td>
 				<td align='right'>

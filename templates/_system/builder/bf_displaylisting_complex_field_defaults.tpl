@@ -9,8 +9,7 @@
 			{Major}<br/>
 			{DegreeLevel}
 		</div>
-		<div class="clrBorder"><br/></div>
-		<div class="clr"><br/></div>
+		<div class="clearfix"></div>
 		{/literal}
 
 	{elseif $theField.b_field_sid eq "WorkExperience" || $theField.id eq "WorkExperience"}
@@ -23,8 +22,7 @@
 			{CompanyName} | {Industry}<br/>
 			{Description}
 		</div>
-		<div class="clrBorder"><br/></div>
-		<div class="clr"><br/></div>
+		<div class="clearfix"></div>
 		{/literal}
 	{else}
 		{foreach from=$theField.fields item="complexChildField"}

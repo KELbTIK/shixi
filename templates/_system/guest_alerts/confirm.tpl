@@ -9,7 +9,7 @@
 		{/if}
 	</div>
 {else}
-	<div class="message alert alert-info">
+	<div class="message alert alert-success">
 		[[Your email is confirmed. You will receive email alerts on this email.]]
 	</div>
 {/if}

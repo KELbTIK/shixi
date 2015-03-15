@@ -38,7 +38,7 @@
 			</script>
 		{/if}
 	{elseif $action == 'edit'}
-	<div style='font-weight: bold;'>[[My notes]]:</div>
+	<div><b>[[My notes]]:</b></div>
 	<form id="notesForm_{$apps_id}" action="{$GLOBALS.site_url}/edit-notes/" onsubmit="return Submit('{$apps_id}')">
 		<input type="hidden" name="actionNew" value='save'/>
 		<input type="hidden" name="page" value='{$page}'/>

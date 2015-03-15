@@ -40,12 +40,10 @@
         {/if}
     {/foreach}
     <div class="form-group has-feedback">
-        <div class="inputName">&nbsp;</div>
-        <div class="inputReq">&nbsp;</div>
         {if $action == 'edit'}
-            <div class="inputField"><input type="submit" name="action_add" value="[[Edit]]" class="btn btn-default" /></div>
+            <div class="inputField col-sm-8 col-sm-offset-3"><input type="submit" name="action_add" value="[[Edit]]" class="btn btn-default" /></div>
         {else}
-            <div class="inputField"><input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" /></div>
+            <div class="inputField col-sm-8 col-sm-offset-3"><input type="submit" name="action_add" value="[[Add]]" class="btn btn-success" /></div>
         {/if}
     </div>
 </form>

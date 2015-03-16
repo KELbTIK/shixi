@@ -5,6 +5,7 @@ module.exports = function(grunt) {
             main: {
                 src: [
                     'js/jquery-1.11.2.min.js',
+                    'node_modules/jquery.browser/dist/jquery.browser.js',
                     'bootstrap/js/bootstrap.js',
                     'plugins/modernizr.js',
                     'plugins/rs-plugin/js/jquery.themepunch.tools.min.js',

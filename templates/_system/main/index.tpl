@@ -15,23 +15,23 @@
 	<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery-ui.css"  />
 	<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.autocomplete.css" />
 	<link rel="Stylesheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.multiselect.css" />
-	<script language="JavaScript" type="text/javascript" src="{common_js}/main.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.autocomplete.pack.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.highlight.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/imagesize.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{common_js}/multilist_functions.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{common_js}/floatnumbers_functions.js"></script>
+	<script  type="text/javascript" src="{common_js}/main.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.autocomplete.pack.js"></script>
+	<script  type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.highlight.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/imagesize.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
+	<script  type="text/javascript" src="{common_js}/multilist_functions.js"></script>
+	<script  type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
+	<script  type="text/javascript" src="{common_js}/floatnumbers_functions.js"></script>
 	<!--[if IE 8]>
-		<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/pie-ie.js"></script>
-		<script language="JavaScript" type="text/javascript">
+		<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/pie-ie.js"></script>
+		<script  type="text/javascript">
 			$(function() {
 				if (window.PIE) {
 					$('input, .products, .productLinks, a.button, a.standart-button, #reports-navigation-in, #reports-navigation-in-border').each(function() {
@@ -49,7 +49,7 @@
 
 	{if $highlight_templates}
 	<!-- AJAX EDIT TEMPLATE SECTION -->
-	<script language="javascript" type="text/javascript">
+	<script  type="text/javascript">
 	$(document).ready(function(){
 		$("html").addClass("highlight-body");
 	});
@@ -112,7 +112,7 @@
 	<!-- END OF AJAX EDIT TEMPLATE SECTION -->
 	{/if}
 	{literal}
-	<script language="javascript" type="text/javascript">
+	<script  type="text/javascript">
 
 	// Set global javascript value for page
 	window.SJB_GlobalSiteUrl = '{/literal}{$GLOBALS.site_url}{literal}';

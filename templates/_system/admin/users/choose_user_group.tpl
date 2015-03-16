@@ -1,4 +1,4 @@
-<script language="javascript">
+<script >
 		function formSubmit(url) {
 			$("#messageBox").dialog('destroy');
 			var options = {

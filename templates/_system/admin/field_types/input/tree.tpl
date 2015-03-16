@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/tree.js"></script>
+<script  type="text/javascript" src="{common_js}/tree.js"></script>
 
 {capture name="trLess"}&#171;&nbsp;{tr}[[less]]{/tr|escape:'quotes'}{/capture}
 {capture name="trMore"}&#187;&nbsp;{tr}[[more]]{/tr|escape:'quotes'}{/capture}

@@ -120,7 +120,7 @@
 	<br/><br/><p class="error" style="width: 600px;">[[Report can not be generated. There is no statistics for this period.]]</p>
 {/if}
 
-<script language="Javascript">
+<script >
 	$(function(){ldelim}
 		var dFormat = '{$GLOBALS.current_language_data.date_format}';
 		dFormat = dFormat.replace('%m', "mm");

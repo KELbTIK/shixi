@@ -1,6 +1,6 @@
 {breadcrumbs}[[Manage Polls]]{/breadcrumbs}
 <h1><img src="{image}/icons/bargraph32.png" border="0" alt="" class="titleicon"/>[[Manage Polls]]</h1>
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 {include file="field_errors.tpl"}
 <p><a href="{$GLOBALS.site_url}/manage-polls/?action_name=new" class="grayButton">[[Add a New Poll]]</a></p>
 

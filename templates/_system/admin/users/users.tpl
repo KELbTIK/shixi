@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 <script type="text/javascript">
 	$.ui.dialog.prototype.options.bgiframe = true;
 	var progbar = "<img src='{$GLOBALS.user_site_url}/system/ext/jquery/progbar.gif' />";

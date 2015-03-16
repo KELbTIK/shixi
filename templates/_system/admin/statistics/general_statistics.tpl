@@ -499,7 +499,7 @@
 	</form>
 </div>
 {/if}
-<script language="Javascript">
+<script >
 $(function() {
 
 	var dFormat = '{$GLOBALS.current_language_data.date_format}';

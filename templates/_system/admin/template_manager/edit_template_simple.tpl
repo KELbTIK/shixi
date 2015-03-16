@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript">
+<script  type="text/javascript">
 <!--//
  
 var ModulesFunctions = new Array();
@@ -150,7 +150,7 @@ function saveTemplateSubmit() {
 						<tr>
 							<td class="td-name">Module</td>
 							<td>
-								<select size="1" name="module" id="modules" onchange="loadFunctionsForModule(this.form)" language="Javascript">
+								<select size="1" name="module" id="modules" onchange="loadFunctionsForModule(this.form)" >
 									<option selected>Choose module:</option>
 									{foreach from=$LIST_MODULES key=KEY_MOD item=VALUE_MOD}
 										<option> {$VALUE_MOD} </option>
@@ -160,7 +160,7 @@ function saveTemplateSubmit() {
 							<td>&nbsp;&nbsp;</td>
 							<td class="td-name">Function</td>
 							<td>
-								<select size="1" name="function" id="functions" onchange="loadParamsForFunction()" language="Javascript">
+								<select size="1" name="function" id="functions" onchange="loadParamsForFunction()" >
 									<option selected>Choose function:</option>
 									{foreach from=$LIST_FUNCTIONS[$user_page.module] key=KEY_FUNC item=VALUE_FUNC}
 										<option> {$VALUE_FUNC} </option>

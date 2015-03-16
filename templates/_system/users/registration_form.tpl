@@ -1,4 +1,4 @@
-<script type="text/javascript" language="JavaScript">
+<script type="text/javascript" >
 function checkField( obj, name ) {
 	if (obj.val() != "") {
 		var options = {

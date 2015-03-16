@@ -1,4 +1,4 @@
-<script language="javascript">
+<script >
 function formSubmit(url, formID) {
 	var options = {
 		target: "#messageBox",

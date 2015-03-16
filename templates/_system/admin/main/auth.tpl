@@ -6,7 +6,7 @@
 	<title>Shixi.com [[Admin Panel]]</title>
 	<link rel="StyleSheet" type="text/css" href="{image src="auth.css"}"/>
 	{if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
 {literal}
 	<script type="text/javascript">$(function () {
 		$('input[name=username]').focus();

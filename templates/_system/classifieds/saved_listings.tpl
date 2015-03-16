@@ -1,5 +1,5 @@
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
-<script type="text/javascript" language="JavaScript">
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
+<script type="text/javascript" >
 {literal}
 function SaveAd(noteId, url){
 	$.get(url, function(data){

@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
 {if !empty($errors)}
 	{foreach from=$errors item="error"}
 		<div class="error alert alert-danger">[[{$error}]]</div>
@@ -41,7 +41,7 @@
 	</div>
 </form>
 
-<script language="JavaScript" type="text/javascript">
+<script  type="text/javascript">
 	{literal}
 	var reloadPage = true;
 	function pm_check() {

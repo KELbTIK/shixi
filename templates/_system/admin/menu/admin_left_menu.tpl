@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript">
+<script  type="text/javascript">
 	function trim(str)
 	{
 		while (str.substring(0, 1) == " ")

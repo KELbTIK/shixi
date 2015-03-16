@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 {if $category.name != 'Archive'}
 	{breadcrumbs}<a href="{$GLOBALS.site_url}/news-categories/">[[News Categories]]</a> &#187; [[{$category.name}]] &#187; [[Edit Category]]{/breadcrumbs}
 	<h1><img src="{image}/icons/linedpaperpencil32.png" border="0" alt="" class="titleicon"/>[[Edit Category]]</h1>

@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 {capture name="displayTitle"}[[Add New Location]]{/capture}
 {capture name="closeButtonText"}[[Close]]{/capture}
 

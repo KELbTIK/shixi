@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 

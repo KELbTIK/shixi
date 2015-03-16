@@ -1,6 +1,6 @@
 {breadcrumbs}[[Flagged Listings]]{/breadcrumbs}
 <h1><img src="{image}/icons/linedpaperminus32.png" border="0" alt="" class="titleicon" />[[Flagged Listings]]</h1>
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 
 	<form name="filter">
 		<fieldset id="filter_fieldset">

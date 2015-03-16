@@ -26,7 +26,7 @@
 			<script type="text/javascript" src="{$GLOBALS.user_site_url}/files/video/flowplayer-3.2.12.min.js"></script>
 			<a href="{$value.file_url|escape:'url'}" id="player_{$value.file_id}" class="player"></a>
 			<div>
-				<script language="JavaScript">
+				<script >
 					$f("player_{$value.file_id}", "{$GLOBALS.user_site_url}/files/video/flowplayer-3.2.16.swf",  {
 						clip: {
 							url: "{$listing.video.file_url|escape:'url'}",
@@ -105,7 +105,7 @@
 				<script type="text/javascript" src="{$GLOBALS.user_site_url}/files/video/flowplayer-3.2.12.min.js"></script>
 				<a href="{$value.file_url|escape:'url'}" id="player_{$value.file_id}" class="player"></a>
 				<div>
-					<script language="JavaScript">
+					<script >
 						$f("player_{$value.file_id}", "{$GLOBALS.user_site_url}/files/video/flowplayer-3.2.16.swf",  {
 							clip: {
 								url: "{$listing.video.file_url|escape:'url'}",

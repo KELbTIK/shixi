@@ -5,7 +5,7 @@
 	{/foreach}
 </select>
 
-<script language="Javascript">
+<script >
 function usersReloadWithParameter(param)
 {
 	window.location = "?user_group_id="+param;

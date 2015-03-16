@@ -1,4 +1,4 @@
-<script type="text/javascript" language="JavaScript">
+<script type="text/javascript" >
 {literal}
 function submitForm(id) {
 	lpp = document.getElementById("companies_per_page" + id);

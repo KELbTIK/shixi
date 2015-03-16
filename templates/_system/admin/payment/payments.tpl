@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 {include file="errors.tpl"}
 <div class="clr"><br/></div>
 <form method="get" name="transactions_form" action="{$GLOBALS.site_url}/payments/">

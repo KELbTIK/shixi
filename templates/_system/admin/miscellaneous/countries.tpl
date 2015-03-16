@@ -1,5 +1,5 @@
 <script type="text/javascript" src="{$GLOBALS.site_url}/../system/ext/jquery/jquery.tablednd.js"></script>
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 {capture name="trSureToDelete"}[[Are you sure you want to delete this country?]]{/capture}
 
 {breadcrumbs}[[Countries]]{/breadcrumbs}

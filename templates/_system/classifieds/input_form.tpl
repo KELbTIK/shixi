@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/picture_actions.js"></script>
+<script  type="text/javascript" src="{common_js}/picture_actions.js"></script>
 {if $account_activated}
 	<div class="message alert alert-info">
 		[[Your account was successfully activated. Thank you.]]

@@ -6221,3 +6221,11 @@ img.ui-datepicker-trigger{
 .fa-envelope[title^="You have"]{
     margin-top:3px;
 }
+
+.padding_correct{
+	padding-top: 7px;
+}
+
+.img_block-inline{
+	display:inline-block;
+}

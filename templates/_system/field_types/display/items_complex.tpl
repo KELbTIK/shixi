@@ -1,5 +1,6 @@
 {assign var="complexField" value=$id scope=global} {* nwy: Если не очистить переменную то в последующих полях начинаются проблемы (некоторые воспринимаются как комплексные)*}
-	<div class="table-responsive"><table id="invoice-table">
+	<div class="table-responsive">
+		<table id="invoice-table" class="table table-condensed">
 		<tbody>
 		<tr class="invoice-table-head">
 			<td width="80%" class="invoice-table-head-2">[[Description]]</td>

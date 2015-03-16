@@ -26,22 +26,22 @@
 			<img src="{image}logo.png" border="0" />
 		</div>
 		<div id="invoice-info">
-			<span class="strong">[[Invoice]]</span><br />
-			[[Date]]:&nbsp;{display property="date"}<br />
-			[[Invoice]]&nbsp;&#35;:&nbsp;{$invoice_sid}<br />
-			[[Invoice Status]]:&nbsp;{$status}{if $payment_method}&nbsp;({display property="payment_method"}){/if}<br />
+			<h2><span class="strong">[[Invoice]]</span><br /></h2>
+			<h3>[[Date]]:</h3>{display property="date"}<br />
+			<h3>[[Invoice]]&nbsp;&#35;:&nbsp;</h3>{$invoice_sid}<br />
+			<h3>[[Invoice Status]]:&nbsp;</h3>{$status}{if $payment_method}&nbsp;({display property="payment_method"}){/if}<br />
 		</div>
 		<div class="clearfix"></div>
 			<div id="invoice-billto">
 			{capture name="location"}{locationFormat location=$user.Location format="middle"}{/capture}
-			<span class="strong">[[Bill To]]</span>
+			<h3><span class="strong">[[Bill To]]</span></h3>
 			<br />{$username}
 			<br />{$user.Location.Address}
 			<br />{$smarty.capture.location|trim:",\t "}
 			<br />{tr}{$user.Location.Country}{/tr|escape:'html'}
 		</div>
 		<div id="invoice-sendto">
-			<span class="strong">[[Send Payment To]]</span>
+			<h3><span class="strong">[[Send Payment To]]</span></h3>
 			<br /><pre class="sendPaymentTo">{$GLOBALS.settings.send_payment_to|escape:'html'}</pre>
 		</div>
 		<div class="clearfix"></div>

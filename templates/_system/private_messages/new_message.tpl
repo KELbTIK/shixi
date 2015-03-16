@@ -5,7 +5,7 @@
 		{include file='field_errors.tpl'}
 		<div class="form-group has-feedback">
 			<label class="inputName col-sm-3 control-label">Message to</label>
-			<div class="inputField col-sm-8">
+			<div class="inputField col-sm-8 padding_correct" >
 				{if $anonym}
 					[[Anonymous User]]
 					<input class="form-control" type="hidden" name="anonym" value="{if $form_to != ""}{$form_to}{else}{$to}{/if}"/>

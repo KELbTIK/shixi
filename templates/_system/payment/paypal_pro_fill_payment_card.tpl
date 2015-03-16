@@ -1,4 +1,4 @@
-<form id="formPayment" method="post" action="{$form_submit_url}">
+<form id="formPayment" method="post" action="{$form_submit_url}" class="form-horizontal">
 	<input type="hidden" id="action" name="action" value="BUTTON_PRESSED"/>{$hiddenFields}
 	{if $errors}
 		{foreach from=$errors item=error}
@@ -7,78 +7,90 @@
 		<br/>
 	{/if}
 	<div class="form-group has-feedback">
-		<div class="orderInfo"><span class="strong">[[Order Information]]</span></div>
-		<div class="orderInfo">[[Invoice Number]]: {$invoiceInfo.invoiceNumber}</div>
-		<div class="orderInfo">[[Description]]: [[{$invoiceInfo.description}]]</div>
-		<div class="orderInfo">[[Total]]: {capture assign = "totalPrice"}{tr type="float"}{$invoiceInfo.totalPrice}{/tr}{/capture}{currencyFormat amount=$totalPrice}</div>
+		<div class="col-sm-8 col-sm-offset-3">
+			<div class="orderInfo"><h1><span class="strong">[[Order Information]]</span></h1></div>
+			<div class="orderInfo"><strong>[[Invoice Number]]:</strong> {$invoiceInfo.invoiceNumber}</div>
+			<div class="orderInfo"><strong>[[Description]]:</strong> [[{$invoiceInfo.description}]]</div>
+			<br/>
+			<div class="orderInfo"><strong>[[Total]]:</strong> {capture assign = "totalPrice"}{tr type="float"}{$invoiceInfo.totalPrice}{/tr}{/capture}{currencyFormat amount=$totalPrice}</div>
+		</div>
 	</div>
 	<div class="clearfix"></div>
 	<div class="form-group has-feedback">
-		<div class="inputName" ><span class="strong">[[Credit Card Information]]:</span></div>
-		<div class="inputReq" >&nbsp;</div>
-		<div class="inputName">
+		<label class="inputName control-label col-sm-3" ><span class="strong">[[Credit Card Information]]:</span></label>
+		<div class="inputName col-sm-8 padding_correct">
 			{foreach from=$creditCards item=card}
-				<img src="{image}/creditcards/{$card}.gif" height="26"" />
+				<img class="img_block-inline" src="{image}/creditcards/{$card}.gif" height="26"/>
 			{/foreach}
 		</div>
 	</div>
+
+
+
+
+
 	<div class="form-group has-feedback">
-		<div class="inputName" >[[Card Number]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+		<label class="inputName col-sm-3 control-label" >[[Card Number]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="card_number" name="card_number" value="{$formFields.card_number}" maxLength="16"/>
-			<br/>([[enter number without spaces or dashes]])
+			<div>([[enter number without spaces or dashes]])</div>
+		</div>
+
+	</div>
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[Expiration Date]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
+			<div class="row">
+				<div class="col-sm-6">
+					<select class="form-control"   id="exp_date_mm" name="exp_date_mm">
+						{foreach from=$monthList item="month"}
+							<option value="{$month}" {if $formFields.exp_date_mm == $month}selected="selected"{/if}>{$month}</option>
+						{/foreach}
+					</select> [[Month]]
+				</div>
+				<div class="col-sm-6">
+					<select class="form-control"   id="exp_date_yy" name="exp_date_yy">
+					{foreach from=$yearList item="yearListItem"}
+						<option value="{$yearListItem}" {if $formFields.exp_date_yy == $yearListItem}selected="selected"{/if}>{$yearListItem}</option>
+					{/foreach}
+					</select> [[Year]]
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="form-group has-feedback">
-		<div class="inputName" >[[Expiration Date]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
-			<select class="form-control"   id="exp_date_mm" name="exp_date_mm">
-				{foreach from=$monthList item="month"}
-					<option value="{$month}" {if $formFields.exp_date_mm == $month}selected="selected"{/if}>{$month}</option>
-				{/foreach}
-			</select> [[Month]]
-			<select class="form-control"   id="exp_date_yy" name="exp_date_yy">
-			{foreach from=$yearList item="yearListItem"}
-				<option value="{$yearListItem}" {if $formFields.exp_date_yy == $yearListItem}selected="selected"{/if}>{$yearListItem}</option>
-			{/foreach}
-			</select> [[Year]]
-		</div>
-	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[Credit card CSC value]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+		<label class="inputName col-sm-3 control-label" >[[Credit card CSC value]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="csc_value" name="csc_value" value="{$formFields.csc_value}" maxLength="20"/>
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[First Name]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[First Name]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="first_name" name="first_name" value="{$formFields.first_name}" maxLength="50"/>
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[Last Name]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[Last Name]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="last_name" name="last_name" value="{$formFields.last_name}" maxLength="50"/>
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[Billing Address]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[Billing Address]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="address" name="address" value="{$formFields.address}" maxLength="60"/>
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[Zip Code]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[Zip Code]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="zip" name="zip" value="{$formFields.zip}" maxLength="60"/>
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[Country]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[Country]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			{$selCountry = ($formFields.country) ? $formFields.country : $curUserCountryInfo.country_code}
 			<select class="form-control"  id="country" name="country">
 				<option value="">[[Select Country]]</option>
@@ -88,15 +100,15 @@
 			</select>
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[City]]:</div>
-		<div class="inputReq">&nbsp;*</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[City]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="city" name="city" value="{$formFields.city}" maxLength="40"/>
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[State/Region]]:</div>
-		<div class="inputReq">&nbsp;{if in_array($selCountry, array("US", "GB", "AU", "CA"))}*{/if}</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[State/Region]]:<span class="small text-danger">&nbsp;{if in_array($selCountry, array("US", "GB", "AU", "CA"))}*{/if}</span></label>
+		<div class="inputField col-sm-8 padding_correct" >
 			{if in_array($selCountry, array("US", "GB", "AU", "CA"))}
 				<select class="form-control"  id="state" name="state">
 					<option value="">[[Select State/Region]]</option>
@@ -106,26 +118,23 @@
 			{/if}
 		</div>
 	</div>
-	<div class="form-group has-feedback"><div class="inputName" >[[Email]]:</div>
-		<div class="inputReq">&nbsp;</div>
-		<div class="inputField" >
+	<div class="form-group has-feedback">
+		<label class="inputName col-sm-3 control-label" >[[Email]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="email" name="email" value="{$formFields.email}" maxLength="255"/>
 		</div>
 	</div>
 	<div class="form-group has-feedback">
-		<div class="inputName" >[[Phone Number]]:</div>
-		<div class="inputReq">&nbsp;</div>
-		<div class="inputField" >
+		<label class="inputName col-sm-3 control-label" >[[Phone Number]]:<span class="small text-danger">&nbsp;*</span></label>
+		<div class="inputField col-sm-8" >
 			<input type="text" class="input_text form-control" id="phone" name="phone" value="{$formFields.phone}" maxLength="25"/>
 		</div>
 	</div>
-	<div class="form-group has-feedback">
-		<div class="inputName" >&nbsp;</div>
-	</div>
+
 	<div class="form-group has-feedback">
 		<div class="inputName" >&nbsp;</div>
 		{capture name="trPayNow"}[[Pay Now]]{/capture}
-		<div class="inputName" ><input class="btn btn-default" type="submit" value="{$smarty.capture.trPayNow|escape:'quotes'}" /></div>
+		<div class="inputName col-sm-8 col-sm-offset-3" ><input class="btn btn-success" type="submit" value="{$smarty.capture.trPayNow|escape:'quotes'}" /></div>
 	</div>
 </form>
 <script type="text/javascript">
@@ -183,7 +192,7 @@
 			);
 		}
 	}
-	
+
 	$(function() {
 		$("#country").change(function() {
 			getStates(this.value);

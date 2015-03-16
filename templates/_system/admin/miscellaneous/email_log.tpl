@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 {capture name="trResend"}[[Resend]]{/capture}
 {capture name="trCancel"}[[Cancel]]{/capture}
 {capture name="trAreYouSureToResend"}[[Are you sure you want to resend selected emails?]]{/capture}

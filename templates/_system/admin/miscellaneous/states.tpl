@@ -1,5 +1,5 @@
 <script type="text/javascript" src="{$GLOBALS.site_url}/../system/ext/jquery/jquery.tablednd.js"></script>
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 <div id="dialog" style="display: none"></div>
 {breadcrumbs}[[State/Region]]{/breadcrumbs}
 <h1><img src="{image}/icons/linedpaper32.png" border="0" alt="" class="titleicon"/> [[States/Regions]]</h1>

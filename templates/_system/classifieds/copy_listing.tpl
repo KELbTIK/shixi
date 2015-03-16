@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/picture_actions.js"></script>
+<script  type="text/javascript" src="{common_js}/picture_actions.js"></script>
 <h1>[[Clone Job]]</h1>
 	{if $errors}
 		{foreach from=$errors item="error_data" key="error_id"}	

@@ -180,7 +180,7 @@
 
 	</form>
 
-	<script language="javascript" type="text/javascript">
+	<script  type="text/javascript">
 	var langSettings = {
 			thousands_separator : '{$GLOBALS.current_language_data.thousands_separator}',
 			decimal_separator : '{$GLOBALS.current_language_data.decimal_separator}',

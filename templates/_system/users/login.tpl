@@ -13,7 +13,7 @@
 	{/literal}
 {/if}
 {if $shopping_cart && $logged_in}
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
 	<script type="text/javascript">
 		{literal}
 			 $("#shoppingCartForm").click();

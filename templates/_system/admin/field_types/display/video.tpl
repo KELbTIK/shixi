@@ -1,6 +1,6 @@
 <script type="text/javascript" src="{$GLOBALS.user_site_url}/files/video/flowplayer-3.2.12.min.js"></script>
 <a href="{$listing.video.file_url|escape:'url'}" id="player_{$listing.video.file_id}" class="player"></a>
-<script language="JavaScript">
+<script >
 	$f("player_{$listing.video.file_id}", "{$GLOBALS.user_site_url}/files/video/flowplayer-3.2.16.swf",  {
 
 		clip: {

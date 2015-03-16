@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
 {foreach from=$errors item=error key=field_caption}
 	{if $error eq 'EMPTY_VALUE'}
 	<p class="error">'[[{$field_caption}]]' [[is empty]]</p>

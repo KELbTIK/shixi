@@ -45,14 +45,14 @@
 	  <script type="text/javascript" src="{$GLOBALS.site_url}/js/template.js"></script>
 	  <script type="text/javascript" src="{$GLOBALS.site_url}/js/custom.js"></script>
 
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>
-<script language="JavaScript" type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
-<script language="JavaScript" type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>
+<script  type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
+<script  type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
 [[$HEAD]]
 {literal}
-	<script language="javascript" type="text/javascript">
+	<script  type="text/javascript">
 		function popUpWindow(url, widthWin, title, parentReload, userLoggedIn){
 			reloadPage = false;
 			$("#loading").show();
@@ -81,8 +81,8 @@
 {/literal}
 {if $highlight_templates}
 <!-- AJAX EDIT TEMPLATE SECTION -->
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
-<script language="javascript" type="text/javascript">
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
+<script  type="text/javascript">
 $(document).ready(function(){
 	$("html").addClass("highlight-body");
 });

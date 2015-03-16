@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/picture_actions.js"></script>
+<script  type="text/javascript" src="{common_js}/picture_actions.js"></script>
 {breadcrumbs}
 	<a href="{$GLOBALS.site_url}/manage-{$listingType.link}/?restore=1">
 		[[Manage {$listingType.name}s]]
@@ -9,7 +9,7 @@
 
 {if $GLOBALS.is_ajax}
 	<link type="text/css" href="{$GLOBALS.user_site_url}/system/ext/jquery/themes/green/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
-	<script language="javascript" type="text/javascript">
+	<script  type="text/javascript">
 		var url = "{$GLOBALS.site_url}/edit-listing/";
 		$("#editListingForm").submit(function() {
 			var options = {

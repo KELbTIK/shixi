@@ -276,7 +276,7 @@
 <div id="chart_div" style="width: 900px; height: 500px;"></div>
 
 
-<script language="Javascript">
+<script >
 $(function(){ldelim}
 
 	var dFormat = '{$GLOBALS.current_language_data.date_format}';

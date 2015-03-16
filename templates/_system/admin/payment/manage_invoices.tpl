@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 <div class="clr"><br/></div>
 <form method="post" name="invoices_form" action="{$GLOBALS.site_url}/manage-invoices/">
 	<input type="hidden" name="action_name" id="action_name" value="" />

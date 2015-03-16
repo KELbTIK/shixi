@@ -1,5 +1,5 @@
 <div id="no-padding">
-	<script type="text/javascript" language="JavaScript">
+	<script type="text/javascript" >
 		$.ui.dialog.prototype.options.bgiframe = true;
 		function submitForm(id) {
 			var lpp = document.getElementById("listings_per_page" + id);
@@ -350,7 +350,7 @@
 		</div>
 	{/if}
 
-	<script type="text/javascript" language="JavaScript">
+	<script type="text/javascript" >
 		{if $keywordsHighlight}
 			$("#listingsResults").highlight({$keywordsHighlight});
 		{/if}

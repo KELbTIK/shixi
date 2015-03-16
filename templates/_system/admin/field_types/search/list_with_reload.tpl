@@ -4,7 +4,7 @@
 		<option value='{$list_value.id}' {if $selected_listing_type_id === $list_value.id}selected="selected"{/if} >[[{$list_value.caption|escape:"html"}]]</option>
 	{/foreach}
 </select>
-<script language="Javascript">
+<script >
 function reloadWithParameter(param)
 {
 	window.location = "?listing_type_id="+param;

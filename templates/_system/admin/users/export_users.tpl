@@ -68,7 +68,7 @@
 	</table>
 </form>
 
-<script language="Javascript">
+<script >
 $(function(){ldelim}
 	var dFormat = '{$GLOBALS.current_language_data.date_format}';
 	dFormat = dFormat.replace('%m', "mm");

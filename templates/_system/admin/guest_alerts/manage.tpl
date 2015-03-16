@@ -1,5 +1,5 @@
 {capture assign="trAskToDelete"}[[Are you sure you want to delete selected guest alert?]]{/capture}
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 <div class="clr"><br /></div>
 {if !empty($errors)}
 	{foreach from=$errors item="error"}

@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/picture_actions.js"></script>
+<script  type="text/javascript" src="{common_js}/picture_actions.js"></script>
 {title}{tr}Post $listingType.id{/tr|escape:'html'}{/title}
 {if $edit_user}
 	{breadcrumbs}

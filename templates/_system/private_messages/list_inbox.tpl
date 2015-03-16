@@ -106,7 +106,7 @@
 	<input type="button" class="button btn btn-dark" value="[[Mark as Read]]" id="pm_controll_mark" /> <input type="button" class="button btn btn-danger" value="[[Delete]]" id="pm_controll_delete" />
 
 </form>
-<script type="text/javascript" language="JavaScript">
+<script type="text/javascript" >
 	function submit() {
 		var form = document.getElementById("listings_per_page_form");
 		form.submit();

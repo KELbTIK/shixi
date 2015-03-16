@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
+<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
 {literal}
 	<script type="text/javascript"><!--
 		function tellFriendSubmit() {

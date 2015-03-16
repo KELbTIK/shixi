@@ -11,17 +11,17 @@
     <link rel="stylesheet" type="text/css" href="{image src="jquery-ui-1.8.custom.css"}" />
 	<link type="text/css" href="{$GLOBALS.user_site_url}/system/ext/jquery/css/jquery-ui.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="{$GLOBALS.user_site_url}/system/ext/jquery/css/jquery.multiselect.css" />
-	<script language="JavaScript" type="text/javascript" src="{common_js}/main.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
-    <script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery-ui.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.form.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{common_js}/multilist_functions.js"></script>
-	<script language="JavaScript" type="text/javascript" src="{common_js}/floatnumbers_functions.js"></script>
+	<script  type="text/javascript" src="{common_js}/main.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.js"></script>
+    <script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery-ui.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.form.js"></script>
+	<script  type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
+	<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
+	<script  type="text/javascript" src="{common_js}/multilist_functions.js"></script>
+	<script  type="text/javascript" src="{common_js}/floatnumbers_functions.js"></script>
 	{capture name="displayProgressBar"}<img style="vertical-align: middle;" src="{$GLOBALS.user_site_url}/system/ext/jquery/progbar.gif" alt="[[Please wait ...]]" /> [[Please wait ...]]{/capture}
-    <script language="JavaScript" type="text/javascript">
+    <script  type="text/javascript">
 
 		// Set global javascript value for page
 		window.SJB_GlobalSiteUrl = '{$GLOBALS.site_url}';

@@ -1,7 +1,7 @@
 {if $template_name eq 'display_resume.tpl' || $template_name eq 'display_job.tpl' || $template_name eq 'search_form_resumes.tpl' || $template_name eq 'search_form.tpl'}
 	<p class="note">[[Warning: If you want to change the layout of this form please use <a href="$GLOBALS.site_url/form-builders/">Form Builder</a>. Direct changing of this template may lead to unpredictable results.]]</p>
 {/if}
-<script language="JavaScript" type="text/javascript">
+<script  type="text/javascript">
 <!--//
 
 var ModulesFunctions = new Array();
@@ -151,7 +151,7 @@ function insertStr() {
 					<tr>
 						<td>{tr}Module{/tr}</td>
 						<td>
-							<select size="1" name="module" id="modules" onchange="loadFunctionsForModule(this.form)" language="Javascript">
+							<select size="1" name="module" id="modules" onchange="loadFunctionsForModule(this.form)" >
 								<option selected>{tr}Choose module{/tr}:</option>
 							    {foreach from=$LIST_MODULES key=KEY_MOD item=VALUE_MOD}
 								    <option> {$VALUE_MOD} </option>
@@ -163,7 +163,7 @@ function insertStr() {
 					<tr>
 						<td>Function</td>
 						<td>
-							<select size="1" name="function" id="functions" onchange="loadParamsForFunction()" language="Javascript">
+							<select size="1" name="function" id="functions" onchange="loadParamsForFunction()" >
 								<option selected>{tr}Choose function{/tr}:</option>
 							    {foreach from=$LIST_FUNCTIONS[$user_page.module] key=KEY_FUNC item=VALUE_FUNC}
 								    <option> {$VALUE_FUNC} </option>
@@ -184,7 +184,7 @@ function insertStr() {
 				<td><div id="table_params"></div></td>
 			</tr>
 			<tr>
-				<td><input type="button" class="grayButton" name="btnInsStr" value="{tr}Insert{/tr}" size=5  onclick="insertStr(this.form)" LANGUAGE="Javascript"></td>
+				<td><input type="button" class="grayButton" name="btnInsStr" value="{tr}Insert{/tr}" size=5  onclick="insertStr(this.form)" ></td>
 			</tr>
 		</table>
 	</div>
@@ -215,7 +215,7 @@ function insertStr() {
             });
     </script>
 
-		<!--<input type="button" name="btnInsStr" value=" Insert" size=5  onclick="insertStr(this.form)" LANGUAGE="Javascript">-->
+		<!--<input type="button" name="btnInsStr" value=" Insert" size=5  onclick="insertStr(this.form)" >-->
 
 		<input type="hidden" name="template_name" value="{$template_name}">
 		<input type="hidden" name="module_name" value="{$module_name}">

@@ -1,4 +1,4 @@
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 {capture name="confirmToDelete"}[[Are you sure you want to delete this {$listingsType.name|lower}?]]{/capture}
 <div class="clr"><br/></div>
 <form method="post" action="{$GLOBALS.site_url}/listing-actions/" name="resultsForm">

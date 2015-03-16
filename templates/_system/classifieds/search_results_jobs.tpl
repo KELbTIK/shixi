@@ -331,7 +331,7 @@
 		</div>
 	{/if}
 
-	<script type="text/javascript" language="JavaScript">
+	<script type="text/javascript" >
 		{if $keywordsHighlight}
 			$(".searchResultsJobs").highlight({$keywordsHighlight});
 		{/if}

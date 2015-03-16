@@ -45,7 +45,7 @@
 {/if}
 
 {if !empty($refineFields)}
-	<script language="JavaScript" type="text/javascript" src="{common_js}/refine_search.js"></script>
+	<script  type="text/javascript" src="{common_js}/refine_search.js"></script>
 
 	{capture name="trLess"}&nbsp;&nbsp;&#171;&nbsp;[[less]]{/capture}
 	{capture name="trMore"}&nbsp;&nbsp;&#187;&nbsp;[[more]]{/capture}
@@ -90,7 +90,7 @@
         {/foreach}
         <br/>
 	</div>
-	<script type="text/javascript" language="JavaScript">
+	<script type="text/javascript" >
 		refineBlockBinder("{$smarty.capture.trLess|escape:"quotes"}", "{$smarty.capture.trMore|escape:"quotes"}");
 	</script>
 {/if}

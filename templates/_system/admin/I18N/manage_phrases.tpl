@@ -1,6 +1,6 @@
 {capture name="edit_phrase"}[[Edit Phrase]]{/capture}
 {capture name="loading"}[[Loading]]{/capture}
-<script language="JavaScript" type="text/javascript" src="{common_js}/pagination.js"></script>
+<script  type="text/javascript" src="{common_js}/pagination.js"></script>
 <script type="text/javascript">
 	$.ui.dialog.prototype.options.bgiframe = true;
 	$(function() {

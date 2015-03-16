@@ -11,7 +11,7 @@
 		{/if}
 	{else}
 		{literal}
-		<script language="javascript" type="text/javascript">
+		<script  type="text/javascript">
 			function cookiePreferencesPopupOpen()
 			{
 				var url = "{/literal}{$GLOBALS.site_url}/cookie-preferences/{literal}";
@@ -68,7 +68,7 @@
 			</div>
 
 			{literal}
-			<script language="JavaScript" type="text/javascript">
+			<script  type="text/javascript">
 				$(document).ready(function() {
 					$("#cookiePreferences_front-end").show("slide", {direction: "up"}, 1500)
 													 .css("display", "block");
@@ -82,7 +82,7 @@
 	{/if}
 {elseif $action == 'preferences'}
 	{literal}
-	<script language="javascript" type="text/javascript">
+	<script  type="text/javascript">
 		var cookiePreferencesSteps = ["Advertising", "Functional", "System"];
 		var cookiePreferencesValue = 0;
 		for (var i = 0; i < cookiePreferencesSteps.length; i++) {
@@ -95,9 +95,9 @@
 	{/literal}
 
 	{if $mobileVersion}
-		<script language="JavaScript" type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
+		<script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
 		{literal}
-		<script language="javascript" type="text/javascript">
+		<script  type="text/javascript">
 			function cookieCheckboxClick(checkBox)
 			{
 				if (checkBox.name == "Functional") {
@@ -182,7 +182,7 @@
 		</form>
 	{else}
 		{literal}
-		<script language="javascript" type="text/javascript">
+		<script  type="text/javascript">
 			var cookiePreferences_confirm = "{/literal}[[If you disable cookies the website performance can become unstable and many functions will be turned off.]]{literal}";
 
 			$("#cookiePreferencesSlider").slider({
@@ -232,7 +232,7 @@
 	{/if}
 
 	{literal}
-	<script language="javascript" type="text/javascript">
+	<script  type="text/javascript">
 		var sliderHeightDone = false;
 		function cookiePreferencesGlowText(value)
 		{

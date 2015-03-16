@@ -10,9 +10,9 @@
 		<link rel="StyleSheet" type="text/css" href="{image src="design.css"}">
 		<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{$GLOBALS.site_url}/rss/">
 		<link rel="Stylesheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.multiselect.css" />
-		<script language="JavaScript" type="text/javascript" src="{common_js}/main.js"></script>
-		<script language="JavaScript" type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
-		<script language="JavaScript" type="text/javascript" src="{common_js}/multilist_functions.js"></script>
+		<script  type="text/javascript" src="{common_js}/main.js"></script>
+		<script  type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
+		<script  type="text/javascript" src="{common_js}/multilist_functions.js"></script>
 		[[$HEAD]]
 	</head>
 	<body />

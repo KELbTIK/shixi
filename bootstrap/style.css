@@ -6224,7 +6224,11 @@ img.ui-datepicker-trigger{
 
 .padding_correct{
 	padding-top: 7px;
-}.
+}
+
+.padding_radio_correct{
+	padding-top: 10px !important;
+}
 
 .img_block-inline{
 	display:inline-block;

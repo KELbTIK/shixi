@@ -119,7 +119,7 @@ function addAnswerBlock() {
 	var id = "answerAdd"+i;
 	$("<div id='"+id+"'><\/div>").appendTo("#answerAdd");
 	var block = $('#answerBlockNone').clone();
-	block.appendTo('#'+id); 
+	block.appendTo('#'+id);
 	block.show();
 	$('#'+ id +' input[type=text]').val('');
 	$('#'+ id).html($('#'+ id).html() + "<div>&nbsp;&nbsp;<a href='#' onclick=\"deleteAnswerBlock('"+id+"'); return false;\" class=\"remove\">{/literal}[[Delete]]{literal}<\/a><\/div><div class='clearfix'><\/div>");

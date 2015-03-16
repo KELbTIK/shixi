@@ -27,7 +27,7 @@
 	<div class="clearfix"></div>
 	<div class="form-group has-feedback">
 		<label class="inputName control-label col-sm-3" ><span class="strong">[[Credit Card Information]]:</span></label>
-		<div class="inputName col-sm-8 padding_correct payment_icons">
+		<div class="inputName col-sm-8 payment_icons">
 			{foreach from=$creditCards item=card}
                 {if $card == 'discovery'}
                     <i class="fa fa-cc-discover"></i>
@@ -124,7 +124,7 @@
 	</div>
 	<div class="form-group has-feedback">
 		<label class="inputName col-sm-3 control-label" >[[State/Region]]:<span class="small text-danger">&nbsp;{if in_array($selCountry, array("US", "GB", "AU", "CA"))}*{/if}</span></label>
-		<div class="inputField col-sm-8 padding_correct" >
+		<div class="inputField col-sm-8" >
 			{if in_array($selCountry, array("US", "GB", "AU", "CA"))}
 				<select class="form-control" id="state" name="state">
 					<option value="">[[Select State/Region]]</option>

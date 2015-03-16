@@ -14,13 +14,13 @@
 		</div>
 	{/foreach}
 
-	<form method="post" id="flagForm" action="" onsubmit="disableSubmitButton('submitForm'); sendFlagForm(); return false;" >
+	<form method="post" id="flagForm" action="" onsubmit="disableSubmitButton('submitForm'); sendFlagForm(); return false;" class="form-horizontal">
 		<input type="hidden" name="listing_id" value="{$listing_id|htmlspecialchars}" />
 		<input type="hidden" name="action" value="flag" />
 		{if count($flag_types)}
 			<div class="form-group has-feedback">
-				<label class="inputName">[[Select Flag Type]]</label>
-				<div class="inputField">
+				<label class="inputName label-control col-sm-3">[[Select Flag Type]]</label>
+				<div class="inputField col-sm-8">
 					<select class="form-control"   name="reason">
 						{foreach from=$flag_types item=type}
 							<option value="{$type.sid}" {if $reason == $type.sid} selected="selected"{/if}>[[{$type.value}]]</option>
@@ -30,15 +30,15 @@
 			</div>
 		{/if}
 		<div class="form-group has-feedback">
-			<div class="inputName">[[Comment]]</div>
-			<div class="inputField"><textarea class="form-control"   name="comment" cols="42" rows="3">{$comment}</textarea></div>
+			<label class="inputName label-control col-sm-3">[[Comment]]</label>
+			<div class="inputField col-sm-8"><textarea class="form-control" name="comment" rows="10">{$comment}</textarea></div>
 		</div>
 		<div class="form-group has-feedback">
-			{module name="miscellaneous" function="captcha_handle" currentFunction="flag_listing" displayMode="fieldset"}
+			<div class="col-sm-8 col-sm-offset-3">{module name="miscellaneous" function="captcha_handle" currentFunction="flag_listing" displayMode="fieldset"}</div>
 		</div>
 		<div class="form-group has-feedback">
-			<div class="inputName">&nbsp;</div>
-			<div class="inputButton"><input type="submit" name="sendForm" value="[[Send]]" class="btn btn-default" id="submitForm" /></div>
+			<label class="inputName label-control col-sm-3">&nbsp;</label>
+			<div class="inputButton col-sm-8"><input type="submit" name="sendForm" value="[[Send]]" class="btn btn-default" id="submitForm" /></div>
 		</div>
 	</form>
 {elseif $listing_type_id == ''}

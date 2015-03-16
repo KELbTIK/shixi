@@ -19,7 +19,7 @@
         {if $form_field.id == 'email_text_more'}
             <div class="form-group has-feedback" id="email_text_more_set" {if $request.send_auto_reply_more != 1}style='display:none'{/if}>
                 <label class="inputName col-sm-3 control-label">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
-                <div class="inputField col-sm-8">{input property=$form_field.id}</div>
+                <div class="inputField col-sm-8 ">{input property=$form_field.id}</div>
             </div>
         {elseif $form_field.id == 'email_text_less'}
             <div class="form-group has-feedback" id="email_text_less_set" {if $request.send_auto_reply_less != 1}style="display:none"{/if} >

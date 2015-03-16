@@ -12,7 +12,7 @@
 {if $form_field.id == 'type'}
 	<div class="form-group has-feedback">
 		<label class="inputName control-label col-sm-3">[[$form_field.caption]] <span class="small text-danger">{if $form_field.is_required}*{/if}</span></label>
-		<div class="inputField col-sm-8">{input property=$form_field.id  template='radio.tpl'}</div>
+		<div class="inputField col-sm-8 padding_radio_correct">{input property=$form_field.id  template='radio.tpl'}</div>
 	</div>
 {else}
 	<div class="form-group has-feedback">
@@ -129,12 +129,12 @@
             <tr class="{cycle values = 'evenrow,oddrow'}">
                 <td>
                     {if $smarty.foreach.question_block.iteration < $smarty.foreach.question_block.total}
-                        <a href="?action=move_down&amp;question={$question.sid}"><img src="{image}b_down_arrow.gif" border="0" alt=""/></a>
+                        <a href="?action=move_down&amp;question={$question.sid}"><i class="fa fa-arrow-down"></i></a>
                     {/if}
                 </td>
                 <td>
                     {if $smarty.foreach.question_block.iteration > 1}
-                        <a href="?action=move_up&amp;question={$question.sid}"><img src="{image}b_up_arrow.gif" border="0" alt="" /></a>
+                        <a href="?action=move_up&amp;question={$question.sid}"><i class="fa fa-arrow-up"></i></a>
                     {/if}
                 </td>
                 <td><span class="strong">{$question.caption}</span></td>
@@ -158,7 +158,7 @@ function addAnswerBlock() {
 	var id = "answerAdd"+i;
 	$("<div id='"+id+"'><\/div>").appendTo("#answerAdd");
 	var block = $('#answerBlockNone').clone();
-	block.appendTo('#'+id); 
+	block.appendTo('#'+id);
 	block.show();
 	$('#'+ id +' input[type=text]').val('');
 	$('#'+ id).html($('#'+ id).html() + "<div>&nbsp;&nbsp;<a href='#' onclick=\"deleteAnswerBlock('"+id+"'); return false;\" class=\"remove\">{/literal}[[Delete]]{literal}<\/a><\/div><div class='clearfix'><\/div>");

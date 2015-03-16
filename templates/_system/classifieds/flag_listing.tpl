@@ -19,7 +19,7 @@
 		<input type="hidden" name="action" value="flag" />
 		{if count($flag_types)}
 			<div class="form-group has-feedback">
-				<div class="inputName">[[Select Flag Type]]</div>
+				<label class="inputName">[[Select Flag Type]]</label>
 				<div class="inputField">
 					<select class="form-control"   name="reason">
 						{foreach from=$flag_types item=type}

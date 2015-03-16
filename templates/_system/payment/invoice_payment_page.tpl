@@ -12,18 +12,20 @@
 	{/if}
 {foreachelse}
 	<br />
-	{if count($gateways) == 1}
-		[[Please wait. You will be redirected to the payment page in a moment]]
-	{else}
-		[[Dear customer!]]<br /><br />
-		{capture assign = "formatingProductPrice"}{tr type="float"}{$invoice_info.total}{/tr}{/capture}
-		{capture assign="productPrice"}{currencyFormat amount=$formatingProductPrice}{/capture}
-		[[Please make a payment in the amount of $productPrice for product(s)]]:
-		{foreach name="product_names_loop" item="productName" from=$productsNames}
-			<span class="strong">[[{$productName|paymentTranslate}]]</span>{if !$smarty.foreach.product_names_loop.last}, {/if}
-		{/foreach}
+	<div class="error alert alert-info">
+		{if count($gateways) == 1}
+			[[Please wait. You will be redirected to the payment page in a moment]]
+		{else}
+			<h3>[[Dear customer!]]</h3><br />
+			{capture assign = "formatingProductPrice"}{tr type="float"}{$invoice_info.total}{/tr}{/capture}
+			{capture assign="productPrice"}{currencyFormat amount=$formatingProductPrice}{/capture}
+			[[Please make a payment in the amount of <strong>$productPrice</strong> for product(s)]]:
+			{foreach name="product_names_loop" item="productName" from=$productsNames}
+				<span class="strong">[[{$productName|paymentTranslate}]]</span>{if !$smarty.foreach.product_names_loop.last}, {/if}
+			{/foreach}
 
-		<p>[[Please choose from the following payment methods:]]</p>
+			<p>[[Please choose from the following payment methods:]]</p>
+	</div>
 	{/if}
 	{foreach from=$gateways item="gateway" key="gatewayID" name="gateways"}
 		<form action="{$gateway.url}" method="post" id="form_{$gatewayID}" onsubmit="disableSubmitButton('submit_{$gatewayID}');">
@@ -36,7 +38,7 @@
 					});
 				</script>
 			{else}
-				<br/><input type='submit' value="{$smarty.capture.trGatewayCaption|escape:'html'}" class="btn btn-primary" id="submit_{$gatewayID}"/>
+				<input type='submit' value="{$smarty.capture.trGatewayCaption|escape:'html'}" class="btn btn-primary pull-left btn-padding" id="submit_{$gatewayID}"/>
 			{/if}
 		</form>
 	{/foreach}

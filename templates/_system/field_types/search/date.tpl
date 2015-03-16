@@ -7,6 +7,6 @@
 
 <div class="row">
     <div class="col-sm-5">[[$input_text_field_from]]</div>
-    <div class="col-sm-2 text-center">to</div>
+    <div class="col-sm-2 text-center padding_correct">to</div>
     <div class="col-sm-5">[[$input_text_field_to]]</div>
 </div>

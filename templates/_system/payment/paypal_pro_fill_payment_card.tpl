@@ -41,20 +41,23 @@
 		<label class="inputName col-sm-3 control-label" >[[Expiration Date]]:<span class="small text-danger">&nbsp;*</span></label>
 		<div class="inputField col-sm-8" >
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<select class="form-control"   id="exp_date_mm" name="exp_date_mm">
 						{foreach from=$monthList item="month"}
 							<option value="{$month}" {if $formFields.exp_date_mm == $month}selected="selected"{/if}>{$month}</option>
 						{/foreach}
-					</select> [[Month]]
+					</select>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-2 padding_correct">[[Month]]</div>
+
+				<div class="col-sm-4">
 					<select class="form-control"   id="exp_date_yy" name="exp_date_yy">
 					{foreach from=$yearList item="yearListItem"}
 						<option value="{$yearListItem}" {if $formFields.exp_date_yy == $yearListItem}selected="selected"{/if}>{$yearListItem}</option>
 					{/foreach}
-					</select> [[Year]]
+					</select>
 				</div>
+				<div class="col-sm-2 padding_correct">[[Year]]</div>
 			</div>
 		</div>
 	</div>
@@ -110,7 +113,7 @@
 		<label class="inputName col-sm-3 control-label" >[[State/Region]]:<span class="small text-danger">&nbsp;{if in_array($selCountry, array("US", "GB", "AU", "CA"))}*{/if}</span></label>
 		<div class="inputField col-sm-8 padding_correct" >
 			{if in_array($selCountry, array("US", "GB", "AU", "CA"))}
-				<select class="form-control"  id="state" name="state">
+				<select class="form-control" id="state" name="state">
 					<option value="">[[Select State/Region]]</option>
 				</select>
 			{else}

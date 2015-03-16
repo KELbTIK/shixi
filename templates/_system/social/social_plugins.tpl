@@ -8,7 +8,6 @@
 			[[Social network you want to login/join with]]:
 		{/if}
 	</span>
-    <div class="clearfix"></div>
     <ul class="social-links circle clearfix {if $GLOBALS.user_page_uri == '/login/'}colored{/if}">
 		{foreach from=$social_plugins item="plugin"}
 			<li class="{$plugin.id}">

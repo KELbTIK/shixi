@@ -29,35 +29,39 @@
     <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
     <link rel="shortcut icon" href="{$GLOBALS.site_url}/images/favicon.ico" />
 
-    <script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/modernizr.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/isotope/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.appear.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.countTo.js"></script>
-    <script src="{$GLOBALS.site_url}/plugins/jquery.parallax-1.1.3.js"></script>
-    <script src="{$GLOBALS.site_url}/plugins/jquery.validate.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/js/template.js"></script>
-    <script type="text/javascript" src="{$GLOBALS.site_url}/js/custom.js"></script>
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/bootstrap/js/bootstrap.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/modernizr.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/isotope/isotope.pkgd.min.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.appear.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.countTo.js"></script>*}
+    {*<script src="{$GLOBALS.site_url}/plugins/jquery.parallax-1.1.3.js"></script>*}
+    {*<script src="{$GLOBALS.site_url}/plugins/jquery.validate.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/js/template.js"></script>*}
+    {*<script type="text/javascript" src="{$GLOBALS.site_url}/js/custom.js"></script>*}
 
 
-	<script type="text/javascript" src="{common_js}/main.js"></script>
-	<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
-	<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
-	<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.autocomplete.pack.js"></script>
-	<script type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
-	<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.highlight.js"></script>
-	<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/imagesize.js"></script>
+	{*<script type="text/javascript" src="{common_js}/main.js"></script>*}
+	{*<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>*}
+	{*<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>*}
+	{*<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>*}
+	{*<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.autocomplete.pack.js"></script>*}
+	{*<script type="text/javascript" src="{common_js}/autoupload_functions.js"></script>*}
+	{*<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.highlight.js"></script>*}
+	{*<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/imagesize.js"></script>*}
 	{*<script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>*}
-	<script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
-	<script type="text/javascript" src="{common_js}/multilist_functions.js"></script>
-	<script type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
-	<script type="text/javascript" src="{common_js}/floatnumbers_functions.js"></script>
+	{*<script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>*}
+	{*<script type="text/javascript" src="{common_js}/multilist_functions.js"></script>*}
+	{*<script type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>*}
+	{*<script type="text/javascript" src="{common_js}/floatnumbers_functions.js"></script>*}
+
+    <script type="text/javascript" src="{$GLOBALS.site_url}/build/scripts.min.js"></script>
+
+
 	<!--[if IE 8]>
 		<script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/pie-ie.js"></script>
 		<script type="text/javascript">

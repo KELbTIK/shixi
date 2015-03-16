@@ -3,3 +3,4 @@ backup
 pictures/
 config.php
 .idea
+node_modules/

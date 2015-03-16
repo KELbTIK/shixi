@@ -6,7 +6,8 @@ function submitForm(id) {
 }
 </script>
 {/literal}
-<div class="SearchResultsCompany">
+<div class="col-sm-8">
+	<div class="SearchResultsCompany row">
 	{if $ERRORS}
 		{include file="error.tpl"}
 	{else}
@@ -29,23 +30,23 @@ function submitForm(id) {
 				</select>
 			</form>
 		</div>
-		<div class="pageNavigation">
-			<span class="prevBtn"><img src="{image}prev_btn.png" alt="[[Previous]]"/>
-			{if $current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page-1}">[[Previous]]</a>{else}<a>[[Previous]]</a>{/if}</span>
-			<span class="navigationItems">
+		<ul class="pagination">
+			<li class="prevBtn">
+				{if $current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page-1}">[[Previous]]</a>{else}<a>[[Previous]]</a>{/if}</li>
+			<li class="navigationItems">
 				{if $current_page-3 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page=1">1</a>{/if}
 				{if $current_page-3 > 1}...{/if}
 				{if $current_page-2 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page-2}">{$current_page-2}</a>{/if}
 				{if $current_page-1 > 0}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page-1}">{$current_page-1}</a>{/if}
-				<span class="strong">{$current_page}</span>
+				<a href="#">{$current_page}</a>
 				{if $current_page+1 <= $pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page+1}">{$current_page+1}</a>{/if}
 				{if $current_page+2 <= $pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page+2}">{$current_page+2}</a>{/if}
 				{if $current_page+3 < $pages_number}...{/if}
 				{if $current_page+3 < $pages_number + 1}<a href="?searchId={$searchId}&amp;action=search&amp;page={$pages_number}">{$pages_number}</a>{/if}
-			</span>
-			<span class="nextBtn">{if $current_page+1 <= $pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page+1}">[[Next]]</a>{else}<a>[[Next]]</a>{/if}
-			<img src="{image}next_btn.png" alt="[[Next]]"/></span>
-		</div>
+			</li>
+			<li class="nextBtn">{if $current_page+1 <= $pages_number}<a href="?searchId={$searchId}&amp;action=search&amp;page={$current_page+1}">[[Next]]</a>{else}<a>[[Next]]</a>{/if}
+			</li>
+		</ul>
 	</div>
 	<div class="topNavBarRight"></div>
 		<div class="clearfix"></div>
@@ -137,4 +138,5 @@ function submitForm(id) {
 	<!-- END RESULTS / PER PAGE / NAVIGATION -->
 	{/if}
 	{/if}
+</div>
 </div>

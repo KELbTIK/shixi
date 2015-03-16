@@ -7,20 +7,33 @@
 		<br/>
 	{/if}
 	<div class="form-group has-feedback">
-		<div class="col-sm-8 col-sm-offset-3">
-			<div class="orderInfo"><h1><span class="strong">[[Order Information]]</span></h1></div>
-			<div class="orderInfo"><strong>[[Invoice Number]]:</strong> {$invoiceInfo.invoiceNumber}</div>
-			<div class="orderInfo"><strong>[[Description]]:</strong> [[{$invoiceInfo.description}]]</div>
-			<br/>
-			<div class="orderInfo"><strong>[[Total]]:</strong> {capture assign = "totalPrice"}{tr type="float"}{$invoiceInfo.totalPrice}{/tr}{/capture}{currencyFormat amount=$totalPrice}</div>
-		</div>
+        <div class="col-sm-8 col-sm-offset-3"><h1><span class="strong">[[Order Information]]</span></h1></div>
+        <div class="clearfix"></div>
+        <div class="form-group">
+            <label class="col-sm-3 text-right"><strong>[[Invoice Number]]:</strong></label>
+            <div class="col-sm-8">{$invoiceInfo.invoiceNumber}</div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 text-right"><strong>[[Description]]:</strong></label>
+            <div class="col-sm-8">[[{$invoiceInfo.description}]]</div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 text-right"><strong>[[Total]]:</strong></label>
+            <div class="col-sm-8">
+                {capture assign = "totalPrice"}{tr type="float"}{$invoiceInfo.totalPrice}{/tr}{/capture}{currencyFormat amount=$totalPrice}
+            </div>
+        </div>
 	</div>
 	<div class="clearfix"></div>
 	<div class="form-group has-feedback">
 		<label class="inputName control-label col-sm-3" ><span class="strong">[[Credit Card Information]]:</span></label>
-		<div class="inputName col-sm-8 padding_correct">
+		<div class="inputName col-sm-8 padding_correct payment_icons">
 			{foreach from=$creditCards item=card}
-				<img class="img_block-inline" src="{image}/creditcards/{$card}.gif" height="26"/>
+                {if $card == 'discovery'}
+                    <i class="fa fa-cc-discover"></i>
+                {else}
+                    <i class="fa fa-cc-{$card}"></i>
+                {/if}
 			{/foreach}
 		</div>
 	</div>
@@ -148,6 +161,7 @@
 				$("<select>", {
 					id: "state",
 					name: "state",
+                    class: "form-control",
 					html: "<option value=''>[[Select State/Region]]</option>"
 				})
 			);

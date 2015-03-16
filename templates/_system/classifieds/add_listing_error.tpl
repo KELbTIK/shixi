@@ -10,4 +10,4 @@
         <div class="error alert alert-danger">[[Your current Product does not allow posting of listings. For posting please purchase another Product]]</div>
 	{elseif $error eq 'NOT_LOGGED_IN'}
 		{module name="users" function="login"}
-	{/if}
+{/if}

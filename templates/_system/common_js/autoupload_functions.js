@@ -16,7 +16,7 @@ function getPreloaderCodeForFieldId(fieldId) {
 /**
  * Autoupload file to server (Common handler for ".autouploadField" class fields)
  */
-$(".autouploadField").on('change', function() {
+$(document).on('change', ".autouploadField", function() {
 	// gets params from input=file field
 	var fieldAction = $(this).attr('field_action');
 	var fieldId     = $(this).attr('field_id');

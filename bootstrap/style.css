@@ -6113,3 +6113,111 @@ img.ui-datepicker-trigger{
     width: 100%;
     position: static;
 }
+
+.fixed  .logo a img{
+    margin-top:18px;
+}
+
+.object-visible .logo a img{
+    margin-top:9px;
+}
+
+@media(max-width:767px){
+    .fixed  .logo a img{
+        margin-top:0;
+    }
+}
+
+.subfooter .container{
+    text-align:center;
+}
+
+.footer .logo-footer img {
+    max-width: 200px;
+}
+
+.box-style-1 i{
+    font-size: 54px;
+    line-height: 60px;
+}
+
+.product-detail-button{
+    float:left;
+    margin-right:5px;
+}
+
+.label-cart{
+    margin-top:7px;
+}
+
+.input-cart{
+    margin:3px 0;
+}
+
+.input-checkout{
+    float:left;
+    margin-right: 15px;
+}
+
+#shoppingCart {
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#number_of_listings{
+    margin-right:10px;
+}
+
+.dropdown>a[href="http://shixi.com/logout/"]:before {
+    content:none;
+}
+
+.dropdown>a[href="http://shixi.com/registration/"]:before {
+    content:none;
+}
+
+.fa-calendar-o{
+    position: relative;
+    top: -28px;
+    right: -190px;
+}
+
+.ui-multiselect{
+    width: 100% !important;
+    height: 40px;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #acacac;
+    text-align: left;
+    padding-left:10px;
+}
+.fa-arrows-v {
+    float:right;
+    margin-right: 6px;
+    margin-top: 4px;
+}
+
+.salary-abbr .text-center{
+    line-height: 40px;
+}
+
+.table-contacts td{
+    vertical-align: middle !important;
+}
+.table_view_seeker td{
+    vertical-align: middle !important;
+}
+
+.table-correct h2{
+    margin-top:10px !important;
+}
+
+.header-top-dropdown .dropdown>a:before {
+    content: none;
+}
+
+.fa-envelope[title^="You have"]{
+    margin-top:3px;
+}

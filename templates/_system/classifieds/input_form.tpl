@@ -35,8 +35,9 @@
 {/if}
 {* END / SOCIAL PLUGIN: AUTOFILL *}
 {include file='field_errors.tpl'}
-<div class="col-sm-8 col-sm-offset-3">[[{$currentPage.description}]]</div>
-<p class="col-sm-8 col-sm-offset-3">[[Fields marked with an asterisk (]]<font color="red">*</font>[[) are mandatory]]</p>
+
+<div class="alert alert-info">[[{$currentPage.description}]]</div>
+<div class="alert alert-info">[[Fields marked with an asterisk (]]<span class="small text-danger">*</span>[[) are mandatory]]</div>
 <form method="post" action="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$currentPage.page_id}/{$listingSID}" enctype="multipart/form-data" onsubmit="disableSubmitButton('submitButton');{if $form_fields.ApplicationSettings}return validateForm('addListingForm');{/if}" id="addListingForm" class="inputForm form-horizontal">
 	<input type="hidden" name="productSID" value="{$productSID}">
 	<input type="hidden" name="contract_id" value="{$contract_id}" />

@@ -9,28 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{$GLOBALS.settings.site_title}{if $TITLE ne ""}: [[$TITLE]] {/if}</title>
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.autocomplete.css"  />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/css/bootstrap.css"  />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/animate.css"  />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/skins/red.css"  />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/normalize.css"  />
-        <link rel="Stylesheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery.multiselect.css" />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery-ui.css"  />
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
-        <link href="{$GLOBALS.site_url}/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
-        <link href="{$GLOBALS.site_url}/fonts/fontello/css/fontello.css" rel="stylesheet">
-        <link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
-        <link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
-        <link href="{$GLOBALS.site_url}/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
-        <link href="{$GLOBALS.site_url}/css/animations.css" rel="stylesheet">
-        <link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
-        <link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
         <link rel="shortcut icon" href="{$GLOBALS.site_url}/images/favicon.ico" />
         <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{$GLOBALS.site_url}/rss/" />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
-
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/min.css"  />
         <script type="text/javascript" src="{$GLOBALS.site_url}/build/scripts.min.js"></script>
 
         <!--[if IE 8]>

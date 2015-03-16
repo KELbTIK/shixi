@@ -5,40 +5,39 @@
 	margin:0px;
 }
 #star ul.star, #star ul.star2 { 
-	LIST-STYLE: none; 
-	MARGIN: 0; 
-	PADDING: 0; 
-	WIDTH: 85px; 
-	HEIGHT: 20px; 
-	LEFT: 0px; 
-	TOP: -3px; 
-	POSITION: relative; 
-	FLOAT: left; 
-	BACKGROUND: url(stars.gif) repeat-x; 
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 85px;
+	height: 20px;
+	left: 0px;
+	top: -3px;
+	position: relative;
+	float: left;
+	background: url(stars.gif) repeat-x;
 	background-position: 0px -25px; 
-	CURSOR: pointer; 
+	cursor: pointer;
 }
 #star ul.star2 { 
-	CURSOR: default; 
+	cursor: default;
 	}
-#star li { 
-	PADDING: 0; 
-	MARGIN: 0; 
-	FLOAT: left; 
-	DISPLAY: block; 
-	WIDTH: 85px; 
-	HEIGHT: 20px; 
-	TEXT-DECORATION: none; 
+#star li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	display: block;
+	width: 85px;
+	height: 20px;
+	text-decoration: none;
 	text-indent: -9000px; 
-	Z-INDEX: 20; 
-	POSITION: absolute; 
-	PADDING: 0; 
+	z-index: 20;
+	position: absolute;
 	}
 #star li.curr { 
-	BACKGROUND: url(stars.gif); 
+	background: url(stars.gif);
 	background-position: 0px 0px; 
-	FONT-SIZE: 1px; 
+	font-size: 1px;
 	}
 #star .user { 
-	FLOAT: left; 
+	float: left;
 }

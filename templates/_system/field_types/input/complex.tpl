@@ -41,7 +41,7 @@
         {if $complexElementKey == 1}
             </div><div id='complexFieldsAdd_{$complexField}'>
             {else}
-            <a href="#" class="remove" onclick='removeComplexField_{$complexField}({$complexElementKey}); return false;' >[[Remove]]</a></div>
+            <div class="col-sm-8 col-sm-offset-3"><a href="#" class="remove" onclick='removeComplexField_{$complexField}({$complexElementKey}); return false;' >[[Remove]]</a></div></div>
         {/if}
     {/foreach}
 </div>
@@ -86,7 +86,7 @@
         {rdelim});
 
         $("<div id='" + id + "' />").appendTo("#complexFieldsAdd_{$complexField}");
-       	newField.append('<a class="remove" href="#" onclick="removeComplexField_{$complexField}(' + i_{$complexField} + '); return false;">[[Remove]]<\/a><br/>');
+       	newField.append('<div class="col-sm-8 col-sm-offset-3"><a class="remove" href="#" onclick="removeComplexField_{$complexField}(' + i_{$complexField} + '); return false;">[[Remove]]<\/a></div>');
 
         var str = newField.html();
         re = /\[1]/g;

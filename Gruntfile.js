@@ -43,13 +43,45 @@ module.exports = function(grunt) {
                     'build/scripts.min.js': '<%= concat.main.dest %>'
                 }
             }
+        },
+
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'css/min.css': [
+                        'system/ext/jquery/css/jquery-ui.css',
+                        'system/lib/rating/style.css',
+                        'system/ext/jquery/css/jquery.autocomplete.css',
+                        'system/ext/jquery/css/jquery.multiselect.css',
+                        'bootstrap/css/bootstrap.css',
+                        'css/animate.css',
+                        'css/skins/red.css',
+                        'css/normalize.css',
+                        'fonts/font-awesome/css/font-awesome.css',
+                        'fonts/fontello/css/fontello.css',
+                        'plugins/rs-plugin/css/settings.css',
+                        'plugins/rs-plugin/css/extralayers.css',
+                        'plugins/magnific-popup/magnific-popup.css',
+                        'css/animations.css',
+                        'plugins/owl-carousel/owl.carousel.css',
+                        'css/custom.css',
+                        'bootstrap/style.css']
+                }
+            }
         }
     });
+
+
 
     // Загрузка плагинов, установленных с помощью npm install
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Задача по умолчанию
-    grunt.registerTask('default', ['concat', 'uglify']);
+    grunt.registerTask('default', ['concat', 'uglify','cssmin']);
 };

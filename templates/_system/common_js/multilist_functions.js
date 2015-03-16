@@ -92,9 +92,9 @@
 			if (currentTime - lastInputTime > 1000) {
 				searchTerm = "";
 			}
-			
+
 			lastInputTime = currentTime;
-			
+
 			var charCode = e.which || e.keyCode;
 			if ($.inArray(charCode, [9, 13, 27, 37, 38, 39, 40]) > -1) {
 				return false;

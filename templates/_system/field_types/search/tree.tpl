@@ -15,7 +15,7 @@
 <input type="hidden" name="{$id}[tree]" id="tree-{$id}-selected" value="" />
 
 
-<script language='JavaScript' type='text/javascript'>
+<script type='text/javascript'>
 	var {$id}Values = [];
 
 	$("#tree-" + "{$id}" + "-options").click(function(event) {

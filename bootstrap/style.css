@@ -6103,7 +6103,7 @@ img.ui-datepicker-trigger{
     color: lightgray;
 }
 .ui-icon{
-    margin-top: 5px;
+    /*margin-top: 5px;*/
 }
 .note-group{
     display: block;

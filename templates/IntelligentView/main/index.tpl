@@ -149,7 +149,7 @@
 	window.SJB_GlobalSiteUrl = '{/literal}{$GLOBALS.site_url}{literal}';
 	window.SJB_UserSiteUrl   = '{/literal}{$GLOBALS.user_site_url}{literal}';
 
-	$.ui.dialog.prototype.options.bgiframe = true;
+//	$.ui.dialog.prototype.options.bgiframe = true;
 
 	function popUpWindow(url, widthWin, title, parentReload, userLoggedIn, callbackFunction) {
 		reloadPage = false;

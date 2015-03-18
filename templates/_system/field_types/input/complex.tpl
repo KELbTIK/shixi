@@ -46,7 +46,7 @@
     {/foreach}
 </div>
 
-<div class="col-sm-8 col-sm-offset-3"><a href='#' class="add" onclick='addComplexField_{$complexField}(); return false;' >[[Add]]</a></div>
+<div class="col-sm-8 col-sm-offset-3"><a href='#' class="add" onclick='addComplexField_{$complexField}(); return false;' >[[Add Additional Education History]]</a></div>
 
 <script type="text/javascript">
 

@@ -6245,3 +6245,18 @@ img.ui-datepicker-trigger{
 .form-file{
     margin: 10px 0;
 }
+
+.box-style-1{min-height: 525px}
+
+.ui-widget-overlay.ui-front{
+	position:fixed !important;
+}
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable{
+	z-index:9999;
+}
+
+.ui-icon{
+	top:-6% !important;
+	left:-7% !important;
+}tree-input-field

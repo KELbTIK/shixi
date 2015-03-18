@@ -23,7 +23,7 @@
 		<label>
 			<input {if !$fullPeriod}checked="checked"{/if} {if $expired}disabled="disabled"{/if} class="inputRadio{if $complexField} complexField{/if}" name="exp_date" value="2" type="radio" id="until" />
 			[[Until]]:
-			<input {if $fullPeriod}disabled="disabled"{/if} type="text" id="{$id}_2" readonly value="{if !$fullPeriod}{tr type="date"}{if $mysql_date && !$complexField}{$mysql_date}{else}{$value}{/if}{/tr}{/if}" class="input_date displayDate form-control{if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}]{else}{$id}{/if}"/>
+			<input {if $fullPeriod}disabled="disabled"{/if} type="text" id="{$id}_2" value="{if !$fullPeriod}{tr type="date"}{if $mysql_date && !$complexField}{$mysql_date}{else}{$value}{/if}{/tr}{/if}" class="input_date displayDate form-control{if $complexField}complexField{/if}" name="{if $complexField}{$complexField}[{$id}][{$complexStep}]{else}{$id}{/if}"/>
 			<i class="fa fa-calendar-o"></i>
 		</label>
 	</div>

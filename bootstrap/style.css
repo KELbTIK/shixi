@@ -6052,7 +6052,8 @@ ul.tweets li span {
     position: relative;
 }
 .captcha-img{
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     max-height: 40px;
 }
 .captcha-refresh{
@@ -6240,4 +6241,7 @@ img.ui-datepicker-trigger{
 .payment_icons{
     font-size: 30px;
 
+}
+.form-file{
+    margin: 10px 0;
 }

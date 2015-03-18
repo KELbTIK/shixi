@@ -39,7 +39,7 @@ $(".autouploadField").on('change', function() {
 			alert('error occured');
 		},
 		complete: function(data) {
-			$(preloader).remove();
+			//$(preloader).remove();
 		}
 	};
 	$(form).ajaxSubmit(options);
@@ -63,7 +63,7 @@ $(".delete_profile_video").on('click', function() {
 		params.user_sid = userSid;
 	}
 
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 	$.get(url, params, function(data){
 		if (data.result == 'success') {
 			$("#autoloadFileSelect_" + fieldId).show();
@@ -72,7 +72,7 @@ $(".delete_profile_video").on('click', function() {
 			}
 			$("#user_video_" + fieldId).empty();
 		}
-		$(preloader).remove();
+		//$(preloader).remove();
 	}, 'json');
 	// prevent link redirect
 	return false;
@@ -97,7 +97,7 @@ $(".delete_profile_logo").on('click', function() {
 	}
 
 
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 	$.get(url, params, function(data){
 		if (data.result == 'success') {
 			$("#autoloadFileSelect_" + fieldId).show();
@@ -106,7 +106,7 @@ $(".delete_profile_logo").on('click', function() {
 			}
 			$("#profile_logo_" + fieldId).empty();
 		}
-		$(preloader).remove();
+		//$(preloader).remove();
 	}, 'json');
 	// prevent link redirect
 	return false;
@@ -127,11 +127,11 @@ function getClassifiedsVideoData(fieldId, listingId, formToken) {
 		'listing_id' : listingId,
 		'form_token': formToken
 	};
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 
 	// check uploaded files to display
 	$.get(url, params, function(data) {
-		$(preloader).remove();
+		//$(preloader).remove();
 		if (data.length == 0 || $.trim(data) == '') {
 			return false;
 		}
@@ -160,7 +160,7 @@ $(".delete_classifieds_video").on('click', function() {
 		'form_token': formToken
 	};
 
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 	$.get(url, params, function(data){
 		if (data.result == 'success') {
 			// remove errors block in field
@@ -175,7 +175,7 @@ $(".delete_classifieds_video").on('click', function() {
 				$("#video_field_content_" + fieldId).prepend('<p class="error">' + error + '</p>');
 			}
 		}
-		$(preloader).remove();
+		//$(preloader).remove();
 	}, 'json');
 	// prevent link redirect
 	return false;
@@ -190,10 +190,10 @@ function getClassifiedsLogoData(fieldId, formToken, listingId) {
         'listing_id' : listingId,
 		'form_token' : formToken
 	};
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 	// check uploaded files to display
 	$.get(url, params, function(data) {
-		$(preloader).remove();
+		//$(preloader).remove();
 		if (data.length == 0 || $.trim(data) == '') {
 			return false;
 		}
@@ -220,7 +220,7 @@ $(".delete_listing_logo").on('click', function() {
 		'form_token': formToken
 	};
 
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 	$.get(url, params, function(data){
 		if (data.result == 'success') {
 			// remove errors block in field
@@ -235,7 +235,7 @@ $(".delete_listing_logo").on('click', function() {
 				$("#logo_field_content_" + fieldId).prepend('<p class="error">' + error + '</p>');
 			}
 		}
-		$(preloader).remove();
+		//$(preloader).remove();
 	}, 'json');
 	// prevent link redirect
 	return false;
@@ -256,11 +256,11 @@ function getFileFieldData(fieldId, listingId, listingTypeId, formToken) {
 		'listing_type_id' : listingTypeId,
 		'form_token': formToken
 	};
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 
 	// check uploaded files to display
 	$.get(url, params, function(data) {
-		$(preloader).remove();
+		//$(preloader).remove();
 		if (data.length == 0 || $.trim(data) == '') {
 			return false;
 		}
@@ -288,7 +288,7 @@ $(".delete_file").on('click', function() {
 		'form_token': formToken
 	};
 
-	var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
+	//var preloader = $(this).after( getPreloaderCodeForFieldId(fieldId) );
 	$.get(url, params, function(data) {
 		if (data.result == 'success') {
 			$("#file_" + fieldId).empty();
@@ -303,7 +303,7 @@ $(".delete_file").on('click', function() {
 				$("#file_field_content_" + fieldId).prepend('<p class="error">' + error + '</p>');
 			}
 		}
-		$(preloader).remove();
+		//$(preloader).remove();
 	}, 'json');
 	// prevent link redirect
 	return false;
@@ -344,7 +344,7 @@ $(".delete_file_complex").on('click', function() {
 				fileFieldContent.prepend('<p class="error">' + error + '</p>');
 			}
 		}
-		$(preloader).remove();
+		//$(preloader).remove();
 	}, 'json');
 	// prevent link redirect
 	return false;
@@ -384,7 +384,7 @@ $(".delete_video_complex").on('click', function() {
 				fileFieldContent.prepend('<p class="error">' + error + '</p>');
 			}
 		}
-		$(preloader).remove();
+		//$(preloader).remove();
 	}, 'json');
 	// prevent link redirect
 	return false;
@@ -414,7 +414,7 @@ function getComplexFileFieldData(fieldId, listingId, listingTypeId, formToken) {
 	};
 	// check uploaded files to display
 	$.get(url, params, function(data) {
-		$(preloader).remove();
+		//$(preloader).remove();
 		if (data.length == 0 || $.trim(data) == '') {
 			return false;
 		}
@@ -482,15 +482,15 @@ $(document).ready(function() {
 $(function() {
 	$(".sortable-select").each(function() {
 		var options = $(this).find("option").toArray();
-		if (options.length <= 1) { 
+		if (options.length <= 1) {
 			return;
 		}
 		var firstOption = options[0];
 		if ($(this).attr('multiple') == false) {
-			options.shift(); 
+			options.shift();
 		}
 		var value = $(this).val();
-		options.sort(function(a, b) { 
+		options.sort(function(a, b) {
 			if (a.text.toUpperCase() > b.text.toUpperCase()) {
 				return 1;
 			}
@@ -501,7 +501,7 @@ $(function() {
 		});
 		$(this).empty().append(firstOption).append(options).val(value);
 	});
-	
+
 	$(".sortable-input").each(function() {
 		var element = this;
 		var firstInput = '';
@@ -519,7 +519,7 @@ $(function() {
 					return $(this).parent('div');
 				}
 			}
-		}).get().sort(function(a, b) { 
+		}).get().sort(function(a, b) {
 			if (a.children('input').next().text().toUpperCase() > b.children('input').next().text().toUpperCase()) {
 				return 1;
 			}

@@ -1,3 +1,4 @@
+{if $field_errors != ''}
 {foreach from=$field_errors item=error key=field_caption}
 	<div class="error alert alert-danger">
 		{if $error eq 'FILE_NOT_SPECIFIED'}
@@ -17,7 +18,7 @@
 		{/if}
 	</div>
 {/foreach}
-
+{/if}
 {if $errors != ''}
 	{foreach from=$errors item=error_message key=error}
 		<div class="error alert alert-danger">
@@ -32,7 +33,7 @@
 	{/foreach}
 {else}
 	{if $number_of_picture < $number_of_picture_allowed}
-		<form id="uploadForm" method="post" action="{$GLOBALS.site_url}/manage-pictures/" enctype="multipart/form-data" onsubmit="return uploadPicture();">
+		<form class="form-file" id="uploadForm" method="post" action="{$GLOBALS.site_url}/manage-pictures/" enctype="multipart/form-data" onsubmit="return uploadPicture();">
 			<input type="hidden" name="action" value="add" />
 			<input type="hidden" id="listing_id" name="listing_sid" value="{$listing.id}" />
 			<div class="col-xs-12">

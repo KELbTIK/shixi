@@ -14,7 +14,7 @@
         <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="{$GLOBALS.site_url}/images/favicon.ico" />
         <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/min.css"  />
-        <script type="text/javascript" src="{$GLOBALS.site_url}/build/scripts.min.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/build/scripts.js"></script>
 
 
         <!--[if IE 8]>
@@ -109,7 +109,7 @@
         function popUpWindow(url, widthWin, title, parentReload, userLoggedIn, callbackFunction) {
             reloadPage = false;
             $("#loading").show();
-            $("#messageBox").dialog( 'destroy' ).html({/literal}'{capture name="displayJobProgressBar"}<img style="vertical-align: middle;" src="{$GLOBALS.site_url}/system/ext/jquery/progbar.gif" alt="[[Please wait ...]]" /> [[Please wait ...]]{/capture}{$smarty.capture.displayJobProgressBar|escape:'quotes'}'{literal});
+            //{*$("#messageBox").dialog( 'destroy' ).html({/literal}'{capture name="displayJobProgressBar"}<img style="vertical-align: middle;" src="{$GLOBALS.site_url}/system/ext/jquery/progbar.gif" alt="[[Please wait ...]]" /> [[Please wait ...]]{/capture}{$smarty.capture.displayJobProgressBar|escape:'quotes'}'{literal});*}
             $("#messageBox").dialog({
                 autoOpen: false,
                 width: widthWin,

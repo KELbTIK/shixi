@@ -83,7 +83,7 @@
 		// check temporary uploaded data of field
 		$(function() {
 			{/literal}
-				getClassifiedsVideoData('{$id}', '{$listingId}', '{$form_token}');
+                getClassifiedsVideoData('{$id}', '{$listingId}', '{$form_token}');
 			{literal}
 		});
 

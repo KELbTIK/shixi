@@ -21,7 +21,7 @@
 	</script>
 
     <div class="row">
-        <div class="col-sm-4 col-xs-6">
+        <div class="col-sm-4 col-xs-6 col-md-2">
             <img class="captcha-img" id="captchaImg" src="{$GLOBALS.site_url}/system/miscellaneous/captcha/?hash={php}echo time();{/php}" alt="[[Captcha]]" /><br/>
         </div>
         <div class="col-sm-2 col-xs-6 text-center captcha-refresh">

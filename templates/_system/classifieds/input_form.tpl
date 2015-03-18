@@ -9,7 +9,7 @@
 	<div class="page-intro">
 		<div class="col-sm-12">
 			{foreach from=$pages item=page name=page_block}
-	<span class="input-form-bc">{if $page.sid == $pageSID}<b>[[{$page.page_name}]]</b>{else}{if $page.order <= $currentPage.order}<a href="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$page.page_id}/{$listingSID}">[[{$page.page_name}]]</a>{else}[[{$page.page_name}]]{/if}{/if}{if !$smarty.foreach.page_block.last} / {/if}&nbsp;</span>
+	<span class="input-form-bc">{if $page.sid == $pageSID}<b>[[{$page.page_name}]]</b>{else}{if $page.order <= $currentPage.order}<a href="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$page.page_id}/{$listingSID}">[[{$page.page_name}]]</a>{else}[[{$page.page_name}]]{/if}{/if}{if !$smarty.foreach.page_block.last}&nbsp;/{/if}&nbsp;</span>
 
 {/foreach}
 		</div>
@@ -36,8 +36,11 @@
 {* END / SOCIAL PLUGIN: AUTOFILL *}
 {include file='field_errors.tpl'}
 
-<div class="alert alert-info">[[{$currentPage.description}]]</div>
-<div class="alert alert-info">[[Fields marked with an asterisk (]]<span class="small text-danger">*</span>[[) are mandatory]]</div>
+<div class="alert alert-info">
+	<p>[[{$currentPage.description}]]</p>
+	[[Fields marked with an asterisk (]]<span class="small text-danger">*</span>[[) are mandatory]]
+</div>
+
 <form method="post" action="{$GLOBALS.site_url}/add-listing/{$listingTypeID|escape:'html'}/{$currentPage.page_id}/{$listingSID}" enctype="multipart/form-data" onsubmit="disableSubmitButton('submitButton');{if $form_fields.ApplicationSettings}return validateForm('addListingForm');{/if}" id="addListingForm" class="inputForm form-horizontal">
 	<input type="hidden" name="productSID" value="{$productSID}">
 	<input type="hidden" name="contract_id" value="{$contract_id}" />

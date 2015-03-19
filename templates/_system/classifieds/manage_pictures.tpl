@@ -1,52 +1,52 @@
 {if $field_errors != ''}
 {foreach from=$field_errors item=error key=field_caption}
-	<div class="error alert alert-danger">
+
 		{if $error eq 'FILE_NOT_SPECIFIED'}
-			{$field_caption}' [[file not specified]]
+			<div class="error alert alert-danger">'{$field_caption}' [[file not specified]]</div>
 		{elseif $error eq 'NOT_SUPPORTED_IMAGE_FORMAT'}
-			'{$field_caption}' - [[Image format is not supported]]
+			<div class="error alert alert-danger">'{$field_caption}' - [[Image format is not supported]]</div>
 		{elseif $error eq 'PICTURES_LIMIT_EXCEEDED'}
-			'{$field_caption}' [[limit exceeded]]
+			<div class="error alert alert-danger">'{$field_caption}' [[limit exceeded]]</div>
 		{elseif $error eq 'UPLOAD_ERR_INI_SIZE'}
-			[[File size exceeds system limit]]
+			<div class="error alert alert-danger">[[File size exceeds system limit]]</div>
 		{elseif $error eq 'UPLOAD_ERR_FORM_SIZE'}
-			[[File size exceeds system limit]]
+			<div class="error alert alert-danger">[[File size exceeds system limit]]</div>
 		{elseif $error eq 'UPLOAD_ERR_PARTIAL'}
-			[[There was an error during file upload]]
+			<div class="error alert alert-danger">[[There was an error during file upload]]</div>
 		{elseif $error eq 'UPLOAD_ERR_NO_FILE'}
-			'{$field_caption}' [[file not specified]]
+			<div class="error alert alert-danger">'{$field_caption}' [[file not specified]]</div>
 		{/if}
-	</div>
+
 {/foreach}
 {/if}
 {if $errors != ''}
 	{foreach from=$errors item=error_message key=error}
-		<div class="error alert alert-danger">
+
 			{if $error eq 'WRONG_PARAMETERS_SPECIFIED'}
-				[[Wrong parameters are specified]]
+				<div class="error alert alert-danger">[[Wrong parameters are specified]]</div>
 			{elseif $error eq 'PARAMETERS_MISSED'}
-				[[The key parameters are not specified]]
+				<div class="error alert alert-danger">[[The key parameters are not specified]]</div>
 			{elseif $error eq 'NOT_OWNER'}
-				[[You are not owner of this listing]]
+				<div class="error alert alert-danger">[[You are not owner of this listing]]</div>
 			{/if}
-		</div>
+
 	{/foreach}
 {else}
 	{if $number_of_picture < $number_of_picture_allowed}
 		<form class="form-file" id="uploadForm" method="post" action="{$GLOBALS.site_url}/manage-pictures/" enctype="multipart/form-data" onsubmit="return uploadPicture();">
 			<input type="hidden" name="action" value="add" />
 			<input type="hidden" id="listing_id" name="listing_sid" value="{$listing.id}" />
-			<div class="col-xs-12">
+
 				<div class="form-group has-feedback">
-					<div class="inputField"><input type="file" name="picture" /></div>
+					<div class="inputField col-xs-12"><input type="file" name="picture" /></div>
 				</div>
 				<div class="form-group has-feedback">
-					<div class="inputField">
+					<div class="inputField col-xs-12">
 						[[Caption]]<br/>
 						<input class="form-control" type="text" name="caption" value="" />
 					</div>
 				</div>
-			</div>
+
 			<div class="clearfix"></div>
 			<input type="submit" value="[[Add Picture]]" class="btn btn-default btn-sm"/>
 		</form>
@@ -73,18 +73,19 @@
 					{foreach from=$pictures item=picture name=pictures_block}
 						<tr>
 							<td></td>
-							<td class="text-center thumbnail"><img src="{$picture.thumbnail_url}" alt="" border="0" /></td>
-							<td class="caption">{$picture.caption|truncate:15|escape:"html"}</td>
-							<td class="text-center actions">
-								<a href="#" onclick="editPicture({$listing.id}, {$picture.id}, '[[Edit Picture]]'); return false;"><img src="{$GLOBALS.site_url}/templates/_system/main/images/b_edit.gif" border="0" alt="" /></a>
+							<td class="text-center thumbnail table-add-picture"><img src="{$picture.thumbnail_url}" alt="" border="0" /></td>
+							<td class="caption table-add-picture">{$picture.caption|truncate:15|escape:"html"}</td>
+							<td class="text-center actions table-add-picture-actions">
+								<a class="pull-left" href="#" onclick="editPicture({$listing.id}, {$picture.id}, '[[Edit Picture]]'); return false;"><img src="{$GLOBALS.site_url}/templates/_system/main/images/b_edit.gif" border="0" alt="" /></a>
 								&nbsp;
-								<a href="#" onclick="deletePicture({$listing.id}, {$picture.id}); return false;"><img src="{$GLOBALS.site_url}/templates/_system/main/images/b_drop.gif" /></a>
+								<a class="pull-right" href="#" onclick="deletePicture({$listing.id}, {$picture.id}); return false;"><img src="{$GLOBALS.site_url}/templates/_system/main/images/b_drop.gif" /></a>
 							</td>
 							<td></td>
 						</tr>
 					{/foreach}
 				</tbody>
 			</table>
+
 		</div>
 	{/if}
 {/if}

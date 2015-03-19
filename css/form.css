@@ -1,0 +1,163 @@
+.tree-input-field {
+    width: 313px;
+    float: left;
+    margin: 0 0 5px;
+}
+.tree-available-count {
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 10px;
+}
+.tree-as-sb-vals {
+    margin: 0 0 10px 0;
+}
+ul.tree,
+ul.tree * {
+    list-style: inside none;
+    margin: 5px 0;
+    padding: 0;
+}
+ul.tree img.arrow {
+    padding: 2px 0 0 0;
+    border: 0;
+    width: 15px;
+}
+ul.tree li {
+    padding: 0;
+    clear: both;
+}
+ul.tree li ul {
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+ul.tree label {
+    cursor: pointer;
+    padding: 2px 0;
+}
+ul.tree label.hover {
+    color: red;
+}
+ul.tree {
+    margin: 5px 0;
+}
+#tree-block {
+    overflow: auto;
+    padding: 5px;
+    max-height: 400px;
+    margin: 20px;
+    background: #ffe;
+    border: 1px solid #c3c3c3;
+}
+#tree-buttons {
+    text-align: center;
+}
+#tree-available {
+    margin: 0 0 0 15px;
+    float: left;
+}
+#tree-deselect-all {
+    margin: 0 15px 0 0 ;
+    float: right;
+    vertical-align: top;
+    cursor: pointer;
+}
+.tree-values div {
+    margin-top: 7px !important;
+    margin-bottom: 5px !important;
+}
+.tree-child {
+    color: #575757;
+}
+.tree-child-1 {
+    margin: 0 0 3px 15px !important;
+}
+.tree-child-2 {
+    margin: 0 0 3px 30px !important;
+}
+.tree-child-3 {
+    margin: 0 0 3px 45px !important;
+}
+.tree-child-4 {
+    margin: 0 0 3px 60px !important;
+}
+.tree-parent {
+    font-weight: bold;
+    margin: 7px 0 5px;
+}
+.tree-child-close {
+    color: #BEBEBE;
+    cursor: pointer;
+    font-size: 10px !important;
+    margin: 0 5px 0 0;
+}
+ul.tree li .arrow {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+    background: url("../../../../../system/ext/jquery/ltL_nes.gif") no-repeat 0 0;
+}
+ul.tree li .collapsed {
+    background: url("../../../../../system/ext/jquery/ltP_nes.gif") no-repeat;
+}
+ul.tree li .expanded {
+    background: url("../../../../../system/ext/jquery/ltM_ne.gif") no-repeat;
+}
+ul.tree li .checkbox {
+    padding: 0 0 3px 20px;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+    background: url("../../../../../system/ext/jquery/cbUnchecked.gif") no-repeat 0 2px;
+}
+ul.tree li .checked {
+    background: url("../../../../../system/ext/jquery/cbChecked.gif") no-repeat 0 2px;
+}
+ul.tree li .half_checked {
+    background: url("../../../../../system/ext/jquery/cbIntermediate.gif") no-repeat 0 2px;
+}
+div.tree_button {
+    cursor: pointer;
+    width: 313px;
+    height: 17px;
+    padding: 3px 0 0 0;
+    border: 1px solid #B3B3B3;
+    float: left;
+    font-size: 12px;
+    background: url("../../../../../system/ext/jquery/arrow_tree.png") right center no-repeat #fff;
+}
+.more-button {
+    margin: 10px 0;
+}
+/********************************************************************************/
+
+/* START:Pop up Window CSS
+*********************************************************************************/
+.ui-dialog-content {
+    max-height: 700px;
+}
+#captchaImg {
+    height: 60px;
+    display: inline-block;
+}
+#loading {
+    background: url("../loader.gif") #000 no-repeat center;
+    opacity: .30;
+    filter:Alpha(Opacity=30);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+}
+#pm_send_form textarea {
+    height: 300px !important;
+}
+.ui-dialog .ui-dialog-content {
+    padding: 0.8em 1.5em !important;

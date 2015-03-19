@@ -58,34 +58,38 @@
 		<div class="information alert alert-info">[[You've reached the limit of number of pictures allowed by your product]]</div>
 	{/if}
 	{if $pictures}
-		<div class="table-responsive">
-			<table id="manage-pictures" class="table table-condensed table-add-picture-size">
-				<thead>
-					<tr>
-						<th class="tableLeft"></th>
-						<th class="text-center">[[Thumbnail]]</th>
-						<th class="text-center">[[Caption]]</th>
-						<th class="text-center">[[Actions]]</th>
-						<th class="tableRight"></th>
-					</tr>
-				</thead>
-				<tbody>
-					{foreach from=$pictures item=picture name=pictures_block}
+		<div class="col-sm-8">
+			<div class="row">
+				<div class="table-responsive">
+				<table id="manage-pictures" class="table table-condensed">
+					<thead>
 						<tr>
-							<td></td>
-							<td class="text-center thumbnail table-add-picture"><img src="{$picture.thumbnail_url}" alt="" border="0" /></td>
-							<td class="caption table-add-picture">{$picture.caption|truncate:15|escape:"html"}</td>
-							<td class="text-center actions table-add-picture-actions">
-								<a class="pull-left" href="#" onclick="editPicture({$listing.id}, {$picture.id}, '[[Edit Picture]]'); return false;"><img src="{$GLOBALS.site_url}/templates/_system/main/images/b_edit.gif" border="0" alt="" /></a>
-								&nbsp;
-								<a class="pull-right" href="#" onclick="deletePicture({$listing.id}, {$picture.id}); return false;"><img src="{$GLOBALS.site_url}/templates/_system/main/images/b_drop.gif" /></a>
-							</td>
-							<td></td>
+							<th class="tableLeft"></th>
+							<th class="text-center">[[Thumbnail]]</th>
+							<th class="text-center">[[Caption]]</th>
+							<th class="text-center">[[Actions]]</th>
+							<th class="tableRight"></th>
 						</tr>
-					{/foreach}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						{foreach from=$pictures item=picture name=pictures_block}
+							<tr>
+								<td></td>
+								<td class="text-center thumbnail table-add-picture"><img src="{$picture.thumbnail_url}" alt="" border="0" /></td>
+								<td class="caption table-add-picture">{$picture.caption|truncate:15|escape:"html"}</td>
+								<td class="text-center actions table-add-picture-actions">
+									<a class="pull-left" href="#" onclick="editPicture({$listing.id}, {$picture.id}, '[[Edit Picture]]'); return false;"><i class="fa fa-pencil-square-o"></i></a>
+									&nbsp;
+									<a class="pull-right" href="#" onclick="deletePicture({$listing.id}, {$picture.id}); return false;"><i class="fa fa-close"></i></a>
+								</td>
+								<td></td>
+							</tr>
+						{/foreach}
+					</tbody>
+				</table>
 
+			</div>
+			</div>
 		</div>
 	{/if}
 {/if}

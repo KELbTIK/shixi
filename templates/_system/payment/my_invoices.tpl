@@ -1,34 +1,34 @@
 <div class="clearfix"></div>
-<div class="box table-responsive" id="displayResults" >
+<div class="table-responsive" id="displayResults" >
 	<table class="table table-condensed">
 		<thead>
 			<tr>
 				<th class="tableLeft"> </th>
 				<th width="10%">
 					<a href="?restore=1&amp;sorting_field=sid&amp;sorting_order={if $sorting_order == 'ASC' && $sorting_field == 'sid'}DESC{else}ASC{/if}">[[Invoice]]&nbsp;#</a>
-					{if $sorting_field == 'sid'}{if $sorting_order == 'DESC'}<img src="{image}b_down_arrow.png" alt="" />{else}<img src="{image}b_up_arrow.png" alt="" />{/if}{/if}
+					{if $sorting_field == 'sid'}{if $sorting_order == 'DESC'}<i class="fa fa-sort-down"></i>{else}<i class="fa fa-sort-up"></i>{/if}{/if}
 				</th>
 				{if $isSubUserExists}
 					<th>
 						<a href="?restore=1&amp;sorting_field=payer&amp;sorting_order={if $sorting_order == 'ASC' && $sorting_field == 'payer'}DESC{else}ASC{/if}">[[Payer]]</a>
-						{if $sorting_field == 'payer'}{if $sorting_order == 'DESC'}<img src="{image}b_down_arrow.png" alt="" />{else}<img src="{image}b_up_arrow.png" alt="" />{/if}{/if}
+						{if $sorting_field == 'payer'}{if $sorting_order == 'DESC'}<i class="fa fa-sort-down"></i>{else}<i class="fa fa-sort-up"></i>{/if}{/if}
 					</th>
 				{/if}
 				<th width="10%">
 					<a href="?restore=1&amp;sorting_field=date&amp;sorting_order={if $sorting_order == 'ASC' && $sorting_field == 'date'}DESC{else}ASC{/if}">[[Date]]</a>
-					{if $sorting_field == 'date'}{if $sorting_order == 'DESC'}<img src="{image}b_down_arrow.png" alt="" />{else}<img src="{image}b_up_arrow.png" alt="" />{/if}{/if}
+					{if $sorting_field == 'date'}{if $sorting_order == 'DESC'}<i class="fa fa-sort-down"></i>{else}<i class="fa fa-sort-up"></i>{/if}{/if}
 				</th>
 				<th>
 					<a href="?restore=1&amp;sorting_field=payment_method&amp;sorting_order={if $sorting_order == 'ASC' && $sorting_field == 'payment_method'}DESC{else}ASC{/if}">[[Payment Method]]</a>
-					{if $sorting_field == 'payment_method'}{if $sorting_order == 'DESC'}<img src="{image}b_down_arrow.png" alt="" />{else}<img src="{image}b_up_arrow.png" alt="" />{/if}{/if}
+					{if $sorting_field == 'payment_method'}{if $sorting_order == 'DESC'}<i class="fa fa-sort-down"></i>{else}<i class="fa fa-sort-up"></i>{/if}{/if}
 				</th>
 				<th>
 					<a href="?restore=1&amp;sorting_field=status&amp;sorting_order={if $sorting_order == 'ASC' && $sorting_field == 'status'}DESC{else}ASC{/if}">[[Status]]</a>
-					{if $sorting_field == 'status'}{if $sorting_order == 'DESC'}<img src="{image}b_down_arrow.png" alt="" />{else}<img src="{image}b_up_arrow.png" alt="" />{/if}{/if}
+					{if $sorting_field == 'status'}{if $sorting_order == 'DESC'}<i class="fa fa-sort-down"></i>{else}<i class="fa fa-sort-up"></i>{/if}{/if}
 				</th>
 				<th>
 					<a href="?restore=1&amp;sorting_field=total&amp;sorting_order={if $sorting_order == 'ASC' && $sorting_field == 'total'}DESC{else}ASC{/if}">[[Total]]</a>
-					{if $sorting_field == 'total'}{if $sorting_order == 'DESC'}<img src="{image}b_down_arrow.png" alt="" />{else}<img src="{image}b_up_arrow.png" alt="" />{/if}{/if}
+					{if $sorting_field == 'total'}{if $sorting_order == 'DESC'}<i class="fa fa-sort-down"></i>{else}<i class="fa fa-sort-up"></i>{/if}{/if}
 				</th>
 				<th width="5%" class="invoice-actions">[[Actions]]</th>
 				<th class="tableRight"> </th>

@@ -5,7 +5,7 @@
 
 		<div class="instr_arrow"></div>
         <div class="clearfix"></div>
-		<div class="instr_cont">
+		<div class="instr_cont col-xs-12 col-sm-offset-3">
 			[[{$form_field.instructions}]]
 			<div class="clearfix"></div>
 		</div>

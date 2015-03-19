@@ -51,7 +51,6 @@
 					<div class="header-top-dropdown">
 						<div class="btn-group dropdown">
 							{if $GLOBALS.current_user.logged_in}
-								[[Welcome]] <span class="longtext-50">{if $GLOBALS.current_user.subuser}{$GLOBALS.current_user.subuser.username}{else}{$GLOBALS.current_user.username}{/if}</span>,
 								{if $GLOBALS.current_user.new_messages > 0}
 									{if $acl->isAllowed('use_private_messages')}
 										<a class="btn" href="{$GLOBALS.site_url}/private-messages/inbox/"><i class="fa fa-envelope" title="[[You have]] {$GLOBALS.current_user.new_messages} [[message]]"></i></a>
@@ -64,6 +63,14 @@
 								<a class="btn" href="{$GLOBALS.site_url}/registration/"> [[Register]]</a>
 							{/if}
 						</div>
+                        {if $GLOBALS.current_user.logged_in}
+
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                    [[Welcome]], <span class="longtext-50">{if $GLOBALS.current_user.subuser}{$GLOBALS.current_user.subuser.username}{else}{$GLOBALS.current_user.username}{/if}</span>
+                                </button>
+                            </div>
+                        {else}
                         <div class="btn-group dropdown">
                             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Login</button>
                             <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
@@ -75,6 +82,7 @@
                                 </li>
                             </ul>
                         </div>
+                        {/if}
 					</div>
 				</div>
 			</div>

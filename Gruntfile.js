@@ -54,6 +54,7 @@ module.exports = function(grunt) {
             target: {
                 files: {
                     'css/min.css': [
+                        'css/form.css',
                         'system/ext/jquery/css/jquery-ui.css',
                         'system/lib/rating/style.css',
                         'system/ext/jquery/css/jquery.autocomplete.css',

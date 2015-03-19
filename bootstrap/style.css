@@ -6083,7 +6083,7 @@ ul.tweets li span {
     margin: 0;
 }
 img.ui-datepicker-trigger{
-    /*display: none;*/
+    display: none;
 }
 .sorting-filters .pagination{
     margin: 5px 0 0 0;
@@ -6178,6 +6178,12 @@ img.ui-datepicker-trigger{
     content:none;
 }
 
+.fa-calendar-o{
+    position: relative;
+    top: -28px;
+    right: -190px;
+}
+
 .ui-multiselect{
     width: 100% !important;
     height: 40px;
@@ -6248,4 +6254,24 @@ img.ui-datepicker-trigger{
 
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable{
 	z-index:9999;
+}
+
+.ui-icon{
+	top:-6% !important;
+	left:-7% !important;
+}
+
+.table-add-picture{
+	position:static !important;
+	border: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+}
+
+.table-add-picture-actions{
+	vertical-align: middle !important;
+}
+
+.table-add-picture-size{
+	max-width:400px;
 }

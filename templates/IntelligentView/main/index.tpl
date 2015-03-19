@@ -15,7 +15,7 @@
         <link rel="shortcut icon" href="{$GLOBALS.site_url}/images/favicon.ico" />
 
 
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/form.css"  />
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/form-mult-select.css"  />
         {*<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />*}
         {if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
         <link rel="stylesheet" href="{$GLOBALS.site_url}/system/lib/rating/style.css" type="text/css" />

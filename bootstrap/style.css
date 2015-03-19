@@ -6272,3 +6272,6 @@ img.ui-datepicker-trigger{
 	vertical-align: middle !important;
 }
 
+.table-add-picture-size{
+	max-width:400px;
+}

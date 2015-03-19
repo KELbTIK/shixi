@@ -59,7 +59,7 @@
 	{/if}
 	{if $pictures}
 		<div class="table-responsive">
-			<table id="manage-pictures" class="table table-condensed">
+			<table id="manage-pictures" class="table table-condensed table-add-picture-size">
 				<thead>
 					<tr>
 						<th class="tableLeft"></th>

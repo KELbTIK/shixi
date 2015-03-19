@@ -15,6 +15,7 @@
         <link rel="shortcut icon" href="{$GLOBALS.site_url}/images/favicon.ico" />
 
 
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/form.css"  />
         {*<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />*}
         {if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
         <link rel="stylesheet" href="{$GLOBALS.site_url}/system/lib/rating/style.css" type="text/css" />
@@ -32,7 +33,7 @@
         <link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
         <link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
         <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css"  />
+
 
         <script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="{$GLOBALS.site_url}/node_modules/jquery.browser/dist/jquery.browser.js"></script>
@@ -59,7 +60,7 @@
         <script type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
         <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.highlight.js"></script>
         <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/imagesize.js"></script>
-        <script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
+        {*<script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>*}
         <script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
         <script type="text/javascript" src="{common_js}/multilist_functions.js"></script>
         <script type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>

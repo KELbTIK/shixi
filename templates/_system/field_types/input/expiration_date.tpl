@@ -48,7 +48,7 @@
 			changeMonth: true,
 			changeYear: true,
 			minDate: '+1d',
-			yearRange: '-99:+99',
+			yearRange: '-99:+99'
 
 		});
 		if (listingDuration) {

@@ -4,7 +4,7 @@
     <div class="instr_block" id="instruction_{$form_field.id}">
 
 		<div class="instr_arrow"></div>
-		<div class="instr_cont col-xs-8 col-xs-offset-3">
+		<div class="instr_cont">
 			[[{$form_field.instructions}]]
 			<div class="clearfix"></div>
 		</div>

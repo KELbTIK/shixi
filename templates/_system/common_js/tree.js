@@ -272,23 +272,23 @@ function treeElementClick(id, parentId, level)
 {
 	var inputBox = $("#tree-check-" + id);
 	var action   = "";
-	if (inputBox.attr("checked") == "") {
+	if (inputBox.is(':checked') == false) {
 		action = "checked";
+
 	}
-	
 	if (selectedCount >= availableCount && action == "checked") {
 		return;
 	}
-	
+
 	var childrenBlock = $("#tree-li-" + id);
 	if (childrenBlock.children("ul").size() > 0) {// if it has children
 		setChildrenStatus(id, action);
 		setParentStatus(id);
 	} else {
 		if (action == "checked") {
-			inputBox.attr("checked", action);
+			inputBox.prop("checked", true);
 		} else {
-			inputBox.removeAttr("checked");
+			inputBox.prop("checked", false);
 		}
 		childrenBlock.children(".checkbox").removeClass().addClass("checkbox").addClass(action);
 	}
@@ -353,9 +353,9 @@ function setParentStatus(fieldId)
 	
 	parentLi.children(".checkbox").removeClass().addClass("checkbox").addClass(classes);
 	if (classes == "checked" || classes == "half_checked") {
-		$("#tree-check-" + fieldId).attr("checked", "checked");
+		$("#tree-check-" + fieldId).prop("checked", true);
 	} else {
-		$("#tree-check-" + fieldId).removeAttr("checked");
+		$("#tree-check-" + fieldId).prop("checked", false);
 	}
 }
 

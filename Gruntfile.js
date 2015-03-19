@@ -30,7 +30,8 @@ module.exports = function(grunt) {
                     'system/ext/jquery/multilist/jquery.multiselect.min.js',
                     'templates/_system/common_js/multilist_functions.js',
                     'templates/_system/common_js/jquery.poshytip.min.js',
-                    'templates/_system/common_js/floatnumbers_functions.js'
+                    'templates/_system/common_js/floatnumbers_functions.js',
+                    'templates/_system/common_js/tree.js'
                 ],
                 dest: 'build/scripts.js'
             }

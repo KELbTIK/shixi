@@ -15,62 +15,62 @@
         <link rel="shortcut icon" href="{$GLOBALS.site_url}/images/favicon.ico" />
 
 
-                        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />
-                        {if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
-                        <link rel="stylesheet" href="{$GLOBALS.site_url}/system/lib/rating/style.css" type="text/css" />
-                        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery-ui.css"  />
-                        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/css/bootstrap.css"  />
-                        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/animate.css"  />
-                        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/skins/red.css"  />
-                        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/normalize.css"  />
-                        <link href="{$GLOBALS.site_url}/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
-                        <link href="{$GLOBALS.site_url}/fonts/fontello/css/fontello.css" rel="stylesheet">
-                        <link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
-                        <link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
-                        <link href="{$GLOBALS.site_url}/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
-                        <link href="{$GLOBALS.site_url}/css/animations.css" rel="stylesheet">
-                        <link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
-                        <link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
-                        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/bootstrap/js/bootstrap.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/modernizr.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/isotope/isotope.pkgd.min.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.appear.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.countTo.js"></script>
-                        <script src="{$GLOBALS.site_url}/plugins/jquery.parallax-1.1.3.js"></script>
-                        <script src="{$GLOBALS.site_url}/plugins/jquery.validate.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/js/template.js"></script>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/js/custom.js"></script>
-                        <script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.js"></script>
-                        <script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
-                        <script  type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>
-                        <script  type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
-                        <script  type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
+        {*<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css" />*}
+        {if $GLOBALS.current_language_data.rightToLeft}<link rel="StyleSheet" type="text/css" href="{image src="designRight.css"}" />{/if}
+        <link rel="stylesheet" href="{$GLOBALS.site_url}/system/lib/rating/style.css" type="text/css" />
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/system/ext/jquery/css/jquery-ui.css"  />
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/css/bootstrap.css"  />
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/animate.css"  />
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/skins/red.css"  />
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/normalize.css"  />
+        <link href="{$GLOBALS.site_url}/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="{$GLOBALS.site_url}/fonts/fontello/css/fontello.css" rel="stylesheet">
+        <link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
+        <link href="{$GLOBALS.site_url}/plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
+        <link href="{$GLOBALS.site_url}/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="{$GLOBALS.site_url}/css/animations.css" rel="stylesheet">
+        <link href="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="{$GLOBALS.site_url}/css/custom.css" rel="stylesheet">
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/bootstrap/style.css"  />
+        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/templates/_system/main/images/css/form.css"  />
+
+        <script type="text/javascript" src="{$GLOBALS.site_url}/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/node_modules/jquery.browser/dist/jquery.browser.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/modernizr.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/isotope/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/owl-carousel/owl.carousel.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.appear.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/plugins/jquery.countTo.js"></script>
+        <script src="{$GLOBALS.site_url}/plugins/jquery.parallax-1.1.3.js"></script>
+        <script src="{$GLOBALS.site_url}/plugins/jquery.validate.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/js/template.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/js/custom.js"></script>
+
+
+        <script type="text/javascript" src="{common_js}/main.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery-ui.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.form.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.autocomplete.pack.js"></script>
+        <script type="text/javascript" src="{common_js}/autoupload_functions.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/jquery.highlight.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/imagesize.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/jquery.bgiframe.js"></script>
+        <script type="text/javascript" src="{$GLOBALS.user_site_url}/system/ext/jquery/multilist/jquery.multiselect.min.js"></script>
+        <script type="text/javascript" src="{common_js}/multilist_functions.js"></script>
+        <script type="text/javascript" src="{common_js}/jquery.poshytip.min.js"></script>
+        <script type="text/javascript" src="{common_js}/floatnumbers_functions.js"></script>
+        <script type="text/javascript" src="{common_js}/tree.js"></script>
 
 
 
-        <link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/min.css"  />
-        <script type="text/javascript" src="{$GLOBALS.site_url}/build/scripts.js"></script>
+        {*<link rel="StyleSheet" type="text/css" href="{$GLOBALS.site_url}/css/min.css"  />*}
+        {*<script type="text/javascript" src="{$GLOBALS.site_url}/build/scripts.js"></script>*}
 
-
-
-                        <!--[if IE 8]>
-                        <script type="text/javascript" src="{$GLOBALS.site_url}/system/ext/jquery/pie-ie.js"></script>
-            <script type="text/javascript">
-                $(function() {
-                    if (window.PIE) {
-                        $('input, .products, .productLinks, a.button, a.standart-button, #reports-navigation-in, #reports-navigation-in-border').each(function() {
-                            PIE.attach(this);
-                        });
-                    }
-                });
-            </script>
-        <![endif]-->
         [[$HEAD]]
 
         {if isset( $GLOBALS.available_datepicker_localizations[$GLOBALS.current_language] )}

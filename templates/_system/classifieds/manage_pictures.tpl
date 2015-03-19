@@ -37,10 +37,10 @@
 			<input type="hidden" name="action" value="add" />
 			<input type="hidden" id="listing_id" name="listing_sid" value="{$listing.id}" />
 
-				<div class="form-group has-feedback">
+				<div class="form-group has-feedback form-group-padding">
 					<div class="inputField col-xs-12"><input type="file" name="picture" /></div>
 				</div>
-				<div class="form-group has-feedback">
+				<div class="form-group has-feedback form-group-padding">
 					<div class="inputField col-xs-12">
 						[[Caption]]<br/>
 						<input class="form-control" type="text" name="caption" value="" />
@@ -64,7 +64,7 @@
 					<tr>
 						<th class="tableLeft"></th>
 						<th class="text-center">[[Thumbnail]]</th>
-						<th>[[Caption]]</th>
+						<th class="text-center">[[Caption]]</th>
 						<th class="text-center">[[Actions]]</th>
 						<th class="tableRight"></th>
 					</tr>
